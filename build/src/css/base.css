@@ -97,36 +97,6 @@
 
 /*
 **----------------------------------
-** Forecast widget:
-**----------------------------------
-*/
-
-/**
- * See the widget JS for more styles.
- */
-
-#forecast { display: none; }
-@media only screen and (min-width: 1005px) {
-	#forecast {
-		width: 115px;
-		height: 115px;
-		display: block;
-		position: absolute;
-		top: -30px;
-		right: -5px;
-	}
-		#forecast span {
-			font: 225%/1 "MillerHeadline Light", Cambria, Georgia, serif;
-			letter-spacing: .05em;
-			position: absolute;
-			left: -.75em;
-			top: .75em;
-		}
-		#forecast a:visited { color: #000; }
-}
-
-/*
-**----------------------------------
 ** Main navigation:
 **----------------------------------
 */
@@ -276,7 +246,7 @@
 */
 
 .bd_insert {
-	font: normal bold 112.5%/1.2 "BentonSansCond Regular", Arial, Helvetica, sans-serif; /* 18px */
+	font: bold 112.5%/1.2 "BentonSansCond Regular", Arial, Helvetica, sans-serif; /* 18px */
 	letter-spacing: .02em;
 	color: #333;
 	margin: 10px 0;

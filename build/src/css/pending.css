@@ -227,3 +227,35 @@ pre code {
 		display: inline;
 	}
 }
+
+
+
+/*
+**----------------------------------
+** Forecast widget (moved from base.css):
+**----------------------------------
+*/
+
+/**
+ * See the widget JS for more styles.
+ */
+
+#forecast { display: none; }
+@media only screen and (min-width: 1005px) {
+	#forecast {
+		width: 115px;
+		height: 115px;
+		display: block;
+		position: absolute;
+		top: -30px;
+		right: -5px;
+	}
+		#forecast span {
+			font: 225%/1 "MillerHeadline Light", Cambria, Georgia, serif;
+			letter-spacing: .05em;
+			position: absolute;
+			left: -.75em;
+			top: .75em;
+		}
+		#forecast a:visited { color: #000; }
+}

@@ -26,6 +26,7 @@
     "grunt-contrib-clean": "git://github.com/gruntjs/grunt-contrib-clean.git",
     "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git",
     "grunt-contrib-cssmin": "git://github.com/gruntjs/grunt-contrib-cssmin.git",
-    "grunt-contrib-copy": "git://github.com/gruntjs/grunt-contrib-copy.git"
+    "grunt-contrib-copy": "git://github.com/gruntjs/grunt-contrib-copy.git",
+    "grunt-htmlgen": "git://github.com/champjss/grunt-htmlgen.git"
   }
 }

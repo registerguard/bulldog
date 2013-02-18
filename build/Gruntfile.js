@@ -9,13 +9,15 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		
 		// http://tanepiper.com/blog/2012/11/25/building-and-testing-javascript-with-gruntjs/
-		now: grunt.template.today('yyyymmddhhMMss'), // http://blog.stevenlevithan.com/archives/date-time-format
+		now: grunt.template.today('yyyymmdd'), // http://blog.stevenlevithan.com/archives/date-time-format (yyyymmddhhMMss)
+		
+		num: 1,
 		
 		/*----------------------------------( META )----------------------------------*/
 		
 		meta: {
 			
-			banner_long: '/*!\n' +
+			banner_long: '/**\n' +
 			             ' * <%= pkg.title || pkg.name %>\n' +
 			             '<%= pkg.description ? " * " + pkg.description + "\\n" : "" %>' +
 			             ' *\n' +
@@ -51,7 +53,7 @@ module.exports = function(grunt) {
 				
 				src: [
 					
-					'../<%= pkg.name %>/**/*'
+					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/**/*'
 					
 				]
 				
@@ -78,7 +80,7 @@ module.exports = function(grunt) {
 			init: [
 				
 				'./Gruntfile.js',
-				'./src/js/modules/**/*.js'
+				'./src/js/woof.*.js'
 				
 			]
 			
@@ -92,36 +94,25 @@ module.exports = function(grunt) {
 		
 		uglify: {
 			
-			plugins: {
+			main: {
 				
 				files: {
 					
-					'../<%= pkg.name %>/<%= now %>/js/plugins.min.js': [
-						'./src/js/plugins/jquery.cookie.js',
-						'./src/js/plugins/jquery.ba-dotimeout.js',
-						'./src/js/plugins/jquery.megawhale.js',
-						'./src/js/plugins/jquery.megakrill.js',
-						'./src/js/plugins/jquery.harmonia.js',
-						'./src/js/plugins/jquery.jsonp.js',
-						'./src/js/plugins/jquery.kerplop.js'
-					]
-					
-				}
-				
-			},
-			
-			modules: {
-				
-				files: {
-					
-					'../<%= pkg.name %>/<%= now %>/js/modules.min.js': [
-						'./src/js/modules/woof.js',
-						'./src/js/modules/woof.forecast.js',
-						'./src/js/modules/woof.megas.js',
-						'./src/js/modules/woof.finder.js',
-						'./src/js/modules/woof.harmonia.js',
-						'./src/js/modules/woof.kerplop.js',
-						'./src/js/modules/woof.init.js'
+					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/<%= pkg.name %>.min.js': [
+						'./src/js/jquery.cookie.js',
+						'./src/js/jquery.ba-dotimeout.js',
+						'./src/js/jquery.megawhale.js',
+						'./src/js/jquery.megakrill.js',
+						'./src/js/jquery.harmonia.js',
+						'./src/js/jquery.jsonp.js',
+						'./src/js/jquery.kerplop.js',
+						'./src/js/woof.js',
+						'./src/js/woof.forecast.js',
+						'./src/js/woof.megas.js',
+						'./src/js/woof.finder.js',
+						'./src/js/woof.harmonia.js',
+						'./src/js/woof.kerplop.js',
+						'./src/js/woof.init.js'
 					]
 					
 				}
@@ -132,9 +123,9 @@ module.exports = function(grunt) {
 				
 				files: {
 					
-					'../<%= pkg.name %>/<%= now %>/js/headutils.min.js': ['./src/js/plugins/headutils.js'],
-					'../<%= pkg.name %>/<%= now %>/js/respond.min.js': ['./src/js/plugins/respond.src.js'],
-					'../<%= pkg.name %>/<%= now %>/js/html5shiv.min.js': ['./src/js/plugins/html5shiv.js']
+					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/headutils.min.js': ['./src/js/headutils.js'],
+					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/respond.min.js': ['./src/js/respond.src.js'],
+					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/html5shiv.min.js': ['./src/js/html5shiv.js']
 					
 				}
 				
@@ -152,7 +143,7 @@ module.exports = function(grunt) {
 				
 				files: {
 					
-					'../<%= pkg.name %>/<%= now %>/css/<%= pkg.name %>.min.css': [
+					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/css/<%= pkg.name %>.min.css': [
 						'./src/css/normalize.css',
 						'./src/css/wiffle.css',
 						'./src/css/onoff.css',
@@ -191,7 +182,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: './src/',
 						src: ['img/**'],
-						dest: '../<%= pkg.name %>/<%= now %>/'
+						dest: '../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/'
 						
 					},
 					
@@ -201,7 +192,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: './src/',
 						src: ['index.html'],
-						dest: '../<%= pkg.name %>/<%= now %>/'
+						dest: '../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/'
 						
 					}
 					
