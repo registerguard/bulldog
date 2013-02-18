@@ -1,0 +1,78 @@
+/**
+ * `<html>`.
+ */
+
+html {
+	color: #000;
+	background: #fff;
+}
+
+/**
+ * `<body>`.
+ * See preflight.css for related styles.
+ */
+
+body {
+	font-size: 100.01%;
+	line-height: 1.3;
+}
+
+/**
+ * `<p>`.
+ */
+
+p {
+	font-family: Cambria, Georgia, serif;
+	margin: 10px 0;
+}
+
+/**
+ * `<a>`.
+ */
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+	a:visited { color: #666; }
+	a:visited:hover,
+	a:focus,
+	a:focus:hover,
+	a:hover,
+	a:active { color: #ae1b1f; }
+
+/**
+ * `<p>` with `<a>` children.
+ */
+
+p a {
+	color: #0083ca;
+	text-decoration: none;
+}
+	p a:visited { color: #0083ca; }
+	p a:visited:hover,
+	p a:focus,
+	p a:focus:hover,
+	p a:hover,
+	p a:active {
+		color: #0083ca;
+		text-decoration: underline;
+	}
+
+
+/**
+ * `<hr>`.
+ */
+
+hr, .hr2 {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 20px 0;
+	padding: 0;
+}
+.hr2 {
+	border-top-color: #eee;
+	margin: 10px 0;
+}

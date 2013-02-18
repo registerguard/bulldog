@@ -1,0 +1,31 @@
+{
+  "title": "Bulldog",
+  "name": "bulldog",
+  "description": "The official 2012 registerguard.com theme.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/registerguard/bulldog",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/registerguard/bulldog.git"
+  },
+  "author": {
+    "name": "Micky Hulse",
+    "url": "http://hulse.me"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "git://github.com/gruntjs/grunt.git",
+    "grunt-contrib-jshint": "git://github.com/gruntjs/grunt-contrib-jshint.git",
+    "grunt-contrib-nodeunit": "git://github.com/gruntjs/grunt-contrib-nodeunit.git",
+    "grunt-contrib-clean": "git://github.com/gruntjs/grunt-contrib-clean.git",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git",
+    "grunt-contrib-cssmin": "git://github.com/gruntjs/grunt-contrib-cssmin.git",
+    "grunt-contrib-copy": "git://github.com/gruntjs/grunt-contrib-copy.git"
+  }
+}
