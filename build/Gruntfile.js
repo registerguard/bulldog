@@ -18,24 +18,24 @@ module.exports = function(grunt) {
 		meta: {
 			
 			banner_long: '/**\n' +
-			             ' * <%= pkg.title || pkg.name %>\n' +
-			             '<%= pkg.description ? " * " + pkg.description + "\\n" : "" %>' +
-			             ' *\n' +
-			             '<%= pkg.author.name ? " * @author " + pkg.author.name + "\\n" : "" %>' +
-			             '<%= pkg.author.url ? " * @link " + pkg.author.url + "\\n" : "" %>' +
-			             '<%= pkg.homepage ? " * @docs " + pkg.homepage + "\\n" : "" %>' +
-			             ' * @copyright Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>.\n' +
-			             '<%= pkg.licenses ? " * @license Released under the " + _.pluck(pkg.licenses, "type").join(", ") + ".\\n" : "" %>' +
-			             '<%= pkg.version ? " * @version " + pkg.version + "\\n" : "" %>' +
-			             ' * @date <%= grunt.template.today("yyyy/mm/dd") %>\n' +
-			             ' */\n\n',
+						 ' * <%= pkg.title || pkg.name %>\n' +
+						 '<%= pkg.description ? " * " + pkg.description + "\\n" : "" %>' +
+						 ' *\n' +
+						 '<%= pkg.author.name ? " * @author " + pkg.author.name + "\\n" : "" %>' +
+						 '<%= pkg.author.url ? " * @link " + pkg.author.url + "\\n" : "" %>' +
+						 '<%= pkg.homepage ? " * @docs " + pkg.homepage + "\\n" : "" %>' +
+						 ' * @copyright Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>.\n' +
+						 '<%= pkg.licenses ? " * @license Released under the " + _.pluck(pkg.licenses, "type").join(", ") + ".\\n" : "" %>' +
+						 '<%= pkg.version ? " * @version " + pkg.version + "\\n" : "" %>' +
+						 ' * @date <%= grunt.template.today("yyyy/mm/dd") %>\n' +
+						 ' */\n\n',
 			
 			banner_short: '/*! ' +
-			              '<%= pkg.title || pkg.name %>' +
-			              '<%= pkg.version ? " v" + pkg.version : "" %>' +
-			              '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
-			              '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
-			              ' */'
+						  '<%= pkg.title || pkg.name %>' +
+						  '<%= pkg.version ? " v" + pkg.version : "" %>' +
+						  '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
+						  '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
+						  ' */'
 			
 		},
 		
@@ -215,6 +215,27 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	
+	// module.exports = function(grunt) {
+		
+	// 	/**
+	// 	 * usemin and usemin:* are used to replace the blocks in HTML
+	// 	 *
+	// 	 * @see https://gist.github.com/necolas/3024891
+	// 	 */
+		
+	// 	grunt.registerHelper('usemin', function(type, content, block, dest) {
+	// 		var indent = (block.split(grunt.utils.linefeed)[0].match(/^\s*/) || [])[0];
+	// 		if (type === 'css') {
+	// 			return content.replace(block, indent + '<link rel="stylesheet" href="' + dest + '">');
+	// 		}
+	// 		if (type === 'js') {
+	// 			return content.replace(block, indent + '<script src="' + dest + '"></script>');
+	// 		}
+	// 		return false;
+	// 	});
+		
+	// };
 	
 	//----------------------------------
 	
