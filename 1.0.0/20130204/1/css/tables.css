@@ -1,0 +1,27 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+table.tbl1 {
+	color:#333;
+	border: 1px solid #666;
+	margin: 10px 0;
+}
+	table.tbl1 caption {
+		text-align: left;
+		padding-bottom: 5px;
+	}
+	table.tbl1 th,
+	table.tbl1 td { text-align: center; }
+	table.tbl1 th {
+		padding: 10px;
+		border: 1px solid #666;
+		background: #ddd;
+	}
+	table.tbl1 td {
+		border: 1px solid #666;
+		padding: 10px;
+		background: #fff;
+	}

@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 				
 				src: [
 					
-					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/**/*'
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/**/*'
 					
 				]
 				
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
 				
 				files: {
 					
-					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/<%= pkg.name %>.min.js': [
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/<%= pkg.name %>.min.js': [
 						'./src/js/jquery.cookie.js',
 						'./src/js/jquery.ba-dotimeout.js',
 						'./src/js/jquery.megawhale.js',
@@ -123,9 +123,9 @@ module.exports = function(grunt) {
 				
 				files: {
 					
-					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/headutils.min.js': ['./src/js/headutils.js'],
-					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/respond.min.js': ['./src/js/respond.src.js'],
-					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/js/html5shiv.min.js': ['./src/js/html5shiv.js']
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/headutils.min.js': ['./src/js/headutils.js'],
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/respond.min.js': ['./src/js/respond.src.js'],
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/html5shiv.min.js': ['./src/js/html5shiv.js']
 					
 				}
 				
@@ -143,7 +143,7 @@ module.exports = function(grunt) {
 				
 				files: {
 					
-					'../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/css/<%= pkg.name %>.min.css': [
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/css/<%= pkg.name %>.min.css': [
 						'./src/css/normalize.css',
 						'./src/css/wiffle.css',
 						'./src/css/onoff.css',
@@ -182,7 +182,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: './src/',
 						src: ['img/**'],
-						dest: '../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/'
+						dest: '../<%= pkg.version %>/<%= now %>/<%= num %>/'
 						
 					},
 					
@@ -192,7 +192,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: './src/',
 						src: ['index.html'],
-						dest: '../<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= num %>/'
+						dest: '../<%= pkg.version %>/<%= now %>/<%= num %>/'
 						
 					}
 					

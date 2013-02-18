@@ -1,0 +1,306 @@
+/*
+**----------------------------------
+** Top links:
+**----------------------------------
+*/
+
+#bd_ear { display: none; }
+@media only screen and (min-width: 1005px) {
+	#bd_ear {
+		font-size: 75%; /* 12px */
+		line-height: 1;
+		margin: 0 0 20px;
+		display: block;
+		position: relative;
+		z-index: 20;
+		*zoom: 1;
+	}
+	#bd_ear:before,
+	#bd_ear:after {
+		content: "";
+		display: table;
+	}
+	#bd_ear:after { clear: both; }
+		#bd_ear li {
+			margin: 10px 0 0 20px;
+			float: right;
+			display: inline;
+		}
+			#bd_ear li:first-child {
+				margin-left: 0;
+				float: left;
+				display: inline;
+			}
+}
+
+/*
+**----------------------------------
+** Main header:
+**----------------------------------
+*/
+
+#bd_masthead {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+	position: relative;
+}
+@media only screen and (min-width: 1005px) {
+	#bd_masthead {
+		padding: 0;
+		border-bottom: 0;
+	}
+}
+
+/*
+**----------------------------------
+** Flag:
+**----------------------------------
+*/
+
+#bd_flag {
+	font: 187.5%/1 "RGWeb", Cambria, Georgia, serif; /* 30px */
+	color: #000;
+	margin: 0;
+	white-space: nowrap;
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+/* If javascript is turned off, tidy things up: */
+.no-js #bd_flag {
+	position: static;
+	margin-bottom: 10px;
+}
+	#bd_flag a,
+	#bd_flag a:visited,
+	#bd_flag a:visited:hover,
+	#bd_flag a:focus,
+	#bd_flag a:focus:hover,
+	#bd_flag a:hover,
+	#bd_flag a:active {
+		color: #000;
+		text-decoration: none;
+	}
+@media only screen and (min-width: 665px) {
+	#bd_flag {
+		font-size: 250%; /* 40px */
+		top: 12px;
+	}
+}
+@media only screen and (min-width: 1005px) {
+	#bd_flag {
+		font-size: 312.5%; /* 50px */
+		position: static;
+		margin-bottom: 25px;
+	}
+}
+
+/*
+**----------------------------------
+** Forecast widget:
+**----------------------------------
+*/
+
+/**
+ * See the widget JS for more styles.
+ */
+
+#forecast { display: none; }
+@media only screen and (min-width: 1005px) {
+	#forecast {
+		width: 115px;
+		height: 115px;
+		display: block;
+		position: absolute;
+		top: -30px;
+		right: -5px;
+	}
+		#forecast span {
+			font: 225%/1 "MillerHeadline Light", Cambria, Georgia, serif;
+			letter-spacing: .05em;
+			position: absolute;
+			left: -.75em;
+			top: .75em;
+		}
+		#forecast a:visited { color: #000; }
+}
+
+/*
+**----------------------------------
+** Main navigation:
+**----------------------------------
+*/
+
+#bd_proof { *zoom: 1; }
+#bd_proof:before,
+#bd_proof:after {
+	content: "";
+	display: table;
+}
+#bd_proof:after { clear: both; }
+	#bd_proof ul ul,
+	#bd_proof ul h2 {
+		margin: 10px 0 10px 10px;
+	}
+
+/*
+**----------------------------------
+** Footer:
+**----------------------------------
+*/
+
+#bd_morgue {
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+}
+	#bd_morgue p {
+		color: #333;
+		font-size: 81.3%;
+		line-height: 1.6;
+		margin-top: 0;
+	}
+		#bd_morgue p strong {
+			font-family: Arial, Helvetica, sans-serif;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+		}
+
+/**
+ * Convert lists to `<select>`s.
+ *
+ * @see rgne.ws/T828kW
+ */
+
+.js #bd_morgue ul {
+	display: none;
+	visibility: hidden;
+}
+#bd_morgue .harmonia-select {
+	width: 100%;
+	display: block;
+	margin: 10px 0;
+}
+@media only screen and (min-width: 665px) {
+	.js #bd_morgue ul {
+		display: block;
+		visibility: visible;
+	}
+	#bd_morgue .harmonia-select {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+/**
+ * Footer meta.
+ */
+
+#bd_press {
+	border-top: 1px solid #ccc;
+	margin-bottom: 50px;
+	padding: 20px 0;
+	position: relative;
+}
+	#bd_press p {
+		font-size: 68.8%;
+		text-transform: uppercase;
+		font-family: Arial, Helvetica, sans-serif;
+		letter-spacing: .05em;
+		color: #999;
+		margin: 10px 0;
+		padding: 0;
+	}
+			#bd_press span { display: block; margin: 10px 0; }
+			#bd_press span span { display: none; }
+	#bd_press a {
+		color: #666;
+		text-decoration: none;
+	}
+	#bd_press a:visited { color: #666; }
+	#bd_press a:visited:hover,
+	#bd_press a:focus,
+	#bd_press a:focus:hover,
+	#bd_press a:hover,
+	#bd_press a:active {
+		color: #000;
+		text-decoration: underline;
+	}
+@media only screen and (min-width: 665px) {
+	#bd_press p { margin: 0 0 10px; }
+	#bd_press span { margin: 0; }
+	#bd_press span,
+	#bd_press span span { display: inline; }
+}
+
+/*
+**----------------------------------
+** Lists:
+**----------------------------------
+*/
+
+.bd_scoop {}
+	.bd_scoop {
+		font-size: 81.3%;
+		line-height: 1.5;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		margin: 10px 0 20px;
+		padding: 0;
+			list-style: none;
+	}
+		.bd_scoop li {
+			border: 0 none;
+			margin: 5px 0;
+			padding: 0;
+		}
+			.bd_scoop li a {
+				color: #666;
+				text-decoration: none;
+				letter-spacing: .02em;
+				word-spacing: .3em;
+			}
+			.bd_scoop li a:visited { color: #666; }
+			.bd_scoop li a:visited:hover,
+			.bd_scoop li a:focus,
+			.bd_scoop li a:focus:hover,
+			.bd_scoop li a:hover,
+			.bd_scoop li a:active {
+				color: #000;
+				text-decoration: underline;
+			}
+
+/*
+**----------------------------------
+** Headings:
+**----------------------------------
+*/
+
+.bd_insert {
+	font: normal bold 112.5%/1.2 "BentonSansCond Regular", Arial, Helvetica, sans-serif; /* 18px */
+	letter-spacing: .02em;
+	color: #333;
+	margin: 10px 0;
+}
+	.bd_insert a:link,
+	.bd_insert a:visited { color: #333; }
+
+/*
+**----------------------------------
+** Utility:
+**----------------------------------
+*/
+
+/**
+ * Hide only visually, but have it available for screen readers.
+ */
+
+.bd_cut {
+	border: 0;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0);
+}
