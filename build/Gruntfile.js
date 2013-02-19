@@ -1,4 +1,4 @@
-/*global module:false */
+/*global module:false, console:false, process:false*/
 
 module.exports = function(grunt) {
 	
@@ -6,52 +6,65 @@ module.exports = function(grunt) {
 	
 	grunt.initConfig({
 		
-		pkg: grunt.file.readJSON('package.json'),
+		pkg : grunt.file.readJSON('package.json'),
 		
 		// http://tanepiper.com/blog/2012/11/25/building-and-testing-javascript-with-gruntjs/
-		now: grunt.template.today('yyyymmdd'), // http://blog.stevenlevithan.com/archives/date-time-format (yyyymmddhhMMss)
+		now : grunt.template.today('yyyymmdd'), // http://blog.stevenlevithan.com/archives/date-time-format (yyyymmddhhMMss)
 		
-		num: 1,
+		num : 1,
 		
-		/*----------------------------------( META )----------------------------------*/
+		/*----------------------------------( ENV )----------------------------------*/
 		
-		meta: {
+		/**
+		 * @see https://github.com/onehealth/grunt-env
+		 */
+		
+		env : {
 			
-			banner_long: '/**\n' +
-						 ' * <%= pkg.title || pkg.name %>\n' +
-						 '<%= pkg.description ? " * " + pkg.description + "\\n" : "" %>' +
-						 ' *\n' +
-						 '<%= pkg.author.name ? " * @author " + pkg.author.name + "\\n" : "" %>' +
-						 '<%= pkg.author.url ? " * @link " + pkg.author.url + "\\n" : "" %>' +
-						 '<%= pkg.homepage ? " * @docs " + pkg.homepage + "\\n" : "" %>' +
-						 ' * @copyright Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>.\n' +
-						 '<%= pkg.licenses ? " * @license Released under the " + _.pluck(pkg.licenses, "type").join(", ") + ".\\n" : "" %>' +
-						 '<%= pkg.version ? " * @version " + pkg.version + "\\n" : "" %>' +
-						 ' * @date <%= grunt.template.today("yyyy/mm/dd") %>\n' +
-						 ' */\n\n',
+			options : {
+				
+				/* Shared Options Hash */
+				//globalOption : 'foo'
+				
+			},
 			
-			banner_short: '/*! ' +
-						  '<%= pkg.title || pkg.name %>' +
-						  '<%= pkg.version ? " v" + pkg.version : "" %>' +
-						  '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
-						  '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
-						  ' */'
+			dev: {
+				
+				NODE_ENV : 'DEVELOPMENT'
+				
+			},
+			
+			prod : {
+				
+				NODE_ENV : 'PRODUCTION'
+				
+			}
 			
 		},
 		
 		/*----------------------------------( 01 )----------------------------------*/
 		
-		clean: {
+		clean : {
 			
-			options: {
+			options : {
 				
-				force: true // Sketchy!
+				force : true // Sketchy!
 				
 			},
 			
-			build: {
+			dev : {
 				
-				src: [
+				src : [
+					
+					'./src/index.html' // Sketchy?
+					
+				]
+				
+			},
+			
+			prod : {
+				
+				src : [
 					
 					'../<%= pkg.version %>/<%= now %>/<%= num %>/**/*'
 					
@@ -69,15 +82,15 @@ module.exports = function(grunt) {
 		 * @see https://github.com/jshint/jshint/blob/r12/jshint.js#L256
 		 */
 		
-		jshint: {
+		jshint : {
 			
-			options: {
+			options : {
 				
-				jshintrc: '.jshintrc'
+				jshintrc : '.jshintrc'
 				
 			},
 			
-			init: [
+			init : [
 				
 				'./Gruntfile.js',
 				'./src/js/woof.*.js'
@@ -92,13 +105,13 @@ module.exports = function(grunt) {
 		 * @see https://github.com/gruntjs/grunt-contrib-uglify
 		 */
 		
-		uglify: {
+		uglify : {
 			
-			main: {
+			main : {
 				
-				files: {
+				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/<%= pkg.name %>.min.js': [
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/<%= pkg.name %>.min.js' : [
 						'./src/js/jquery.cookie.js',
 						'./src/js/jquery.ba-dotimeout.js',
 						'./src/js/jquery.megawhale.js',
@@ -119,13 +132,13 @@ module.exports = function(grunt) {
 				
 			},
 			
-			other: {
+			other : {
 				
-				files: {
+				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/headutils.min.js': ['./src/js/headutils.js'],
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/respond.min.js': ['./src/js/respond.src.js'],
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/html5shiv.min.js': ['./src/js/html5shiv.js']
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/headutils.min.js' : ['./src/js/headutils.js'],
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/respond.min.js' : ['./src/js/respond.src.js'],
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/html5shiv.min.js' : ['./src/js/html5shiv.js']
 					
 				}
 				
@@ -135,15 +148,13 @@ module.exports = function(grunt) {
 		
 		/*----------------------------------( 04 )----------------------------------*/
 		
-		cssmin: {
+		cssmin : {
 			
-			/* Need banner option! */
-			
-			compress: {
+			compress : {
 				
-				files: {
+				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/css/<%= pkg.name %>.min.css': [
+					'../<%= pkg.version %>/<%= now %>/<%= num %>/css/<%= pkg.name %>.min.css' : [
 						'./src/css/normalize.css',
 						'./src/css/wiffle.css',
 						'./src/css/onoff.css',
@@ -171,32 +182,63 @@ module.exports = function(grunt) {
 		
 		/*----------------------------------( 05 )----------------------------------*/
 		
-		copy: {
+		copy : {
 			
-			main: {
+			main : {
 				
-				files: [
+				files : [
 					
 					{
 						
-						expand: true,
-						cwd: './src/',
-						src: ['img/**'],
-						dest: '../<%= pkg.version %>/<%= now %>/<%= num %>/'
+						expand : true,
+						cwd : './src/',
+						src : ['img/**'],
+						dest : '../<%= pkg.version %>/<%= now %>/<%= num %>/'
 						
-					},
+					}//,
 					
+					/*
 					{
 						
-						filter: 'isFile',
-						expand: true,
-						cwd: './src/',
-						src: ['index.html'],
-						dest: '../<%= pkg.version %>/<%= now %>/<%= num %>/'
+						filter : 'isFile',
+						expand : true,
+						cwd : './src/',
+						src : ['index.html'],
+						dest : '../<%= pkg.version %>/<%= now %>/<%= num %>/'
 						
 					}
+					*/
 					
 				]
+				
+			}
+			
+		},
+		
+		/*----------------------------------( 06 )----------------------------------*/
+		
+		/**
+		 * @see https://github.com/onehealth/grunt-preprocess
+		 */
+		
+		preprocess : {
+			
+			dev : {
+				
+				src     : './src/tmpl/index.html',
+				dest    : './src/index.html',
+				options : {
+					
+					//context : { customOption : 'foo' }
+					
+				}
+				
+			},
+			
+			prod : {
+				
+				src  : './src/tmpl/index.html',
+				dest : '../<%= pkg.version %>/<%= now %>/<%= num %>/index.html'
 				
 			}
 			
@@ -216,29 +258,25 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
-	// module.exports = function(grunt) {
-		
-	// 	/**
-	// 	 * usemin and usemin:* are used to replace the blocks in HTML
-	// 	 *
-	// 	 * @see https://gist.github.com/necolas/3024891
-	// 	 */
-		
-	// 	grunt.registerHelper('usemin', function(type, content, block, dest) {
-	// 		var indent = (block.split(grunt.utils.linefeed)[0].match(/^\s*/) || [])[0];
-	// 		if (type === 'css') {
-	// 			return content.replace(block, indent + '<link rel="stylesheet" href="' + dest + '">');
-	// 		}
-	// 		if (type === 'js') {
-	// 			return content.replace(block, indent + '<script src="' + dest + '"></script>');
-	// 		}
-	// 		return false;
-	// 	});
-		
-	// };
+	grunt.loadNpmTasks('grunt-preprocess');
+	
+	grunt.loadNpmTasks('grunt-env');
 	
 	//----------------------------------
 	
-	grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'cssmin', 'copy']);
+	/**
+	 * @see https://github.com/onehealth/grunt-preprocess/issues/7
+	 * @see https://github.com/onehealth/grunt-env/issues/4
+	 */
+	
+	grunt.registerTask('printenv', function () { console.log(process.env); });
+	
+	//grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'cssmin', 'copy']);
+	
+	grunt.registerTask('default', ['jshint']);
+	
+	grunt.registerTask('dev', ['env:dev', 'clean:dev', 'jshint', 'preprocess:dev']);
+	
+	grunt.registerTask('prod', ['env:prod', 'clean', 'jshint', 'uglify', 'cssmin', 'copy', 'preprocess']);
 	
 };

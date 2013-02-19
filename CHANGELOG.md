@@ -1,6 +1,11 @@
 # Changelog
 
 ## v1.0.0
+#### February 19, 2013
+
+* Updated `Gruntfile.js`.
+* Other ...
+
 #### February 18, 2013
 
 * Removed test build.
