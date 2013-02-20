@@ -129,7 +129,16 @@ module.exports = function(grunt) {
 				
 				files : {
 					
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
+						'./src/js/preflight.js'
+					],
+					
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv-printshiv.min.js' : [
+						'./src/js/html5shiv-printshiv.js'
+					],
+					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
+						'./src/js/matchMedia.js',
 						'./src/js/jquery.cookie.js',
 						'./src/js/jquery.ba-dotimeout.js',
 						'./src/js/jquery.megawhale.js',
@@ -145,9 +154,11 @@ module.exports = function(grunt) {
 						'./src/js/woof.kerplop.js',
 						'./src/js/woof.init.js'
 					],
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/headutils.min.js' : ['./src/js/headutils.js'],
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : ['./src/js/respond.src.js'],
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv.min.js' : ['./src/js/html5shiv.js']
+					
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : [
+						'./src/js/respond.src.js',
+						'./src/js/respond.proxy.js'
+					]
 					
 				}
 				
@@ -214,7 +225,10 @@ module.exports = function(grunt) {
 						
 						expand : true,
 						cwd : './src/',
-						src : ['img/**'],
+						src : [
+							'img/**',
+							'util/**'
+						],
 						dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}//,
@@ -262,10 +276,7 @@ module.exports = function(grunt) {
 				options : {
 					
 					context : {
-						name : '<%= pkg.name %>',
-						version : '<%= pkg.version %>',
-						now : '<%= now %>',
-						ver : '<%= ver %>'
+						path : '/<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= ver %>'
 					}
 					
 				}

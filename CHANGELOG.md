@@ -1,6 +1,24 @@
 # Changelog
 
 ## v1.0.0
+#### February 20, 2013
+
+* `Gruntfile.js`:
+	1. Updated "uglify" scripts.
+	1. Added [respond.js](https://github.com/scottjehl/Respond) scripts to the mix.
+	1. Added `util` folder to the `copy` task.
+	1. Passing just the path via the context option of preprocess.
+	1. Added `matchMedia.js` to JS.
+	1. Changed `html5shiv.js` to `html5shiv-printshiv.js` (the latter aids IE printing and includes everything in the former).
+* Added respond.js files (cross domain setup included).
+	* Updated template to account for these new files.
+	* Markup for this only shows on production template/view.
+* Ad code now shows on dev template/view.
+* Re-named `headutils.js` to `preflight.js`.
+* Re-arranged markup a bit.
+* Added `matchMedia.js` to the JS.
+* Replaced preprocess multiple vars for one `path` var.
+
 #### February 19, 2013
 
 * Updated this file.

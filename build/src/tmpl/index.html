@@ -10,21 +10,9 @@
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	
-	<title>Bulldog: <!-- @echo NODE_ENV --></title>
+	<title><!-- @echo NODE_ENV --></title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-		
-		<script src="../src/js/headutils.js"></script>
-		
-	<!-- @endif -->
-	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-		
-		<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/headutils.min.js"></script>
-		
-	<!-- @endif -->
 	
 	<meta name="verify-v1" content="FPxMUeDPHJaIRBh+RAEc0QZisGX9WHLZuqlbleiLe3c=">
 	<meta name="google-site-verification" content="-b9kSGtOMT3DZyn5y1faDWWBN74GtyBDZlCDJuf39Yc">
@@ -33,10 +21,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	
-	<!-- [END] ad_manager -->
-	<link rel="stylesheet" href="http://advertising.registerguard.com/static/ad_manager/1.0/css/onmediaquery.css">
-	<link rel="stylesheet" href="http://advertising.registerguard.com/static/ad_manager/1.0/css/ad_manager.css">
-	<!-- [END] ad_manager -->
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+		
+		<script src="../src/js/preflight.js"></script>
+		
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+		
+		<script src="http://static.registerguard.com/v5<!-- @echo path -->/js/preflight.min.js"></script>
+		
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+		
+		<!--[if (lt IE 9) & (!IEMobile 7)]>
+			<script src="http://static.registerguard.com/v5<!-- @echo path -->/js/html5shiv-printshiv.min.js"></script>
+			<link href="http://static.registerguard.com/v5<!-- @echo path -->/util/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
+			<link href="http://WWW.ORIGIN.TLD/PATH/TO/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+		<![endif]-->
+		
+	<!-- @endif -->
 	
 	<link rel="stylesheet" href="http://fonts.registerguard.com/type.css">
 	
@@ -44,29 +49,18 @@
 		
 		<link rel="stylesheet" href="../src/css/bulldog.css">
 		
-		<!--[if (lt IE 9) & (!IEMobile)]>
-			<script src="../src/js/respond.js"></script>
-		<![endif]-->
-		
-		<!--[if lt IE 9]>
-			<script src="../src/js/html5shiv.js"></script>
-		<![endif]-->
-		
 	<!-- @endif -->
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 		
-		<link rel="stylesheet" href="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
-		
-		<!--[if (lt IE 9) & (!IEMobile)]>
-			<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/respond.min.js"></script>
-		<![endif]-->
-		
-		<!--[if lt IE 9]>
-			<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/html5shiv.min.js"></script>
-		<![endif]-->
+		<link rel="stylesheet" href="http://static.registerguard.com/v5<!-- @echo path -->/css/bulldog.min.css">
 		
 	<!-- @endif -->
+	
+	<!-- [END] ad_manager -->
+	<link rel="stylesheet" href="http://advertising.registerguard.com/static/ad_manager/1.0/css/onmediaquery.css">
+	<link rel="stylesheet" href="http://advertising.registerguard.com/static/ad_manager/1.0/css/ad_manager.css">
+	<!-- [END] ad_manager -->
 	
 </head>
 <body>
@@ -850,6 +844,14 @@
 				
 				<div class="w_col w_B300 Blb Clb Dlb">
 					
+					<!-- //////////////////// MEDIUM RECTANGLE 1 \\\\\\\\\\\\\\\\\\\\ -->
+					
+					<div class="medium_rectangle advert Aon Bon"><div id="medium_rectangle_1-mobile"></div></div>
+					
+					<div class="medium_rectangle advert Con Don"><div id="medium_rectangle_1-desktop"></div></div>
+					
+					<!-- \\\\\\\\\\\\\\\\\\\\ MEDIUM RECTANGLE 1 //////////////////// -->
+					
 					<p>Content here...</p>
 					
 				</div> <!-- /.w_col -->
@@ -967,7 +969,7 @@
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-		<script src="../src/js/onmediaquery.js"></script>
+		<script src="../src/js/matchMedia.js"></script>
 		<script src="../src/js/jquery.cookie.js"></script>
 		<script src="../src/js/jquery.ba-dotimeout.js"></script>
 		<script src="../src/js/jquery.megawhale.js"></script>
@@ -988,18 +990,25 @@
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		
-		<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/<!-- @echo name -->.min.js"></script>
+		<script src="http://static.registerguard.com/v5<!-- @echo path -->/js/bulldog.min.js"></script>
 		
 	<!-- @endif -->
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 		
-		<!-- [BEGIN] ad_manager -->
-		<script src="http://advertising.registerguard.com/static/ad_manager/1.0/js/onmediaquery.js"></script>
-		<script src="http://advertising.registerguard.com/static/ad_manager/1.0/js/ad_manager.js"></script>
-		<script>$(document).ready(function(){$.ad_manager({parent:'news',section:'homepage',page:'section'});});</script>
-		<!-- [END] ad_manager -->
+		<!--[if (lt IE 9) & (!IEMobile 7)]>
+			<script src="http://static.registerguard.com/v5<!-- @echo path -->/js/respond.min.js"></script>
+		<![endif]-->
+		
+	<!-- @endif -->
+	
+	<!-- [BEGIN] ad_manager -->
+	<script src="http://advertising.registerguard.com/static/ad_manager/1.0/js/onmediaquery.js"></script>
+	<script src="http://advertising.registerguard.com/static/ad_manager/1.0/js/ad_manager.js"></script>
+	<script>$(document).ready(function(){$.ad_manager({parent:'news',section:'homepage',page:'section'});});</script>
+	<!-- [END] ad_manager -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
 		
 		<!-- [BEGIN] comScore -->
 		<script>var _comscore=_comscore||[];_comscore.push({c1:'2',c2:'14055685'});(function(){var s=document.createElement('script'),el=document.getElementsByTagName('script')[0];s.async=true;s.src=(document.location.protocol=='https:'?'https://sb':'http://b')+'.scorecardresearch.com/beacon.js';el.parentNode.insertBefore(s,el);})();</script>
