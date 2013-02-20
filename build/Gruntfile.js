@@ -8,14 +8,48 @@ module.exports = function(grunt) {
 		
 		pkg : grunt.file.readJSON('package.json'),
 		
-		// http://tanepiper.com/blog/2012/11/25/building-and-testing-javascript-with-gruntjs/
-		now : grunt.template.today('yyyymmdd'), // http://blog.stevenlevithan.com/archives/date-time-format (yyyymmddhhMMss)
+		/**
+		 * Build date and version.
+		 *
+		 * @see http://tanepiper.com/blog/2012/11/25/building-and-testing-javascript-with-gruntjs/
+		 * @see http://blog.stevenlevithan.com/archives/date-time-format
+		 */
 		
-		num : 1,
+		now : grunt.template.today('yyyymmdd'), // Alternative: yyyymmddhhMMss
 		
-		/*----------------------------------( ENV )----------------------------------*/
+		ver : 1,
+		
+		/*----------------------------------( PREFLIGHT )----------------------------------*/
 		
 		/**
+		 * Validate files with JSHint.
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-jshint
+		 * @see http://www.jshint.com/docs/
+		 */
+		
+		jshint : {
+			
+			options : {
+				
+				jshintrc : '.jshintrc'
+				
+			},
+			
+			init : [
+				
+				'./Gruntfile.js',
+				'./src/js/woof.*.js'
+				
+			]
+			
+		},
+		
+		/*----------------------------------( ENVIRONMENT )----------------------------------*/
+		
+		/**
+		 * Grunt task to automate environment configuration for future tasks.
+		 *
 		 * @see https://github.com/onehealth/grunt-env
 		 */
 		
@@ -44,6 +78,12 @@ module.exports = function(grunt) {
 		
 		/*----------------------------------( 01 )----------------------------------*/
 		
+		/**
+		 * Clean files and folders.
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-clean
+		 */
+		
 		clean : {
 			
 			options : {
@@ -56,7 +96,7 @@ module.exports = function(grunt) {
 				
 				src : [
 					
-					'./src/index.html' // Sketchy?
+					'./dev/**/*'
 					
 				]
 				
@@ -66,7 +106,7 @@ module.exports = function(grunt) {
 				
 				src : [
 					
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/**/*'
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/**/*'
 					
 				]
 				
@@ -74,44 +114,22 @@ module.exports = function(grunt) {
 			
 		},
 		
-		/*----------------------------------( 02 )----------------------------------*/
-		
-		/**
-		 * @see http://www.jshint.com/docs/
-		 * @see http://www.jshint.com/docs/
-		 * @see https://github.com/jshint/jshint/blob/r12/jshint.js#L256
-		 */
-		
-		jshint : {
-			
-			options : {
-				
-				jshintrc : '.jshintrc'
-				
-			},
-			
-			init : [
-				
-				'./Gruntfile.js',
-				'./src/js/woof.*.js'
-				
-			]
-			
-		},
-		
 		/*----------------------------------( 03 )----------------------------------*/
 		
 		/**
+		 * Minify files with UglifyJS.
+		 *
 		 * @see https://github.com/gruntjs/grunt-contrib-uglify
+		 * @see http://lisperator.net/uglifyjs/
 		 */
 		
 		uglify : {
 			
-			main : {
+			prod : {
 				
 				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/<%= pkg.name %>.min.js' : [
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
 						'./src/js/jquery.cookie.js',
 						'./src/js/jquery.ba-dotimeout.js',
 						'./src/js/jquery.megawhale.js',
@@ -126,19 +144,10 @@ module.exports = function(grunt) {
 						'./src/js/woof.harmonia.js',
 						'./src/js/woof.kerplop.js',
 						'./src/js/woof.init.js'
-					]
-					
-				}
-				
-			},
-			
-			other : {
-				
-				files : {
-					
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/headutils.min.js' : ['./src/js/headutils.js'],
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/respond.min.js' : ['./src/js/respond.src.js'],
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/js/html5shiv.min.js' : ['./src/js/html5shiv.js']
+					],
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/headutils.min.js' : ['./src/js/headutils.js'],
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : ['./src/js/respond.src.js'],
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv.min.js' : ['./src/js/html5shiv.js']
 					
 				}
 				
@@ -148,13 +157,20 @@ module.exports = function(grunt) {
 		
 		/*----------------------------------( 04 )----------------------------------*/
 		
+		/**
+		 * Compress CSS files.
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-cssmin
+		 * @see https://github.com/GoalSmashers/clean-css
+		 */
+		
 		cssmin : {
 			
-			compress : {
+			prod : {
 				
 				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= num %>/css/<%= pkg.name %>.min.css' : [
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : [
 						'./src/css/normalize.css',
 						'./src/css/wiffle.css',
 						'./src/css/onoff.css',
@@ -182,9 +198,15 @@ module.exports = function(grunt) {
 		
 		/*----------------------------------( 05 )----------------------------------*/
 		
+		/**
+		 * Copy files and folders.
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-copy
+		 */
+		
 		copy : {
 			
-			main : {
+			prod : {
 				
 				files : [
 					
@@ -193,7 +215,7 @@ module.exports = function(grunt) {
 						expand : true,
 						cwd : './src/',
 						src : ['img/**'],
-						dest : '../<%= pkg.version %>/<%= now %>/<%= num %>/'
+						dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}//,
 					
@@ -204,7 +226,7 @@ module.exports = function(grunt) {
 						expand : true,
 						cwd : './src/',
 						src : ['index.html'],
-						dest : '../<%= pkg.version %>/<%= now %>/<%= num %>/'
+						dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}
 					*/
@@ -218,27 +240,35 @@ module.exports = function(grunt) {
 		/*----------------------------------( 06 )----------------------------------*/
 		
 		/**
+		 * Grunt task around preprocess npm module.
+		 *
 		 * @see https://github.com/onehealth/grunt-preprocess
+		 * @see https://github.com/onehealth/preprocess
 		 */
 		
 		preprocess : {
 			
 			dev : {
 				
-				src     : './src/tmpl/index.html',
-				dest    : './src/index.html',
-				options : {
-					
-					//context : { customOption : 'foo' }
-					
-				}
+				src : './src/tmpl/index.html',
+				dest : './dev/index.html'
 				
 			},
 			
 			prod : {
 				
-				src  : './src/tmpl/index.html',
-				dest : '../<%= pkg.version %>/<%= now %>/<%= num %>/index.html'
+				src : './src/tmpl/index.html',
+				dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
+				options : {
+					
+					context : {
+						name : '<%= pkg.name %>',
+						version : '<%= pkg.version %>',
+						now : '<%= now %>',
+						ver : '<%= ver %>'
+					}
+					
+				}
 				
 			}
 			
@@ -275,8 +305,8 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('default', ['jshint']);
 	
-	grunt.registerTask('dev', ['env:dev', 'clean:dev', 'jshint', 'preprocess:dev']);
+	grunt.registerTask('dev', ['jshint', 'env:dev', 'clean:dev', 'preprocess:dev']);
 	
-	grunt.registerTask('prod', ['env:prod', 'clean', 'jshint', 'uglify', 'cssmin', 'copy', 'preprocess']);
+	grunt.registerTask('prod', ['jshint', 'env:prod', 'clean:prod', 'uglify:prod', 'cssmin:prod', 'copy:prod', 'preprocess:prod']);
 	
 };

@@ -14,15 +14,15 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 		
-		<script src="./js/headutils.min.js"></script>
+		<script src="../src/js/headutils.js"></script>
 		
 	<!-- @endif -->
 	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
 		
-		<script src="./js/headutils.js"></script>
+		<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/headutils.min.js"></script>
 		
 	<!-- @endif -->
 	
@@ -40,30 +40,30 @@
 	
 	<link rel="stylesheet" href="http://fonts.registerguard.com/type.css">
 	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 		
-		<link rel="stylesheet" href="./css/bulldog.min.css">
+		<link rel="stylesheet" href="../src/css/bulldog.css">
 		
 		<!--[if (lt IE 9) & (!IEMobile)]>
-			<script src="./js/respond.min.js"></script>
+			<script src="../src/js/respond.js"></script>
 		<![endif]-->
 		
 		<!--[if lt IE 9]>
-			<script src="./js/html5shiv.min.js"></script>
+			<script src="../src/js/html5shiv.js"></script>
 		<![endif]-->
 		
 	<!-- @endif -->
 	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
 		
-		<link rel="stylesheet" href="./css/bulldog.css">
+		<link rel="stylesheet" href="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
 		
 		<!--[if (lt IE 9) & (!IEMobile)]>
-			<script src="./js/respond.js"></script>
+			<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/respond.min.js"></script>
 		<![endif]-->
 		
 		<!--[if lt IE 9]>
-			<script src="./js/html5shiv.js"></script>
+			<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/html5shiv.min.js"></script>
 		<![endif]-->
 		
 	<!-- @endif -->
@@ -964,31 +964,32 @@
 		
 	</div> <!-- /.wiffle -->
 	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="./js/bulldog.min.js"></script>
-		
-	<!-- @endif -->
-	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-		<script src="./js/onmediaquery.js"></script>
-		<script src="./js/jquery.cookie.js"></script>
-		<script src="./js/jquery.ba-dotimeout.js"></script>
-		<script src="./js/jquery.megawhale.js"></script>
-		<script src="./js/jquery.megakrill.js"></script>
-		<script src="./js/jquery.harmonia.js"></script>
-		<script src="./js/jquery.jsonp.js"></script>
-		<script src="./js/jquery.kerplop.js"></script>
-		<script src="./js/woof.js"></script>
-		<script src="./js/woof.forecast.js"></script>
-		<script src="./js/woof.megas.js"></script>
-		<script src="./js/woof.finder.js"></script>
-		<script src="./js/woof.harmonia.js"></script>
-		<script src="./js/woof.kerplop.js"></script>
-		<script src="./js/woof.init.js"></script>
+		<script src="../src/js/onmediaquery.js"></script>
+		<script src="../src/js/jquery.cookie.js"></script>
+		<script src="../src/js/jquery.ba-dotimeout.js"></script>
+		<script src="../src/js/jquery.megawhale.js"></script>
+		<script src="../src/js/jquery.megakrill.js"></script>
+		<script src="../src/js/jquery.harmonia.js"></script>
+		<script src="../src/js/jquery.jsonp.js"></script>
+		<script src="../src/js/jquery.kerplop.js"></script>
+		<script src="../src/js/woof.js"></script>
+		<script src="../src/js/woof.forecast.js"></script>
+		<script src="../src/js/woof.megas.js"></script>
+		<script src="../src/js/woof.finder.js"></script>
+		<script src="../src/js/woof.harmonia.js"></script>
+		<script src="../src/js/woof.kerplop.js"></script>
+		<script src="../src/js/woof.init.js"></script>
+		
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		
+		<script src="http://static.registerguard.com/v5/<!-- @echo name -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/js/<!-- @echo name -->.min.js"></script>
 		
 	<!-- @endif -->
 	
