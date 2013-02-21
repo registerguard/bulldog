@@ -1,26 +1,61 @@
+
+
 /**
- * Some default styles for headings.
- * Note: The `.h1`-`.h6` classes should be used to maintain the semantically appropriate heading levels.
- * Attention: NOT for use on non-headings.
+ * Represent headings and subheadings. These elements rank in importance
+ * according to the number in their name. The `<h1>` element is said to
+ * have the highest rank, the `<h6>` element has the lowest rank, and two
+ * elements with the same name have equal rank.
  *
- * @see rgne.ws/PkojDe
- * @see rgne.ws/RmSawq
- * @see rgne.ws/NFvWAg
+ * Note: The `.h1`-`.h6` classes should be used to maintain the
+ * semantically appropriate heading levels.
+ *
+ * Attention: Classes NOT for use on non-headings.
+ *
+ * @see https://groups.google.com/d/topic/object-oriented-css/GE1uzU2Bu48/discussion
+ * @see http://www.stubbornella.org/content/2011/09/06/style-headings-using-html5-sections/
+ * @see https://github.com/stubbornella/oocss/blob/master/core/heading/heading.css
+ * @see http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+ * @see http://dev.w3.org/html5/spec/Overview.html#the-h1-h2-h3-h4-h5-and-h6-elements
  */
 
-/* Head, Headline: */
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	font: bold 100%/1.2 "MillerHeadline Bold", Cambria, Georgia, serif;
-	color: #000;
-	margin: 0 0 5px;
+	font-family: "MillerHeadline Bold", Cambria, Georgia, serif;
+	margin: 0;
 }
-h1, .h1 { font-size: 287.5%; } /* 46px */
-h2, .h2 { font-size: 250%; }   /* 40px */
-h3, .h3 { font-size: 212.5%; } /* 34px */
-h4, .h4 { font-size: 175%; }   /* 28px */
-h5, .h5 { font-size: 137.5%; } /* 22px */
-h6, .h6 { font-size: 100%; }   /* 16px */
+
+/**
+ * (16px = base font size) * (6 heading levels) = (96px = "important number")
+ * Scale: 1:2 octave.
+ *
+ * @see http://modularscale.com/scale/?px1=16&px2=96&ra1=2&ra2=0
+ */
+
+h1, .h1 {
+	font-size: 6em; /* 96px */
+	line-height: 1.2; /* 7.2 / 6 */
+}
+h2, .h2 {
+	font-size: 4em; /* 64px */
+	line-height: 1.35; /* 5.4 / 4 */
+}
+h3, .h3 {
+	font-size: 3em; /* 48px */
+	line-height: 1.2; /* 3.6 / 3 */
+}
+h4, .h4 {
+	font-size: 2em; /* 32px */
+	line-height: 1.8; /* 3.6 / 2 */
+}
+h5, .h5 {
+	font-size: 1.5em; /* 24px */
+	line-height: 1.2; /* 1.8 / 1.5 */
+	padding: .6em 0; /* 1.2 / 2 */
+}
+h6, .h6 {
+	font-size: 1em; /* 16px */
+	line-height: 1.8; /* 1.8 / 1 */
+	padding: .9em 0; /* 1.8 / 2 */
+}
 
 /*----------------------------------*/
 
@@ -123,7 +158,7 @@ h6, .h6 { font-size: 100%; }   /* 16px */
 
 .zone:before, .zone:after { content: ""; display: table; } .zone:after { clear: both; } .zone { *zoom: 1; }
 .zone {
-	margin: 10px 0;
+	margin: .9em 0;
 }
 	.zone h1,
 	.zone h2 {
@@ -133,7 +168,7 @@ h6, .h6 { font-size: 100%; }   /* 16px */
 		padding: 0;
 	}
 	.zone a,
-	.zone span { padding: 5px 10px; }
+	.zone span { padding: 0 .9em; }
 	.zone h1 {
 		margin-right: 5px;
 		float: left;
@@ -141,7 +176,10 @@ h6, .h6 { font-size: 100%; }   /* 16px */
 	}
 		.zone h1 a,
 		.zone h1 span { display: block; }
-	.zone h2 { overflow: hidden; }
+	.zone h2 {
+		overflow: hidden;
+		_height: 1%; /* rgne.ws/12PCNDO */
+	}
 		.zone h2 a,
 		.zone h2 span {
 			float: left;
@@ -149,9 +187,9 @@ h6, .h6 { font-size: 100%; }   /* 16px */
 		}
 @media only screen and (min-width: 665px) {
 	.zone {}
-		.zone h1 { margin-right: 10px; }
+		.zone h1 { margin-right: .9em; }
 			.zone a,
-			.zone span { padding: 10px 20px; }
+			.zone span { padding: 0 .9em; }
 }
 
 /**
@@ -180,7 +218,7 @@ h6, .h6 { font-size: 100%; }   /* 16px */
 .zone {}
 	.zone h1,
 	.zone h2 {
-		font: bold 93.8%/1 "BentonSansCond Regular", Arial, Helvetica, sans-serif;
+		font: bold .938em/1.91897654584222 "BentonSansCond Regular", Arial, Helvetica, sans-serif; /* 15px */
 		text-transform: uppercase;
 		letter-spacing: normal;
 	}
@@ -213,8 +251,13 @@ h6, .h6 { font-size: 100%; }   /* 16px */
  */
 
 .zone.alt01 h2 { background-color: #000; }
-	.zone.alt01 span,
-	.zone.alt01 a:link,
-	.zone.alt01 a:visited { color: #fff; }
+	.zone.alt01 h2 span,
+	.zone.alt01 h2 a:link,
+	.zone.alt01 h2 a:visited,
+	.zone.alt01 h2 a:visited:hover,
+	.zone.alt01 h2 a:focus,
+	.zone.alt01 h2 a:focus:hover,
+	.zone.alt01 h2 a:hover,
+	.zone.alt01 h2 a:active { color: #fff; }
 
 /*--------------------------------------------------------------------*/

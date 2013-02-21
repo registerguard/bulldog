@@ -182,6 +182,7 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : [
+						'./src/css/bassline.css',
 						'./src/css/normalize.css',
 						'./src/css/wiffle.css',
 						'./src/css/onoff.css',
