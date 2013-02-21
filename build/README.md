@@ -1,1 +1,1 @@
-See [Grunt `0.4.0rc7`](https://github.com/gruntjs/grunt).
+See [Grunt](http://gruntjs.com/).
