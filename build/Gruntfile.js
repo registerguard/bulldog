@@ -19,6 +19,34 @@ module.exports = function(grunt) {
 		
 		ver : 1,
 		
+		/*----------------------------------( WATCH )----------------------------------*/
+		
+		/**
+		 * Run predefined tasks whenever watched file patterns are added, changed
+		 * or deleted.
+		 *
+		 * $ grunt watch
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-watch
+		 */
+		
+		watch: {
+			
+			tmpl : {
+				
+				files: [
+					
+					'./dev/tmpl/*.html',
+					'./dev/css/less/*.less'
+					
+				],
+				
+				tasks: ['dev']
+				
+			}
+			
+		},
+		
 		/*----------------------------------( PREFLIGHT )----------------------------------*/
 		
 		/**
@@ -39,7 +67,7 @@ module.exports = function(grunt) {
 			init : [
 				
 				'./Gruntfile.js',
-				'./src/js/woof.*.js'
+				'./dev/js/woof.*.js'
 				
 			]
 			
@@ -96,7 +124,8 @@ module.exports = function(grunt) {
 				
 				src : [
 					
-					'./dev/**/*'
+					'./dev/index.html',
+					'./dev/css/<%= pkg.name %>.css'
 					
 				]
 				
@@ -130,34 +159,24 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
-						'./src/js/preflight.js'
+						'./dev/js/preflight.js'
 					],
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv-printshiv.min.js' : [
-						'./src/js/html5shiv-printshiv.js'
+						'./dev/js/html5shiv-printshiv.js'
 					],
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
-						'./src/js/matchMedia.js',
-						'./src/js/jquery.cookie.js',
-						'./src/js/jquery.ba-dotimeout.js',
-						'./src/js/jquery.megawhale.js',
-						'./src/js/jquery.megakrill.js',
-						'./src/js/jquery.harmonia.js',
-						'./src/js/jquery.jsonp.js',
-						'./src/js/jquery.kerplop.js',
-						'./src/js/woof.js',
-						'./src/js/woof.forecast.js',
-						'./src/js/woof.megas.js',
-						'./src/js/woof.finder.js',
-						'./src/js/woof.harmonia.js',
-						'./src/js/woof.kerplop.js',
-						'./src/js/woof.init.js'
+						'./dev/js/matchMedia.js',
+						'./dev/js/jquery.*.js',
+						'./dev/js/woof.js',
+						'./dev/js/woof.*.js',
+						'./dev/js/woof.init.js'
 					],
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : [
-						'./src/js/respond.src.js',
-						'./src/js/respond.proxy.js'
+						'./dev/js/respond.src.js',
+						'./dev/js/respond.proxy.js'
 					]
 					
 				}
@@ -175,6 +194,7 @@ module.exports = function(grunt) {
 		 * @see https://github.com/GoalSmashers/clean-css
 		 */
 		
+		/*
 		cssmin : {
 			
 			prod : {
@@ -182,25 +202,69 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : [
-						'./src/css/bassline.css',
-						'./src/css/normalize.css',
-						'./src/css/wiffle.css',
-						'./src/css/onoff.css',
-						'./src/css/lines.css',
-						'./src/css/global.css',
-						'./src/css/navigation.css',
-						'./src/css/base.css',
-						'./src/css/utils.css',
-						'./src/css/headings.css',
-						'./src/css/rgpdf.css',
-						'./src/css/images.css',
-						'./src/css/lists.css',
-						'./src/css/tables.css',
-						'./src/css/copy.css',
-						'./src/css/media.css',
-						'./src/css/finder.css',
-						'./src/css/pending.css'
+						'./dev/css/bassline.css',
+						'./dev/css/normalize.css',
+						'./dev/css/wiffle.css',
+						'./dev/css/onoff.css',
+						'./dev/css/lines.css',
+						'./dev/css/global.css',
+						'./dev/css/navigation.css',
+						'./dev/css/base.css',
+						'./dev/css/utils.css',
+						'./dev/css/headings.css',
+						'./dev/css/rgpdf.css',
+						'./dev/css/images.css',
+						'./dev/css/lists.css',
+						'./dev/css/tables.css',
+						'./dev/css/copy.css',
+						'./dev/css/media.css',
+						'./dev/css/pending.css'
 					]
+					
+				}
+				
+			}
+			
+		},
+		*/
+		
+		//----------------------------------
+		
+		/**
+		 * Compile LESS files to CSS.
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-less
+		 */
+		
+		less: {
+			
+			options : {
+				
+				compress : true
+				
+			},
+			
+			dev: {
+				
+				files : {
+					
+					'./dev/css/<%= pkg.name %>.css' : './dev/css/less/<%= pkg.name %>.less'
+					
+				}
+				
+			},
+			
+			prod : {
+				
+				options : {
+					
+					yuicompress : true
+					
+				},
+				
+				files : {
+					
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './dev/css/less/<%= pkg.name %>.less'
 					
 				}
 				
@@ -225,7 +289,7 @@ module.exports = function(grunt) {
 					{
 						
 						expand : true,
-						cwd : './src/',
+						cwd : './dev/',
 						src : [
 							'img/**',
 							'util/**'
@@ -239,7 +303,7 @@ module.exports = function(grunt) {
 						
 						filter : 'isFile',
 						expand : true,
-						cwd : './src/',
+						cwd : './dev/',
 						src : ['index.html'],
 						dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
@@ -265,14 +329,14 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				src : './src/tmpl/index.html',
+				src : './dev/tmpl/index.html',
 				dest : './dev/index.html'
 				
 			},
 			
 			prod : {
 				
-				src : './src/tmpl/index.html',
+				src : './dev/tmpl/index.html',
 				dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
 				options : {
 					
@@ -300,6 +364,10 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
+	grunt.loadNpmTasks('grunt-contrib-less');
+	
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	
 	grunt.loadNpmTasks('grunt-preprocess');
 	
 	grunt.loadNpmTasks('grunt-env');
@@ -317,8 +385,8 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('default', ['jshint']);
 	
-	grunt.registerTask('dev', ['jshint', 'env:dev', 'clean:dev', 'preprocess:dev']);
+	grunt.registerTask('dev', ['jshint', 'env:dev', 'clean:dev', 'less:dev', 'preprocess:dev']);
 	
-	grunt.registerTask('prod', ['jshint', 'env:prod', 'clean:prod', 'uglify:prod', 'cssmin:prod', 'copy:prod', 'preprocess:prod']);
+	grunt.registerTask('prod', ['jshint', 'env:prod', 'clean:prod', 'uglify:prod', 'less:prod', 'copy:prod', 'preprocess:prod']);
 	
 };

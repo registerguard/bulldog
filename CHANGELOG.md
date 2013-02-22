@@ -1,6 +1,16 @@
 # Changelog
 
 ## v1.0.0
+
+#### February 21, 2013
+
+* Ditched `dev` folder.
+* Changed `src` to `dev`.
+* Converted CSS to LESS.
+* Added `watch` task.
+* Added `LESS` task.
+* Updated HTML to reflect above changes.
+
 #### February 20, 2013
 
 * `Gruntfile.js`:
@@ -44,6 +54,7 @@
 ---
 
 ## vX.X.X
+
 #### Mmmmm [D]D, YYYY
 
 * ...
