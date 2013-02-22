@@ -2,6 +2,12 @@
 
 ## v1.0.0
 
+#### February 22, 2013
+
+* Changed name of `build/dev/` to `build/files/`.
+* Added icons to `build/files/icon/`.
+* Moved respond.js files into `build/files/util/respond/`.
+
 #### February 21, 2013
 
 * Ditched `dev` folder.

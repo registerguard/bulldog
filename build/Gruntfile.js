@@ -30,18 +30,18 @@ module.exports = function(grunt) {
 		 * @see https://github.com/gruntjs/grunt-contrib-watch
 		 */
 		
-		watch: {
+		watch : {
 			
 			tmpl : {
 				
-				files: [
+				files : [
 					
-					'./dev/tmpl/*.html',
-					'./dev/css/less/*.less'
+					'./files/tmpl/*.html',
+					'./files/css/less/*.less'
 					
 				],
 				
-				tasks: ['dev']
+				tasks : ['dev']
 				
 			}
 			
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 			init : [
 				
 				'./Gruntfile.js',
-				'./dev/js/woof.*.js'
+				'./files/js/woof.*.js'
 				
 			]
 			
@@ -90,7 +90,7 @@ module.exports = function(grunt) {
 				
 			},
 			
-			dev: {
+			dev : {
 				
 				NODE_ENV : 'DEVELOPMENT'
 				
@@ -124,8 +124,8 @@ module.exports = function(grunt) {
 				
 				src : [
 					
-					'./dev/index.html',
-					'./dev/css/<%= pkg.name %>.css'
+					'./files/index.html',
+					'./files/css/<%= pkg.name %>.css'
 					
 				]
 				
@@ -159,24 +159,24 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
-						'./dev/js/preflight.js'
+						'./files/js/preflight.js'
 					],
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv-printshiv.min.js' : [
-						'./dev/js/html5shiv-printshiv.js'
+						'./files/js/html5shiv-printshiv.js'
 					],
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
-						'./dev/js/matchMedia.js',
-						'./dev/js/jquery.*.js',
-						'./dev/js/woof.js',
-						'./dev/js/woof.*.js',
-						'./dev/js/woof.init.js'
+						'./files/js/matchMedia.js',
+						'./files/js/jquery.*.js',
+						'./files/js/woof.js',
+						'./files/js/woof.*.js',
+						'./files/js/woof.init.js'
 					],
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : [
-						'./dev/js/respond.src.js',
-						'./dev/js/respond.proxy.js'
+						'./files/js/respond.src.js',
+						'./files/js/respond.proxy.js'
 					]
 					
 				}
@@ -202,23 +202,23 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : [
-						'./dev/css/bassline.css',
-						'./dev/css/normalize.css',
-						'./dev/css/wiffle.css',
-						'./dev/css/onoff.css',
-						'./dev/css/lines.css',
-						'./dev/css/global.css',
-						'./dev/css/navigation.css',
-						'./dev/css/base.css',
-						'./dev/css/utils.css',
-						'./dev/css/headings.css',
-						'./dev/css/rgpdf.css',
-						'./dev/css/images.css',
-						'./dev/css/lists.css',
-						'./dev/css/tables.css',
-						'./dev/css/copy.css',
-						'./dev/css/media.css',
-						'./dev/css/pending.css'
+						'./files/css/bassline.css',
+						'./files/css/normalize.css',
+						'./files/css/wiffle.css',
+						'./files/css/onoff.css',
+						'./files/css/lines.css',
+						'./files/css/global.css',
+						'./files/css/navigation.css',
+						'./files/css/base.css',
+						'./files/css/utils.css',
+						'./files/css/headings.css',
+						'./files/css/rgpdf.css',
+						'./files/css/images.css',
+						'./files/css/lists.css',
+						'./files/css/tables.css',
+						'./files/css/copy.css',
+						'./files/css/media.css',
+						'./files/css/pending.css'
 					]
 					
 				}
@@ -236,7 +236,7 @@ module.exports = function(grunt) {
 		 * @see https://github.com/gruntjs/grunt-contrib-less
 		 */
 		
-		less: {
+		less : {
 			
 			options : {
 				
@@ -244,11 +244,11 @@ module.exports = function(grunt) {
 				
 			},
 			
-			dev: {
+			dev : {
 				
 				files : {
 					
-					'./dev/css/<%= pkg.name %>.css' : './dev/css/less/<%= pkg.name %>.less'
+					'./files/css/<%= pkg.name %>.css' : './files/css/less/<%= pkg.name %>.less'
 					
 				}
 				
@@ -264,7 +264,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './dev/css/less/<%= pkg.name %>.less'
+					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less'
 					
 				}
 				
@@ -289,7 +289,7 @@ module.exports = function(grunt) {
 					{
 						
 						expand : true,
-						cwd : './dev/',
+						cwd : './files/',
 						src : [
 							'img/**',
 							'util/**'
@@ -303,7 +303,7 @@ module.exports = function(grunt) {
 						
 						filter : 'isFile',
 						expand : true,
-						cwd : './dev/',
+						cwd : './files/',
 						src : ['index.html'],
 						dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
@@ -329,14 +329,14 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				src : './dev/tmpl/index.html',
-				dest : './dev/index.html'
+				src : './files/tmpl/index.html',
+				dest : './files/index.html'
 				
 			},
 			
 			prod : {
 				
-				src : './dev/tmpl/index.html',
+				src : './files/tmpl/index.html',
 				dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
 				options : {
 					

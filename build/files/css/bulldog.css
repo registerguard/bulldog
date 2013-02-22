@@ -141,11 +141,11 @@ hr,.hr1,.hr2,.hr3,.hr4{border:0;border-top:.063em solid #ccc;height:.063em;margi
 #bd_proof ul ul,#bd_proof ul h2{margin:10px 0 10px 10px;}
 #bd_morgue{border-top:1px solid #ccc;padding-top:20px;}
 #bd_morgue p{color:#333;font-size:81.3%;line-height:1.6;margin-top:0;}
-#bd_morgue p strong{font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.05em;}
+#bd_morgue p strong{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;}
 .js #bd_morgue ul{display:none;visibility:hidden;}
 #bd_morgue .harmonia-select{width:100%;display:block;margin:10px 0;}
 @media only screen and (min-width:665px){.js #bd_morgue ul{display:block;visibility:visible;} #bd_morgue .harmonia-select{display:none;visibility:hidden;}}#bd_press{border-top:1px solid #ccc;margin-bottom:50px;padding:20px 0;position:relative;}
-#bd_press p{font-size:68.8%;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;letter-spacing:.05em;color:#999;margin:10px 0;padding:0;}
+#bd_press p{font-size:68.8%;text-transform:uppercase;font-family:Arial,sans-serif;letter-spacing:.05em;color:#999;margin:10px 0;padding:0;}
 #bd_press span{display:block;margin:10px 0;}
 #bd_press span span{display:none;}
 #bd_press a{color:#666;text-decoration:none;}
@@ -157,7 +157,7 @@ hr,.hr1,.hr2,.hr3,.hr4{border:0;border-top:.063em solid #ccc;height:.063em;margi
 .bd_scoop li a{color:#666;text-decoration:none;letter-spacing:.02em;word-spacing:.3em;}
 .bd_scoop li a:visited{color:#666;}
 .bd_scoop li a:visited:hover,.bd_scoop li a:focus,.bd_scoop li a:focus:hover,.bd_scoop li a:hover,.bd_scoop li a:active{color:#000;text-decoration:underline;}
-.bd_insert{font:bold 112.5%/1.2 "BentonSansCond Regular",Arial,Helvetica,sans-serif;letter-spacing:.02em;color:#333;margin:10px 0;}
+.bd_insert{font:bold 112.5%/1.2 "BentonSansCond Regular",Arial,sans-serif;letter-spacing:.02em;color:#333;margin:10px 0;}
 .bd_insert a:link,.bd_insert a:visited{color:#333;}
 .bd_cut{border:0;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;position:absolute;clip:rect(0 0 0 0);}
 .fix{*zoom:1;}
@@ -183,7 +183,7 @@ h6,.h6{font-size:100%;}
 .deck3{font-size:200%;}
 .reverse1{font:bold 100%/1.3 "BentonSansCond Regular",Arial,sans-serif;letter-spacing:.03em;text-shadow:0 1px 2px #4e5051;color:#fff;background:#9d9fa2;margin:10px 0;padding:3px 8px;}
 .label1{font:bold 81.3%/1 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#ae1b1f;margin:10px 0 5px;}
-.sig1{font:75%/1 Arial,Helvetica,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-shadow:0 1px 2px #5e0e11;color:#fff;border-width:2px 0;border-style:solid;border-color:#e82528;-webkit-border-radius:2px;border-radius:2px;background:#e82528;margin:0 5px;padding:0 5px;white-space:nowrap;}
+.sig1{font:75%/1 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-shadow:0 1px 2px #5e0e11;color:#fff;border-width:2px 0;border-style:solid;border-color:#e82528;-webkit-border-radius:2px;border-radius:2px;background:#e82528;margin:0 5px;padding:0 5px;white-space:nowrap;}
 .streamer:before,.streamer:after{content:"";display:table;}
 .streamer:after{clear:both;}
 .streamer{*zoom:1;}
@@ -197,7 +197,7 @@ h6,.h6{font-size:100%;}
 @media only screen and (min-width:665px){.streamer h1{margin-right:10px;} .streamer a,.streamer span{padding:10px 20px;}}.streamer.flip h1{float:right;margin-right:0;margin-left:5px;}
 .streamer.flip h2 a,.streamer.flip h2 span{float:right;}
 @media only screen and (min-width:665px){.streamer.flip h1{margin-right:0;margin-left:10px;}}
-.streamer h1,.streamer h2{font:bold 93.8%/1 "BentonSansCond Regular",Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:normal;}
+.streamer h1,.streamer h2{font:bold 93.8%/1 "BentonSansCond Regular",Arial,sans-serif;text-transform:uppercase;letter-spacing:normal;}
 .streamer a:link,.streamer a:visited{color:#fff;text-decoration:none;}
 .streamer h1{color:#fff;background-color:#ae1a1f;}
 .streamer h2{color:#4f5052;background-color:#e7e3dd;}
