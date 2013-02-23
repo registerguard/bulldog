@@ -61,9 +61,8 @@ body {
  */
 
 p {
-	font-size: 1.125em; /* 18px */
-	line-height: 1.33333333333333;
-	margin: 0 0 1.33333333333333em;
+	font: 1em/1.5 Cambria, Georgia, serif; /* 16px */
+	margin: 0 0 1.5em;
 	-webkit-hyphens: auto;
 	   -moz-hyphens: auto;
 	        hyphens: auto;
@@ -80,6 +79,7 @@ a {
 	a:hover,
 	a:active { color: #ae1b1f; }
 
+/* Move to another file? */
 p a {
 	color: #0083ca;
 	text-decoration: none;
@@ -94,13 +94,23 @@ p a {
 		text-decoration: underline;
 	}
 
+/**
+ * The `<hr>` element represents a paragraph-level thematic break. It
+ * separates different topics within a section of prose, or between scenes
+ * in a novel.
+ *
+ * @see https://gist.github.com/4277585
+ * @see https://github.com/h5bp/html5-boilerplate/blob/b378ce239dfb017e32fbeacc5ab0346258b089e2/css/main.css#L42-L53
+ * @see https://github.com/twitter/bootstrap/blob/070c125ceceb2a164773f51226950350445160ee/docs/assets/css/bootstrap.css#L876-L881
+ */
+
 /* @TODO: Use REM? */
 hr, .hr1, .hr2, .hr3, .hr4 {
-	/* `border` + `height` + `margin` = base line height (`1.8em` or `28px`). */
+	/* `border` + `height` + `margin` = base line height (`1.5em` or `24px`). */
 	border: 0;
 	border-top: .063em solid #ccc; /* 1px */
 	height: .063em; /* 1px */
-	margin: .8125em 0; /* 13px */
+	margin: .688em 0; /* 11px */
 	padding: 0;
 }
 	.hr2 { border-style: dotted; }
@@ -108,6 +118,22 @@ hr, .hr1, .hr2, .hr3, .hr4 {
 	.hr4 {
 		border-top-width: .125em; /* 2px */
 		border-color: #999;
-		margin: 1.5em 0 1.625em; /* (12px * 2 = 24px) 0 (13px * 2 = 26px) */
+		margin: 1.375em 0 1.438em; /* 10px 0 11px */
 	}
 	.hr4 { border-style: dotted; }
+
+/**
+ * The `<span>` element doesn't mean anything on its own, but can be
+ * useful when used together with the global attributes, e.g. `class`,
+ * `lang`, or `dir`. It represents its children.
+ *
+ * @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
+ * @see http://dev.w3.org/html5/spec/Overview.html#the-span-element
+ */
+
+span {}
+	/* The italic version of an ampersand is more decorative and interesting than its roman counterpart. */
+	span.amp1 {
+		font-family: Baskerville, Palatino, "Book Antiqua", serif;
+		font-style: italic;
+	}

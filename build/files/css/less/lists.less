@@ -1,19 +1,19 @@
 .li1,
+.li1 li,
 .li1 ul {
-	list-style: none;
-	margin: 0 0 20px;
+	margin: 0;
 	padding: 0;
 }
 	.li1 li {
-		font: bold 106.3%/1.3 "MillerHeadline Bold", Cambria, Georgia, serif;
-		letter-spacing: .02em;
-	}
-	.li1 li a {
+		list-style: none;
 		border-width: 1px 0;
 		border-style: solid;
 		border-color: #eee;
 		margin-bottom: -1px;
-		padding: 5px 0;
+	}
+	.li1 li a {
+		font: bold 1em/1.5 "MillerHeadline Bold", Cambria, Georgia, serif; /* 16px */
+		letter-spacing: .02em;
 		display: block;
 	}
 		.li1 ul li a {
@@ -21,14 +21,23 @@
 			padding-left: 1.5em;
 		}
 
-.li2 {
-	margin: 0 0 20px 1.5em;
+.li2,
+.li2 li,
+.li2 ul {
+	margin: 0;
 	padding: 0;
 }
 	.li2 li {
-		font: 87.5%/1.3 Arial, sans-serif;
-		letter-spacing: .02em;
+		font-size: 14px;
+		font: .875rem/1.71428571428571 Arial, sans-serif; /* 14px */
 		color: #666;
-		margin: 5px 0;
-		padding: 0;
+		margin-left: 1.25em;
 	}
+	.li2 ul { margin: .85714285714286em 0; }
+		.li2 li a,
+		.li2 li a:visited { color: #666; }
+		.li2 li a:visited:hover,
+		.li2 li a:focus,
+		.li2 li a:focus:hover,
+		.li2 li a:hover,
+		.li2 li a:active { color: #000; }

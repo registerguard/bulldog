@@ -24,21 +24,31 @@
 
 /*----------------------------------*/
 
-.byline1,
-.byline2 {
-	font: 112.5%/1.2 Cambria, Georgia, serif;
-}
-.byline1 {
-	font-weight: bold;
-	font-variant: small-caps;
-	margin-bottom: 0;
-}
-.byline2 {
-	font-style: italic;
-	margin-top: 0;
+.mugline {
+	font: bold 1em/1.5 Arial, sans-serif; /* 16px */
+	text-align: center;
 }
 
 /*----------------------------------*/
 
+.byline { font: 1.125em/1.33333333333333 Cambria, Georgia, serif; } /* 18px */
+	.byline.byline1 {
+		font-weight: bold;
+		font-variant: small-caps;
+		margin-bottom: 0;
+	}
+	.byline.byline2 {
+		font-style: italic;
+		margin-top: 0;
+	}
+
+/*----------------------------------*/
+
 #story { content: ""; display: table; } #story:after { clear: both; } #story { *zoom: 1; }
-	#story p { font-family: Cambria, Georgia, serif; }
+	#story p {
+		font: 1.125em/1.33333333333333 Cambria, Georgia, serif; /* 18px */
+		margin: 0 0 1.33333333333333em;
+		-webkit-hyphens: auto;
+		   -moz-hyphens: auto;
+		        hyphens: auto;
+	}
