@@ -1,32 +1,3 @@
-/**
- * The `<html>` element represents the root of an HTML document.
- *
- * Base `font-size` = `16px`.
- *
- * PX to EM:
- * Formula: size in pixels / parent size in pixels
- * Example: 12px / 16px = .75em
- *
- * PX to %:
- * Formula: size in pixels / parent size in pixels * 100
- * Example: 12px / 16px * 100 = 75%
- *
- * PX to PT:
- * Formula: size in pixels * (points per inch / pixels per inch)
- * Example: 16px * (72pt / 96px) = 12pt
- *
- * EM to PX:
- * Formula: size in EMs * parent size in pixels
- * Example: .75em * 16px = 12px
- *
- * EM to %:
- * Formula: size in EMs * 100
- * Example: .75em * 100 = 75%
- *
- * @see http://pxtoem.com/
- * @see http://dev.w3.org/html5/spec/Overview.html#the-html-element-0
- */
-
 html {
 	height: 100%; /* Expand to height of browser window. */
 	overflow-y: scroll; /* Force scrollbar in non-IE. */
@@ -35,27 +6,27 @@ html {
 
 /**
  * The `<body>` element represents the main content of the document.
- * 
+ *
  * Baseline grid:
  *
  * Base font size = 16px or 100% or 1em.
- * Base line height = 28px or 175% or 1.75em.
+ * Base line height = 24px or 150% or 1.5em.
  *
  * Rule: Make sure all elements take up a vertical height (including
- * margins) are multiples of our base line height.
+ * margins) are multiples of our base line height (24).
  * 
  * Calculate line height by dividing base line height by desired font size.
  *
- * If the font size greater than `28px`, then base your calculations on
- * the next full `line-height` value up: `1.75` * `2` = `3.5` (`56px`).
- * For example, if the desired font size is `2.875em` (`46px`), the math
- * would be: (`1.8` * `2`) / `2.875` = `1.25217391304348`.
+ * If the font size greater than `24px`, then base your calculations on
+ * the next full `line-height` value up: `1.5` * `2` = `3` (`48px`). For
+ * example, if the desired font size is `2.875em` (`46px`), the math would
+ * be: (`1.5` * `2`) / `2.875` = `1.04347826086957`.
  *
  * Line height chart:
- *                       |                  |                               |                               |                                |                              |
- * Target `line-height`: | x1 = (1.8em)     | x2 = (3.6em)                  | x3 = (5.4em)                  | x4 = (7.2em)                   | x5 = (9em)                   |
- *  Min/max `font-size`: | 0 - 28px (1.8em) | 29px (1.813em) - 57px (3.6em) | 58px (3.625em) - 86px (5.4em) | 87px (5.438em) - 115px (7.2em) | 116px (7.25em) - 144px (9em) |
- *                       |                  |                               |                               |                                |                              |
+ *
+ * | x1 = (1.5em)     | x2 = (3em)                   | x3 = (4.5em)                  | x4 = (6em)                  | x5 = (7.5em)                   |
+ * | 0 - 24px (1.5em) | 25px (1.563em) - 48px (3.em) | 49px (3.063em) - 72px (4.5em) | 73px (4.563em) - 96px (6em) | 97px (6.063em) - 120px (7.5em) |
+ * |                  |                              |                               |                             |                                |
  *
  * Important: WebKit needs at least ten-millionth decimal places; for
  * example: `line-height: 1.3333333;` (that's 7 decimal places).
@@ -67,12 +38,11 @@ html {
  * @see http://code.stephenmorley.org/html-and-css/the-myth-of-web-safe-fonts/
  * @see http://stackoverflow.com/questions/2703056/body-font-size-100-01-vs-body-font-size-100
  * @see http://www.sitepoint.com/typography-baseline-rhythm-deciphered/
- * @see http://modularscale.com/scale/?px1=16&px2=40&ra1=1.618&ra2=0
- * @see http://dev.w3.org/html5/spec/Overview.html#the-body-element-0
+ * @see http://modularscale.com/scale/?px1=16&px2=46&ra1=1.618&ra2=0
  */
 
 body {
-	font: 100.01%/1.8 Arial, sans-serif; /* Serif: Cambria, Georgia, serif; */
+	font: 100.01%/1.5 Cambria, Georgia, serif; /* Serif: Arial, sans-serif; */
 	color: #000;
 	/* Improve default text rendering, handling of kerning pairs and ligatures: */
 	-webkit-font-smoothing: antialiased;
@@ -86,22 +56,18 @@ body {
 /**
  * The `<p>` element represents a paragraph.
  *
- * @see http://dev.w3.org/html5/spec/Overview.html#the-p-element
+ * @see http://www.smashingmagazine.com/2012/04/03/drop-caps-historical-use-and-current-best-practices/
+ * @see http://css-tricks.com/snippets/css/drop-caps/
  */
 
 p {
 	font-size: 1.125em; /* 18px */
-	font-family: Cambria, Georgia, serif;
-	line-height: 1.6;
-	margin: 0 0 1.6em;
+	line-height: 1.33333333333333;
+	margin: 0 0 1.33333333333333em;
 	-webkit-hyphens: auto;
 	   -moz-hyphens: auto;
 	        hyphens: auto;
 }
-
-/**
- * `<a>`.
- */
 
 a {
 	color: #000;
@@ -113,10 +79,6 @@ a {
 	a:focus:hover,
 	a:hover,
 	a:active { color: #ae1b1f; }
-
-/**
- * `<p>` with `<a>` children.
- */
 
 p a {
 	color: #0083ca;
@@ -131,17 +93,6 @@ p a {
 		color: #0083ca;
 		text-decoration: underline;
 	}
-
-/**
- * The `<hr>` element represents a paragraph-level thematic break. It
- * separates different topics within a section of prose, or between scenes
- * in a novel.
- *
- * @see https://gist.github.com/4277585
- * @see https://github.com/h5bp/html5-boilerplate/blob/b378ce239dfb017e32fbeacc5ab0346258b089e2/css/main.css#L42-L53
- * @see https://github.com/twitter/bootstrap/blob/070c125ceceb2a164773f51226950350445160ee/docs/assets/css/bootstrap.css#L876-L881
- * @see http://dev.w3.org/html5/spec/Overview.html#the-hr-element-0
- */
 
 /* @TODO: Use REM? */
 hr, .hr1, .hr2, .hr3, .hr4 {
