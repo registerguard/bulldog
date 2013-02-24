@@ -102,7 +102,11 @@ table{border-collapse:collapse;border-spacing:0;}
 .Ala:after,.Bla:after,.Cla:after,.Dla:after{right:-20px;}
 @media only screen and (min-width:0) and (max-width:664px){:root *>.Alb:before,:root *>.Ala:after{display:block;}}@media only screen and (min-width:665px) and (max-width:1004px){:root *>.Blb:before,:root *>.Bla:after{display:block;}}@media only screen and (min-width:1005px) and (max-width:1344px){:root *>.Clb:before,:root *>.Cla:after{display:block;}}@media only screen and (min-width:1345px){:root *>.Dlb:before,:root *>.Dla:after{display:block;}}html{height:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;}
 body{font:100.01%/1.5 Cambria,Georgia,serif;color:#000;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility;min-height:100%;_height:100%;}
-p{font:1em/1.5 Cambria,Georgia,serif;margin:0 0 1.5em;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
+p{font-family:Cambria, Georgia, serif;font-size:1em;line-height:1.5;margin:0 0 1.5em;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
+p.p1{font-size:.75em;line-height:1.5;margin-bottom:2em;}
+p.p2{font-size:.813em;line-height:1.38376383763838;margin-bottom:1.8450184501845em;}
+p.p3{font-size:.875em;line-height:1.28571428571428;margin-bottom:1.71428571428571em;}
+p.p4{font-size:.938em;line-height:1.19936034115139;margin-bottom:1.59914712153518em;}
 a{color:#000;text-decoration:none;}
 a:visited{color:#666;}
 a:visited:hover,a:focus,a:focus:hover,a:hover,a:active{color:#ae1b1f;}
@@ -170,10 +174,10 @@ span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:itali
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-family:"MillerHeadline Bold",Cambria,Georgia,serif;margin:0;}
 h1,.h1{font-size:2.875em;line-height:1.04347826086957;}
 h2,.h2{font-size:2.5em;line-height:1.2;}
-h3,.h3{font-size:2.125em;line-height:1.41176470588235;}
-h4,.h4{font-size:1.75em;line-height:1.71428571428571;}
-h5,.h5{font-size:1.375em;line-height:1.09090909090909;margin:.54545454545455em 0;}
-h6,.h6{font-size:1em;line-height:1.5;margin:.375em 0;}
+h3,.h3{font-size:2.125em;line-height:1.05882352941176;}
+h4,.h4{font-size:1.75em;line-height:1.28571428571428;}
+h5,.h5{font-size:1.375em;line-height:1.09090909090909;}
+h6,.h6{font-size:1em;line-height:1.5;}
 .head{font:bold 1em/1.5 "BentonSansCond Regular",Arial,sans-serif;color:#808285;margin:0;}
 .head a,.head a:visited{color:#808285;}
 .head a:visited:hover,.head a:focus,.head a:focus:hover,.head a:hover,.head a:active{color:#000;}
@@ -181,10 +185,10 @@ h6,.h6{font-size:1em;line-height:1.5;margin:.375em 0;}
 .deck{font:1em/1.5 "MillerHeadline Light",Cambria,Georgia,serif;color:#666;margin:0;}
 .deck a,.deck a:visited{color:#666;}
 .deck a:visited:hover,.deck a:focus,.deck a:focus:hover,.deck a:hover,.deck a:active{color:#000;}
-.deck.deck1{font-size:1em;line-height:1.5;margin:.375em 0;}
-.deck.deck2{font-size:1.375em;line-height:1.09090909090909;margin:.54545454545455em 0;}
-.deck.deck3{font-size:1.75em;line-height:1.71428571428571;}
-.deck.deck4{font-size:2.125em;line-height:1.41176470588235;}
+.deck.deck1{font-size:1em;line-height:1.5;}
+.deck.deck2{font-size:1.375em;line-height:1.09090909090909;}
+.deck.deck3{font-size:1.75em;line-height:1.28571428571428;}
+.deck.deck4{font-size:2.125em;line-height:1.05882352941176;}
 .deck.deck5{font-size:2.5em;line-height:1.2;}
 .deck.deck6{font-size:2.875em;line-height:1.04347826086957;margin:.2608695652174em 0;}
 .reverse{font:bold 1em/1.5 "BentonSansCond Regular",Arial,sans-serif;color:#fff;background:#000;margin:0;padding:.375em .75em;}
@@ -256,7 +260,7 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 #story{content:"";display:table;}
 #story:after{clear:both;}
 #story{*zoom:1;}
-#story p{font:1.125em/1.33333333333333 Cambria,Georgia,serif;margin:0 0 1.33333333333333em;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
+#story p{text-align:justify;text-justify:newspaper;-webkit-hyphenate-character:"\2010";-webkit-hyphenate-limit-after:1;-webkit-hyphenate-limit-before:3;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
 .mm{height:0;padding-bottom:56.25%;position:relative;overflow:hidden;}
 .mm iframe,.mm object,.mm embed{width:100% !important;height:100% !important;position:absolute;top:0;left:0;}
 .ss{padding-bottom:66.666%;}

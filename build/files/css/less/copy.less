@@ -46,8 +46,11 @@
 
 #story { content: ""; display: table; } #story:after { clear: both; } #story { *zoom: 1; }
 	#story p {
-		font: 1.125em/1.33333333333333 Cambria, Georgia, serif; /* 18px */
-		margin: 0 0 1.33333333333333em;
+		text-align: justify;
+		text-justify: newspaper;
+		-webkit-hyphenate-character: "\2010";
+		-webkit-hyphenate-limit-after: 1;
+		-webkit-hyphenate-limit-before: 3;
 		-webkit-hyphens: auto;
 		   -moz-hyphens: auto;
 		        hyphens: auto;
