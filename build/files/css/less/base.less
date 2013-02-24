@@ -6,31 +6,40 @@
 
 #bd_ear { display: none; }
 @media only screen and (min-width: 1005px) {
+	#bd_ear:before, #bd_ear:after { content: ""; display: table; } #bd_ear:after { clear: both; } #bd_ear { *zoom: 1; }
+	#bd_ear,
+	#bd_ear li {
+		margin: 0;
+		padding: 0;
+	}
 	#bd_ear {
-		font-size: 75%; /* 12px */
-		line-height: 1;
-		margin: 0 0 20px;
+		list-style: none;
+		margin: 10px 0 20px -20px;
 		display: block;
 		position: relative;
 		z-index: 20;
-		*zoom: 1;
 	}
-	#bd_ear:before,
-	#bd_ear:after {
-		content: "";
-		display: table;
-	}
-	#bd_ear:after { clear: both; }
 		#bd_ear li {
-			margin: 10px 0 0 20px;
+			font: .813em/1.8450184501845 Arial, sans-serif; /* 14px */
+			text-transform: uppercase;
+			margin-left: 20px;
 			float: right;
 			display: inline;
 		}
-			#bd_ear li:first-child {
-				margin-left: 0;
-				float: left;
-				display: inline;
-			}
+		#bd_ear li:first-child { float: left; }
+		#bd_ear li a {
+			color: #000;
+			text-decoration: none;
+		}
+		#bd_ear li a:visited { color: #000; }
+		#bd_ear li a:visited:hover,
+		#bd_ear li a:focus,
+		#bd_ear li a:focus:hover,
+		#bd_ear li a:hover,
+		#bd_ear li a:active {
+			color: #000;
+			text-decoration: underline;
+		}
 }
 
 /*
@@ -123,17 +132,6 @@
 	border-top: 1px solid #ccc;
 	padding-top: 20px;
 }
-	#bd_morgue p {
-		color: #333;
-		font-size: 81.3%;
-		line-height: 1.6;
-		margin-top: 0;
-	}
-		#bd_morgue p strong {
-			font-family: Arial, sans-serif;
-			text-transform: uppercase;
-			letter-spacing: .05em;
-		}
 
 /**
  * Convert lists to `<select>`s.
@@ -167,20 +165,19 @@
 
 #bd_press {
 	border-top: 1px solid #ccc;
-	margin-bottom: 50px;
-	padding: 20px 0;
+	margin: 1.5em 0;
+	padding: 1.5em 0;
 	position: relative;
 }
 	#bd_press p {
-		font-size: 68.8%;
+		font: .688em/2.18023255813953 Arial, sans-serif; /* 11px */
 		text-transform: uppercase;
-		font-family: Arial, sans-serif;
 		letter-spacing: .05em;
 		color: #999;
-		margin: 10px 0;
+		margin: 0;
 		padding: 0;
 	}
-			#bd_press span { display: block; margin: 10px 0; }
+			#bd_press span { display: block; }
 			#bd_press span span { display: none; }
 	#bd_press a {
 		color: #666;
@@ -196,8 +193,6 @@
 		text-decoration: underline;
 	}
 @media only screen and (min-width: 665px) {
-	#bd_press p { margin: 0 0 10px; }
-	#bd_press span { margin: 0; }
 	#bd_press span,
 	#bd_press span span { display: inline; }
 }
@@ -208,35 +203,34 @@
 **----------------------------------
 */
 
-.bd_scoop {}
-	.bd_scoop {
-		font: 81.3%/1.5 Arial, sans-serif;
-		letter-spacing: .1em;
+.bd_scoop {
+	margin: 1em 0;
+	padding: 0;
+	list-style: none;
+}
+	.bd_scoop li {
+		/* (((1.5 / .813) = 1.8450184501845) * .75) = 1.38376383763838 */
+		font: .813em/1.38376383763838 Arial, sans-serif; /* 13px */
 		text-transform: uppercase;
-		margin: 10px 0 20px;
+		letter-spacing: .1em;
+		letter-spacing: .02em;
+		word-spacing: .3em;
+		margin: .92250922509225em 0; /* (1.8450184501845 / 2) = .92250922509225 */
 		padding: 0;
-		list-style: none;
 	}
-		.bd_scoop li {
-			border: 0 none;
-			margin: 5px 0;
-			padding: 0;
+		.bd_scoop li a {
+			color: #666;
+			text-decoration: none;
 		}
-			.bd_scoop li a {
-				color: #666;
-				text-decoration: none;
-				letter-spacing: .02em;
-				word-spacing: .3em;
-			}
-			.bd_scoop li a:visited { color: #666; }
-			.bd_scoop li a:visited:hover,
-			.bd_scoop li a:focus,
-			.bd_scoop li a:focus:hover,
-			.bd_scoop li a:hover,
-			.bd_scoop li a:active {
-				color: #000;
-				text-decoration: underline;
-			}
+		.bd_scoop li a:visited { color: #666; }
+		.bd_scoop li a:visited:hover,
+		.bd_scoop li a:focus,
+		.bd_scoop li a:focus:hover,
+		.bd_scoop li a:hover,
+		.bd_scoop li a:active {
+			color: #000;
+			text-decoration: underline;
+		}
 
 /*
 **----------------------------------
@@ -245,10 +239,10 @@
 */
 
 .bd_insert {
-	font: bold 112.5%/1.2 "BentonSansCond Regular", Arial, sans-serif; /* 18px */
+	font: bold 1.125em/1.33333333333333 "BentonSansCond Regular", Arial, sans-serif; /* 18px */
 	letter-spacing: .02em;
 	color: #333;
-	margin: 10px 0;
+	margin: .66666666666667em 0;
 }
 	.bd_insert a:link,
 	.bd_insert a:visited { color: #333; }
