@@ -135,7 +135,7 @@ module.exports = function(grunt) {
 				
 				src : [
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/**/*'
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*'
 					
 				]
 				
@@ -158,15 +158,15 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
 						'./files/js/preflight.js'
 					],
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv-printshiv.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv-printshiv.min.js' : [
 						'./files/js/html5shiv-printshiv.js'
 					],
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
 						'./files/js/matchMedia.js',
 						'./files/js/jquery.*.js',
 						'./files/js/woof.js',
@@ -174,7 +174,7 @@ module.exports = function(grunt) {
 						'./files/js/woof.init.js'
 					],
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : [
 						'./files/js/respond.src.js',
 						'./files/js/respond.proxy.js'
 					]
@@ -201,7 +201,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : [
 						'./files/css/bassline.css',
 						'./files/css/normalize.css',
 						'./files/css/wiffle.css',
@@ -264,7 +264,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less'
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less'
 					
 				}
 				
@@ -294,7 +294,7 @@ module.exports = function(grunt) {
 							'img/**',
 							'util/**'
 						],
-						dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/'
+						dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}//,
 					
@@ -305,7 +305,7 @@ module.exports = function(grunt) {
 						expand : true,
 						cwd : './files/',
 						src : ['index.html'],
-						dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/'
+						dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}
 					*/
@@ -337,11 +337,11 @@ module.exports = function(grunt) {
 			prod : {
 				
 				src : './files/tmpl/index.html',
-				dest : '../<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
+				dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
 				options : {
 					
 					context : {
-						path : '/<%= pkg.name %>/<%= pkg.version %>/<%= now %>/<%= ver %>'
+						path : '/<%= pkg.name %>/dist/<%= pkg.version %>/<%= now %>/<%= ver %>'
 					}
 					
 				}
