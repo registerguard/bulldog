@@ -467,11 +467,58 @@ p {
 			.jump.jump1 a:hover,
 			.jump.jump1 a:active { color: #ae1b1f; }
 
+blockquote {
+	border-left: 3px solid #ccc;
+	margin: 0 0 1.5em;
+	padding: 0 0 0 1.5em;
+	quotes: '“' '”';
+}
+	blockquote p {
+		font: italic 1.125em/1.33333333333333 Cambria, Georgia, serif; /* 18px */
+		text-indent: -.75em;
+		word-spacing: .05em;
+	}
+		blockquote p:before {
+			font-weight: bold;
+			letter-spacing: .5ex;
+			content: '“';
+			content: open-quote;
+		}
+		blockquote p:after {
+			content: '';
+			content: no-close-quote;
+		}
+		blockquote p:last-of-type:after {
+			font-weight: bold;
+			content: '”';
+			content: close-quote;
+		}
+		blockquote p:last-of-type { margin: 0; }
+	blockquote footer {
+		font-size: .875em; /* 14px */
+		line-height: 1.71428571428571em;
+		color: #666;
+		margin: 0 0 1.71428571428571em;
+	}
+	/* For `<q>`s in `<blockquote>`s: */
+	blockquote q:before {
+		content: '‘';
+		content: open-quote;
+	}
+	blockquote q:after {
+		content: '’';
+		content: close-quote;
+	}
+		blockquote q q:before {
+			content: '“';
+			content: open-quote;
+		}
+		blockquote q q:after {
+			content: '”';
+			content: close-quote;
+		}
+
 /**
- * The `<span>` element doesn't mean anything on its own, but can be
- * useful when used together with the global attributes, e.g. `class`,
- * `lang`, or `dir`. It represents its children.
- *
  * @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
  * @see http://dev.w3.org/html5/spec/Overview.html#the-span-element
  */

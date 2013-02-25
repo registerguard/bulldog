@@ -1,43 +1,112 @@
-code,
-pre {
-	padding: 0 3px 2px;
-	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-	font-size: 75.0%;
-	color: #333333;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
+/**
+ * @see https://raw.github.com/twitter/bootstrap/master/docs/assets/css/bootstrap.css
+ * @see http://perishablepress.com/wrapping-content/
+ * @see http://perishablepress.com/perfect-pre-tags/
+ * @see http://dev.w3.org/html5/spec/Overview.html#the-pre-element
+ */
 
-code {
-	padding: 2px 4px;
-	color: #d14;
-	background-color: #f7f7f9;
-	border: 1px solid #e1e1e8;
-}
-
+/* @TODO: Make `font-size` bigger. */
 pre {
-	display: block;
-	padding: 9.5px;
-	margin: 20px;
-	font-size: 13px;
-	line-height: 20px;
-	word-break: break-all;
-	word-wrap: break-word;
-	white-space: pre;
-	background-color: #f5f5f5;
-	border: 1px solid #ccc;
-	border: 1px solid rgba(0, 0, 0, 0.15);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	xmax-height: 340px;
+	font: .875em/2.05714285714286 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif; /* (14px / 16px = .875em)/(1.8em / .875em = 2.05714285714286) */
+	color: #333;
+	border: .07142857142857em solid rgba(0, 0, 0, .15); /* 1px / 14px */
+	background: rgba(0, 0, 0, .1);
+	margin: 1em 0; /* (28px / 14px = 2em) / 2 = 1em */
+	padding: .92857142857143em; /* (28px - 2px (top/bottom borders) = 26px) / (14px = 1.85714285714286) / 2 */
+	word-wrap: normal;
 	overflow: auto;
+	white-space: pre;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+	pre code {
+		color: inherit;
+		border: 0;
+		background: transparent;
+		padding: 0;
+	}
+
+/**
+ * @see http://perishablepress.com/wrapping-content/
+ * @see http://dev.w3.org/html5/spec/Overview.html#the-code-element
+ */
+
+/* @TODO: I'd like to have an code:after pseudo element to show line wrap. */
+code {
+	font: 1em Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+	color: #333;
+	/*border: 1px solid rgba(0, 0, 0, .15);*/
+	background: rgba(0, 0, 0, .1);
+	padding: 0 2px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
 }
 
-pre code {
-	padding: 0;
-	color: inherit;
-	background-color: transparent;
-	border: 0;
+/**
+ * The `<var>` element represents a variable. This could be an actual
+ * variable in a mathematical expression or programming context, or it
+ * could just be a term used as a placeholder in prose.
+ *
+ * @see http://dev.w3.org/html5/spec/Overview.html#the-var-element
+ */
+
+var { font-style: italic; }
+
+/**
+ * The `<samp>` element represents (sample) output from a program or
+ * computing system.
+ *
+ * @see http://dev.w3.org/html5/spec/Overview.html#the-samp-element
+ */
+
+samp {
+	font: 1em Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+	color: #333;
+}
+
+/**
+ * The `<kbd>` element represents user input (typically keyboard input,
+ * although it may also be used to represent other input, such as voice
+ * commands).
+ *
+ * When the `<kbd>` element is nested inside a `<samp>` element, it
+ * represents the input as it was echoed by the system. When the `<kbd>`
+ * element contains a `<samp>` element, it represents input based on
+ * system output, for example invoking a menu item.
+ *
+ * When the `<kbd>` element is nested inside another `<kbd>` element, it
+ * represents an actual key or other single unit of input as appropriate
+ * for the input mechanism.
+ *
+ * @see http://meta.superuser.com/questions/4788/css-for-the-new-kbd-style
+ * @see http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-kbd-element
+ */
+
+kbd {
+	-moz-border-radius: 3px;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+	-webkit-border-radius:3px;
+	-webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+	background-color:#f7f7f7;
+	border:1px solid #ccc;
+	border-radius:3px;
+	box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+	color:#333;
+	display:inline-block;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	line-height:1.4;
+	margin:0 .1em;
+	padding:.1em .6em;
+	text-shadow:0 1px 0 #fff;
 }
