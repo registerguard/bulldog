@@ -112,17 +112,7 @@ pre code {
 .banner { padding: 5px 0; }
 	.banner .advert { margin: 0 auto; } /* Move elsewhere? */
 @media only screen and (min-width: 665px) {
-	.banner {
-		padding: 10px 0;
-		background: #ededed;
-		background: -moz-linear-gradient(top, #fff 0, #f6f6f6 47%, #ededed 100%);
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
-		background: -webkit-linear-gradient(top, #fff 0, #f6f6f6 47%, #ededed 100%);
-		background: -o-linear-gradient(top, #fff 0, #f6f6f6 47%,#ededed 100%);
-		background: -ms-linear-gradient(top, #fff 0, #f6f6f6 47%, #ededed 100%);
-		background: linear-gradient(top, #fff 0%, #f6f6f6 47%, #ededed 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
-	}
+	.banner { padding: 10px 0; }
 }
 
 /* TEMP CRAP: */
@@ -144,17 +134,9 @@ pre code {
 		display: inline;
 		clear: right;
 	}
-	.deep.deep-l {
-		float: left;
-		clear: left;
-		margin-left: 0;
-		margin-right: 40px;
-	}
-	.deep.deep-mug { width: 130px; }
 }
 @media only screen and (min-width: 1005px) {
 	.deep { margin-right: -170px; }
-	.deep.deep-l { margin-left: -170px; }
 }
 
 
@@ -258,4 +240,23 @@ pre code {
 			top: .75em;
 		}
 		#forecast a:visited { color: #000; }
+}
+
+
+
+
+
+
+
+/* From the footer: */
+.harmonia-select {
+	width: 100%;
+	display: block;
+	margin: 10px 0;
+}
+@media only screen and (min-width: 665px) {
+	.harmonia-select {
+		display: none;
+		visibility: hidden;
+	}
 }

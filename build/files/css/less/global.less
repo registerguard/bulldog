@@ -4,41 +4,14 @@ html {
 	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom. */
 }
 
+/*----------------------------------*/
+
 /**
- * The `<body>` element represents the main content of the document.
- *
- * Baseline grid:
- *
- * Base font size = 16px or 100% or 1em.
- * Base line height = 24px or 150% or 1.5em.
- *
- * Rule: Make sure all elements take up a vertical height (including
- * margins) are multiples of our base line height (24).
- * 
- * Calculate line height by dividing base line height by desired font size.
- *
- * If the font size greater than `24px`, then base your calculations on
- * the next full `line-height` value up: `1.5` * `2` = `3` (`48px`). For
- * example, if the desired font size is `2.875em` (`46px`), the math would
- * be: (`1.5` * `2`) / `2.875` = `1.04347826086957`.
- *
  * Line height chart:
  *
  * | x1 = (1.5em)     | x2 = (3em)                   | x3 = (4.5em)                  | x4 = (6em)                  | x5 = (7.5em)                   |
  * | 0 - 24px (1.5em) | 25px (1.563em) - 48px (3.em) | 49px (3.063em) - 72px (4.5em) | 73px (4.563em) - 96px (6em) | 97px (6.063em) - 120px (7.5em) |
  * |                  |                              |                               |                             |                                |
- *
- * Important: WebKit needs at least ten-millionth decimal places; for
- * example: `line-height: 1.3333333;` (that's 7 decimal places).
- *
- * @see https://gist.github.com/4277585
- * @see http://advent2012.digitpaint.nl/13/
- * @see http://www.netmagazine.com/tutorials/preserving-vertical-rhythm-css-and-jquery
- * @see http://www.awayback.com/revised-font-stack/
- * @see http://code.stephenmorley.org/html-and-css/the-myth-of-web-safe-fonts/
- * @see http://stackoverflow.com/questions/2703056/body-font-size-100-01-vs-body-font-size-100
- * @see http://www.sitepoint.com/typography-baseline-rhythm-deciphered/
- * @see http://modularscale.com/scale/?px1=16&px2=46&ra1=1.618&ra2=0
  */
 
 body {
@@ -53,43 +26,18 @@ body {
 	_height: 100%; /* IE6 treats `height` as `min-height`. */
 }
 
-/**
- * The `<p>` element represents a paragraph.
- *
- * @see http://www.smashingmagazine.com/2012/04/03/drop-caps-historical-use-and-current-best-practices/
- * @see http://css-tricks.com/snippets/css/drop-caps/
- */
+/*----------------------------------*/
 
-p {
-	font-family: Cambria, Georgia, serif;
-	font-size: 1em;
-	line-height: 1.5;
-	margin: 0 0 1.5em;
-	-webkit-hyphens: auto;
-	   -moz-hyphens: auto;
-	        hyphens: auto;
+::-moz-selection {
+	background: #98adca; /* RG Blue */
+	text-shadow: none;
 }
-	/* Re-think class names? */
-	p.p1 {
-		font-size: .75em; /* 12px */
-		line-height: 1.5; /* (((1.5 / .75) = 2) * .75) = 1.5 */
-		margin-bottom: 2em;
-	}
-	p.p2 {
-		font-size: .813em; /* 13px */
-		line-height: 1.38376383763838; /* (((1.5 / .813) = 1.8450184501845) * .75) = 1.38376383763838 */
-		margin-bottom: 1.8450184501845em;
-	}
-	p.p3 {
-		font-size: .875em; /* 14px */
-		line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
-		margin-bottom: 1.71428571428571em;
-	}
-	p.p4 {
-		font-size: .938em; /* 15px */
-		line-height: 1.19936034115139; /* (((1.5 / .938) = 1.59914712153518) * .75) = 1.19936034115139 */
-		margin-bottom: 1.59914712153518em;
-	}
+::selection {
+	background: #98adca;
+	text-shadow: none;
+}
+
+/*----------------------------------*/
 
 a {
 	color: #000;
@@ -101,62 +49,3 @@ a {
 	a:focus:hover,
 	a:hover,
 	a:active { color: #ae1b1f; }
-
-/* Move to another file? */
-p a {
-	color: #0083ca;
-	text-decoration: none;
-}
-	p a:visited { color: #0083ca; }
-	p a:visited:hover,
-	p a:focus,
-	p a:focus:hover,
-	p a:hover,
-	p a:active {
-		color: #0083ca;
-		text-decoration: underline;
-	}
-
-/**
- * The `<hr>` element represents a paragraph-level thematic break. It
- * separates different topics within a section of prose, or between scenes
- * in a novel.
- *
- * @see https://gist.github.com/4277585
- * @see https://github.com/h5bp/html5-boilerplate/blob/b378ce239dfb017e32fbeacc5ab0346258b089e2/css/main.css#L42-L53
- * @see https://github.com/twitter/bootstrap/blob/070c125ceceb2a164773f51226950350445160ee/docs/assets/css/bootstrap.css#L876-L881
- */
-
-/* @TODO: Use REM? */
-hr, .hr1, .hr2, .hr3, .hr4 {
-	/* `border` + `height` + `margin` = base line height (`1.5em` or `24px`). */
-	border: 0;
-	border-top: .063em solid #ccc; /* 1px */
-	height: .063em; /* 1px */
-	margin: .688em 0; /* 11px */
-	padding: 0;
-}
-	.hr2 { border-style: dotted; }
-	.hr3,
-	.hr4 {
-		border-top-width: .125em; /* 2px */
-		border-color: #999;
-		margin: 1.375em 0 1.438em; /* 10px 0 11px */
-	}
-	.hr4 { border-style: dotted; }
-
-/**
- * The `<span>` element doesn't mean anything on its own, but can be
- * useful when used together with the global attributes, e.g. `class`,
- * `lang`, or `dir`. It represents its children.
- *
- * @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
- * @see http://dev.w3.org/html5/spec/Overview.html#the-span-element
- */
-
-span {}
-	/* The italic version of an ampersand is more decorative and interesting than its roman counterpart. */
-	span.amp1 {
-		font-family: Baskerville, Palatino, "Book Antiqua", serif;
-		font-style: italic;
-	}

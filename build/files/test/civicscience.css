@@ -1,0 +1,155 @@
+/* @override 
+	http://civicscience-css.s3.amazonaws.com/clients/civicscience/css/about_cs_com.css
+	http://civicscience-css.s3.amazonaws.com/clients/civicscience/css/about_cs_com_progress.css */
+
+/* @group CSS Reset for iQpoll */
+
+div.civicscience.ballotbox,
+div.civicscience.ballotbox div,
+div.civicscience.ballotbox span, 
+div.civicscience.ballotbox form, 
+div.civicscience.ballotbox label, 
+div.civicscience.ballotbox div.poll_title,
+div.civicscience.ballotbox div.poll_body,
+div.civicscience.ballotbox div.question_text,
+div.civicscience.ballotbox div.answer,
+div.civicscience.ballotbox div.answer div.control,
+div.civicscience.ballotbox div.answer div.answer_text,
+div.civicscience.ballotbox div.result,
+div.civicscience.ballotbox div.result div.percent,
+div.civicscience.ballotbox div.result div.answer_text,
+div.civicscience.ballotbox div.buttons,
+div.civicscience.ballotbox div.detailed_results,
+div.civicscience.ballotbox div.wrap_up {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	width: auto;
+	color: #555; 
+	text-decoration: auto;
+}
+
+/* @end */
+
+div.civicscience.ballotbox {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 10px;
+   margin: 0px 0 4px;
+   display: table;
+   font: 12px/18px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+div.civicscience.ballotbox div.poll_title {
+   font-size: 18px;
+   font-weight: bold;
+   margin: 0 0; 
+}
+
+div.civicscience.ballotbox div.poll_body.loading {
+    background: url(http://civicscience-css.s3.amazonaws.com/clients/civicscience/images/loading.gif) no-repeat;
+    height: 20px;
+    width: 20px;
+    margin: 10px 0 0;
+    opacity: .5;
+}
+
+div.civicscience.ballotbox div.question_text {
+	margin: 10px 0;
+}
+
+div.civicscience.ballotbox div.answer {
+	clear: both;
+	margin: 0;
+	padding: 5px 0;
+	display: table;
+	width: 100%;
+}
+
+div.civicscience.ballotbox div.answer div.control {
+   float: left;
+   margin: 0 10px 0 5px;
+}
+
+div.civicscience.ballotbox div.answer div.control input {
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+}
+
+div.civicscience.ballotbox div.answer div.answer_text label {
+   display: table;
+   cursor: pointer;
+}
+
+div.civicscience.ballotbox div.result {
+	clear: both;
+	margin: 6px 0;
+	padding: 3px;
+	display: table;
+	width: 100%; 
+}
+
+div.civicscience.ballotbox div.result div.percent {
+   float: left;
+   width: 50px;
+}
+
+div.civicscience.ballotbox div.result div.answer_text label {
+   display: table;
+   cursor: pointer; 
+}
+
+div.civicscience.ballotbox div.buttons {
+    margin: 10px 0 0 0;
+	display: table;
+	width: 100%;
+}
+
+div.civicscience.ballotbox div.buttons input.next {
+   float: right;
+   width: 40px;
+}
+
+div.civicscience.ballotbox div.buttons input.previous {
+   float: left;
+   width: 40px;
+}
+
+div.civicscience.ballotbox div.detailed_results {
+	width: 100px;
+	float: left;
+	text-align: left;
+	padding: 10px 0 0 3px;
+}
+
+div.civicscience.ballotbox a {
+	color: #2B6991;
+}
+
+div.civicscience.ballotbox div.wrap_up {
+	margin: 10px 0 20px;
+}
+
+div.civicscience.ballotbox div.wrap_up div.end_title {
+    display: none;
+}
+
+div.civicscience.ballotbox div.poll_progress.current_1.total_3 {
+    height: 20px;
+    width: 300px;
+    background: url(http://civicscience-css.s3.amazonaws.com/clients/civicscience/images/progress/progress_1.png) no-repeat center;
+}
+
+div.civicscience.ballotbox div.poll_progress.current_2.total_3 {
+    height: 20px;
+    width: 300px;
+    background: url(http://civicscience-css.s3.amazonaws.com/clients/civicscience/images/progress/progress_2.png) no-repeat center;
+}
+
+div.civicscience.ballotbox div.poll_progress.current_3.total_3 {
+    height: 20px;
+    width: 300px;
+    background: url(http://civicscience-css.s3.amazonaws.com/clients/civicscience/images/progress/progress_3.png) no-repeat center;
+}

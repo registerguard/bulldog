@@ -405,3 +405,111 @@ h6, .h6 {
 	color: #999;
 	margin: 1.26262626262626em 0;
 }
+
+/*----------------------------------*/
+
+p {
+	font-family: Cambria, Georgia, serif;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0 0 1.5em;
+	word-break: break-all;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+	        hyphens: auto;
+}
+	/* Re-think class names? */
+	p.p1 {
+		font-size: .75em; /* 12px */
+		line-height: 1.5; /* (((1.5 / .75) = 2) * .75) = 1.5 */
+		margin-bottom: 2em;
+	}
+	p.p2 {
+		font-size: .813em; /* 13px */
+		line-height: 1.38376383763838; /* (((1.5 / .813) = 1.8450184501845) * .75) = 1.38376383763838 */
+		margin-bottom: 1.8450184501845em;
+	}
+	p.p3 {
+		font-size: .875em; /* 14px */
+		line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
+		margin-bottom: 1.71428571428571em;
+	}
+	p.p4 {
+		font-size: .938em; /* 15px */
+		line-height: 1.19936034115139; /* (((1.5 / .938) = 1.59914712153518) * .75) = 1.19936034115139 */
+		margin-bottom: 1.59914712153518em;
+	}
+		p a {
+			color: #0083ca;
+			text-decoration: none;
+		}
+			p a:visited { color: #0083ca; }
+			p a:visited:hover,
+			p a:focus,
+			p a:focus:hover,
+			p a:hover,
+			p a:active {
+				color: #0083ca;
+				text-decoration: underline;
+			}
+
+/*----------------------------------*/
+
+.caption {
+	font: .938em/1.19936034115139 Cambria, Georgia, serif; /* 15px */
+	font-style: italic;
+	margin: .79957356076759em 0;
+}
+
+/*----------------------------------*/
+
+.mugline {
+	font: bold 1em/1.5 Arial, sans-serif; /* 16px */
+	text-align: center;
+}
+
+/*----------------------------------*/
+
+.byline { font: 1.125em/1.33333333333333 Cambria, Georgia, serif; } /* 18px */
+	.byline.byline1 {
+		font-weight: bold;
+		font-variant: small-caps;
+		margin-bottom: 0;
+	}
+	.byline.byline2 {
+		font-style: italic;
+		margin-top: 0;
+	}
+
+/*----------------------------------*/
+
+/**
+ * The `<span>` element doesn't mean anything on its own, but can be
+ * useful when used together with the global attributes, e.g. `class`,
+ * `lang`, or `dir`. It represents its children.
+ *
+ * @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
+ * @see http://dev.w3.org/html5/spec/Overview.html#the-span-element
+ */
+
+span {}
+	/* The italic version of an ampersand is more decorative and interesting than its roman counterpart. */
+	span.amp1 {
+		font-family: Baskerville, Palatino, "Book Antiqua", serif;
+		font-style: italic;
+	}
+
+/*----------------------------------*/
+
+#story { content: ""; display: table; } #story:after { clear: both; } #story { *zoom: 1; }
+	#story p {
+		text-align: justify;
+		text-justify: newspaper;
+		-webkit-hyphenate-character: "\2010";
+		-webkit-hyphenate-limit-after: 1;
+		-webkit-hyphenate-limit-before: 3;
+		-webkit-hyphens: auto;
+		   -moz-hyphens: auto;
+		        hyphens: auto;
+	}

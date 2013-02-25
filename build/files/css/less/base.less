@@ -14,7 +14,7 @@
 	}
 	#bd_ear {
 		list-style: none;
-		margin: 10px 0 20px -20px;
+		margin: 10px 0 15px -20px;
 		display: block;
 		position: relative;
 		z-index: 20;
@@ -100,7 +100,7 @@
 	#bd_flag {
 		font-size: 312.5%; /* 50px */
 		position: static;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -110,13 +110,7 @@
 **----------------------------------
 */
 
-#bd_proof { *zoom: 1; }
-#bd_proof:before,
-#bd_proof:after {
-	content: "";
-	display: table;
-}
-#bd_proof:after { clear: both; }
+#bd_proof { *zoom: 1; } #bd_proof:before, #bd_proof:after { content: ""; display: table; } #bd_proof:after { clear: both; }
 	#bd_proof ul ul,
 	#bd_proof ul h2 {
 		margin: 10px 0 10px 10px;
@@ -124,14 +118,19 @@
 
 /*
 **----------------------------------
+** Content area:
+**----------------------------------
+*/
+
+#bd_content {}
+
+/*
+**----------------------------------
 ** Footer:
 **----------------------------------
 */
 
-#bd_morgue {
-	border-top: 1px solid #ccc;
-	padding-top: 20px;
-}
+#bd_morgue { border-top: 1px solid #ccc; }
 
 /**
  * Convert lists to `<select>`s.
@@ -143,19 +142,10 @@
 	display: none;
 	visibility: hidden;
 }
-#bd_morgue .harmonia-select {
-	width: 100%;
-	display: block;
-	margin: 10px 0;
-}
 @media only screen and (min-width: 665px) {
 	.js #bd_morgue ul {
 		display: block;
 		visibility: visible;
-	}
-	#bd_morgue .harmonia-select {
-		display: none;
-		visibility: hidden;
 	}
 }
 
@@ -165,8 +155,8 @@
 
 #bd_press {
 	border-top: 1px solid #ccc;
-	margin: 1.5em 0;
-	padding: 1.5em 0;
+	margin: 0 0 10px;
+	padding: 10px 0;
 	position: relative;
 }
 	#bd_press p {
@@ -196,6 +186,8 @@
 	#bd_press span,
 	#bd_press span span { display: inline; }
 }
+
+/*--------------------------------------------------------------------*/
 
 /*
 **----------------------------------

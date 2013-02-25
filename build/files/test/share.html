@@ -1,0 +1,96 @@
+<!doctype html>
+<!--[if IE 6]>         <html class="no-js ie6 funk" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7 funk" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8 funk" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js no-touch">           <!--<![endif]-->
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"> <!-- Use this server side: h5bp.com/i/378 -->
+	
+	<title>Configuration page for sharing widgets</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<style>
+		<!--
+			
+			#fb-root { display: none; }
+			
+			.social-box_count:before, .social-box_count:after { content: ""; display: table; } .social-box_count:after { clear: both; } .social-box_count { *zoom: 1; }
+			.social-box_count { margin-left: -5px; }
+				.sbc-item {
+					height: auto;
+					_height: 70px; /* IE6 */
+					min-height: 70px; /* Height of tallest widget. */
+					margin-left: 5px;
+					float: left;
+					display: inline;
+				}
+				.sbc-item iframe,
+				.sbc-item div { display: block !important; }
+				.sbc-pinterest {
+					/* Jenky widget code! */
+					margin-top: 10px;
+					_height: 60px;
+					min-height: 60px;
+				}
+			
+		-->
+	</style>
+	
+	<link rel="canonical" href="http://assets.registerguard.com/demos/share/">
+	
+</head>
+<body>
+	
+	<!-- Must come after opening body tag: -->
+	<div id="fb-root"></div>
+	<!-- http://developers.facebook.com/docs/reference/plugins/like/ -->
+	<script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='//connect.facebook.net/en_US/all.js#xfbml=1';fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));</script>
+	
+	<hr>
+	
+	<div class="fb-like" data-href="http://facebook.com/registerguard" data-send="false" data-layout="button_count" data-show-faces="false"></div>
+	
+	<hr>
+	
+	<div class="social-box_count">
+		
+		<div class="sbc-item sbc-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-via="registerguard" data-count="vertical">Tweet</a></div>
+		
+		<div class="sbc-item sbc-facebook"><div class="fb-like" data-width="55" data-height="65" data-send="false" data-layout="box_count" data-show-faces="false"></div></div>
+		
+		<div class="sbc-item sbc-googleplus"><div class="g-plusone" data-size="tall"></div></div>
+		
+		<div class="sbc-item sbc-stumbleupon"><su:badge layout="5"></su:badge></div>
+		
+		<div class="sbc-item sbc-reddit"><script src="http://www.reddit.com/static/button/button2.js?newwindow=1"></script></div>
+		
+		<div class="sbc-item sbc-linkedin"><script type="IN/Share" data-counter="top"></script></div>
+		
+		<div class="sbc-item sbc-pinterest"><a class="pin-it-button" count-layout="vertical" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fassets.registerguard.com%2Fdemos%2Fshare%2F&amp;media=http%3A%2F%2Fassets.registerguard.com%2Fdemos%2Fshare%2Fpinterest.jpg&amp;description=This%20is%20the%20description."><img src="//assets.pinterest.com/images/PinExt.png" title="Pin It"></a></div>
+		
+	</div> <!-- /.social-box_count -->
+	
+	<hr>
+	
+	<!-- https://dev.twitter.com/docs/tweet-button -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	
+	<!-- https://developers.google.com/+/plugins/+1button/ -->
+	<script src="https://apis.google.com/js/plusone.js"></script>
+	
+	<!-- http://www.stumbleupon.com/dt/badges/create -->
+	<script>(function(){var li=document.createElement('script');li.type='text/javascript';li.async=true;li.src=('https:'==document.location.protocol?'https:':'http:')+'//platform.stumbleupon.com/1/widgets.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(li,s);})();</script>
+	
+	<!-- http://developer.linkedin.com/share-plugin -->
+	<script src="//platform.linkedin.com/in.js"></script>
+	
+	<!-- http://pinterest.com/about/goodies/ -->
+	<script src="//assets.pinterest.com/js/pinit.js"></script>
+	
+</body>
+</html>
