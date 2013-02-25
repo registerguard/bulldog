@@ -15,3 +15,148 @@ hr, .hr1, .hr2, .hr3, .hr4 {
 		margin: 1.375em 0 1.438em; /* 10px 0 11px */
 	}
 	.hr4 { border-style: dotted; }
+
+/* Lines only style. */
+.pull1 {
+	border: 1px solid #ccc;
+	background: #eee;
+	padding: 10px;
+}
+
+#banner_top { border-bottom: 1px solid #ccc; }
+#banner_bottom { border-top: 1px solid #ccc; }
+.banner { padding: 5px 0; }
+	.banner .advert { margin: 0 auto; } /* Move elsewhere? */
+@media only screen and (min-width: 665px) {
+	.banner { padding: 10px 0; }
+}
+
+.deep {
+	width: 100%;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #ccc;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+@media only screen and (min-width: 665px) {
+	.deep {
+		width: 300px;
+		border: 0;
+		margin-left: 40px;
+		padding: 0;
+		float: right;
+		display: inline;
+		clear: right;
+	}
+}
+@media only screen and (min-width: 1005px) {
+	.deep { margin-right: -170px; }
+}
+
+/* Story page thumbnails: */
+/*
+300px at breakpoint D
+640px at breakpoint C
+100% at breakpoint B
+*/
+.thumb-wrap {
+	margin-left: -15px;
+	margin-bottom: -15px;
+}
+	.thumb-img {
+		width: 90px;
+		height: 68px;
+		float: left;
+		display: inline;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		background-position: center center;
+	}
+		.thumb-img a {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	@media only screen and (min-width: 665px) {
+		.thumb-img {
+			width: 116px;
+			height: 87px;
+		}
+	}
+	@media only screen and (min-width: 1345px) {
+		.thumb-img {
+			width: 90px;
+			height: 68px;
+		}
+	}
+
+/* Facebook API stuff: */
+#fb-root { display: none; }
+
+/* Sharing widgets on the story page: */
+.social-box_count { margin-left: -5px; }
+	.sbc-item {
+		height: auto;
+		_height: 70px; /* IE6 */
+		min-height: 70px; /* Height of tallest widget. */
+		margin-left: 5px;
+		float: left;
+		display: inline;
+	}
+	.sbc-item iframe,
+	.sbc-item div { display: block !important; }
+	.sbc-pinterest {
+		/* Jenky widget code! */
+		margin-top: 10px;
+		_height: 60px;
+		min-height: 60px;
+	}
+@media only screen and (min-width: 665px) {
+	.social-box_count {
+		float: right;
+		display: inline;
+	}
+}
+
+/**
+ * See the widget JS for more styles.
+ */
+
+#forecast { display: none; }
+@media only screen and (min-width: 1005px) {
+	#forecast {
+		width: 115px;
+		height: 115px;
+		display: block;
+		position: absolute;
+		top: -30px;
+		right: -5px;
+	}
+		#forecast span {
+			font: 225%/1 "MillerHeadline Light", Cambria, Georgia, serif;
+			letter-spacing: .05em;
+			position: absolute;
+			left: -.75em;
+			top: .75em;
+		}
+		#forecast a:visited { color: #000; }
+}
+
+/**
+ * Convert lists to `<select>`s.
+ *
+ * @see rgne.ws/T828kW
+ */
+
+.harmonia-select {
+	width: 100%;
+	display: block;
+	margin: 10px 0;
+}
+@media only screen and (min-width: 665px) {
+	.harmonia-select {
+		display: none;
+		visibility: hidden;
+	}
+}

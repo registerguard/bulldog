@@ -23,8 +23,6 @@
  * @see rgne.ws/YF7bv3
  */
 
-/*----------------------------------( DEFAULTS )----------------------------------*/
-
 /**
  * Some default styles for headings.
  *
@@ -69,8 +67,6 @@ h6, .h6 {
 	line-height: 1.5;
 }
 
-/*----------------------------------( HEAD )----------------------------------*/
-
 /**
  * Head: Large type running above or beside a story to summarize its
  * content; also called a head, for short.
@@ -93,8 +89,6 @@ h6, .h6 {
 	line-height: 1.2;
 	margin: .6em 0;
 }
-
-/*----------------------------------( DECK )----------------------------------*/
 
 /**
  * Deck: A small headline running below the main headline; also called a
@@ -139,8 +133,6 @@ h6, .h6 {
 	margin: .2608695652174em 0;
 }
 
-/*----------------------------------( REVERSE )----------------------------------*/
-
 /**
  * Reverse: A printing technique that creates white type on a dark
  * background; also called a dropout.
@@ -171,8 +163,6 @@ h6, .h6 {
 }
 .reverse.reverse2 { text-align: center; }
 
-/*----------------------------------( LABEL )----------------------------------*/
-
 /**
  * Label: A small standing head that labels a regularly appearing column
  * or feature; also called a sig.
@@ -198,8 +188,6 @@ h6, .h6 {
 	line-height: 1.8450184501845;
 }
 .label.label2 { text-align: center; }
-
-/*----------------------------------( SIG )----------------------------------*/
 
 /**
  * Sig: A small standing head that labels a regularly appearing column or
@@ -237,8 +225,6 @@ h6, .h6 {
 	top: -.35em;
 }
 
-/*----------------------------------( BUG )----------------------------------*/
-
 /**
  * Another term for a sig or logo used to label a story; often indented
  * into the text.
@@ -269,8 +255,6 @@ h6, .h6 {
 }
 .bug.bug2 { text-align: center; }
 
-/*----------------------------------( BANNER )----------------------------------*/
-
 /**
  * Banner: Headline across or near the top of all or most of a newspaper
  * page. Also called a line, ribbon, streamer, screamer.
@@ -293,12 +277,6 @@ h6, .h6 {
 
  *
  */
-
-/*
-**----------------------------------
-** Structure:
-**----------------------------------
-*/
 
 .streamer:before, .streamer:after { content: ""; display: table; } .streamer:after { clear: both; } .streamer { *zoom: 1; }
 .streamer { margin: 1em 0; }
@@ -326,12 +304,6 @@ h6, .h6 {
 			display: inline;
 		}
 
-/*
-**----------------------------------
-** Flipped:
-**----------------------------------
-*/
-
 .streamer.flip h1 {
 	float: right;
 	margin-right: 0;
@@ -339,12 +311,6 @@ h6, .h6 {
 }
 	.streamer.flip h2 a,
 	.streamer.flip h2 span { float: right; }
-
-/*
-**----------------------------------
-** Base skin:
-**----------------------------------
-*/
 
 .streamer {}
 	.streamer a,
@@ -370,12 +336,6 @@ h6, .h6 {
 		.streamer h2 a:link,
 		.streamer h2 a:visited { color: #4f5052; }
 
-/*
-**----------------------------------
-** Skin alternative #1:
-**----------------------------------
-*/
-
 .streamer.alt1 h2 { background-color: #000; }
 	.streamer.alt1 h2 span,
 	.streamer.alt1 h2 a:link,
@@ -385,8 +345,6 @@ h6, .h6 {
 	.streamer.alt1 h2 a:focus:hover,
 	.streamer.alt1 h2 a:hover,
 	.streamer.alt1 h2 a:active { color: #fff; }
-
-/*----------------------------------( TESTERS )----------------------------------*/
 
 .marker {
 	font: bold 1.375em/1.09090909090909 Arial, sans-serif; /* 22px */
@@ -406,11 +364,9 @@ h6, .h6 {
 	margin: 1.26262626262626em 0;
 }
 
-/*----------------------------------*/
-
 p {
 	font-family: Cambria, Georgia, serif;
-	font-size: 1em;
+	font-size: 1em; /* 16px */
 	line-height: 1.5;
 	margin: 0 0 1.5em;
 	word-break: break-all;
@@ -419,6 +375,19 @@ p {
 	   -moz-hyphens: auto;
 	        hyphens: auto;
 }
+	p a {
+		color: #0083ca;
+		text-decoration: none;
+	}
+	p a:visited { color: #0083ca; }
+	p a:visited:hover,
+	p a:focus,
+	p a:focus:hover,
+	p a:hover,
+	p a:active {
+		color: #0083ca;
+		text-decoration: underline;
+	}
 	/* Re-think class names? */
 	p.p1 {
 		font-size: .75em; /* 12px */
@@ -440,21 +409,6 @@ p {
 		line-height: 1.19936034115139; /* (((1.5 / .938) = 1.59914712153518) * .75) = 1.19936034115139 */
 		margin-bottom: 1.59914712153518em;
 	}
-		p a {
-			color: #0083ca;
-			text-decoration: none;
-		}
-			p a:visited { color: #0083ca; }
-			p a:visited:hover,
-			p a:focus,
-			p a:focus:hover,
-			p a:hover,
-			p a:active {
-				color: #0083ca;
-				text-decoration: underline;
-			}
-
-/*----------------------------------*/
 
 .caption {
 	font: .938em/1.19936034115139 Cambria, Georgia, serif; /* 15px */
@@ -462,16 +416,22 @@ p {
 	margin: .79957356076759em 0;
 }
 
-/*----------------------------------*/
-
 .mugline {
 	font: bold 1em/1.5 Arial, sans-serif; /* 16px */
 	text-align: center;
 }
 
-/*----------------------------------*/
-
 .byline { font: 1.125em/1.33333333333333 Cambria, Georgia, serif; } /* 18px */
+	.byline a,
+	.byline a:visited { color: #000; }
+	.byline a:visited:hover,
+	.byline a:focus,
+	.byline a:focus:hover,
+	.byline a:hover,
+	.byline a:active {
+		color: #000;
+		text-decoration: underline;
+	}
 	.byline.byline1 {
 		font-weight: bold;
 		font-variant: small-caps;
@@ -482,7 +442,30 @@ p {
 		margin-top: 0;
 	}
 
-/*----------------------------------*/
+.jump {}
+	.jump.jump1 {
+		font: italic 87.5%/1 Cambria, Georgia, serif;
+		text-align: right;
+		color: #000;
+		margin: 20px 0;
+		padding: 0;
+	}
+		.jump.jump1 span {
+			font-family: Arial, sans-serif;
+			font-weight: bold;
+			font-style: normal;
+			text-transform: uppercase;
+		}
+		.jump.jump1 a {
+			color: #000;
+			text-decoration: none;
+		}
+			.jump.jump1 a:visited { color: #000; }
+			.jump.jump1 a:visited:hover,
+			.jump.jump1 a:focus,
+			.jump.jump1 a:focus:hover,
+			.jump.jump1 a:hover,
+			.jump.jump1 a:active { color: #ae1b1f; }
 
 /**
  * The `<span>` element doesn't mean anything on its own, but can be
@@ -499,8 +482,6 @@ span {}
 		font-family: Baskerville, Palatino, "Book Antiqua", serif;
 		font-style: italic;
 	}
-
-/*----------------------------------*/
 
 #story { content: ""; display: table; } #story:after { clear: both; } #story { *zoom: 1; }
 	#story p {

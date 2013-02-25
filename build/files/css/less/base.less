@@ -1,9 +1,3 @@
-/*
-**----------------------------------
-** Top links:
-**----------------------------------
-*/
-
 #bd_ear { display: none; }
 @media only screen and (min-width: 1005px) {
 	#bd_ear:before, #bd_ear:after { content: ""; display: table; } #bd_ear:after { clear: both; } #bd_ear { *zoom: 1; }
@@ -42,12 +36,6 @@
 		}
 }
 
-/*
-**----------------------------------
-** Main header:
-**----------------------------------
-*/
-
 #bd_masthead {
 	border-bottom: 1px solid #ccc;
 	padding: 10px 0;
@@ -59,12 +47,6 @@
 		border-bottom: 0;
 	}
 }
-
-/*
-**----------------------------------
-** Flag:
-**----------------------------------
-*/
 
 #bd_flag {
 	font: 187.5%/1 "RGWeb", Cambria, Georgia, serif; /* 30px */
@@ -104,39 +86,24 @@
 	}
 }
 
-/*
-**----------------------------------
-** Main navigation:
-**----------------------------------
-*/
-
 #bd_proof { *zoom: 1; } #bd_proof:before, #bd_proof:after { content: ""; display: table; } #bd_proof:after { clear: both; }
+#bd_proof {
+	min-height: 49px;
+	_height: 49px;
+}
 	#bd_proof ul ul,
-	#bd_proof ul h2 {
-		margin: 10px 0 10px 10px;
-	}
+	#bd_proof ul h2 { margin-left: 10px; } /* Replace for wrapping div? */
 
-/*
-**----------------------------------
-** Content area:
-**----------------------------------
-*/
+@media only screen and (min-width: 1005px) {
+	#bd_proof {
+		min-height: auto;
+		height: auto;
+	}
+}
 
 #bd_content {}
 
-/*
-**----------------------------------
-** Footer:
-**----------------------------------
-*/
-
 #bd_morgue { border-top: 1px solid #ccc; }
-
-/**
- * Convert lists to `<select>`s.
- *
- * @see rgne.ws/T828kW
- */
 
 .js #bd_morgue ul {
 	display: none;
@@ -148,10 +115,6 @@
 		visibility: visible;
 	}
 }
-
-/**
- * Footer meta.
- */
 
 #bd_press {
 	border-top: 1px solid #ccc;
@@ -187,14 +150,6 @@
 	#bd_press span span { display: inline; }
 }
 
-/*--------------------------------------------------------------------*/
-
-/*
-**----------------------------------
-** Lists:
-**----------------------------------
-*/
-
 .bd_scoop {
 	margin: 1em 0;
 	padding: 0;
@@ -224,12 +179,6 @@
 			text-decoration: underline;
 		}
 
-/*
-**----------------------------------
-** Headings:
-**----------------------------------
-*/
-
 .bd_insert {
 	font: bold 1.125em/1.33333333333333 "BentonSansCond Regular", Arial, sans-serif; /* 18px */
 	letter-spacing: .02em;
@@ -238,12 +187,6 @@
 }
 	.bd_insert a:link,
 	.bd_insert a:visited { color: #333; }
-
-/*
-**----------------------------------
-** Utility:
-**----------------------------------
-*/
 
 /**
  * Hide only visually, but have it available for screen readers.
