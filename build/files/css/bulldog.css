@@ -123,7 +123,7 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 @media only screen and (min-width:665px){#bd_flag{font-size:250%;top:12px;}}@media only screen and (min-width:1005px){#bd_flag{font-size:312.5%;position:static;margin-bottom:20px;}}#bd_proof{*zoom:1;}
 #bd_proof:before,#bd_proof:after{content:"";display:table;}
 #bd_proof:after{clear:both;}
-#bd_proof{min-height:49px;_height:49px;}
+#bd_proof{font-family:Arial,sans-serif;min-height:49px;_height:49px;}
 #bd_proof ul ul,#bd_proof ul h2{margin-left:10px;}
 @media only screen and (min-width:1005px){#bd_proof{min-height:auto;height:auto;}}
 #bd_morgue{border-top:1px solid #ccc;}
@@ -143,7 +143,6 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 .bd_insert{font:bold 1.125em/1.33333333333333 "BentonSansCond Regular",Arial,sans-serif;letter-spacing:.02em;color:#333;margin:.66666666666667em 0;}
 .bd_insert a:link,.bd_insert a:visited{color:#333;}
 .bd_cut{border:0;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;position:absolute;clip:rect(0 0 0 0);}
-#megawhale{font-family:Arial,sans-serif;}
 .js #megawhale{display:none;}
 .mw-div{position:absolute;left:-999em;}
 .megakrill{width:100%;float:left;display:inline;}
