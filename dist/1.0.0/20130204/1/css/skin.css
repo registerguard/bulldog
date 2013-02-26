@@ -1,0 +1,62 @@
+/* TODO: Rename div and this file to match official SAU name. */
+
+#bgad { display: none; }
+
+html,
+body { height: 100%; }
+
+.wiffle {
+	background-color: #fff;
+	border-width: 0 5px;
+	border-style: solid;
+	border-color: #fff;
+	height: auto;
+	min-height: 100%;
+	_height: 100%;
+	margin: 0 5px;
+}
+
+@media only screen and (min-width: 665px) {
+	
+	.wiffle { margin: 0 auto; }
+	
+}
+
+@media only screen and (min-width: 1005px) {
+	
+	.wiffle {
+		margin: 0 0 0 -490px;
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		top: 0;
+	}
+	
+	/**
+	 * @see http://www.howtocreate.co.uk/fixedPosition.html
+	 */
+	
+	a#skin {
+		width: 100%;
+		_height: 100%;
+		min-height: 100%;
+		background-color: #314a11;
+		background-image: url(../img/junk/ad970.png);
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-attachment: fixed;
+		display: block;
+		position: fixed;
+		z-index: 1;
+		_top: expression((ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop) + 'px'); /* <= IE6 */
+	}
+	
+}
+
+@media only screen and (min-width: 1345px) {
+	
+	.wiffle { margin: 0 0 0 -660px; }
+	
+	a#skin { background-image: url(../img/junk/ad1300.png); }
+	
+}
