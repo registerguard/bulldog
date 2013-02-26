@@ -2,6 +2,11 @@
 
 ## v1.0.0
 
+#### February 26, 2013
+
+* Been a few changes; lots of CSS tweaks.
+* Removed `1.0.0` folder from root and into `dist` folder.
+
 #### February 22, 2013
 
 * Changed name of `build/dev/` to `build/files/`.
