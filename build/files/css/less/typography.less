@@ -208,7 +208,7 @@ h6, .h6 {
 	.sig a:hover,
 	.sig a:active { color: #fff; }
 .sig.sig1 {
-	font-size: 50%;
+	font-size: 65%;
 	letter-spacing: .1em;
 	text-shadow: 0 1px 2px #5e0e11;
 	color: #fff;
@@ -279,7 +279,7 @@ h6, .h6 {
  */
 
 .streamer:before, .streamer:after { content: ""; display: table; } .streamer:after { clear: both; } .streamer { *zoom: 1; }
-.streamer { margin: 1em 0; }
+.streamer { margin: 10px 0; }
 	.streamer h1,
 	.streamer h2 {
 		font-size: 100%;
@@ -288,7 +288,7 @@ h6, .h6 {
 		padding: 0;
 	}
 	.streamer h1 {
-		margin-right: .5em;
+		margin-right: 10px;
 		float: left;
 		display: inline;
 	}
@@ -307,7 +307,7 @@ h6, .h6 {
 .streamer.flip h1 {
 	float: right;
 	margin-right: 0;
-	margin-left: .5em;
+	margin-left: 10px;
 }
 	.streamer.flip h2 a,
 	.streamer.flip h2 span { float: right; }
@@ -361,14 +361,14 @@ h6, .h6 {
 .subtle {
 	font: normal 1.188em/1.26262626262626 Courier, monospace; /* 19px */
 	color: #999;
-	margin: 1.26262626262626em 0;
+	margin: 0 0 1.26262626262626em;
 }
 
 p {
 	font-family: Cambria, Georgia, serif;
-	font-size: 1em; /* 16px */
-	line-height: 1.5;
-	margin: 0 0 1.5em;
+	font-size: .875em; /* 14px */
+	line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
+	margin: 0 0 .85714285714286em; /* (((1.5 / .875) = 1.71428571428571) / 2) = .85714285714286 */
 	/*
 	word-break: break-all;
 	word-wrap: break-word;
@@ -389,27 +389,6 @@ p {
 	p a:active {
 		color: #0083ca;
 		text-decoration: underline;
-	}
-	/* Re-think class names? */
-	p.p1 {
-		font-size: .75em; /* 12px */
-		line-height: 1.5; /* (((1.5 / .75) = 2) * .75) = 1.5 */
-		margin-bottom: 2em;
-	}
-	p.p2 {
-		font-size: .813em; /* 13px */
-		line-height: 1.38376383763838; /* (((1.5 / .813) = 1.8450184501845) * .75) = 1.38376383763838 */
-		margin-bottom: 1.8450184501845em;
-	}
-	p.p3 {
-		font-size: .875em; /* 14px */
-		line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
-		margin-bottom: 1.71428571428571em;
-	}
-	p.p4 {
-		font-size: .938em; /* 15px */
-		line-height: 1.19936034115139; /* (((1.5 / .938) = 1.59914712153518) * .75) = 1.19936034115139 */
-		margin-bottom: 1.59914712153518em;
 	}
 
 .caption {
@@ -534,8 +513,11 @@ span {}
 
 #story { content: ""; display: table; } #story:after { clear: both; } #story { *zoom: 1; }
 	#story p {
+		font-size: 1em;
+		line-height: 1.5em;
 		text-align: justify;
 		text-justify: newspaper;
+		margin: 1.5em 0;
 		-webkit-hyphenate-character: "\2010";
 		-webkit-hyphenate-limit-after: 1;
 		-webkit-hyphenate-limit-before: 3;

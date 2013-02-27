@@ -56,14 +56,17 @@ body{font:100.01%/1.5 Cambria,Georgia,serif;color:#000;-webkit-font-smoothing:an
 a{color:#000;text-decoration:none;}
 a:visited{color:#666;}
 a:visited:hover,a:focus,a:focus:hover,a:hover,a:active{color:#ae1b1f;}
+ul,ol,dl,dt,dd{margin:0;padding:0;}
+ul,ol,dl{font-size:14px;font-size:.875rem;line-height:1.71428571428571;margin:.85714285714286em 0;}
+dl dt{font-weight:bold;}
+ul ul,ul ol,ul dl,ol ul,ol ol,ol dl,dl ol,dl ul{margin-top:0;margin-bottom:0;}
+ul li,ol li,dl dd{margin-left:1.5em;}
 .li1,.li1 li{margin:0;padding:0;}
-.li1{font:bold 1em/1.5 "MillerHeadline Bold",Cambria,Georgia,serif;letter-spacing:.02em;}
-.li1 li{border-width:1px 0;border-style:solid;border-color:#eee;list-style:none;margin-bottom:-1px;}
+.li1{font-family:"MillerHeadline Bold",Cambria,Georgia,serif;font-size:1em;font-weight:bold;line-height:1.25;letter-spacing:.02em;margin:.75em 0;}
+.li1 li{border-width:1px 0;border-style:solid;border-color:#ccc;list-style:none;margin-bottom:-1px;padding:.25em 0;}
 .li1 li a,.li1 li a:visited{color:#333;}
 .li1 li a:visited:hover,.li1 li a:focus,.li1 li a:focus:hover,.li1 li a:hover,.li1 li a:active{color:#000;}
-.li2,.li2 li,.li2 ul{margin:0;padding:0;}
-.li2 li{font:1em/1.5 Arial,sans-serif;color:#666;margin-left:1.25em;}
-.li2 ul{margin:.375em 0;}
+.li2{font-family:Arial,sans-serif;}
 .li2 li a,.li2 li a:visited{color:#666;}
 .li2 li a:visited:hover,.li2 li a:focus,.li2 li a:focus:hover,.li2 li a:hover,.li2 li a:active{color:#000;}
 table{border-collapse:collapse;border-spacing:0;width:100%;}
@@ -210,7 +213,7 @@ h6,.h6{font-size:1em;line-height:1.5;}
 .label.label2{text-align:center;}
 .sig{font-family:Arial,sans-serif;font-weight:bold;text-transform:uppercase;color:#f00;}
 .sig a,.sig a:visited,.sig a:visited:hover,.sig a:focus,.sig a:focus:hover,.sig a:hover,.sig a:active{color:#fff;}
-.sig.sig1{font-size:50%;letter-spacing:.1em;text-shadow:0 1px 2px #5e0e11;color:#fff;border-width:2px 0;border-style:solid;border-color:#e82528;-webkit-border-radius:2px;border-radius:2px;background:#e82528;margin:0 .25em;padding:0 .25em;white-space:nowrap;position:relative;top:-0.35em;}
+.sig.sig1{font-size:65%;letter-spacing:.1em;text-shadow:0 1px 2px #5e0e11;color:#fff;border-width:2px 0;border-style:solid;border-color:#e82528;-webkit-border-radius:2px;border-radius:2px;background:#e82528;margin:0 .25em;padding:0 .25em;white-space:nowrap;position:relative;top:-0.35em;}
 .bug{font:bold 1em/1.5 "BentonSansCond Regular",Arial,sans-serif;text-transform:uppercase;color:#000;border-width:1px 0;border-style:solid;border-color:#000;margin:.75em 0;}
 .bug a,.bug a:visited{color:#000;}
 .bug a:visited:hover,.bug a:focus,.bug a:focus:hover,.bug a:hover,.bug a:active{color:#ae1b1f;}
@@ -219,13 +222,13 @@ h6,.h6{font-size:1em;line-height:1.5;}
 .streamer:before,.streamer:after{content:"";display:table;}
 .streamer:after{clear:both;}
 .streamer{*zoom:1;}
-.streamer{margin:1em 0;}
+.streamer{margin:10px 0;}
 .streamer h1,.streamer h2{font-size:100%;line-height:1;margin:0;padding:0;}
-.streamer h1{margin-right:.5em;float:left;display:inline;}
+.streamer h1{margin-right:10px;float:left;display:inline;}
 .streamer h1 a,.streamer h1 span{display:block;}
 .streamer h2{overflow:hidden;_height:1%;}
 .streamer h2 a,.streamer h2 span{float:left;display:inline;}
-.streamer.flip h1{float:right;margin-right:0;margin-left:.5em;}
+.streamer.flip h1{float:right;margin-right:0;margin-left:10px;}
 .streamer.flip h2 a,.streamer.flip h2 span{float:right;}
 .streamer a,.streamer span{font:bold 0.938em/1.59914712153518 "BentonSansCond Regular",Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;padding:.3997867803838em .79957356076759em;}
 .streamer a:link,.streamer a:visited{color:#fff;text-decoration:none;}
@@ -235,15 +238,11 @@ h6,.h6{font-size:1em;line-height:1.5;}
 .streamer.alt1 h2{background-color:#000;}
 .streamer.alt1 h2 span,.streamer.alt1 h2 a:link,.streamer.alt1 h2 a:visited,.streamer.alt1 h2 a:visited:hover,.streamer.alt1 h2 a:focus,.streamer.alt1 h2 a:focus:hover,.streamer.alt1 h2 a:hover,.streamer.alt1 h2 a:active{color:#fff;}
 .marker{font:bold 1.375em/1.09090909090909 Arial,sans-serif;color:#660;text-transform:none;background:#ff0;margin:.54545454545455em 0;padding:.54545454545455em .54545454545455em;display:inline-block;*display:inline;*zoom:1;}
-.subtle{font:normal 1.188em/1.26262626262626 Courier,monospace;color:#999;margin:1.26262626262626em 0;}
-p{font-family:Cambria, Georgia, serif;font-size:1em;line-height:1.5;margin:0 0 1.5em;}
+.subtle{font:normal 1.188em/1.26262626262626 Courier,monospace;color:#999;margin:0 0 1.26262626262626em;}
+p{font-family:Cambria, Georgia, serif;font-size:.875em;line-height:1.28571428571428;margin:0 0 .85714285714286em;}
 p a{color:#0083ca;text-decoration:none;}
 p a:visited{color:#0083ca;}
 p a:visited:hover,p a:focus,p a:focus:hover,p a:hover,p a:active{color:#0083ca;text-decoration:underline;}
-p.p1{font-size:.75em;line-height:1.5;margin-bottom:2em;}
-p.p2{font-size:.813em;line-height:1.38376383763838;margin-bottom:1.8450184501845em;}
-p.p3{font-size:.875em;line-height:1.28571428571428;margin-bottom:1.71428571428571em;}
-p.p4{font-size:.938em;line-height:1.19936034115139;margin-bottom:1.59914712153518em;}
 .caption{font:0.938em/1.19936034115139 Cambria,Georgia,serif;font-style:italic;margin:.79957356076759em 0;}
 .mugline{font:bold 1em/1.5 Arial,sans-serif;text-align:center;}
 .byline{font:1.125em/1.33333333333333 Cambria,Georgia,serif;}
@@ -271,22 +270,19 @@ span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:itali
 #story{content:"";display:table;}
 #story:after{clear:both;}
 #story{*zoom:1;}
-#story p{text-align:justify;text-justify:newspaper;-webkit-hyphenate-character:"\2010";-webkit-hyphenate-limit-after:1;-webkit-hyphenate-limit-before:3;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
+#story p{font-size:1em;line-height:1.5em;text-align:justify;text-justify:newspaper;margin:1.5em 0;-webkit-hyphenate-character:"\2010";-webkit-hyphenate-limit-after:1;-webkit-hyphenate-limit-before:3;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
 .mm{height:0;padding-bottom:56.25%;position:relative;overflow:hidden;}
 .mm iframe,.mm object,.mm embed{width:100% !important;height:100% !important;position:absolute;top:0;left:0;}
 .ss{padding-bottom:66.666%;}
 img{vertical-align:middle;}
 img{width:auto;height:auto;max-width:100%;max-height:100%;}
-.img{margin:10px 0;display:block;}
-.imgr{float:right;margin:0 0 5px 10px;}
-.imgl{float:left;margin:0 10px 5px 0;}
+.imgr{float:right;margin-left:10px;}
+.imgl{float:left;margin-right:10px;}
 .oa{overflow:auto;}
 * html .oa{height:1%;}
 #rgpdf{display:none;visibility:hidden;}
-@media only screen and (min-width:665px){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima4.jpg);background-repeat:no-repeat;width:128px;height:261px;float:right;margin:0 0 10px 10px;display:block;visibility:visible;overflow:hidden;text-indent:-999em;} #rgpdf a{display:block;width:100%;height:100%;}}@media only screen and (min-width:665px) and (min--moz-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-moz-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-o-min-device-pixel-ratio:3/2),only screen and (min-width:665px) and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-resolution:1.5dppx){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima2.jpg);-moz-background-size:128px 261px;-ie-background-size:128px 261px;-o-background-size:128px 261px;-webkit-background-size:128px 261px;background-size:128px 261px;}}hr,.hr1,.hr2,.hr3,.hr4{border:0;border-top:.063em solid #ccc;height:.063em;margin:.688em 0;padding:0;}
-.hr2{border-style:dotted;}
-.hr3,.hr4{border-top-width:.125em;border-color:#999;margin:1.375em 0 1.438em;}
-.hr4{border-style:dotted;}
+@media only screen and (min-width:665px){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima4.jpg);background-repeat:no-repeat;width:128px;height:261px;float:right;margin:0 0 10px 10px;display:block;visibility:visible;overflow:hidden;text-indent:-999em;} #rgpdf a{display:block;width:100%;height:100%;}}@media only screen and (min-width:665px) and (min--moz-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-moz-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-o-min-device-pixel-ratio:3/2),only screen and (min-width:665px) and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-resolution:1.5dppx){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima2.jpg);-moz-background-size:128px 261px;-ie-background-size:128px 261px;-o-background-size:128px 261px;-webkit-background-size:128px 261px;background-size:128px 261px;}}hr,.hr1{border:0;border-top:1px solid #ccc;height:1px;margin:10px 0 11px;padding:0;}
+.hr1{border-color:#eee;}
 .pull1{border:1px solid #ccc;background:#eee;padding:10px;}
 .deep{width:100%;border-width:1px 0;border-style:solid;border-color:#ccc;margin:10px 0;padding:10px 0;}
 @media only screen and (min-width:665px){.deep{width:300px;border:0;margin-left:40px;padding:0;float:right;display:inline;clear:right;}}@media only screen and (min-width:1005px){.deep{margin-right:-170px;}}.thumb-wrap{margin-left:-15px;margin-bottom:-15px;}
@@ -306,3 +302,8 @@ var{font-style:italic;}
 samp{font:1em Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;color:#333;}
 kbd{-moz-border-radius:3px;-moz-box-shadow:0 1px 0 rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;-webkit-border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;background-color:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;color:#333;display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.4;margin:0 .1em;padding:.1em .6em;text-shadow:0 1px 0 #fff;}
 dfn,dfn[title],abbr,abbr[title]{border-bottom:1px dotted #666;}
+#loc{border-bottom:1px solid #ccc;}
+#loc p{font:bold 0.813em/1.8450184501845 Arial,sans-serif;letter-spacing:.02em;color:#666;text-transform:uppercase;margin:0 0 10px;}
+#loc p a,#loc p a:visited,#loc p a:visited:hover,#loc p a:focus,#loc p a:focus:hover,#loc p a:hover,#loc p a:active{color:#000;}
+.item{margin:5px 0 0;}
+.item>:last-child{margin-bottom:0;}

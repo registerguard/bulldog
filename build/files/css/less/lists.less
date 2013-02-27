@@ -2,21 +2,58 @@
  * @see http://graphicdesign.stackexchange.com/a/11138/10258
  */
 
+ul,
+ol,
+dl,
+dt,
+dd {
+	margin: 0;
+	padding: 0;
+}
+	ul,
+	ol,
+	dl {
+		font-size: 14px;
+		font-size: .875rem;
+		line-height: 1.71428571428571;
+		margin: .85714285714286em 0; /* (1.71428571428571 / 2) = .85714285714286 */
+	}
+		dl dt { font-weight: bold; }
+		ul ul,
+		ul ol,
+		ul dl,
+		ol ul,
+		ol ol,
+		ol dl,
+		dl ol,
+		dl ul {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+			ul li,
+			ol li,
+			dl dd { margin-left: 1.5em; }
+
 .li1,
 .li1 li {
 	margin: 0;
 	padding: 0;
 }
 .li1 {
-	font: bold 1em/1.5 "MillerHeadline Bold", Cambria, Georgia, serif; /* 16px */
+	font-family: "MillerHeadline Bold", Cambria, Georgia, serif;
+	font-size: 1em; /* 16px */
+	font-weight: bold;
+	line-height: 1.25; /* (((1.5 / 1) = 1.5) - .25) = 1.25 */
 	letter-spacing: .02em;
+	margin: .75em 0; /* (1.5 / 2) = .75 */
 }
 	.li1 li {
 		border-width: 1px 0;
 		border-style: solid;
-		border-color: #eee;
+		border-color: #ccc;
 		list-style: none;
 		margin-bottom: -1px;
+		padding: .25em 0;
 	}
 	.li1 li a,
 	.li1 li a:visited { color: #333; }
@@ -26,22 +63,11 @@
 	.li1 li a:hover,
 	.li1 li a:active { color: #000; }
 
-.li2,
-.li2 li,
-.li2 ul {
-	margin: 0;
-	padding: 0;
-}
-	.li2 li {
-		font: 1em/1.5 Arial, sans-serif; /* 16px */
-		color: #666;
-		margin-left: 1.25em;
-	}
-	.li2 ul { margin: .375em 0; }
-		.li2 li a,
-		.li2 li a:visited { color: #666; }
-		.li2 li a:visited:hover,
-		.li2 li a:focus,
-		.li2 li a:focus:hover,
-		.li2 li a:hover,
-		.li2 li a:active { color: #000; }
+.li2 { font-family: Arial, sans-serif; }
+	.li2 li a,
+	.li2 li a:visited { color: #666; }
+	.li2 li a:visited:hover,
+	.li2 li a:focus,
+	.li2 li a:focus:hover,
+	.li2 li a:hover,
+	.li2 li a:active { color: #000; }
