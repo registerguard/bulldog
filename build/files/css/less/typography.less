@@ -42,7 +42,7 @@
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-family: "MillerHeadline Bold", Cambria, Georgia, serif;
-	margin: 0;
+	margin: 0 0 10px;
 }
 h1, .h1 {
 	font-size: 2.875em; /* 46px */
@@ -100,7 +100,7 @@ h6, .h6 {
 .deck {
 	font: 1em/1.5 "MillerHeadline Light", Cambria, Georgia, serif;
 	color: #666;
-	margin: 0;
+	margin: 0 0 10px;
 }
 	.deck a,
 	.deck a:visited { color: #666; } /* RG black 60. */
@@ -545,6 +545,5 @@ span {}
 		   -moz-hyphens: auto;
 		        hyphens: auto;
 	}
-	/* Remove top/bottom margins of first/last children: */
-	#story > p:first-of-type { margin-top: 0; }
-	#story > p:last-of-type { margin-bottom: 0; }
+	/* Remove top margin of first `<p>` within `#story`: */
+	#story p:first-of-type { margin-top: 0; }
