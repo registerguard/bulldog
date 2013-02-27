@@ -414,7 +414,10 @@ p {
 	text-align: center;
 }
 
-.byline { font: 1.125em/1.33333333333333 Cambria, Georgia, serif; } /* 18px */
+.byline {
+	font: 1.125em/1.33333333333333 Cambria, Georgia, serif; /* 18px */
+	margin: 0;
+}
 	.byline a,
 	.byline a:visited { color: #000; }
 	.byline a:visited:hover,
@@ -428,13 +431,10 @@ p {
 	.byline.byline1 {
 		font-weight: bold;
 		font-variant: small-caps;
-		margin-bottom: 0;
 	}
-	.byline.byline2 {
-		font-style: italic;
-		margin-top: 0;
-	}
+	.byline.byline2 { font-style: italic; }
 
+/* Move some default styles into the base class. */
 .jump {}
 	.jump.jump1 {
 		font: italic 87.5%/1 Cambria, Georgia, serif;
@@ -459,6 +459,14 @@ p {
 			.jump.jump1 a:focus:hover,
 			.jump.jump1 a:hover,
 			.jump.jump1 a:active { color: #ae1b1f; }
+
+.pub {}
+	.pub.pub1 {
+		font-size: .75em;
+		line-height: 2;
+		margin: 0;
+		text-transform: uppercase;
+	}
 
 blockquote {
 	border-left: 3px solid #ccc;
@@ -537,3 +545,6 @@ span {}
 		   -moz-hyphens: auto;
 		        hyphens: auto;
 	}
+	/* Remove top/bottom margins of first/last children: */
+	#story > p:first-of-type { margin-top: 0; }
+	#story > p:last-of-type { margin-bottom: 0; }

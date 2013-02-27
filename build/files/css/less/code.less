@@ -7,18 +7,18 @@
 
 /* @TODO: Make `font-size` bigger. */
 pre {
-	font: .875em/2.05714285714286 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif; /* (14px / 16px = .875em)/(1.8em / .875em = 2.05714285714286) */
+	font: 1em/1.5 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 	color: #333;
-	border: .07142857142857em solid rgba(0, 0, 0, .15); /* 1px / 14px */
+	border: 1px solid rgba(0, 0, 0, .15);
 	background: rgba(0, 0, 0, .1);
-	margin: 1em 0; /* (28px / 14px = 2em) / 2 = 1em */
-	padding: .92857142857143em; /* (28px - 2px (top/bottom borders) = 26px) / (14px = 1.85714285714286) / 2 */
+	margin: 0 0 10px;
+	padding: 5px 10px;
 	word-wrap: normal;
 	overflow: auto;
 	white-space: pre;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-	        border-radius: 4px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
 }
 	pre code {
 		color: inherit;
@@ -36,20 +36,19 @@ pre {
 code {
 	font: 1em Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 	color: #333;
-	/*border: 1px solid rgba(0, 0, 0, .15);*/
 	background: rgba(0, 0, 0, .1);
 	padding: 0 2px;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
 	        border-radius: 3px;
-	white-space: pre;           /* CSS 2.0 */
-	white-space: pre-wrap;      /* CSS 2.1 */
-	white-space: pre-line;      /* CSS 3.0 */
-	white-space: -pre-wrap;     /* Opera 4-6 */
-	white-space: -o-pre-wrap;   /* Opera 7 */
-	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: pre;           /* CSS 2.0     */
+	white-space: pre-wrap;      /* CSS 2.1     */
+	white-space: pre-line;      /* CSS 3.0     */
+	white-space: -pre-wrap;     /* Opera 4-6   */
+	white-space: -o-pre-wrap;   /* Opera 7     */
+	white-space: -moz-pre-wrap; /* Mozilla     */
 	white-space: -hp-pre-wrap;  /* HP Printers */
-	word-wrap: break-word;      /* IE 5+ */
+	word-wrap: break-word;      /* IE 5+       */
 }
 
 /**
@@ -93,20 +92,18 @@ samp {
  */
 
 kbd {
-	-moz-border-radius: 3px;
-	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-	-webkit-border-radius:3px;
-	-webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
-	background-color:#f7f7f7;
-	border:1px solid #ccc;
-	border-radius:3px;
-	box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
-	color:#333;
-	display:inline-block;
-	font-family:Arial,Helvetica,sans-serif;
-	font-size:11px;
-	line-height:1.4;
-	margin:0 .1em;
-	padding:.1em .6em;
-	text-shadow:0 1px 0 #fff;
+	font-family: Arial, sans-serif;
+	color: #333;
+	border: 1px solid #ccc;
+	background: #f7f7f7;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px #fff inset;
+	   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px #fff inset;
+	        box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px #fff inset;
+	display: inline-block;
+	margin: 0 .1em;
+	padding: .1em .6em;
+	text-shadow: 0 1px 0 #fff;
 }

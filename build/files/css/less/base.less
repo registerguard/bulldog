@@ -7,6 +7,8 @@
 		padding: 0;
 	}
 	#bd_ear {
+		font: .813em/1.8450184501845 Arial, sans-serif; /* 13px */
+		text-transform: uppercase;
 		list-style: none;
 		margin: 10px 0 15px -20px;
 		display: block;
@@ -14,8 +16,6 @@
 		z-index: 20;
 	}
 		#bd_ear li {
-			font: .813em/1.8450184501845 Arial, sans-serif; /* 14px */
-			text-transform: uppercase;
 			margin-left: 20px;
 			float: right;
 			display: inline;
@@ -40,6 +40,7 @@
 	border-bottom: 1px solid #ccc;
 	padding: 10px 0;
 	position: relative;
+	z-index: 10; /* Fixes IE 6-8 bug: rgne.ws/XZIBmE */
 }
 @media only screen and (min-width: 1005px) {
 	#bd_masthead {
@@ -49,7 +50,7 @@
 }
 
 #bd_flag {
-	font: 187.5%/1 "RGWeb", Cambria, Georgia, serif; /* 30px */
+	font: 1.875em/1 "RGWeb", Cambria, Georgia, serif; /* 30px */
 	color: #000;
 	margin: 0;
 	white-space: nowrap;
@@ -74,13 +75,13 @@
 	}
 @media only screen and (min-width: 665px) {
 	#bd_flag {
-		font-size: 250%; /* 40px */
+		font-size: 2.5em; /* 40px */
 		top: 12px;
 	}
 }
 @media only screen and (min-width: 1005px) {
 	#bd_flag {
-		font-size: 312.5%; /* 50px */
+		font-size: 3.125em; /* 50px */
 		position: static;
 		margin-bottom: 20px;
 	}
@@ -94,8 +95,6 @@
 	min-height: 49px;
 	_height: 49px;
 }
-	#bd_proof ul ul,
-	#bd_proof ul h2 { margin-left: 10px; } /* Replace for wrapping div? */
 
 @media only screen and (min-width: 1005px) {
 	#bd_proof {
@@ -114,7 +113,10 @@
 
 #bd_content {}
 
-#bd_morgue { border-top: 1px solid #ccc; }
+#bd_morgue {
+	border-top: 1px solid #ccc;
+	padding: 10px 0 0;
+}
 
 .js #bd_morgue ul {
 	display: none;
@@ -164,7 +166,7 @@
 .bd_scoop {
 	font-size: 1em;
 	line-height: 1.5em;
-	margin: 10px 0;
+	margin: 0 0 10px;
 	padding: 0;
 	list-style: none;
 }
@@ -196,7 +198,7 @@
 	font: bold 1.125em/1.33333333333333 "BentonSansCond Regular", Arial, sans-serif; /* 18px */
 	letter-spacing: .02em;
 	color: #333;
-	margin: .66666666666667em 0;
+	margin: 0 0 10px;
 }
 	.bd_insert a:link,
 	.bd_insert a:visited { color: #333; }
@@ -215,3 +217,5 @@
 	position: absolute;
 	clip: rect(0 0 0 0);
 }
+
+.bd_filler { padding: 10px; }
