@@ -16,6 +16,10 @@
  *
  * Heading: ...
  *
+ * Head: ...
+ *
+ * Headline: ...
+ *
  * Digest Head: In-story headings (a digest is a collection of stories).
  *
  * Subhead: IBID.
@@ -35,8 +39,6 @@
  * @see rgne.ws/RmSawq
  * @see rgne.ws/NFvWAg
  */
-
-/* Head, Headline: */
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-family: "MillerHeadline Bold", Cambria, Georgia, serif;
@@ -63,8 +65,8 @@ h5, .h5 {
 	line-height: 1.09090909090909;
 }
 h6, .h6 {
-	font-size: 1em; /* 16px */
-	line-height: 1.5;
+	font-size: 1.125em; /* 18px */
+	line-height: 1.33333333333333;
 }
 
 /**
@@ -87,7 +89,7 @@ h6, .h6 {
 .head.head1 {
 	font-size: 1.25em; /* 20px */
 	line-height: 1.2;
-	margin: .6em 0;
+	margin: 0 0 10px;
 }
 
 /**
@@ -108,8 +110,8 @@ h6, .h6 {
 	.deck a:hover,
 	.deck a:active { color: #000; }
 .deck.deck1 {
-	font-size: 1em; /* 16px */
-	line-height: 1.5;
+	font-size: 1.125em; /* 18px */
+	line-height: 1.33333333333333;
 }
 .deck.deck2 {
 	font-size: 1.375em; /* 22px */
@@ -130,7 +132,6 @@ h6, .h6 {
 .deck.deck6 {
 	font-size: 2.875em; /* 46px */
 	line-height: 1.04347826086957;
-	margin: .2608695652174em 0;
 }
 
 /**
@@ -140,10 +141,11 @@ h6, .h6 {
 
 .reverse {
 	font: bold 1em/1.5 "BentonSansCond Regular", Arial, sans-serif;
+	letter-spacing: .05em;
 	color: #fff;
 	background: #000;
-	margin: 0;
-	padding: .375em .75em;
+	margin: 0 0 10px;
+	padding: 0 .375em;
 }
 	.reverse a,
 	.reverse a:visited,
@@ -154,12 +156,9 @@ h6, .h6 {
 	.reverse a:active { color: #fff; }
 .reverse.reverse1,
 .reverse.reverse2 {
-	letter-spacing: .05em;
 	text-shadow: 0 1px 2px #4e5051;
 	color: #fff;
 	background: #9d9fa2;
-	margin: .75em 0;
-	padding: 0 .375em;
 }
 .reverse.reverse2 { text-align: center; }
 
@@ -218,7 +217,7 @@ h6, .h6 {
 	-webkit-border-radius: 2px;
 	        border-radius: 2px;
 	background: #e82528;
-	margin: 0 .25em;
+	margin: 0 5px;
 	padding: 0 .25em;
 	white-space: nowrap;
 	position: relative;
@@ -231,13 +230,13 @@ h6, .h6 {
  */
 
 .bug {
-	font: bold 1em/1.5 "BentonSansCond Regular", Arial, sans-serif;
+	font: bold .875em/1.71428571428571 "BentonSansCond Regular", Arial, sans-serif; /* 14px */
+	letter-spacing: .05em;
 	text-transform: uppercase;
-	color: #000;
 	border-width: 1px 0;
 	border-style: solid;
 	border-color: #000;
-	margin: .75em 0;
+	margin: 0 0 10px;
 }
 	.bug a,
 	.bug a:visited { color: #000; }
@@ -248,11 +247,24 @@ h6, .h6 {
 	.bug a:active { color: #ae1b1f; }
 .bug.bug1,
 .bug.bug2 {
-	font-size: .875em; /* 14px */
-	letter-spacing: .05em;
-	line-height: 1.71428571428571;
-	margin: .85714285714286em 0;
+	color: #666;
+	border-color: #666;
 }
+	/* Clean up? */
+	.bug.bug1 a,
+	.bug.bug2 a,
+	.bug.bug1 a:visited,
+	.bug.bug2 a:visited { color: #666; }
+	.bug.bug1 a:visited:hover,
+	.bug.bug2 a:visited:hover,
+	.bug.bug1 a:focus,
+	.bug.bug2 a:focus,
+	.bug.bug1 a:focus:hover,
+	.bug.bug2 a:focus:hover,
+	.bug.bug1 a:hover,
+	.bug.bug2 a:hover,
+	.bug.bug1 a:active,
+	.bug.bug2 a:active { color: #000; }
 .bug.bug2 { text-align: center; }
 
 /**
@@ -351,7 +363,7 @@ h6, .h6 {
 	color: #660;
 	text-transform: none;
 	background: #ff0;
-	margin: .54545454545455em 0;
+	margin: 0 0 10px;
 	padding: .54545454545455em .54545454545455em;
 	display: inline-block;
 	*display: inline;
@@ -361,14 +373,14 @@ h6, .h6 {
 .subtle {
 	font: normal 1.188em/1.26262626262626 Courier, monospace; /* 19px */
 	color: #999;
-	margin: 0 0 1.26262626262626em;
+	margin: 0 0 10px;
 }
 
 p {
 	font-family: Cambria, Georgia, serif;
 	font-size: .875em; /* 14px */
 	line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
-	margin: 0 0 .85714285714286em; /* (((1.5 / .875) = 1.71428571428571) / 2) = .85714285714286 */
+	margin: 0 0 10px;
 	/*
 	word-break: break-all;
 	word-wrap: break-word;
@@ -394,7 +406,7 @@ p {
 .caption {
 	font: .938em/1.19936034115139 Cambria, Georgia, serif; /* 15px */
 	font-style: italic;
-	margin: .79957356076759em 0;
+	margin: 0 0 10px;
 }
 
 .mugline {
@@ -450,7 +462,7 @@ p {
 
 blockquote {
 	border-left: 3px solid #ccc;
-	margin: 0 0 1.5em;
+	margin: 0 0 10px;
 	padding: 0 0 0 1.5em;
 	quotes: '“' '”';
 }
@@ -479,7 +491,7 @@ blockquote {
 		font-size: .875em; /* 14px */
 		line-height: 1.71428571428571em;
 		color: #666;
-		margin: 0 0 1.71428571428571em;
+		margin: 0 0 10px;
 	}
 	/* For `<q>`s in `<blockquote>`s: */
 	blockquote q:before {
