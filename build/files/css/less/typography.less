@@ -530,20 +530,3 @@ span {}
 		font-family: Baskerville, Palatino, "Book Antiqua", serif;
 		font-style: italic;
 	}
-
-#story { content: ""; display: table; } #story:after { clear: both; } #story { *zoom: 1; }
-	#story p {
-		font-size: 1em;
-		line-height: 1.5em;
-		text-align: justify;
-		text-justify: newspaper;
-		margin: 1.5em 0;
-		-webkit-hyphenate-character: "\2010";
-		-webkit-hyphenate-limit-after: 1;
-		-webkit-hyphenate-limit-before: 3;
-		-webkit-hyphens: auto;
-		   -moz-hyphens: auto;
-		        hyphens: auto;
-	}
-	/* Remove top margin of first `<p>` within `#story`: */
-	#story p:first-of-type { margin-top: 0; }

@@ -270,11 +270,6 @@ blockquote q:after{content:'’';content:close-quote;}
 blockquote q q:before{content:'“';content:open-quote;}
 blockquote q q:after{content:'”';content:close-quote;}
 span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:italic;}
-#story{content:"";display:table;}
-#story:after{clear:both;}
-#story{*zoom:1;}
-#story p{font-size:1em;line-height:1.5em;text-align:justify;text-justify:newspaper;margin:1.5em 0;-webkit-hyphenate-character:"\2010";-webkit-hyphenate-limit-after:1;-webkit-hyphenate-limit-before:3;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}
-#story p:first-of-type{margin-top:0;}
 .mm{height:0;padding-bottom:56.25%;position:relative;overflow:hidden;margin:0 0 10px;}
 .mm iframe,.mm object,.mm embed{width:100% !important;height:100% !important;position:absolute;top:0;left:0;}
 .ss{padding-bottom:66.666%;}
