@@ -2,6 +2,10 @@
 
 ## v1.0.0
 
+#### February 27, 2013
+
+* Fixed all links in `header` and `footer`.
+
 #### February 26, 2013
 
 * Been a few changes; lots of CSS tweaks.
