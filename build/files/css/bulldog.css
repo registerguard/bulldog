@@ -288,14 +288,11 @@ img{width:auto\9;height:auto;max-width:100%;max-height:100%;vertical-align:middl
 .thumb-img{width:90px;height:68px;float:left;display:inline;margin-left:15px;margin-bottom:15px;background-position:center center;}
 .thumb-img a{width:100%;height:100%;display:block;}
 @media only screen and (min-width:665px){.thumb-img{width:116px;height:87px;}}@media only screen and (min-width:1345px){.thumb-img{width:90px;height:68px;}}#fb-root{display:none;}
-.social-box_count:before,.social-box_count:after{content:"";display:table;}
-.social-box_count:after{clear:both;}
-.social-box_count{*zoom:1;}
-.social-box_count{margin-left:-5px;}
-.sbc-item{height:auto;_height:70px;min-height:70px;margin-left:5px;float:left;display:inline;}
-.sbc-item iframe,.sbc-item div{display:block !important;}
-.sbc-pinterest{margin-top:10px;_height:60px;min-height:60px;}
-@media only screen and (min-width:665px){.social-box_count{float:right;display:inline;}}#forecast{display:none;}
+#sbc{width:100%;float:left;display:inline;}
+#sbc .sbc-item{height:auto;_height:70px;min-height:70px;margin:0 5px 0 0;float:left;display:inline;}
+#sbc .sbc-item iframe,#sbc .sbc-item div{display:block !important;}
+#sbc .sbc-pinterest{margin-top:10px;_height:60px;min-height:60px;}
+@media only screen and (min-width:665px){#sbc{width:auto;float:right;} #sbc .sbc-item{margin:0 0 0 5px;}}#forecast{display:none;}
 @media only screen and (min-width:1005px){#forecast{width:115px;height:115px;display:block;position:absolute;top:-30px;right:-5px;} #forecast span{font:2.25em/1 "MillerHeadline Light",Cambria,Georgia,serif;letter-spacing:.05em;position:absolute;left:-0.75em;top:.75em;} #forecast a:visited{color:#000;}}.harmonia-select{width:100%;display:block;margin:10px 0;}
 @media only screen and (min-width:665px){.harmonia-select{display:none;visibility:hidden;}}pre{font:1em/1.5 Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;color:#333;border:1px solid rgba(0, 0, 0, 0.15);background:rgba(0, 0, 0, 0.1);margin:0 0 10px;padding:5px 10px;word-wrap:normal;overflow:auto;white-space:pre;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 pre code{color:inherit;border:0;background:transparent;padding:0;}
@@ -311,4 +308,6 @@ dfn,dfn[title],abbr,abbr[title]{border-bottom:1px dotted #666;}
 .take{padding-bottom:10px;}
 #look h2{display:none;}
 #look .h5{font-size:1em;line-height:1.3;}
-#look hr{border-color:#DDDDDD;margin:5px 0;}
+#look hr{border-color:#ddd;margin:5px 0;}
+#meta{border-bottom:1px solid #ccc;padding-bottom:10px;margin:0 0 10px;}
+@media only screen and (min-width:665px){#meta{border:0;margin:0;padding:0;float:left;display:inline;}}

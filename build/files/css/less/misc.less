@@ -79,29 +79,33 @@ hr, .hr1 {
 #fb-root { display: none; }
 
 /* Sharing widgets on the story page: */
-.social-box_count:before, .social-box_count:after { content: ""; display: table; } .social-box_count:after { clear: both; } .social-box_count { *zoom: 1; }
-.social-box_count { margin-left: -5px; }
-	.sbc-item {
+#sbc {
+	width: 100%;
+	float: left;
+	display: inline;
+}
+	#sbc .sbc-item {
 		height: auto;
 		_height: 70px; /* IE6 */
 		min-height: 70px; /* Height of tallest widget. */
-		margin-left: 5px;
+		margin: 0 5px 0 0;
 		float: left;
 		display: inline;
 	}
-	.sbc-item iframe,
-	.sbc-item div { display: block !important; }
-	.sbc-pinterest {
+	#sbc .sbc-item iframe,
+	#sbc .sbc-item div { display: block !important; }
+	#sbc .sbc-pinterest {
 		/* Jenky widget code! */
 		margin-top: 10px;
 		_height: 60px;
 		min-height: 60px;
 	}
 @media only screen and (min-width: 665px) {
-	.social-box_count {
+	#sbc {
+		width: auto;
 		float: right;
-		display: inline;
 	}
+		#sbc .sbc-item { margin: 0 0 0 5px; }
 }
 
 /**

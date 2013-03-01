@@ -3,9 +3,7 @@ dfn[title],
 abbr,
 abbr[title] { border-bottom: 1px dotted #666; }
 
-#loc {
-	border-bottom: 1px solid #ccc;
-}
+#loc { border-bottom: 1px solid #ccc; }
 	#loc p {
 		font: bold .813em/1.8450184501845 Arial, sans-serif; /* 13px */
 		letter-spacing: .02em;
@@ -32,6 +30,21 @@ abbr[title] { border-bottom: 1px dotted #666; }
 		line-height: 1.3;
 	}
 	#look hr {
-		border-color: #DDDDDD;
+		border-color: #ddd;
 		margin: 5px 0;
 	}
+
+#meta {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin: 0 0 10px;
+}
+@media only screen and (min-width: 665px) {
+	#meta {
+		border: 0;
+		margin: 0;
+		padding: 0;
+		float: left;
+		display: inline;
+	}
+}
