@@ -245,8 +245,8 @@ p{font-family:Cambria, Georgia, serif;font-size:.875em;line-height:1.28571428571
 p a{color:#0083ca;text-decoration:none;}
 p a:visited{color:#0083ca;}
 p a:visited:hover,p a:focus,p a:focus:hover,p a:hover,p a:active{color:#0083ca;text-decoration:underline;}
-.caption{font:0.938em/1.19936034115139 Cambria,Georgia,serif;font-style:italic;margin:0 0 10px;}
-.mugline{font:bold 1em/1.5 Arial,sans-serif;text-align:center;}
+.caption{font:0.938em/1.19936034115139 Cambria,Georgia,serif;margin:0 0 10px;}
+.caption.caption1{font-style:italic;}
 .byline{font:1.125em/1.33333333333333 Cambria,Georgia,serif;margin:0;}
 .byline a,.byline a:visited{color:#000;}
 .byline a:visited:hover,.byline a:focus,.byline a:focus:hover,.byline a:hover,.byline a:active{color:#000;text-decoration:underline;}
@@ -257,7 +257,8 @@ p a:visited:hover,p a:focus,p a:focus:hover,p a:hover,p a:active{color:#0083ca;t
 .jump.jump1 a{color:#000;text-decoration:none;}
 .jump.jump1 a:visited{color:#000;}
 .jump.jump1 a:visited:hover,.jump.jump1 a:focus,.jump.jump1 a:focus:hover,.jump.jump1 a:hover,.jump.jump1 a:active{color:#ae1b1f;}
-.pub.pub1{font-size:.75em;line-height:2;margin:0;text-transform:uppercase;}
+.pub{font-size:1em;line-height:1.5;}
+.pub.pub1{font-size:.875em;line-height:1.71428571428571;text-transform:uppercase;margin:0;}
 blockquote{border-left:3px solid #ccc;margin:0 0 10px;padding:0 0 0 1.5em;quotes:'“' '”';}
 blockquote p{font:italic 1.125em/1.33333333333333 Cambria,Georgia,serif;text-indent:-0.75em;word-spacing:.05em;}
 blockquote p:before{font-weight:bold;letter-spacing:.5ex;content:'“';content:open-quote;}
@@ -287,6 +288,9 @@ img{width:auto\9;height:auto;max-width:100%;max-height:100%;vertical-align:middl
 .thumb-img{width:90px;height:68px;float:left;display:inline;margin-left:15px;margin-bottom:15px;background-position:center center;}
 .thumb-img a{width:100%;height:100%;display:block;}
 @media only screen and (min-width:665px){.thumb-img{width:116px;height:87px;}}@media only screen and (min-width:1345px){.thumb-img{width:90px;height:68px;}}#fb-root{display:none;}
+.social-box_count:before,.social-box_count:after{content:"";display:table;}
+.social-box_count:after{clear:both;}
+.social-box_count{*zoom:1;}
 .social-box_count{margin-left:-5px;}
 .sbc-item{height:auto;_height:70px;min-height:70px;margin-left:5px;float:left;display:inline;}
 .sbc-item iframe,.sbc-item div{display:block !important;}
