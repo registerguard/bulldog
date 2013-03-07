@@ -83,12 +83,13 @@ module.exports = function(grunt) {
 		
 		env : {
 			
+			/*
 			options : {
 				
-				/* Shared Options Hash */
-				//globalOption : 'foo'
+				globalOption : 'foo'
 				
 			},
+			*/
 			
 			dev : {
 				

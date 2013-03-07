@@ -63,7 +63,7 @@ ul ul,ul ol,ul dl,ol ul,ol ol,ol dl,dl ol,dl ul{margin-top:0;margin-bottom:0;}
 ul li,ol li,dl dd{margin-left:1.5em;}
 .li1,.li1 li{margin:0;padding:0;}
 .li1{font:bold 1em/1.25 "MillerHeadline Bold",Cambria,Georgia,serif;letter-spacing:.02em;margin:0 0 10px;}
-.li1 li{border-width:1px 0;border-style:solid;border-color:#ccc;list-style:none;margin-bottom:-1px;padding:.25em 0;}
+.li1 li{border-width:1px 0;border-style:solid;border-color:#ddd;list-style:none;margin-bottom:-1px;padding:.25em 0;}
 .li1 li a,.li1 li a:visited{color:#333;}
 .li1 li a:visited:hover,.li1 li a:focus,.li1 li a:focus:hover,.li1 li a:hover,.li1 li a:active{color:#000;}
 .li2{font-family:Arial,sans-serif;}
