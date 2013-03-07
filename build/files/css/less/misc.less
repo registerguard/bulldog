@@ -1,14 +1,13 @@
-hr, .hr1 {
+hr {
 	border: 0;
 	border-top: 1px solid #ccc;
 	height: 1px;
 	margin: 10px 0 11px;
 	padding: 0;
 }
-	.hr1 { border-color: #eee; }
 
 /* Lines only style. */
-.pull1 {
+.pull {
 	border: 1px solid #ccc;
 	background: #eee;
 	padding: 10px;
@@ -37,43 +36,6 @@ hr, .hr1 {
 @media only screen and (min-width: 1005px) {
 	.deep { margin-right: -170px; }
 }
-
-/* Story page thumbnails: */
-/*
-300px at breakpoint D
-640px at breakpoint C
-100% at breakpoint B
-*/
-.thumb-wrap {
-	margin-left: -15px;
-	margin-bottom: -15px;
-}
-	.thumb-img {
-		width: 90px;
-		height: 68px;
-		float: left;
-		display: inline;
-		margin-left: 15px;
-		margin-bottom: 15px;
-		background-position: center center;
-	}
-		.thumb-img a {
-			width: 100%;
-			height: 100%;
-			display: block;
-		}
-	@media only screen and (min-width: 665px) {
-		.thumb-img {
-			width: 116px;
-			height: 87px;
-		}
-	}
-	@media only screen and (min-width: 1345px) {
-		.thumb-img {
-			width: 90px;
-			height: 68px;
-		}
-	}
 
 /* Facebook API stuff: */
 #fb-root { display: none; }
@@ -108,10 +70,6 @@ hr, .hr1 {
 		#sbc .sbc-item { margin: 0 0 0 5px; }
 }
 
-/**
- * See the widget JS for more styles.
- */
-
 #forecast { display: none; }
 @media only screen and (min-width: 1005px) {
 	#forecast {
@@ -131,12 +89,6 @@ hr, .hr1 {
 		}
 		#forecast a:visited { color: #000; }
 }
-
-/**
- * Convert lists to `<select>`s.
- *
- * @see rgne.ws/T828kW
- */
 
 .harmonia-select {
 	width: 100%;

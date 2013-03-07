@@ -1,31 +1,15 @@
-/**
- * Micro clearfix.
- *
- *@see: rgne.ws/KZHkqq
- */
-
-.fix { *zoom: 1; }
 .fix:before,
 .fix:after {
-	content: "";
+	content: " ";
 	display: table;
 }
 .fix:after { clear: both; }
-
-/**
- * Hide from both screen readers and browsers.
- *
- * @see: h5bp.com/u
- */
+.fix { *zoom: 1; }
 
 .gone {
 	display: none !important;
 	visibility: hidden;
 }
-
-/**
- * Hide only visually, but have it available for screen readers.
- */
 
 .off {
 	border: 0;
@@ -38,26 +22,12 @@
 	width: 1px;
 }
 
-/**
- * Hide visually and from screen readers whilst retaining layout.
- */
-
 .ghost { visibility: hidden; }
-
-/**
- * Contains child margins.
- *
- * @see rgne.ws/JAoGck
- */
 
 .force {
 	margin-top: -1px;
 	margin-bottom: -1px;
 	padding: 1px 0;
 }
-
-/**
- * You can force unbreaking text (e.g. long URL text) to wrap instead of running in a single line.
- */
 
 .nono { word-wrap: break-word; }

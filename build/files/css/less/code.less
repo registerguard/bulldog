@@ -1,11 +1,3 @@
-/**
- * @see https://raw.github.com/twitter/bootstrap/master/docs/assets/css/bootstrap.css
- * @see http://perishablepress.com/wrapping-content/
- * @see http://perishablepress.com/perfect-pre-tags/
- * @see http://dev.w3.org/html5/spec/Overview.html#the-pre-element
- */
-
-/* @TODO: Make `font-size` bigger. */
 pre {
 	font: 1em/1.5 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 	color: #333;
@@ -27,12 +19,6 @@ pre {
 		padding: 0;
 	}
 
-/**
- * @see http://perishablepress.com/wrapping-content/
- * @see http://dev.w3.org/html5/spec/Overview.html#the-code-element
- */
-
-/* @TODO: I'd like to have an code:after pseudo element to show line wrap. */
 code {
 	font: 1em Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 	color: #333;
@@ -49,61 +35,4 @@ code {
 	white-space: -moz-pre-wrap; /* Mozilla     */
 	white-space: -hp-pre-wrap;  /* HP Printers */
 	word-wrap: break-word;      /* IE 5+       */
-}
-
-/**
- * The `<var>` element represents a variable. This could be an actual
- * variable in a mathematical expression or programming context, or it
- * could just be a term used as a placeholder in prose.
- *
- * @see http://dev.w3.org/html5/spec/Overview.html#the-var-element
- */
-
-var { font-style: italic; }
-
-/**
- * The `<samp>` element represents (sample) output from a program or
- * computing system.
- *
- * @see http://dev.w3.org/html5/spec/Overview.html#the-samp-element
- */
-
-samp {
-	font: 1em Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-	color: #333;
-}
-
-/**
- * The `<kbd>` element represents user input (typically keyboard input,
- * although it may also be used to represent other input, such as voice
- * commands).
- *
- * When the `<kbd>` element is nested inside a `<samp>` element, it
- * represents the input as it was echoed by the system. When the `<kbd>`
- * element contains a `<samp>` element, it represents input based on
- * system output, for example invoking a menu item.
- *
- * When the `<kbd>` element is nested inside another `<kbd>` element, it
- * represents an actual key or other single unit of input as appropriate
- * for the input mechanism.
- *
- * @see http://meta.superuser.com/questions/4788/css-for-the-new-kbd-style
- * @see http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-kbd-element
- */
-
-kbd {
-	font-family: Arial, sans-serif;
-	color: #333;
-	border: 1px solid #ccc;
-	background: #f7f7f7;
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-	        border-radius: 3px;
-	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px #fff inset;
-	   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px #fff inset;
-	        box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px #fff inset;
-	display: inline-block;
-	margin: 0 .1em;
-	padding: .1em .6em;
-	text-shadow: 0 1px 0 #fff;
 }

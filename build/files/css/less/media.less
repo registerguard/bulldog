@@ -1,7 +1,3 @@
-/**
- * Responsive video.
- */
-
 .mm {
 	height: 0;
 	padding-bottom: 56.25%; /* 16x9 ratio */
@@ -20,12 +16,6 @@
 	}
 	.ss { padding-bottom: 66.666%; } /* 3x2 ratio */
 
-/**
- * Responsive images.
- *
- * Need to test this CSS in old IEs.
- */
-
 img {
 	width: auto\9; /* IE */
 	height: auto;
@@ -37,6 +27,9 @@ img {
 	margin-bottom: 5px;
 }
 
+.oa { overflow: auto; }
+* html .oa { height: 1%; }
+
 .imgr {
 	float: right;
 	margin-left: 10px;
@@ -45,16 +38,3 @@ img {
 	float: left;
 	margin-right: 10px;
 }
-
-/**
- * Captions to the side.
- * Use in conjunction with .imgr/.imgl classes.
- *
- * Example:
- * <div class="fix"><img class="imgr"><div class="oa">...</div></div>
- *
- * @see rgne.ws/TKNp3i
- */
-
-.oa { overflow: auto; }
-* html .oa { height: 1%; }

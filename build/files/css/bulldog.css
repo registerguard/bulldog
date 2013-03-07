@@ -172,9 +172,9 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 @media only screen and (min-width:665px){.Aon{display:none !important;visibility:hidden;} .Bon{display:block !important;visibility:visible;} .Aoff{display:block !important;visibility:visible;} .Boff{display:none !important;visibility:hidden;}}@media only screen and (min-width:1005px){.Bon{display:none !important;visibility:hidden;} .Con{display:block !important;visibility:visible;} .Boff{display:block !important;visibility:visible;} .Coff{display:none !important;visibility:hidden;}}@media only screen and (min-width:1345px){.Con{display:none !important;visibility:hidden;} .Don{display:block !important;visibility:visible;} .Coff{display:block !important;visibility:visible;} .Doff{display:none !important;visibility:hidden;}}.Alb:before,.Blb:before,.Clb:before,.Dlb:before,.Ala:after,.Bla:after,.Cla:after,.Dla:after{border-right:1px solid #ccc;content:"";display:none;position:absolute;top:0;bottom:0;}
 .Alb:before,.Blb:before,.Clb:before,.Dlb:before{left:-21px;}
 .Ala:after,.Bla:after,.Cla:after,.Dla:after{right:-20px;}
-@media only screen and (min-width:0) and (max-width:664px){:root *>.Alb:before,:root *>.Ala:after{display:block;}}@media only screen and (min-width:665px) and (max-width:1004px){:root *>.Blb:before,:root *>.Bla:after{display:block;}}@media only screen and (min-width:1005px) and (max-width:1344px){:root *>.Clb:before,:root *>.Cla:after{display:block;}}@media only screen and (min-width:1345px){:root *>.Dlb:before,:root *>.Dla:after{display:block;}}.fix{*zoom:1;}
-.fix:before,.fix:after{content:"";display:table;}
+@media only screen and (min-width:0) and (max-width:664px){:root *>.Alb:before,:root *>.Ala:after{display:block;}}@media only screen and (min-width:665px) and (max-width:1004px){:root *>.Blb:before,:root *>.Bla:after{display:block;}}@media only screen and (min-width:1005px) and (max-width:1344px){:root *>.Clb:before,:root *>.Cla:after{display:block;}}@media only screen and (min-width:1345px){:root *>.Dlb:before,:root *>.Dla:after{display:block;}}.fix:before,.fix:after{content:" ";display:table;}
 .fix:after{clear:both;}
+.fix{*zoom:1;}
 .gone{display:none !important;visibility:hidden;}
 .off{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;}
 .ghost{visibility:hidden;}
@@ -183,44 +183,27 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 .bassline{position:relative;}
 .bassline:before{background-image:-webkit-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px),-webkit-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px),-webkit-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);background-image:-moz-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px),-moz-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px),-moz-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);background-image:linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px),linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px),linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);background-size:100% 1.5rem, 100% .75rem, 100% .375rem;background-position:0 0;background-origin:content-box;background-attachment:local;width:100%;display:block;position:absolute;top:0;bottom:-1px;z-index:999;content:"";pointer-events:none;}
 .bassline.debug *{-webkit-box-shadow:inset 0 0 0 1px rgba(255, 0, 0, 0.5);box-shadow:inset 0 0 0 1px rgba(255, 0, 0, 0.5);}
-h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-family:"MillerHeadline Bold",Cambria,Georgia,serif;margin:0 0 5px;}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-family:"MillerHeadline Bold",Cambria,Georgia,serif;color:#000;margin:0 0 5px;}
 h1,.h1{font-size:2.875em;line-height:1.04347826086957;}
 h2,.h2{font-size:2.5em;line-height:1.2;}
 h3,.h3{font-size:2.125em;line-height:1.05882352941176;}
 h4,.h4{font-size:1.75em;line-height:1.28571428571428;}
 h5,.h5{font-size:1.375em;line-height:1.09090909090909;}
 h6,.h6{font-size:1.125em;line-height:1.33333333333333;}
-.head{font:bold 1em/1.5 "BentonSansCond Regular",Arial,sans-serif;color:#808285;margin:0;}
-.head a,.head a:visited{color:#808285;}
+.sh1,.sh2,.sh3,.sh4,.sh5,.sh6{font:normal 1em/1.5 "MillerHeadline Light",Cambria,Georgia,serif;color:#444;margin:0 0 10px;}
+.sh1{font-size:2.875em;line-height:1.04347826086957;}
+.sh2{font-size:2.5em;line-height:1.2;}
+.sh3{font-size:2.125em;line-height:1.05882352941176;}
+.sh4{font-size:1.75em;line-height:1.28571428571428;}
+.sh5{font-size:1.375em;line-height:1.09090909090909;}
+.sh6{font-size:1.125em;line-height:1.33333333333333;}
+.head{font:bold 1.25em/1.2 "BentonSansCond Regular",Arial,sans-serif;color:#888;margin:0 0 10px;}
+.head a,.head a:visited{color:#888;}
 .head a:visited:hover,.head a:focus,.head a:focus:hover,.head a:hover,.head a:active{color:#000;}
-.head.head1{font-size:1.25em;line-height:1.2;margin:0 0 10px;}
-.deck{font:1em/1.5 "MillerHeadline Light",Cambria,Georgia,serif;color:#666;margin:0 0 10px;}
-.deck a,.deck a:visited{color:#666;}
-.deck a:visited:hover,.deck a:focus,.deck a:focus:hover,.deck a:hover,.deck a:active{color:#000;}
-.deck.deck1{font-size:1.125em;line-height:1.33333333333333;}
-.deck.deck2{font-size:1.375em;line-height:1.09090909090909;}
-.deck.deck3{font-size:1.75em;line-height:1.28571428571428;}
-.deck.deck4{font-size:2.125em;line-height:1.05882352941176;}
-.deck.deck5{font-size:2.5em;line-height:1.2;}
-.deck.deck6{font-size:2.875em;line-height:1.04347826086957;}
-.reverse{font:bold 1em/1.5 "BentonSansCond Regular",Arial,sans-serif;letter-spacing:.05em;color:#fff;background:#000;margin:0 0 10px;padding:0 .375em;}
+.reverse{font:bold 1em/1.5 "BentonSansCond Regular",Arial,sans-serif;letter-spacing:.05em;text-shadow:0 1px 2px #444;color:#fff;background:#9d9fa2;margin:0 0 10px;padding:0 .375em;}
 .reverse a,.reverse a:visited,.reverse a:visited:hover,.reverse a:focus,.reverse a:focus:hover,.reverse a:hover,.reverse a:active{color:#fff;}
-.reverse.reverse1,.reverse.reverse2{text-shadow:0 1px 2px #4e5051;color:#fff;background:#9d9fa2;}
-.reverse.reverse2{text-align:center;}
-.label{font:bold 1em/1.5 Arial,sans-serif;text-transform:uppercase;margin:0;}
+.label{font:bold 0.813em/1.8450184501845 Arial,sans-serif;color:#ae1b1f;letter-spacing:.1em;text-transform:uppercase;margin:0;}
 .label a,.label a:visited,.label a:visited:hover,.label a:focus,.label a:focus:hover,.label a:hover,.label a:active{color:#ae1b1f;}
-.label.label1,.label.label2{font-size:.813em;letter-spacing:.1em;color:#ae1b1f;line-height:1.8450184501845;}
-.label.label2{text-align:center;}
-.sig{font-family:Arial,sans-serif;font-weight:bold;text-transform:uppercase;color:#f00;}
-.sig a,.sig a:visited,.sig a:visited:hover,.sig a:focus,.sig a:focus:hover,.sig a:hover,.sig a:active{color:#fff;}
-.sig.sig1{font-size:65%;letter-spacing:.1em;text-shadow:0 1px 2px #5e0e11;color:#fff;border-width:2px 0;border-style:solid;border-color:#e82528;-webkit-border-radius:2px;border-radius:2px;background:#e82528;margin:0 5px;padding:0 .25em;white-space:nowrap;position:relative;top:-0.35em;}
-.bug{font:bold 0.875em/1.71428571428571 "BentonSansCond Regular",Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;border-width:1px 0;border-style:solid;border-color:#000;margin:0 0 10px;}
-.bug a,.bug a:visited{color:#000;}
-.bug a:visited:hover,.bug a:focus,.bug a:focus:hover,.bug a:hover,.bug a:active{color:#ae1b1f;}
-.bug.bug1,.bug.bug2{color:#666;border-color:#666;}
-.bug.bug1 a,.bug.bug2 a,.bug.bug1 a:visited,.bug.bug2 a:visited{color:#666;}
-.bug.bug1 a:visited:hover,.bug.bug2 a:visited:hover,.bug.bug1 a:focus,.bug.bug2 a:focus,.bug.bug1 a:focus:hover,.bug.bug2 a:focus:hover,.bug.bug1 a:hover,.bug.bug2 a:hover,.bug.bug1 a:active,.bug.bug2 a:active{color:#000;}
-.bug.bug2{text-align:center;}
 .streamer:before,.streamer:after{content:"";display:table;}
 .streamer:after{clear:both;}
 .streamer{*zoom:1;}
@@ -239,26 +222,22 @@ h6,.h6{font-size:1.125em;line-height:1.33333333333333;}
 .streamer h2 a:link,.streamer h2 a:visited{color:#4f5052;}
 .streamer.alt1 h2{background-color:#000;}
 .streamer.alt1 h2 span,.streamer.alt1 h2 a:link,.streamer.alt1 h2 a:visited,.streamer.alt1 h2 a:visited:hover,.streamer.alt1 h2 a:focus,.streamer.alt1 h2 a:focus:hover,.streamer.alt1 h2 a:hover,.streamer.alt1 h2 a:active{color:#fff;}
-.marker{font:bold 1.375em/1.09090909090909 Arial,sans-serif;color:#660;text-transform:none;background:#ff0;margin:0 0 10px;padding:.54545454545455em .54545454545455em;display:inline-block;*display:inline;*zoom:1;}
-.subtle{font:normal 1.188em/1.26262626262626 Courier,monospace;color:#999;margin:0 0 10px;}
 p{font-family:Cambria, Georgia, serif;font-size:.875em;line-height:1.28571428571428;margin:0 0 10px;}
 p a{color:#0083ca;text-decoration:none;}
 p a:visited{color:#0083ca;}
 p a:visited:hover,p a:focus,p a:focus:hover,p a:hover,p a:active{color:#0083ca;text-decoration:underline;}
-.caption{font:0.938em/1.19936034115139 Cambria,Georgia,serif;margin:0 0 10px;}
-.caption.caption1{font-style:italic;}
+.caption{font:italic 0.938em/1.19936034115139 Cambria,Georgia,serif;margin:0 0 10px;}
 .byline{font:1.125em/1.33333333333333 Cambria,Georgia,serif;margin:0;}
 .byline a,.byline a:visited{color:#000;}
 .byline a:visited:hover,.byline a:focus,.byline a:focus:hover,.byline a:hover,.byline a:active{color:#000;text-decoration:underline;}
-.byline.byline1{font-weight:bold;font-variant:small-caps;}
-.byline.byline2{font-style:italic;}
-.jump.jump1{font:italic 87.5%/1 Cambria,Georgia,serif;text-align:right;color:#000;margin:0 0 10px;padding:0;}
-.jump.jump1 span{font-family:Arial,sans-serif;font-weight:bold;font-style:normal;text-transform:uppercase;}
-.jump.jump1 a{color:#000;text-decoration:none;}
-.jump.jump1 a:visited{color:#000;}
-.jump.jump1 a:visited:hover,.jump.jump1 a:focus,.jump.jump1 a:focus:hover,.jump.jump1 a:hover,.jump.jump1 a:active{color:#ae1b1f;}
-.pub{font-size:1em;line-height:1.5;}
-.pub.pub1{font-size:.875em;line-height:1.71428571428571;text-transform:uppercase;margin:0;}
+.byline.name{font-weight:bold;font-variant:small-caps;}
+.byline.organization{font-style:italic;}
+.jump{font:italic 87.5%/1 Cambria,Georgia,serif;text-align:right;color:#000;margin:0 0 10px;padding:0;}
+.jump span{font-family:Arial,sans-serif;font-weight:bold;font-style:normal;text-transform:uppercase;}
+.jump a{color:#000;text-decoration:none;}
+.jump a:visited{color:#000;}
+.jump a:visited:hover,.jump a:focus,.jump a:focus:hover,.jump a:hover,.jump a:active{color:#ae1b1f;}
+.pub{font-size:.875em;line-height:1.71428571428571;text-transform:uppercase;margin:0;}
 blockquote{border-left:3px solid #ccc;margin:0 0 10px;padding:0 0 0 1.5em;quotes:'“' '”';}
 blockquote p{font:italic 1.125em/1.33333333333333 Cambria,Georgia,serif;text-indent:-0.75em;word-spacing:.05em;}
 blockquote p:before{font-weight:bold;letter-spacing:.5ex;content:'“';content:open-quote;}
@@ -275,19 +254,15 @@ span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:itali
 .mm iframe,.mm object,.mm embed{width:100% !important;height:100% !important;position:absolute;top:0;left:0;}
 .ss{padding-bottom:66.666%;}
 img{width:auto\9;height:auto;max-width:100%;max-height:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;margin-bottom:5px;}
-.imgr{float:right;margin-left:10px;}
-.imgl{float:left;margin-right:10px;}
 .oa{overflow:auto;}
 * html .oa{height:1%;}
+.imgr{float:right;margin-left:10px;}
+.imgl{float:left;margin-right:10px;}
 #rgpdf{display:none;visibility:hidden;}
-@media only screen and (min-width:665px){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima4.jpg);background-repeat:no-repeat;width:128px;height:261px;float:right;margin:0 0 10px 10px;display:block;visibility:visible;overflow:hidden;text-indent:-999em;} #rgpdf a{display:block;width:100%;height:100%;}}@media only screen and (min-width:665px) and (min--moz-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-moz-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-o-min-device-pixel-ratio:3/2),only screen and (min-width:665px) and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-resolution:1.5dppx){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima2.jpg);-moz-background-size:128px 261px;-ie-background-size:128px 261px;-o-background-size:128px 261px;-webkit-background-size:128px 261px;background-size:128px 261px;}}hr,.hr1{border:0;border-top:1px solid #ccc;height:1px;margin:10px 0 11px;padding:0;}
-.hr1{border-color:#eee;}
-.pull1{border:1px solid #ccc;background:#eee;padding:10px;}
+@media only screen and (min-width:665px){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima4.jpg);background-repeat:no-repeat;width:128px;height:261px;float:right;margin:0 0 10px 10px;display:block;visibility:visible;overflow:hidden;text-indent:-999em;} #rgpdf a{display:block;width:100%;height:100%;}}@media only screen and (min-width:665px) and (min--moz-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-moz-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-o-min-device-pixel-ratio:3/2),only screen and (min-width:665px) and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-resolution:1.5dppx){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima2.jpg);-moz-background-size:128px 261px;-ie-background-size:128px 261px;-o-background-size:128px 261px;-webkit-background-size:128px 261px;background-size:128px 261px;}}hr{border:0;border-top:1px solid #ccc;height:1px;margin:10px 0 11px;padding:0;}
+.pull{border:1px solid #ccc;background:#eee;padding:10px;}
 .deep{width:100%;border-width:1px 0;border-style:solid;border-color:#ccc;margin:10px 0;padding:10px 0;position:relative;}
-@media only screen and (min-width:665px){.deep{width:300px;border:0;margin:0 0 0 20px;padding:0;float:right;display:inline;clear:right;}}@media only screen and (min-width:1005px){.deep{margin-right:-170px;}}.thumb-wrap{margin-left:-15px;margin-bottom:-15px;}
-.thumb-img{width:90px;height:68px;float:left;display:inline;margin-left:15px;margin-bottom:15px;background-position:center center;}
-.thumb-img a{width:100%;height:100%;display:block;}
-@media only screen and (min-width:665px){.thumb-img{width:116px;height:87px;}}@media only screen and (min-width:1345px){.thumb-img{width:90px;height:68px;}}#fb-root{display:none;}
+@media only screen and (min-width:665px){.deep{width:300px;border:0;margin:0 0 0 20px;padding:0;float:right;display:inline;clear:right;}}@media only screen and (min-width:1005px){.deep{margin-right:-170px;}}#fb-root{display:none;}
 #sbc{width:100%;float:left;display:inline;}
 #sbc .sbc-item{height:auto;_height:70px;min-height:70px;margin:0 5px 0 0;float:left;display:inline;}
 #sbc .sbc-item iframe,#sbc .sbc-item div{display:block !important;}
@@ -297,10 +272,6 @@ img{width:auto\9;height:auto;max-width:100%;max-height:100%;vertical-align:middl
 @media only screen and (min-width:665px){.harmonia-select{display:none;visibility:hidden;}}pre{font:1em/1.5 Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;color:#333;border:1px solid rgba(0, 0, 0, 0.15);background:rgba(0, 0, 0, 0.1);margin:0 0 10px;padding:5px 10px;word-wrap:normal;overflow:auto;white-space:pre;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 pre code{color:inherit;border:0;background:transparent;padding:0;}
 code{font:1em Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;color:#333;background:rgba(0, 0, 0, 0.1);padding:0 2px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;white-space:pre;white-space:pre-wrap;white-space:pre-line;white-space:-pre-wrap;white-space:-o-pre-wrap;white-space:-moz-pre-wrap;white-space:-hp-pre-wrap;word-wrap:break-word;}
-var{font-style:italic;}
-samp{font:1em Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;color:#333;}
-kbd{font-family:Arial,sans-serif;color:#333;border:1px solid #ccc;background:#f7f7f7;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;-moz-box-shadow:0 1px 0 rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;box-shadow:0 1px 0 rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;display:inline-block;margin:0 .1em;padding:.1em .6em;text-shadow:0 1px 0 #fff;}
-dfn,dfn[title],abbr,abbr[title]{border-bottom:1px dotted #666;}
 #loc{border-bottom:1px solid #ccc;}
 #loc p{font:bold 0.813em/1.8450184501845 Arial,sans-serif;letter-spacing:.02em;color:#666;text-transform:uppercase;margin:0 0 10px;}
 #loc p a,#loc p a:visited,#loc p a:visited:hover,#loc p a:focus,#loc p a:focus:hover,#loc p a:hover,#loc p a:active{color:#000;}
@@ -310,4 +281,12 @@ dfn,dfn[title],abbr,abbr[title]{border-bottom:1px dotted #666;}
 #look .h5{font-size:1em;line-height:1.3;}
 #look hr{border-color:#ddd;margin:5px 0;}
 #meta{border-bottom:1px solid #ccc;padding-bottom:10px;margin:0 0 10px;}
-@media only screen and (min-width:665px){#meta{border:0;margin:0;padding:0;float:left;display:inline;}}
+@media only screen and (min-width:665px){#meta{border:0;margin:0;padding:0;float:left;display:inline;}}.archive,.archive li{margin:0;padding:0;}
+.archive{list-style:none;font-size:1em;line-height:1.5em;}
+.archive li{border-width:1px 0;border-style:solid;border-color:#ddd;margin:-1px 0 0;padding:5px 0;}
+.archive li:first-child{border-top:none;}
+.archive li:last-child{border-bottom:none;}
+.thumb-wrap{margin-left:-15px;margin-bottom:-15px;}
+.thumb-img{width:90px;height:68px;float:left;display:inline;margin-left:15px;margin-bottom:15px;background-position:center center;}
+.thumb-img a{width:100%;height:100%;display:block;}
+@media only screen and (min-width:665px){.thumb-img{width:116px;height:87px;}}@media only screen and (min-width:1345px){.thumb-img{width:90px;height:68px;}}

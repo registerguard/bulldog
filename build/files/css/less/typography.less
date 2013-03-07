@@ -1,47 +1,6 @@
-/**
- * Site headings.
- *
- * Unused terms:
- *
- * Bug: Another term for a sig or logo used to label a story; often
- * indented into the text.
- *
- * Bar: ...
- * 
- * Strip: ...
- *
- * Banner: ...
- *
- * Standing Head: ...
- *
- * Heading: ...
- *
- * Head: ...
- *
- * Headline: ...
- *
- * Digest Head: In-story headings (a digest is a collection of stories).
- *
- * Subhead: IBID.
- *
- * @see rgne.ws/YF7bv3
- */
-
-/**
- * Some default styles for headings.
- *
- * Note: The `.h1`-`.h6` classes should be used to maintain the
- * semantically appropriate heading levels.
- *
- * Attention: NOT for use on non-headings.
- *
- * @see rgne.ws/PkojDe
- * @see rgne.ws/RmSawq
- * @see rgne.ws/NFvWAg
- */
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-family: "MillerHeadline Bold", Cambria, Georgia, serif;
+	color: #000;
 	margin: 0 0 5px;
 }
 h1, .h1 {
@@ -69,81 +28,55 @@ h6, .h6 {
 	line-height: 1.33333333333333;
 }
 
-/**
- * Head: Large type running above or beside a story to summarize its
- * content; also called a head, for short.
- */
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
+	font: normal 1em/1.5 "MillerHeadline Light", Cambria, Georgia, serif;
+	color: #444;
+	margin: 0 0 10px;
+}
+.sh1 {
+	font-size: 2.875em; /* 46px */
+	line-height: 1.04347826086957;
+}
+.sh2 {
+	font-size: 2.5em; /* 40px */
+	line-height: 1.2;
+}
+.sh3 {
+	font-size: 2.125em; /* 34px */
+	line-height: 1.05882352941176; /* (((3 / 1.75em) = 1.41176470588235) * .75) = 1.05882352941176 */
+}
+.sh4 {
+	font-size: 1.75em; /* 28px */
+	line-height: 1.28571428571428; /* (1.71428571428571 * .75) = 1.28571428571428 */
+}
+.sh5 {
+	font-size: 1.375em; /* 22px */
+	line-height: 1.09090909090909;
+}
+.sh6 {
+	font-size: 1.125em; /* 18px */
+	line-height: 1.33333333333333;
+}
 
 .head {
-	font: bold 1em/1.5 "BentonSansCond Regular", Arial, sans-serif;
-	color: #808285;
-	margin: 0;
+	font: bold 1.25em/1.2 "BentonSansCond Regular", Arial, sans-serif; /* 20px */
+	color: #888;
+	margin: 0 0 10px;
 }
 	.head a,
-	.head a:visited { color: #808285; } /* RG black 60. */
+	.head a:visited { color: #888; }
 	.head a:visited:hover,
 	.head a:focus,
 	.head a:focus:hover,
 	.head a:hover,
 	.head a:active { color: #000; }
-.head.head1 {
-	font-size: 1.25em; /* 20px */
-	line-height: 1.2;
-	margin: 0 0 10px;
-}
-
-/**
- * Deck: A small headline running below the main headline; also called a
- * drop head.
- */
-
-.deck {
-	font: 1em/1.5 "MillerHeadline Light", Cambria, Georgia, serif;
-	color: #666;
-	margin: 0 0 10px;
-}
-	.deck a,
-	.deck a:visited { color: #666; } /* RG black 60. */
-	.deck a:visited:hover,
-	.deck a:focus,
-	.deck a:focus:hover,
-	.deck a:hover,
-	.deck a:active { color: #000; }
-.deck.deck1 {
-	font-size: 1.125em; /* 18px */
-	line-height: 1.33333333333333;
-}
-.deck.deck2 {
-	font-size: 1.375em; /* 22px */
-	line-height: 1.09090909090909;
-}
-.deck.deck3 {
-	font-size: 1.75em; /* 28px */
-	line-height: 1.28571428571428; /* (1.71428571428571 * .75) = 1.28571428571428 */
-}
-.deck.deck4 {
-	font-size: 2.125em; /* 34px */
-	line-height: 1.05882352941176; /* (((3 / 1.75em) = 1.41176470588235) * .75) = 1.05882352941176 */
-}
-.deck.deck5 {
-	font-size: 2.5em; /* 40px */
-	line-height: 1.2;
-}
-.deck.deck6 {
-	font-size: 2.875em; /* 46px */
-	line-height: 1.04347826086957;
-}
-
-/**
- * Reverse: A printing technique that creates white type on a dark
- * background; also called a dropout.
- */
 
 .reverse {
 	font: bold 1em/1.5 "BentonSansCond Regular", Arial, sans-serif;
 	letter-spacing: .05em;
+	text-shadow: 0 1px 2px #444;
 	color: #fff;
-	background: #000;
+	background: #9d9fa2;
 	margin: 0 0 10px;
 	padding: 0 .375em;
 }
@@ -154,21 +87,11 @@ h6, .h6 {
 	.reverse a:focus:hover,
 	.reverse a:hover,
 	.reverse a:active { color: #fff; }
-.reverse.reverse1,
-.reverse.reverse2 {
-	text-shadow: 0 1px 2px #4e5051;
-	color: #fff;
-	background: #9d9fa2;
-}
-.reverse.reverse2 { text-align: center; }
-
-/**
- * Label: A small standing head that labels a regularly appearing column
- * or feature; also called a sig.
- */
 
 .label {
-	font: bold 1em/1.5 Arial, sans-serif;
+	font: bold .813em/1.8450184501845 Arial, sans-serif; /* 12px */
+	color: #ae1b1f;
+	letter-spacing: .1em;
 	text-transform: uppercase;
 	margin: 0;
 }
@@ -179,116 +102,6 @@ h6, .h6 {
 	.label a:focus:hover,
 	.label a:hover,
 	.label a:active { color: #ae1b1f; }
-.label.label1,
-.label.label2 {
-	font-size: .813em; /* 12px */
-	letter-spacing: .1em;
-	color: #ae1b1f;
-	line-height: 1.8450184501845;
-}
-.label.label2 { text-align: center; }
-
-/**
- * Sig: A small standing head that labels a regularly appearing column or
- * feature.
- */
-
-.sig {
-	font-family: Arial, sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: #f00;
-}
-	.sig a,
-	.sig a:visited,
-	.sig a:visited:hover,
-	.sig a:focus,
-	.sig a:focus:hover,
-	.sig a:hover,
-	.sig a:active { color: #fff; }
-.sig.sig1 {
-	font-size: 65%;
-	letter-spacing: .1em;
-	text-shadow: 0 1px 2px #5e0e11;
-	color: #fff;
-	border-width: 2px 0;
-	border-style: solid;
-	border-color: #e82528;
-	-webkit-border-radius: 2px;
-	        border-radius: 2px;
-	background: #e82528;
-	margin: 0 5px;
-	padding: 0 .25em;
-	white-space: nowrap;
-	position: relative;
-	top: -.35em;
-}
-
-/**
- * Another term for a sig or logo used to label a story; often indented
- * into the text.
- */
-
-.bug {
-	font: bold .875em/1.71428571428571 "BentonSansCond Regular", Arial, sans-serif; /* 14px */
-	letter-spacing: .05em;
-	text-transform: uppercase;
-	border-width: 1px 0;
-	border-style: solid;
-	border-color: #000;
-	margin: 0 0 10px;
-}
-	.bug a,
-	.bug a:visited { color: #000; }
-	.bug a:visited:hover,
-	.bug a:focus,
-	.bug a:focus:hover,
-	.bug a:hover,
-	.bug a:active { color: #ae1b1f; }
-.bug.bug1,
-.bug.bug2 {
-	color: #666;
-	border-color: #666;
-}
-	/* Clean up? */
-	.bug.bug1 a,
-	.bug.bug2 a,
-	.bug.bug1 a:visited,
-	.bug.bug2 a:visited { color: #666; }
-	.bug.bug1 a:visited:hover,
-	.bug.bug2 a:visited:hover,
-	.bug.bug1 a:focus,
-	.bug.bug2 a:focus,
-	.bug.bug1 a:focus:hover,
-	.bug.bug2 a:focus:hover,
-	.bug.bug1 a:hover,
-	.bug.bug2 a:hover,
-	.bug.bug1 a:active,
-	.bug.bug2 a:active { color: #000; }
-.bug.bug2 { text-align: center; }
-
-/**
- * Banner: Headline across or near the top of all or most of a newspaper
- * page. Also called a line, ribbon, streamer, screamer.
- *
- * Example:
- *
-
-<header>
-	
-	<hgroup>
-		
-		<div class="streamer alt1 flip">
-			<h1><a href="#">Section</a></h1>
-			<h2><span>Section</span></h2>
-		</div> <!-- /.streamer -->
-		
-	</hgroup>
-	
-</header>
-
- *
- */
 
 .streamer:before, .streamer:after { content: ""; display: table; } .streamer:after { clear: both; } .streamer { *zoom: 1; }
 .streamer { margin: 10px 0; }
@@ -358,36 +171,11 @@ h6, .h6 {
 	.streamer.alt1 h2 a:hover,
 	.streamer.alt1 h2 a:active { color: #fff; }
 
-.marker {
-	font: bold 1.375em/1.09090909090909 Arial, sans-serif; /* 22px */
-	color: #660;
-	text-transform: none;
-	background: #ff0;
-	margin: 0 0 10px;
-	padding: .54545454545455em .54545454545455em;
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-}
-
-.subtle {
-	font: normal 1.188em/1.26262626262626 Courier, monospace; /* 19px */
-	color: #999;
-	margin: 0 0 10px;
-}
-
 p {
 	font-family: Cambria, Georgia, serif;
 	font-size: .875em; /* 14px */
 	line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
 	margin: 0 0 10px;
-	/*
-	word-break: break-all;
-	word-wrap: break-word;
-	-webkit-hyphens: auto;
-	   -moz-hyphens: auto;
-	        hyphens: auto;
-	*/
 }
 	p a {
 		color: #0083ca;
@@ -404,10 +192,9 @@ p {
 	}
 
 .caption {
-	font: .938em/1.19936034115139 Cambria, Georgia, serif; /* 15px */
+	font: italic .938em/1.19936034115139 Cambria, Georgia, serif; /* 15px */
 	margin: 0 0 10px;
 }
-	.caption.caption1 {	font-style: italic; }
 
 .byline {
 	font: 1.125em/1.33333333333333 Cambria, Georgia, serif; /* 18px */
@@ -423,48 +210,43 @@ p {
 		color: #000;
 		text-decoration: underline;
 	}
-	.byline.byline1 {
+	.byline.name {
 		font-weight: bold;
 		font-variant: small-caps;
 	}
-	.byline.byline2 { font-style: italic; }
+	.byline.organization { font-style: italic; }
 
-/* Move some default styles into the base class. */
-.jump {}
-	.jump.jump1 {
-		font: italic 87.5%/1 Cambria, Georgia, serif;
-		text-align: right;
-		color: #000;
-		margin: 0 0 10px;
-		padding: 0;
+
+.jump {
+	font: italic 87.5%/1 Cambria, Georgia, serif;
+	text-align: right;
+	color: #000;
+	margin: 0 0 10px;
+	padding: 0;
+}
+	.jump span {
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+		font-style: normal;
+		text-transform: uppercase;
 	}
-		.jump.jump1 span {
-			font-family: Arial, sans-serif;
-			font-weight: bold;
-			font-style: normal;
-			text-transform: uppercase;
-		}
-		.jump.jump1 a {
-			color: #000;
-			text-decoration: none;
-		}
-			.jump.jump1 a:visited { color: #000; }
-			.jump.jump1 a:visited:hover,
-			.jump.jump1 a:focus,
-			.jump.jump1 a:focus:hover,
-			.jump.jump1 a:hover,
-			.jump.jump1 a:active { color: #ae1b1f; }
+	.jump a {
+		color: #000;
+		text-decoration: none;
+	}
+		.jump a:visited { color: #000; }
+		.jump a:visited:hover,
+		.jump a:focus,
+		.jump a:focus:hover,
+		.jump a:hover,
+		.jump a:active { color: #ae1b1f; }
 
 .pub {
-		font-size: 1em;
-		line-height: 1.5;
+	font-size: .875em;
+	line-height: 1.71428571428571;
+	text-transform: uppercase;
+	margin: 0;
 }
-	.pub.pub1 {
-		font-size: .875em;
-		line-height: 1.71428571428571;
-		text-transform: uppercase;
-		margin: 0;
-	}
 
 blockquote {
 	border-left: 3px solid #ccc;
@@ -517,14 +299,7 @@ blockquote {
 			content: close-quote;
 		}
 
-/**
- * @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
- * @see http://dev.w3.org/html5/spec/Overview.html#the-span-element
- */
-
-span {}
-	/* The italic version of an ampersand is more decorative and interesting than its roman counterpart. */
-	span.amp1 {
-		font-family: Baskerville, Palatino, "Book Antiqua", serif;
-		font-style: italic;
-	}
+span.amp1 {
+	font-family: Baskerville, Palatino, "Book Antiqua", serif;
+	font-style: italic;
+}

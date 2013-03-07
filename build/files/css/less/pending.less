@@ -1,8 +1,4 @@
-dfn,
-dfn[title],
-abbr,
-abbr[title] { border-bottom: 1px dotted #666; }
-
+/* Used on story page. Need to make this a re-usable class. */
 #loc { border-bottom: 1px solid #ccc; }
 	#loc p {
 		font: bold .813em/1.8450184501845 Arial, sans-serif; /* 13px */
@@ -19,6 +15,7 @@ abbr[title] { border-bottom: 1px dotted #666; }
 	#loc p a:hover,
 	#loc p a:active { color: #000; }
 
+/* Need to re-think these classes. Either I need more like these (.mb10, .nomb, ...) or I need to nuke alltogether. */
 .give { padding-top: 10px; }
 .take { padding-bottom: 10px; }
 
@@ -49,6 +46,54 @@ abbr[title] { border-bottom: 1px dotted #666; }
 	}
 }
 
-.archive1 {
-	
+.archive,
+.archive li {
+	margin: 0;
+	padding: 0;
 }
+	.archive {
+		list-style: none;
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+		.archive li {
+			border-width: 1px 0;
+			border-style: solid;
+			border-color: #ddd;
+			margin: -1px 0 0;
+			padding: 5px 0;
+		}
+		.archive li:first-child { border-top: none; }
+		.archive li:last-child { border-bottom: none; }
+
+/* Story page thumbs. Need to fine-tune and make sure the math work well for all breakpoints. */
+.thumb-wrap {
+	margin-left: -15px;
+	margin-bottom: -15px;
+}
+	.thumb-img {
+		width: 90px;
+		height: 68px;
+		float: left;
+		display: inline;
+		margin-left: 15px;
+		margin-bottom: 15px;
+		background-position: center center;
+	}
+		.thumb-img a {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	@media only screen and (min-width: 665px) {
+		.thumb-img {
+			width: 116px;
+			height: 87px;
+		}
+	}
+	@media only screen and (min-width: 1345px) {
+		.thumb-img {
+			width: 90px;
+			height: 68px;
+		}
+	}

@@ -40,7 +40,7 @@
 	border-bottom: 1px solid #ccc;
 	padding: 10px 0;
 	position: relative;
-	z-index: 10; /* Fixes IE 6-8 bug: rgne.ws/XZIBmE */
+	z-index: 10;
 }
 @media only screen and (min-width: 1005px) {
 	#bd_masthead {
@@ -58,7 +58,6 @@
 	top: 20px;
 	left: 0;
 }
-/* If javascript is turned off, tidy things up: */
 .no-js #bd_flag {
 	position: static;
 	margin-bottom: 10px;
@@ -202,10 +201,6 @@
 }
 	.bd_insert a:link,
 	.bd_insert a:visited { color: #333; }
-
-/**
- * Hide only visually, but have it available for screen readers.
- */
 
 .bd_cut {
 	border: 0;

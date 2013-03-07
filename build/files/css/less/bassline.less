@@ -1,16 +1,4 @@
-/**
- * Baseline grid class.
- * It simulates a baseline grid based on `em`/`rems` which will allow you
- * to size according to your site's `font-size`.
- *
- * @see https://gist.github.com/4277585
- * @see http://advent2012.digitpaint.nl/13/
- * @see http://stackoverflow.com/a/8905262/922323
- * @see http://css-tricks.com/browser-support-pseudo-elements/
- */
-
 .bassline { position: relative; }
-	/* Grid overlay: */
 	.bassline:before {
 		background-image:
 			-webkit-linear-gradient(rgba(255, 0, 0, .75) 1px, transparent 1px),
@@ -24,20 +12,19 @@
 			linear-gradient(rgba(255, 0, 0, .75) 1px, transparent 1px),
 			linear-gradient(rgba(0, 255, 255, .75) 1px, transparent 1px),
 			linear-gradient(rgba(0, 255, 255, .25) 1px, transparent 1px);
-		background-size: 100% 1.5rem, 100% .75rem, 100% .375rem;   /* Match base `line-height`. */
-		background-position: 0 0;       /* Put line adjustments here. */
-		background-origin: content-box; /* Regardless of padding, background will begin in the corner of the box. */
-		background-attachment: local;   /* For scrolling. */
+		background-size: 100% 1.5rem, 100% .75rem, 100% .375rem;
+		background-position: 0 0;
+		background-origin: content-box;
+		background-attachment: local;
 		width: 100%;
 		display: block;
 		position: absolute;
 		top: 0;
-		bottom: -1px; /* Allows for the bottom-most border to show. */
-		z-index: 999; /* Above all other content. */
+		bottom: -1px;
+		z-index: 999;
 		content: "";
-		pointer-events: none; /* The element is never the target of mouse events. */
+		pointer-events: none;
 	}
-	/* Add a faux border to child elements to view where they begin/end in relationship to the baseline: */
 	.bassline.debug * {
 		-webkit-box-shadow: inset 0 0 0 1px rgba(255, 0, 0, .5);
 		box-shadow: inset 0 0 0 1px rgba(255, 0, 0, .5);
