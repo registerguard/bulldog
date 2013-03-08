@@ -1,0 +1,23 @@
+/**
+ * | x1 = (1.5em)     | x2 = (3em)                   | x3 = (4.5em)                  | x4 = (6em)                  | x5 = (7.5em)                   |
+ * | 0 - 24px (1.5em) | 25px (1.563em) - 48px (3.em) | 49px (3.063em) - 72px (4.5em) | 73px (4.563em) - 96px (6em) | 97px (6.063em) - 120px (7.5em) |
+ * |                  |                              |                               |                             |                                |
+ */
+
+
+// http://www.johnfaulds.com.au/journal/less-baseline-grid-calculator/
+// http://www.ifdattic.com/2011/10/19/converting-px-to-ems-with-less/
+// https://github.com/mhulse/bassline/blob/gh-pages/demo/bassline.css
+
+// Create a converter namespace [optional]
+#bass {
+	
+	// #bass > .line1(48, 16);
+	
+	// Create convert mixin [required]
+	.line1(@fontSize: @baseFontSize, @lineHeight: @baseLineHeight, @lineHeightReducer: 1) {
+		font-size: (@fontSize / @baseFontSize) * 1em;
+		line-height: @lineHeight / @fontSize / @lineHeightReducer;
+	}
+	
+}

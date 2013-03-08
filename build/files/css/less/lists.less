@@ -64,3 +64,24 @@ dd {
 	.li2 li a:focus:hover,
 	.li2 li a:hover,
 	.li2 li a:active { color: #000; }
+
+.li3,
+.li3 li {
+	margin: 0;
+	padding: 0;
+}
+	.li3 {
+		list-style: none;
+		font-size: 1em;
+		line-height: 1.5em;
+		margin: 0 0 10px;
+	}
+		.li3 li {
+			border-width: 1px 0;
+			border-style: solid;
+			border-color: #ddd;
+			margin: -1px 0 0;
+			padding: 5px 0;
+		}
+		.li3 li:first-child { border-top: none; }
+		.li3 li:last-child { border-bottom: none; }

@@ -1,59 +1,34 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	font-family: "MillerHeadline Bold", Cambria, Georgia, serif;
-	color: #000;
+	font: @headingsFontWeight @baseFontSize~'/'@baseLineHeight @headingsFontFamily;
+	color: @headingsColor;
 	margin: 0 0 5px;
 }
-h1, .h1 {
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
+	font: @baseFontSize~'/'@baseLineHeight @subHeadingsFontFamily;
+	color: @subHeadingsColor;
+	margin: 0 0 10px;
+}
+h1, .h1, .sh1 {
 	font-size: 2.875em; /* 46px */
 	line-height: 1.04347826086957;
 }
-h2, .h2 {
+h2, .h2, .sh2 {
 	font-size: 2.5em; /* 40px */
 	line-height: 1.2;
 }
-h3, .h3 {
+h3, .h3, .sh3 {
 	font-size: 2.125em; /* 34px */
-	line-height: 1.05882352941176; /* (((3 / 1.75em) = 1.41176470588235) * .75) = 1.05882352941176 */
+	line-height: 1.05882352941176; /* (((3 / 2.125em) = 1.41176470588235) * .75) = 1.05882352941176 */
 }
-h4, .h4 {
+h4, .h4, .sh4 {
 	font-size: 1.75em; /* 28px */
 	line-height: 1.28571428571428; /* (((3 / 1.75em) = 1.71428571428571) * .75) = 1.28571428571428 */
 }
-h5, .h5 {
+h5, .h5, .sh5 {
 	font-size: 1.375em; /* 22px */
 	line-height: 1.09090909090909;
 }
-h6, .h6 {
-	font-size: 1.125em; /* 18px */
-	line-height: 1.33333333333333;
-}
-
-.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
-	font: normal 1em/1.5 "MillerHeadline Light", Cambria, Georgia, serif;
-	color: #444;
-	margin: 0 0 10px;
-}
-.sh1 {
-	font-size: 2.875em; /* 46px */
-	line-height: 1.04347826086957;
-}
-.sh2 {
-	font-size: 2.5em; /* 40px */
-	line-height: 1.2;
-}
-.sh3 {
-	font-size: 2.125em; /* 34px */
-	line-height: 1.05882352941176; /* (((3 / 1.75em) = 1.41176470588235) * .75) = 1.05882352941176 */
-}
-.sh4 {
-	font-size: 1.75em; /* 28px */
-	line-height: 1.28571428571428; /* (1.71428571428571 * .75) = 1.28571428571428 */
-}
-.sh5 {
-	font-size: 1.375em; /* 22px */
-	line-height: 1.09090909090909;
-}
-.sh6 {
+h6, .h6, .sh6 {
 	font-size: 1.125em; /* 18px */
 	line-height: 1.33333333333333;
 }
@@ -103,7 +78,7 @@ h6, .h6 {
 	.label a:hover,
 	.label a:active { color: #ae1b1f; }
 
-.streamer:before, .streamer:after { content: ""; display: table; } .streamer:after { clear: both; } .streamer { *zoom: 1; }
+.streamer:before, .streamer:after { content: " "; display: table; } .streamer:after { clear: both; } .streamer { *zoom: 1; }
 .streamer { margin: 10px 0; }
 	.streamer h1,
 	.streamer h2 {
@@ -155,21 +130,40 @@ h6, .h6 {
 		background-color: #ae1a1f;
 	}
 	.streamer h2 {
-		color: #4f5052;
-		background-color: #e7e3dd;
+		color: @tanDark;
+		background-color: @tan;
 	}
 		.streamer h2 a:link,
-		.streamer h2 a:visited { color: #4f5052; }
+		.streamer h2 a:visited { color: @tanDark; }
 
-.streamer.alt1 h2 { background-color: #000; }
-	.streamer.alt1 h2 span,
-	.streamer.alt1 h2 a:link,
-	.streamer.alt1 h2 a:visited,
-	.streamer.alt1 h2 a:visited:hover,
-	.streamer.alt1 h2 a:focus,
-	.streamer.alt1 h2 a:focus:hover,
-	.streamer.alt1 h2 a:hover,
-	.streamer.alt1 h2 a:active { color: #fff; }
+.streamer.alt1 {}
+	.streamer.alt1 h2 { background-color: #000; }
+		.streamer.alt1 h2 span,
+		.streamer.alt1 h2 a:link,
+		.streamer.alt1 h2 a:visited,
+		.streamer.alt1 h2 a:visited:hover,
+		.streamer.alt1 h2 a:focus,
+		.streamer.alt1 h2 a:focus:hover,
+		.streamer.alt1 h2 a:hover,
+		.streamer.alt1 h2 a:active { color: #fff; }
+
+.streamer.alt2 {}
+	.streamer.alt2 a,
+	.streamer.alt2 span {
+		font-size: .75em;
+		line-height: 2;
+		padding: 0 .75em;
+	}
+	.streamer.alt2 h1 { background-color: #333; }
+	.streamer.alt2 h2 { background-color: #ccc; }
+		.streamer.alt2 h2 span,
+		.streamer.alt2 h2 a:link,
+		.streamer.alt2 h2 a:visited,
+		.streamer.alt2 h2 a:visited:hover,
+		.streamer.alt2 h2 a:focus,
+		.streamer.alt2 h2 a:focus:hover,
+		.streamer.alt2 h2 a:hover,
+		.streamer.alt2 h2 a:active { color: #333; }
 
 p {
 	font-family: Cambria, Georgia, serif;
