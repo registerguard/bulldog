@@ -192,11 +192,11 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font:bold 1em / 1.5em "MillerHeadline Bold",Cambria,Georgia,serif;color:#000000;margin:0 0 5px;}
 .sh1,.sh2,.sh3,.sh4,.sh5,.sh6{font:1em / 1.5em "MillerHeadline Light",Cambria,Georgia,serif;color:#555555;margin:0 0 10px;}
 h1,.h1,.sh1{font-size:2.875em;line-height:1.04347826086957;}
-h2,.h2,.sh2{font-size:2.5em;line-height:1.2;}
+h2,.h2,.sh2{font-size:2.5em;line-height:1.05;}
 h3,.h3,.sh3{font-size:2.125em;line-height:1.05882352941176;}
-h4,.h4,.sh4{font-size:1.75em;line-height:1.28571428571428;}
+h4,.h4,.sh4{font-size:1.75em;line-height:1.07142857142857;}
 h5,.h5,.sh5{font-size:1.375em;line-height:1.09090909090909;}
-h6,.h6,.sh6{font-size:1.125em;line-height:1.33333333333333;}
+h6,.h6,.sh6{font-size:1.125em;line-height:1.16666666666666;}
 .head{font:bold 1.25em/1.2 "BentonSansCond Regular",Arial,sans-serif;color:#888;margin:0 0 10px;}
 .head a,.head a:visited{color:#888;}
 .head a:visited:hover,.head a:focus,.head a:focus:hover,.head a:hover,.head a:active{color:#000;}
@@ -260,11 +260,12 @@ span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:itali
 img{width:auto\9;height:auto;max-width:100%;max-height:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;margin-bottom:5px;}
 .oa{overflow:auto;}
 * html .oa{height:1%;}
+.img{margin:0 auto;display:block;}
 .imgr{float:right;margin-left:10px;}
 .imgl{float:left;margin-right:10px;}
 #rgpdf{display:none;visibility:hidden;}
 @media only screen and (min-width:665px){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima4.jpg);background-repeat:no-repeat;width:128px;height:261px;float:right;margin:0 0 10px 10px;display:block;visibility:visible;overflow:hidden;text-indent:-999em;} #rgpdf a{display:block;width:100%;height:100%;}}@media only screen and (min-width:665px) and (min--moz-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-moz-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (-o-min-device-pixel-ratio:3/2),only screen and (min-width:665px) and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-device-pixel-ratio:1.5),only screen and (min-width:665px) and (min-resolution:1.5dppx){#rgpdf{background-image:url(http://registerguard.or.newsmemory.com/newsmemvol2/oregon/eugeneregisterguard/prima/prima2.jpg);-moz-background-size:128px 261px;-ie-background-size:128px 261px;-o-background-size:128px 261px;-webkit-background-size:128px 261px;background-size:128px 261px;}}hr{border:0;border-top:1px solid #ccc;height:1px;margin:10px 0 11px;padding:0;}
-.pull{border:1px solid #ccc;background:#eee;padding:10px;}
+.pull{border:1px solid #ccc;background:#eee;padding:10px;margin:0 0 10px;}
 .deep{width:100%;border-width:1px 0;border-style:solid;border-color:#ccc;margin:10px 0;padding:10px 0;position:relative;}
 @media only screen and (min-width:665px){.deep{width:300px;border:0;margin:0 0 0 20px;padding:0;float:right;display:inline;clear:right;}}@media only screen and (min-width:1005px){.deep{margin-right:-170px;}}#fb-root{display:none;}
 #sbc{width:100%;float:left;display:inline;}
