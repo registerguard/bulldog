@@ -1,0 +1,422 @@
+@import "variables";
+
+.marker {
+	font: bold 1.375em/1.09090909090909 Arial, sans-serif; /* 22px */
+	color: darken(#ff0, 20%);
+	text-transform: none;
+	background: #ff0;
+	margin: 5px 0 10px;
+	padding: .54545454545455em .54545454545455em;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.subtle {
+	font: normal 1.188em/1.26262626262626 Courier, monospace; /* 19px */
+	color: @grayLight;
+	margin: 10px 0;
+}
+
+/**
+ * `:nth-child` = pseudo-class & `::before` = pseudo-element.
+ * @see http://reference.sitepoint.com/css/pseudoclasses
+ * @see http://reference.sitepoint.com/css/pseudoelements
+ */
+
+.swatches::before, .swatches::after { content: " "; display: table; } .swatches::after { clear: both; } .swatches { *zoom: 1; }
+.swatches {
+	> div {
+		font: 14px/50px @monoFontFamily;
+		text-align: center;
+		color: #fff;
+		width: 100%;
+		height: 50px;
+		float: left;
+		display: inline;
+		cursor: pointer;
+		cursor: hand;
+		box-sizing: border-box;
+		box-shadow: inset 0 0 10px 0 fade(@black, 25%);
+		&::before {
+			padding: 3px 5px;
+			background: fade(@black, 10%);
+			border: 1px solid fade(@black, 8%);
+			border-radius: 3px;
+		}
+		@media only screen and (min-width: 665px) {
+			width: 175px;
+		}
+	}
+	// Grays:
+	&.swatches-gray-1 > div {
+		&:nth-child(1) {
+			background: @black;
+			&::before { content: %("%d", @black); }
+			&:hover::before { content: "@black"; }
+		}
+		&:nth-child(2) {
+			background: @grayDarker;
+			&::before { content: %("%d", @grayDarker); }
+			&:hover::before { content: "@grayDarker"; }
+		}
+		&:nth-child(3) {
+			background: @grayDark;
+			&::before { content: %("%d", @grayDark); }
+			&:hover::before { content: "@grayDark"; }
+		}
+		&:nth-child(4) {
+			background: @gray;
+			&::before { content: %("%d", @gray); }
+			&:hover::before { content: "@gray"; }
+		}
+		&:nth-child(5) {
+			background: @grayLight;
+			&::before { content: %("%d", @grayLight); }
+			&:hover::before { content: "@grayLight"; }
+		}
+		&:nth-child(6) {
+			background: @grayLighter;
+			&::before { content: %("%d", @grayLighter); }
+			&:hover::before { content: "@grayLighter"; }
+		}
+		&:nth-child(7) {
+			background: @white;
+			&::before { content: %("%d", @white); }
+			&:hover::before { content: "@white"; }
+		}
+	}
+	// Accents:
+	&.swatches-accent-1 > div {
+		&:nth-child(1) {
+			background: @tan;
+			&::before { content: %("%d", @tan); }
+			&:hover::before { content: "@tan"; }
+		}
+		&:nth-child(2) {
+			background: @red;
+			&::before { content: %("%d", @red); }
+			&:hover::before { content: "@red"; }
+		}
+		&:nth-child(3) {
+			background: @blue;
+			&::before { content: %("%d", @blue); }
+			&:hover::before { content: "@blue"; }
+		}
+		&:nth-child(4) {
+			background: @green;
+			&::before { content: %("%d", @green); }
+			&:hover::before { content: "@green"; }
+		}
+	}
+	// Complements:
+	&.swatches-complement-1 > div {
+		&:nth-child(1) {
+			background: @tanComplement;
+			&::before { content: %("%d", @tanComplement); }
+			&:hover::before { content: "@tanComplement"; }
+		}
+		&:nth-child(2) {
+			background: @redComplement;
+			&::before { content: %("%d", @redComplement); }
+			&:hover::before { content: "@redComplement"; }
+		}
+		&:nth-child(3) {
+			background: @blueComplement;
+			&::before { content: %("%d", @blueComplement); }
+			&:hover::before { content: "@blueComplement"; }
+		}
+		&:nth-child(4) {
+			background: @greenComplement;
+			&::before { content: %("%d", @greenComplement); }
+			&:hover::before { content: "@greenComplement"; }
+		}
+	}
+	// Shades:
+	&.swatches-shade-1 > div {
+		&:nth-child(1) {
+			background: @tanDarker;
+			&::before { content: %("%d", @tanDarker); }
+			&:hover::before { content: "@tanDarker"; }
+		}
+		&:nth-child(2) {
+			background: @tanDark;
+			&::before { content: %("%d", @tanDark); }
+			&:hover::before { content: "@tanDark"; }
+		}
+		&:nth-child(3) {
+			background: @tan;
+			&::before { content: %("%d", @tan); }
+			&:hover::before { content: "@tan"; }
+		}
+		&:nth-child(4) {
+			background: @tanLight;
+			&::before { content: %("%d", @tanLight); }
+			&:hover::before { content: "@tanLight"; }
+		}
+		&:nth-child(5) {
+			background: @tanLighter;
+			&::before { content: %("%d", @tanLighter); }
+			&:hover::before { content: "@tanLighter"; }
+		}
+	}
+	&.swatches-shade-2 > div {
+		&:nth-child(1) {
+			background: @redDarker;
+			&::before { content: %("%d", @redDarker); }
+			&:hover::before { content: "@redDarker"; }
+		}
+		&:nth-child(2) {
+			background: @redDark;
+			&::before { content: %("%d", @redDark); }
+			&:hover::before { content: "@redDark"; }
+		}
+		&:nth-child(3) {
+			background: @red;
+			&::before { content: %("%d", @red); }
+			&:hover::before { content: "@red"; }
+		}
+		&:nth-child(4) {
+			background: @redLight;
+			&::before { content: %("%d", @redLight); }
+			&:hover::before { content: "@redLight"; }
+		}
+		&:nth-child(5) {
+			background: @redLighter;
+			&::before { content: %("%d", @redLighter); }
+			&:hover::before { content: "@redLighter"; }
+		}
+	}
+	&.swatches-shade-3 > div {
+		&:nth-child(1) {
+			background: @blueDarker;
+			&::before { content: %("%d", @blueDarker); }
+			&:hover::before { content: "@blueDarker"; }
+		}
+		&:nth-child(2) {
+			background: @blueDark;
+			&::before { content: %("%d", @blueDark); }
+			&:hover::before { content: "@blueDark"; }
+		}
+		&:nth-child(3) {
+			background: @blue;
+			&::before { content: %("%d", @blue); }
+			&:hover::before { content: "@blue"; }
+		}
+		&:nth-child(4) {
+			background: @blueLight;
+			&::before { content: %("%d", @blueLight); }
+			&:hover::before { content: "@blueLight"; }
+		}
+		&:nth-child(5) {
+			background: @blueLighter;
+			&::before { content: %("%d", @blueLighter); }
+			&:hover::before { content: "@blueLighter"; }
+		}
+	}
+	&.swatches-shade-4 > div {
+		&:nth-child(1) {
+			background: @greenDarker;
+			&::before { content: %("%d", @greenDarker); }
+			&:hover::before { content: "@greenDarker"; }
+		}
+		&:nth-child(2) {
+			background: @greenDark;
+			&::before { content: %("%d", @greenDark); }
+			&:hover::before { content: "@greenDark"; }
+		}
+		&:nth-child(3) {
+			background: @green;
+			&::before { content: %("%d", @green); }
+			&:hover::before { content: "@green"; }
+		}
+		&:nth-child(4) {
+			background: @greenLight;
+			&::before { content: %("%d", @greenLight); }
+			&:hover::before { content: "@greenLight"; }
+		}
+		&:nth-child(5) {
+			background: @greenLighter;
+			&::before { content: %("%d", @greenLighter); }
+			&:hover::before { content: "@greenLighter"; }
+		}
+	}
+	// Analgous:
+	&.swatches-analgous-1 > div {
+		&:nth-child(1) {
+			background: @tanLeft2;
+			&::before { content: %("%d", @tanLeft2); }
+			&:hover::before { content: "@tanLeft2"; }
+		}
+		&:nth-child(2) {
+			background: @tanLeft1;
+			&::before { content: %("%d", @tanLeft1); }
+			&:hover::before { content: "@tanLeft1"; }
+		}
+		&:nth-child(3) {
+			background: @tan;
+			&::before { content: %("%d", @tan); }
+			&:hover::before { content: "@tan"; }
+		}
+		&:nth-child(4) {
+			background: @tanRight1;
+			&::before { content: %("%d", @tanRight1); }
+			&:hover::before { content: "@tanRight1"; }
+		}
+		&:nth-child(5) {
+			background: @tanRight2;
+			&::before { content: %("%d", @tanRight2); }
+			&:hover::before { content: "@tanRight2"; }
+		}
+	}
+	&.swatches-analgous-2 > div {
+		&:nth-child(1) {
+			background: @redLeft2;
+			&::before { content: %("%d", @redLeft2); }
+			&:hover::before { content: "@redLeft2"; }
+		}
+		&:nth-child(2) {
+			background: @redLeft1;
+			&::before { content: %("%d", @redLeft1); }
+			&:hover::before { content: "@redLeft1"; }
+		}
+		&:nth-child(3) {
+			background: @red;
+			&::before { content: %("%d", @red); }
+			&:hover::before { content: "@red"; }
+		}
+		&:nth-child(4) {
+			background: @redRight1;
+			&::before { content: %("%d", @redRight1); }
+			&:hover::before { content: "@redRight1"; }
+		}
+		&:nth-child(5) {
+			background: @redRight2;
+			&::before { content: %("%d", @redRight2); }
+			&:hover::before { content: "@redRight2"; }
+		}
+	}
+	&.swatches-analgous-3 > div {
+		&:nth-child(1) {
+			background: @blueLeft2;
+			&::before { content: %("%d", @blueLeft2); }
+			&:hover::before { content: "@blueLeft2"; }
+		}
+		&:nth-child(2) {
+			background: @blueLeft1;
+			&::before { content: %("%d", @blueLeft1); }
+			&:hover::before { content: "@blueLeft1"; }
+		}
+		&:nth-child(3) {
+			background: @blue;
+			&::before { content: %("%d", @blue); }
+			&:hover::before { content: "@blue"; }
+		}
+		&:nth-child(4) {
+			background: @blueRight1;
+			&::before { content: %("%d", @blueRight1); }
+			&:hover::before { content: "@blueRight1"; }
+		}
+		&:nth-child(5) {
+			background: @blueRight2;
+			&::before { content: %("%d", @blueRight2); }
+			&:hover::before { content: "@blueRight2"; }
+		}
+	}
+	&.swatches-analgous-4 > div {
+		&:nth-child(1) {
+			background: @greenLeft2;
+			&::before { content: %("%d", @greenLeft2); }
+			&:hover::before { content: "@greenLeft2"; }
+		}
+		&:nth-child(2) {
+			background: @greenLeft1;
+			&::before { content: %("%d", @greenLeft1); }
+			&:hover::before { content: "@greenLeft1"; }
+		}
+		&:nth-child(3) {
+			background: @green;
+			&::before { content: %("%d", @green); }
+			&:hover::before { content: "@green"; }
+		}
+		&:nth-child(4) {
+			background: @greenRight1;
+			&::before { content: %("%d", @greenRight1); }
+			&:hover::before { content: "@greenRight1"; }
+		}
+		&:nth-child(5) {
+			background: @greenRight2;
+			&::before { content: %("%d", @greenRight2); }
+			&:hover::before { content: "@greenRight2"; }
+		}
+	}
+	// Clashes:
+	&.swatches-clash-1 > div {
+		&:nth-child(1) {
+			background: @tanClash1;
+			&::before { content: %("%d", @tanClash1); }
+			&:hover::before { content: "@tanClash1"; }
+		}
+		&:nth-child(2) {
+			background: @tan;
+			&::before { content: %("%d", @tan); }
+			&:hover::before { content: "@tan"; }
+		}
+		&:nth-child(3) {
+			background: @tanClash2;
+			&::before { content: %("%d", @tanClash2); }
+			&:hover::before { content: "@tanClash2"; }
+		}
+	}
+	&.swatches-clash-2 > div {
+		&:nth-child(1) {
+			background: @redClash1;
+			&::before { content: %("%d", @redClash1); }
+			&:hover::before { content: "@redClash1"; }
+		}
+		&:nth-child(2) {
+			background: @red;
+			&::before { content: %("%d", @red); }
+			&:hover::before { content: "@red"; }
+		}
+		&:nth-child(3) {
+			background: @redClash2;
+			&::before { content: %("%d", @redClash2); }
+			&:hover::before { content: "@redClash2"; }
+		}
+	}
+	&.swatches-clash-3 > div {
+		&:nth-child(1) {
+			background: @blueClash1;
+			&::before { content: %("%d", @blueClash1); }
+			&:hover::before { content: "@blueClash1"; }
+		}
+		&:nth-child(2) {
+			background: @blue;
+			&::before { content: %("%d", @blue); }
+			&:hover::before { content: "@blue"; }
+		}
+		&:nth-child(3) {
+			background: @blueClash2;
+			&::before { content: %("%d", @blueClash2); }
+			&:hover::before { content: "@blueClash2"; }
+		}
+	}
+	&.swatches-clash-4 > div {
+		&:nth-child(1) {
+			background: @greenClash1;
+			&::before { content: %("%d", @greenClash1); }
+			&:hover::before { content: "@greenClash1"; }
+		}
+		&:nth-child(2) {
+			background: @green;
+			&::before { content: %("%d", @green); }
+			&:hover::before { content: "@green"; }
+		}
+		&:nth-child(3) {
+			background: @greenClash2;
+			&::before { content: %("%d", @greenClash2); }
+			&:hover::before { content: "@greenClash2"; }
+		}
+	}
+}

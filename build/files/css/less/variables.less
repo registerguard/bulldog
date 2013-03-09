@@ -1,5 +1,6 @@
 // https://github.com/twitter/bootstrap/blob/master/less/variables.less
 
+// Grays:
 @black: #000;
 @grayDarker: #222;
 @grayDark: #333;
@@ -7,12 +8,67 @@
 @grayLight: #999;
 @grayLighter: #eee;
 @white: #fff;
+// Accents:
+@tan: #ae906f;
+@red: #ae1a1f;
+@blue: #0083ca;
+@green: #9ac80d;
+// Complementary:
+@tanComplement: spin(@tan, 180);
+@redComplement: spin(@red, 180);
+@blueComplement: spin(@blue, 180);
+@greenComplement: spin(@green, 180);
+// Shades:
+@difference: 15%; // Difference (in perecent) between each shade.
+@tanDarker: darken(@tan, (@difference * 2));
+@tanDark: darken(@tan, @difference);
+@tanLight: lighten(@tan, @difference);
+@tanLighter: lighten(@tan, (@difference * 2));
+@redDarker: darken(@red, (@difference * 2));
+@redDark: darken(@red, @difference);
+@redLight: lighten(@red, @difference);
+@redLighter: lighten(@red, (@difference * 2));
+@blueDarker: darken(@blue, (@difference * 2));
+@blueDark: darken(@blue, @difference);
+@blueLight: lighten(@blue, @difference);
+@blueLighter: lighten(@blue, (@difference * 2));
+@greenDarker: darken(@green, (@difference * 2));
+@greenDark: darken(@green, @difference);
+@greenLight: lighten(@green, @difference);
+@greenLighter: lighten(@green, (@difference * 2));
+// Analgous:
+@distance: 10; // Degrees between each analgous color.
+@tanLeft2: spin(@tan, (@distance * 2));
+@tanLeft1: spin(@tan, @distance);
+@tanRight1: spin(@tan, (@distance * -1));
+@tanRight2: spin(@tan, (@distance * -2));
+@redLeft2: spin(@red, (@distance * 2));
+@redLeft1: spin(@red, @distance);
+@redRight1: spin(@red, (@distance * -1));
+@redRight2: spin(@red, (@distance * -2));
+@blueLeft2: spin(@blue, (@distance * 2));
+@blueLeft1: spin(@blue, @distance);
+@blueRight1: spin(@blue, (@distance * -1));
+@blueRight2: spin(@blue, (@distance * -2));
+@greenLeft2: spin(@green, (@distance * 2));
+@greenLeft1: spin(@green, @distance);
+@greenRight1: spin(@green, (@distance * -1));
+@greenRight2: spin(@green, (@distance * -2));
+// Clash:
+// Clash
+@angle: 45; // Angle formed at base of isosceles triangle.
+@tanClash1: spin(@tan, (@angle * -2));
+@tanClash2: spin(@tan, (@angle * 2));
+@redClash1: spin(@red, (@angle * -2));
+@redClash2: spin(@red, (@angle * 2));
+@blueClash1: spin(@blue, (@angle * -2));
+@blueClash2: spin(@blue, (@angle * 2));
+@greenClash1: spin(@green, (@angle * -2));
+@greenClash2: spin(@green, (@angle * 2));
 
+// Scaffolding:
 @bodyBackground: @white;
 @textColor: @black;
-
-@tan: #e7e3dd;
-@tanDark: darken(@tan, 50%);
 
 @sansFontFamily: Arial, sans-serif;
 @serifFontFamily: Cambria, Georgia, serif;

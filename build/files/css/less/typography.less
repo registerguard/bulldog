@@ -64,11 +64,14 @@ h6, .h6, .sh6 {
 	.reverse a:active { color: #fff; }
 
 .label {
-	font: bold .813em/1.8450184501845 Arial, sans-serif; /* 12px */
+	font-family: Arial, sans-serif;
+	font-size: .813em; /* 12px */
+	font-weight: bold;
+	line-height: 1.15313653136531; /* (((1.5 / .813) = 1.8450184501845) * .625) = 1.15313653136531 */
 	color: #ae1b1f;
 	letter-spacing: .1em;
 	text-transform: uppercase;
-	margin: 0;
+	padding: .3459409594096em 0; /* (((((1.5 / .813) = 1.8450184501845) * .375) = .69188191881919) / 2) = .3459409594096 */
 }
 	.label a,
 	.label a:visited,
@@ -131,7 +134,7 @@ h6, .h6, .sh6 {
 	}
 	.streamer h2 {
 		color: @tanDark;
-		background-color: @tan;
+		background-color: @tanLighter;
 	}
 		.streamer h2 a:link,
 		.streamer h2 a:visited { color: @tanDark; }
@@ -246,7 +249,7 @@ blockquote {
 	border-left: 3px solid #ccc;
 	margin: 0 0 10px;
 	padding: 0 0 0 1.5em;
-	quotes: '“' '”';
+	quotes: '\201C' '\201D';
 }
 	blockquote p {
 		font: italic 1.125em/1.33333333333333 Cambria, Georgia, serif; /* 18px */
@@ -256,7 +259,7 @@ blockquote {
 		blockquote p:before {
 			font-weight: bold;
 			letter-spacing: .5ex;
-			content: '“';
+			content: '\201C';
 			content: open-quote;
 		}
 		blockquote p:after {
@@ -265,7 +268,7 @@ blockquote {
 		}
 		blockquote p:last-of-type:after {
 			font-weight: bold;
-			content: '”';
+			content: '\201D';
 			content: close-quote;
 		}
 		blockquote p:last-of-type { margin: 0; }
@@ -277,19 +280,19 @@ blockquote {
 	}
 	/* For `<q>`s in `<blockquote>`s: */
 	blockquote q:before {
-		content: '‘';
+		content: '\2018';
 		content: open-quote;
 	}
 	blockquote q:after {
-		content: '’';
+		content: '\2019';
 		content: close-quote;
 	}
 		blockquote q q:before {
-			content: '“';
+			content: '\201C';
 			content: open-quote;
 		}
 		blockquote q q:after {
-			content: '”';
+			content: '\201D';
 			content: close-quote;
 		}
 

@@ -249,7 +249,10 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'./files/css/<%= pkg.name %>.css' : './files/css/less/<%= pkg.name %>.less'
+					'./files/css/<%= pkg.name %>.css' : [
+						'./files/css/less/<%= pkg.name %>.less',
+						'./files/css/less/test.less'
+					]
 					
 				}
 				
