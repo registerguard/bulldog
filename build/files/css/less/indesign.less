@@ -1,0 +1,113 @@
+/**
+ * Styles for classes coming from InDesign.
+ *
+ *   Begins: p[class^="al"] { background: red; }
+ *     Ends: p[class$="al"] { background: blue; }
+ * Contains: p[class*="tr"] { background: green; }
+ *
+ * Web-safe font families:
+ *     Serif: Cambria, Georgia, serif
+ * San-serif: Arial, sans-serif
+ *
+ * @see rgne.ws/Zl7kVg
+ */
+
+/*----------------------------------( MARGINS (pre headings) )----------------------------------*/
+
+/* Before headings: */
+#story p[class*="Agate_News_Text_Just"],
+#story p[class*="Agate_News_Text_RR"],
+#story p[class*="AgateSports"],
+#story p[class*="Blood"],
+#story p[class*="Date"],
+#story p[class*="FormChart_1"],
+#story p[class*="FormChart_2"],
+#story p[class*="LetterName"],
+#story p[class*="Lumber"],
+#story p[class*="News_Tab"],
+#story p[class*="Numbers_Text"],
+#story p[class*="QuickFacts_Text"],
+#story p[class*="Text_85"]
+{
+	margin: 0;
+}
+
+/*----------------------------------( HEADINGS )----------------------------------*/
+
+/* Fix what was removed from above: */
+#story p[class*="Head"],
+#story p[class*="Subhead"]
+{
+	font: bold 1.375em/1.09090909090909 "MillerHeadline Bold", Cambria, Georgia, serif; /* 22px */
+	margin: 1.09090909090909em 0;
+}
+
+/*----------------------------------( MARGINS (post headings) )----------------------------------*/
+
+#story p[class*="AgateSports-Head"]
+{
+	margin: 0;
+}
+
+/*----------------------------------( BOLD )----------------------------------*/
+
+#story p[class*="_BLD"],
+#story p[class*="AgBld"],
+#story p[class*="Edit_LetterName"],
+#story p[class*="Edit_LetterNameTitle"],
+#story p[class*="Question"]
+{
+	font-weight: bold;
+}
+
+/*----------------------------------( ITALIC )----------------------------------*/
+
+#story p[class*="Answer"],
+#story p[class*="Credit_Source"],
+#story p[class*="FlushRight"],
+#story p[class*="Italic"],
+#story p[class*="LetterTown"],
+#story p[class*="Tagline"]
+{
+	font-style: italic;
+}
+
+/*----------------------------------( ALIGN: RIGHT )----------------------------------*/
+
+#story p[class*="Credit_Source"],
+#story p[class*="FlushRight"]
+{
+	text-align: right;
+}
+
+/*----------------------------------( UPPERCASE )----------------------------------*/
+
+#story p[class*="_CAP"],
+#story p[class*="Edit_LetterName"],
+#story p[class*="QuickFacts_Head"]
+{
+	text-transform: uppercase;
+}
+
+/*----------------------------------( SPECIAL )----------------------------------*/
+
+#story p[class*="Rail_SectionHeader"]
+{
+	font: bold 1em/1.5 Arial, sans-serif; /* 16px */
+	color: #ae1b1f;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	margin-bottom: 1.5em;
+}
+
+/*----------------------------------( OTHER )----------------------------------*/
+
+#story p.Editorial-Edit_LetterTown
+{
+	margin-top: 0;
+}
+
+#story p.Recipes-Recipe_Items_Tab
+{
+	margin: 0;
+}

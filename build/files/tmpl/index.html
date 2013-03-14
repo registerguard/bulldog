@@ -48,8 +48,6 @@
 	<link rel="stylesheet" href="http://static.registerguard.com/v5/ad_manager/1.0/css/ad_manager.css">
 	<!-- [END] ad_manager -->
 	
-	<link rel="stylesheet" href="http://static.registerguard.com/v5/indesign/styles.css">
-	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
 	<link rel="stylesheet" href="./css/bulldog.css">
@@ -78,10 +76,6 @@
 	
 </head>
 <body>
-	
-	<div id="fb-root"></div>
-	<!-- http://developers.facebook.com/docs/reference/plugins/like/ -->
-	<script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='//connect.facebook.net/en_US/all.js#xfbml=1';fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));</script>
 	
 	<div class="wiffle">
 		
@@ -146,6 +140,10 @@
 					
 				</header>
 				
+				<p>Something here ...</p>
+				
+				<hr>
+				
 				<div class="w_row">
 					
 					<div class="w_col w_C130 Aoff Boff">&nbsp;</div>
@@ -158,25 +156,36 @@
 								
 								<div id="meta">
 									
-									<p class="byline name"><a href="#">First Last</a></p>
+									<p class="byline1"><a href="#">First Middle Last</a></p>
 									
-									<p class="byline organization"><a href="#">Organization</a></p>
+									<p class="byline2">Organization Company Name</p>
 									
 									<p class="pub">Published: <time datetime="2013-03-01T00:00:00-08:00" pubdate>12:00 a.m., March 1</time></p>
 									
 								</div> <!-- /#meta -->
 								
-								<div id="sbc">
-									
-									<div class="sbc-item sbc-facebook"><div class="fb-like" data-width="55" data-height="65" data-send="false" data-layout="box_count" data-show-faces="false"></div></div>
-									
-									<div class="sbc-item sbc-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-via="registerguard" data-count="vertical">Tweet</a></div>
-									
-									<div class="sbc-item sbc-googleplus"><div class="g-plusone" data-size="tall"></div></div>
-									
-									<div class="sbc-item sbc-linkedin"><script type="IN/Share" data-counter="top"></script></div>
-									
-								</div> <!-- /#sbc -->
+								<div class="sharing sharing-box_count addthis_toolbox">
+									<div class="sharing-item sharing-facebook"><a class="addthis_button_facebook_like" fb:like:layout="box_count" fb:like:width="48"></a></div>
+									<div class="sharing-item sharing-twitter"><a class="addthis_button_tweet" tw:count="vertical"></a></div>
+									<div class="sharing-item sharing-googleplus"><a class="addthis_button_google_plusone" g:plusone:size="tall"></a></div>
+									<div class="sharing-item sharing-linkedin"><a class="addthis_button_linkedin_counter" li:counter="top"></a></div>
+									<div class="sharing-item"><a class="addthis_counter"></a></div>
+								</div> <!-- /.sharing -->
+								
+								<div class="sharing sharing-icons addthis_toolbox">
+									<div class="sharing-item"><a class="addthis_button_print"></a></div>
+									<div class="sharing-item"><a class="addthis_button_email"></a></div>
+									<div class="sharing-item"><a class="addthis_button_gmail"></a></div>
+									<div class="sharing-item"><a class="addthis_button_yahoomail"></a></div>
+									<div class="sharing-item"><a class="addthis_button_stumbleupon"></a></div>
+									<div class="sharing-item"><a class="addthis_button_reddit"></a></div>
+									<div class="sharing-item"><a class="addthis_button_delicious"></a></div>
+									<div class="sharing-item"><a class="addthis_button_digg"></a></div>
+									<div class="sharing-item"><a class="addthis_button_fark"></a></div>
+									<div class="sharing-item"><a class="addthis_button_bitly"></a></div>
+									<div class="sharing-item"><a class="addthis_button_tumblr"></a></div>
+									<div class="sharing-item"><a class="addthis_button_blogger"></a></div>
+								</div> <!-- /.sharing -->
 								
 							</div> <!-- /.fix -->
 							
@@ -475,6 +484,24 @@
 									<hgroup>
 										
 										<div class="streamer alt1 flip">
+											<h1><a href="#">Lorem</a></h1>
+											<h2><span>Ipsum</span></h2>
+										</div> <!-- /.streamer -->
+										
+									</hgroup>
+									
+									<hgroup>
+										
+										<div class="streamer alt2">
+											<h1><a href="#">Lorem</a></h1>
+											<h2><span>Ipsum</span></h2>
+										</div> <!-- /.streamer -->
+										
+									</hgroup>
+									
+									<hgroup>
+										
+										<div class="streamer alt2 flip">
 											<h1><a href="#">Lorem</a></h1>
 											<h2><span>Ipsum</span></h2>
 										</div> <!-- /.streamer -->
@@ -848,9 +875,9 @@
 							
 							<section>
 								
-								<p class="byline name"><a href="#">First Last</a></p>
+								<p class="byline1"><a href="#">First Last</a></p>
 								
-								<p class="byline organization"><a href="#">Organization</a></p>
+								<p class="byline2">Organization</p>
 								
 							</section>
 							
@@ -991,7 +1018,33 @@
 						
 						<!-- \\\\\\\\\\\\\\\\\\\\ MEDIUM RECTANGLE 1 //////////////////// -->
 						
-						<p>Content here...</p>
+						<hr>
+						
+						<section>
+							
+							<h1 class="head">Most popular</h1>
+							
+							<h2 class="reverse">Most read</h2>
+							
+							<ol class="li2">
+								<li><a href="/rg/news/local/29574165-75/police-ryan-gun-officers-eugene.html.csp" >Pellet gun scare results in arrest</a></li>
+								<li><a href="/rg/sports/29569964-81/pac-season-altman-ducks-tournament.html.csp" >Looking to get on a roll</a></li>
+								<li><a href="/rg/news/local/29568471-75/akers-mcnamara-manslaughter-court-drunk.html.csp" >Driver gets 10-year term</a></li>
+								<li><a href="/rg/sports/29571139-81/asomugha-philadelphia-nfl-million-eagles.html.csp" >Eagles part ways with heralded free agent</a></li>
+								<li><a href="/rg/news/local/29573075-75/police-eugene-robber-note-pizza.html.csp" >Man uses note to rob west Eugene pizza place</a></li>
+							</ol>
+							
+							<h2 class="reverse">Most commented</h2>
+							
+							<script type="text/javascript" src="http://registerguard.disqus.com/combination_widget.js?num_items=5&amp;hide_mods=1&amp;color=grey&amp;default_tab=popular&amp;excerpt_length=200"></script>
+							
+							<h2 class="reverse">Most blogged</h2>
+							
+							<ol class="li2">
+								<li><a href="http://www2.registerguard.com/cms/index.php/duck-football/index/">Oregon Football</a> <span>(Last activity: 23 hours ago)</span></li>
+							</ol>
+							
+						</section>
 						
 					</div> <!-- /.w_col -->
 					
@@ -1068,14 +1121,8 @@
 	<script>$(document).ready(function(){$.ad_manager({parent:'news',section:'local',page:'section'});});</script>
 	<!-- [END] ad_manager -->
 	
-	<!-- https://dev.twitter.com/docs/tweet-button -->
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	
-	<!-- https://developers.google.com/+/plugins/+1button/ -->
-	<script src="https://apis.google.com/js/plusone.js"></script>
-	
-	<!-- http://developer.linkedin.com/share-plugin -->
-	<script src="//platform.linkedin.com/in.js"></script>
+	<!-- http://www.addthis.com/services/list -->
+	<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=registerguard"></script>
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	

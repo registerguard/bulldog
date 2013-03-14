@@ -14,7 +14,7 @@
 
 .subtle {
 	font: normal 1.188em/1.26262626262626 Courier, monospace; /* 19px */
-	color: @grayLight;
+	color: @gray20;
 	margin: 10px 0;
 }
 
@@ -56,38 +56,58 @@
 			&:hover::before { content: "@black"; }
 		}
 		&:nth-child(2) {
-			background: @grayDarker;
-			&::before { content: %("%d", @grayDarker); }
-			&:hover::before { content: "@grayDarker"; }
+			background: @gray90;
+			&::before { content: %("%d", @gray90); }
+			&:hover::before { content: "@gray90"; }
 		}
 		&:nth-child(3) {
-			background: @grayDark;
-			&::before { content: %("%d", @grayDark); }
-			&:hover::before { content: "@grayDark"; }
+			background: @gray80;
+			&::before { content: %("%d", @gray80); }
+			&:hover::before { content: "@gray80"; }
 		}
 		&:nth-child(4) {
-			background: @gray;
-			&::before { content: %("%d", @gray); }
-			&:hover::before { content: "@gray"; }
+			background: @gray70;
+			&::before { content: %("%d", @gray70); }
+			&:hover::before { content: "@gray70"; }
 		}
 		&:nth-child(5) {
-			background: @grayLight;
-			&::before { content: %("%d", @grayLight); }
-			&:hover::before { content: "@grayLight"; }
+			background: @gray60;
+			&::before { content: %("%d", @gray60); }
+			&:hover::before { content: "@gray60"; }
 		}
 		&:nth-child(6) {
-			background: @grayLighter;
-			&::before { content: %("%d", @grayLighter); }
-			&:hover::before { content: "@grayLighter"; }
+			background: @gray50;
+			&::before { content: %("%d", @gray50); }
+			&:hover::before { content: "@gray50"; }
 		}
 		&:nth-child(7) {
+			background: @gray40;
+			&::before { content: %("%d", @gray40); }
+			&:hover::before { content: "@gray40"; }
+		}
+		&:nth-child(8) {
+			background: @gray30;
+			&::before { content: %("%d", @gray30); }
+			&:hover::before { content: "@gray30"; }
+		}
+		&:nth-child(9) {
+			background: @gray20;
+			&::before { content: %("%d", @gray20); }
+			&:hover::before { content: "@gray20"; }
+		}
+		&:nth-child(10) {
+			background: @gray10;
+			&::before { content: %("%d", @gray10); }
+			&:hover::before { content: "@gray10"; }
+		}
+		&:nth-child(11) {
 			background: @white;
 			&::before { content: %("%d", @white); }
 			&:hover::before { content: "@white"; }
 		}
 	}
-	// Accents:
-	&.swatches-accent-1 > div {
+	// Base:
+	&.swatches-base-1 > div {
 		&:nth-child(1) {
 			background: @tan;
 			&::before { content: %("%d", @tan); }

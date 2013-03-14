@@ -38,6 +38,58 @@ hr {
 	.deep { margin-right: -170px; }
 }
 
+/* Sharing widgets on the story page: */
+.sharing {
+	width: 100%;
+	float: left;
+	display: inline;
+	clear: left;
+}
+	.sharing-item {
+		margin: 0 5px 0 0;
+		float: left;
+		display: inline;
+	}
+	.sharing-item iframe,
+	.sharing-item div { display: block !important; }
+	.sharing-item a:active,
+	.sharing-item a:focus { outline: 0; }
+.sharing-box_count {}
+	.sharing-box_count .sharing-item {
+		height: auto;
+		_height: 65px;
+		min-height: 65px; /* Height of tallest widget. */
+	}
+	.sharing-icons .sharing-item {
+		height: 16px;
+		margin-bottom: 2px;
+	}
+@media only screen and (min-width: 665px) {
+	.sharing {
+		width: auto;
+		float: right;
+		clear: right;
+	}
+		.sharing-item { margin: 0 0 0 5px; }
+	.sharing-icons {
+		opacity: .5;
+		-webkit-transition: opacity .25s ease-in-out;
+		   -moz-transition: opacity .25s ease-in-out;
+		     -o-transition: opacity .25s ease-in-out;
+		    -ms-transition: opacity .25s ease-in-out;
+		        transition: opacity .25s ease-in-out;
+	}
+	.sharing-icons:hover { opacity: 1; }
+}
+
+
+
+/*
+
+Delete below after apply above classes and html.
+
+*/
+
 /* Facebook API stuff: */
 #fb-root { display: none; }
 
@@ -70,6 +122,11 @@ hr {
 	}
 		#sbc .sbc-item { margin: 0 0 0 5px; }
 }
+
+
+
+
+
 
 #forecast { display: none; }
 @media only screen and (min-width: 1005px) {

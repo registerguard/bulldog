@@ -19,6 +19,10 @@ module.exports = function(grunt) {
 		
 		ver : 1,
 		
+		//----------------------------------
+		
+		build_path : '<%= pkg.version %>/<%= now %>/<%= ver %>',
+		
 		/*----------------------------------( WATCH )----------------------------------*/
 		
 		/**
@@ -136,7 +140,7 @@ module.exports = function(grunt) {
 				
 				src : [
 					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*'
+					'../dist/<%= buld_path %>/**/*'
 					
 				]
 				
@@ -159,15 +163,15 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
+					'../dist/<%= buld_path %>/js/preflight.min.js' : [
 						'./files/js/preflight.js'
 					],
 					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv-printshiv.min.js' : [
+					'../dist/<%= buld_path %>/js/html5shiv-printshiv.min.js' : [
 						'./files/js/html5shiv-printshiv.js'
 					],
 					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
+					'../dist/<%= buld_path %>/js/<%= pkg.name %>.min.js' : [
 						'./files/js/matchMedia.js',
 						'./files/js/jquery.*.js',
 						'./files/js/woof.js',
@@ -175,7 +179,7 @@ module.exports = function(grunt) {
 						'./files/js/woof.init.js'
 					],
 					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : [
+					'../dist/<%= buld_path %>/js/respond.min.js' : [
 						'./files/js/respond.src.js',
 						'./files/js/respond.proxy.js'
 					]
@@ -187,49 +191,6 @@ module.exports = function(grunt) {
 		},
 		
 		/*----------------------------------( 04 )----------------------------------*/
-		
-		/**
-		 * Compress CSS files.
-		 *
-		 * @see https://github.com/gruntjs/grunt-contrib-cssmin
-		 * @see https://github.com/GoalSmashers/clean-css
-		 */
-		
-		/*
-		cssmin : {
-			
-			prod : {
-				
-				files : {
-					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : [
-						'./files/css/bassline.css',
-						'./files/css/normalize.css',
-						'./files/css/wiffle.css',
-						'./files/css/onoff.css',
-						'./files/css/lines.css',
-						'./files/css/global.css',
-						'./files/css/navigation.css',
-						'./files/css/base.css',
-						'./files/css/utils.css',
-						'./files/css/headings.css',
-						'./files/css/rgpdf.css',
-						'./files/css/images.css',
-						'./files/css/lists.css',
-						'./files/css/tables.css',
-						'./files/css/copy.css',
-						'./files/css/media.css',
-						'./files/css/pending.css'
-					]
-					
-				}
-				
-			}
-			
-		},
-		*/
-		
-		//----------------------------------
 		
 		/**
 		 * Compile LESS files to CSS.
@@ -268,7 +229,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less'
+					'../dist/<%= buld_path %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less'
 					
 				}
 				
@@ -298,7 +259,7 @@ module.exports = function(grunt) {
 							'img/**',
 							'util/**'
 						],
-						dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/'
+						dest : '../dist/<%= buld_path %>/'
 						
 					}//,
 					
@@ -309,7 +270,7 @@ module.exports = function(grunt) {
 						expand : true,
 						cwd : './files/',
 						src : ['index.html'],
-						dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/'
+						dest : '../dist/<%= buld_path %>/'
 						
 					}
 					*/
@@ -341,11 +302,11 @@ module.exports = function(grunt) {
 			prod : {
 				
 				src : './files/tmpl/index.html',
-				dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
+				dest : '../dist/<%= buld_path %>/index.html',
 				options : {
 					
 					context : {
-						path : '/<%= pkg.name %>/dist/<%= pkg.version %>/<%= now %>/<%= ver %>'
+						path : '/<%= pkg.name %>/dist/<%= buld_path %>'
 					}
 					
 				}
@@ -363,8 +324,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	
@@ -385,7 +344,7 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('printenv', function () { console.log(process.env); });
 	
-	//grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'cssmin', 'copy']);
+	//grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'copy']);
 	
 	grunt.registerTask('default', ['jshint']);
 	

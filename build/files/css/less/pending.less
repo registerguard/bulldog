@@ -2,11 +2,15 @@
 #loc { border-bottom: 1px solid #ccc; }
 	/* Make not a part of #loc? */
 	#loc p {
-		font: bold .813em/1.8450184501845 Arial, sans-serif; /* 13px */
+		font-family: Arial, sans-serif;
+		font-size: .813em; /* 13px */
+		font-weight: bold;
+		line-height: 1.38376383763838; /* (((1.5 / .813) = 1.8450184501845) * .75) = 1.38376383763838 */
 		letter-spacing: .02em;
-		color: #666;
+		color: @tanDark;
 		text-transform: uppercase;
 		margin: 0 0 10px;
+		padding: .3459409594096em 0; /* ((1.8450184501845 * .25) = .3459409594096 */
 	}
 	#loc p a,
 	#loc p a:visited,
@@ -14,7 +18,7 @@
 	#loc p a:focus,
 	#loc p a:focus:hover,
 	#loc p a:hover,
-	#loc p a:active { color: #000; }
+	#loc p a:active { color: @tanDarker; }
 
 /* Need to re-think these classes. Either I need more like these (.mb10, .nomb, ...) or I need to nuke alltogether. */
 .give { padding-top: 10px; }
@@ -32,6 +36,7 @@
 		margin: 5px 0;
 	}
 
+/* Story page byline and sharing widgets (can I work this into a generic class for use in more spots?): */
 #meta {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 10px;
@@ -100,3 +105,45 @@ small, .small {
 	color: #999;
 	text-align: center;
 }
+
+#story:before, #story:after { content: " "; display: table; } #story:after { clear: both; } #story { *zoom: 1; }
+	#story p {
+		font-size: 1.125em; /* 18px */
+		line-height: 1.33333333333333;
+		text-align: justify;
+		text-justify: newspaper;
+		margin: 0 0 1.33333333333333em;
+		-webkit-hyphenate-character: "\2010";
+		-webkit-hyphenate-limit-after: 1;
+		-webkit-hyphenate-limit-before: 3;
+		-webkit-hyphens: auto;
+		   -moz-hyphens: auto;
+		        hyphens: auto;
+	}
+	#story p a {
+		color: @blue;
+		text-decoration: none;
+	}
+	#story p a:visited { color: @blue; }
+	#story p a:visited:hover,
+	#story p a:focus,
+	#story p a:focus:hover,
+	#story p a:hover,
+	#story p a:active {
+		color: @blueComplement;
+		text-decoration: underline;
+	}
+	/* Remove top margin of first `<p>` within `#story`: */
+	#story p:first-of-type { margin-top: 0; }
+
+#dsq-combo-widget {
+	font-family: @sansFontFamily;
+}
+	#dsq-combo-widget .dsq-widget-thread,
+	#dsq-combo-widget .dsq-widget-meta a {
+		 -o-text-overflow: ellipsis;
+		    text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	#dsq-combo-widget h3 { display: none; }
