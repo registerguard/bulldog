@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title>AddThis configuration</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<style>
+		<!--
+			
+			/* Sharing widgets on the story page: */
+			.sharing {
+				width: 100%;
+				float: left;
+				display: inline;
+			}
+				.sharing-item {
+					margin: 0 5px 0 0;
+					float: left;
+					display: inline;
+				}
+				.sharing-item iframe,
+				.sharing-item div { display: block !important; }
+					.sharing-box_count .sharing-item {
+						height: auto;
+						_height: 65px; /* IE6 */
+						min-height: 65px; /* Height of tallest widget. */
+					}
+			@media only screen and (min-width: 665px) {
+				.sharing {
+					width: auto;
+					float: right;
+				}
+					.sharing-item { margin: 0 0 0 5px; }
+			}
+			
+			.fix:before,
+			.fix:after {
+				content: " ";
+				display: table;
+			}
+			.fix:after { clear: both; }
+			.fix { *zoom: 1; }
+			
+		-->
+	</style>
+	
+</head>
+<body>
+	
+	<div class="fix">
+		
+		<div class="sharing sharing-box_count addthis_toolbox">
+			
+			<div class="sharing-item sharing-facebook"><a class="addthis_button_facebook_like" fb:like:layout="box_count" fb:like:width="48"></a></div>
+			
+			<div class="sharing-item sharing-twitter"><a class="addthis_button_tweet" tw:count="vertical"></a></div>
+			
+			<div class="sharing-item sharing-googleplus"><a class="addthis_button_google_plusone" g:plusone:size="tall"></a></div>
+			
+			<div class="sharing-item sharing-linkedin"><a class="addthis_button_linkedin_counter" li:counter="top"></a></div>
+			
+			<div class="sharing-item"><a class="addthis_counter"></a></div>
+			<!--
+			<div class="sharing-item"><a class="addthis_button_email"></a></div>
+			
+			<div class="sharing-item"><a class="addthis_button_print"></a></div>
+			-->
+			
+		</div> <!-- /.sharing -->
+		
+	</div> <!-- /.fix -->
+	
+	<div class="sharing addthis_toolbox">
+		<div class="sharing-item"><a class="addthis_button_email"></a></div>
+		<div class="sharing-item"><a class="addthis_button_gmail"></a></div>
+		<div class="sharing-item"><a class="addthis_button_print"></a></div>
+		<div class="sharing-item"><a class="addthis_button_stumbleupon"></a></div>
+	</div>
+	
+	<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=registerguard"></script>
+	
+</body>
+</html>
