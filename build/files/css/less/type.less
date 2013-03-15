@@ -47,22 +47,24 @@ h6, .h6, .sh6 {
 	.head a:active { color: @black; }
 
 .reverse {
-	font: bold 1em/1.125 "BentonSansCond Regular", Arial, sans-serif; /* (((1.5 / 1) = 1.5) * .75) = 1.125 */
-	letter-spacing: .08em;
-	text-shadow: 0 1px 1px @gray90;
-	color: @gray10;
-	background: @gray60;
+	font-family: "BentonSansCond Regular", Arial, sans-serif;
+	font-size: .75em; /* 14px */
+	font-weight: bold;
+	line-height: 1.25; /* (((1.5 / .75) = 2) * .625) = 1.25 */
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: @gray90;
+	background: @gray30;
 	margin: 0 0 10px;
-	padding: .1875em .5625em; /* (((1.5 * .25) = .375) / 2) = .1875), ((.1875 * 3) = .5625) */
-	border-radius: 3px;
+	padding: .375em .625em; /* ((1.5 / .25) = .375), ((1.25 / 2) = .625) */
 }
 	.reverse a,
-	.reverse a:visited { color: @gray10; }
+	.reverse a:visited { color: @gray90; }
 	.reverse a:visited:hover,
 	.reverse a:focus,
 	.reverse a:focus:hover,
 	.reverse a:hover,
-	.reverse a:active { color: @white; }
+	.reverse a:active { color: @gray90; }
 
 .label {
 	font-family: Arial, sans-serif;
@@ -119,10 +121,13 @@ h6, .h6, .sh6 {
 .streamer {}
 	.streamer a,
 	.streamer span {
-		font: bold .938em/1.59914712153518 "BentonSansCond Regular", Arial, sans-serif; /* 14px */
+		font-family: "BentonSansCond Regular", Arial, sans-serif;
+		font-size: .938em; /* 14px */
+		font-weight: bold;
+		line-height: 1.19936034115139; /* (((1.5 / .938) = 1.59914712153518) * .75) = 1.19936034115139 */
 		text-transform: uppercase;
 		letter-spacing: .05em;
-		padding: .3997867803838em .79957356076759em;
+		padding: .3997867803838em .5996801705757em; /* ((1.59914712153518 * .25) = .3997867803838), ((1.19936034115139 / 2) = .5996801705757) */
 	}
 		.streamer a:link,
 		.streamer a:visited {
@@ -155,8 +160,8 @@ h6, .h6, .sh6 {
 	.streamer.alt2 a,
 	.streamer.alt2 span {
 		font-size: .75em;
-		line-height: 2;
-		padding: 0 .75em;
+		line-height: 1.25; /* (((1.5 / .75) = 2) * .625) = 1.25 */
+		padding: .375em .625em; /* ((1.5 / .25) = .375), ((1.25 / 2) = .625) */
 	}
 	.streamer.alt2 h1 { background-color: @gray90; }
 	.streamer.alt2 h2 { background-color: @gray30; }

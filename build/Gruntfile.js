@@ -19,10 +19,6 @@ module.exports = function(grunt) {
 		
 		ver : 1,
 		
-		//----------------------------------
-		
-		build_path : '<%= pkg.version %>/<%= now %>/<%= ver %>',
-		
 		/*----------------------------------( WATCH )----------------------------------*/
 		
 		/**
@@ -140,7 +136,7 @@ module.exports = function(grunt) {
 				
 				src : [
 					
-					'../dist/<%= buld_path %>/**/*'
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*'
 					
 				]
 				
@@ -163,15 +159,15 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../dist/<%= buld_path %>/js/preflight.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
 						'./files/js/preflight.js'
 					],
 					
-					'../dist/<%= buld_path %>/js/html5shiv-printshiv.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/html5shiv-printshiv.min.js' : [
 						'./files/js/html5shiv-printshiv.js'
 					],
 					
-					'../dist/<%= buld_path %>/js/<%= pkg.name %>.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/<%= pkg.name %>.min.js' : [
 						'./files/js/matchMedia.js',
 						'./files/js/jquery.*.js',
 						'./files/js/woof.js',
@@ -179,7 +175,7 @@ module.exports = function(grunt) {
 						'./files/js/woof.init.js'
 					],
 					
-					'../dist/<%= buld_path %>/js/respond.min.js' : [
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/respond.min.js' : [
 						'./files/js/respond.src.js',
 						'./files/js/respond.proxy.js'
 					]
@@ -212,8 +208,10 @@ module.exports = function(grunt) {
 					
 					'./files/css/<%= pkg.name %>.css' : [
 						'./files/css/less/<%= pkg.name %>.less',
-						'./files/css/less/test.less'
-					]
+						'./files/css/less/dev.less'
+					],
+					
+					'./files/css/<%= pkg.name %>.print.css' : './files/css/less/print.less'
 					
 				}
 				
@@ -229,7 +227,9 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../dist/<%= buld_path %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less'
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less',
+					
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.print.min.css' : './files/css/less/print.less'
 					
 				}
 				
@@ -256,10 +256,9 @@ module.exports = function(grunt) {
 						expand : true,
 						cwd : './files/',
 						src : [
-							'img/**',
-							'util/**'
+							'img/**'
 						],
-						dest : '../dist/<%= buld_path %>/'
+						dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}//,
 					
@@ -270,7 +269,7 @@ module.exports = function(grunt) {
 						expand : true,
 						cwd : './files/',
 						src : ['index.html'],
-						dest : '../dist/<%= buld_path %>/'
+						dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}
 					*/
@@ -302,11 +301,11 @@ module.exports = function(grunt) {
 			prod : {
 				
 				src : './files/tmpl/index.html',
-				dest : '../dist/<%= buld_path %>/index.html',
+				dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
 				options : {
 					
 					context : {
-						path : '/<%= pkg.name %>/dist/<%= buld_path %>'
+						path : '/<%= pkg.name %>/dist/<%= pkg.version %>/<%= now %>/<%= ver %>'
 					}
 					
 				}
