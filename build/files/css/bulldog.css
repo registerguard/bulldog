@@ -269,16 +269,11 @@ img{width:auto\9;height:auto;max-width:100%;max-height:100%;vertical-align:middl
 .deep{width:100%;border-width:1px 0;border-style:solid;border-color:#ccc;margin:10px 0;padding:10px 0;position:relative;}
 @media only screen and (min-width:665px){.deep{width:300px;border:0;margin:0 0 0 20px;padding:0;float:right;display:inline;clear:right;}}@media only screen and (min-width:1005px){.deep{margin-right:-170px;}}.sharing{width:100%;float:left;display:inline;clear:left;}
 .sharing-item{margin:0 5px 0 0;float:left;display:inline;}
-.sharing-item iframe,.sharing-item div{display:block !important;}
+.sharing-item iframe,.sharing-item div,.sharing-item img{display:block !important;}
 .sharing-item a:active,.sharing-item a:focus{outline:0;}
 .sharing-box_count .sharing-item{height:auto;_height:65px;min-height:65px;}
 .sharing-icons .sharing-item{height:16px;margin-bottom:2px;}
-@media only screen and (min-width:665px){.sharing{width:auto;float:right;clear:right;} .sharing-item{margin:0 0 0 5px;} .sharing-icons{opacity:.5;-webkit-transition:opacity 0.25s ease-in-out;-moz-transition:opacity 0.25s ease-in-out;-o-transition:opacity 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out;transition:opacity 0.25s ease-in-out;} .sharing-icons:hover{opacity:1;}}#fb-root{display:none;}
-#sbc{width:100%;float:left;display:inline;}
-#sbc .sbc-item{height:auto;_height:70px;min-height:70px;margin:0 5px 0 0;float:left;display:inline;}
-#sbc .sbc-item iframe,#sbc .sbc-item div{display:block !important;}
-#sbc .sbc-pinterest{margin-top:10px;_height:60px;min-height:60px;}
-@media only screen and (min-width:665px){#sbc{width:auto;float:right;} #sbc .sbc-item{margin:0 0 0 5px;}}#forecast{display:none;}
+@media only screen and (min-width:665px){.sharing{width:auto;float:right;clear:right;} .sharing-item{margin:0 0 0 5px;} .sharing-icons{opacity:.5;-webkit-transition:opacity 0.25s ease-in-out;-moz-transition:opacity 0.25s ease-in-out;-o-transition:opacity 0.25s ease-in-out;-ms-transition:opacity 0.25s ease-in-out;transition:opacity 0.25s ease-in-out;} .sharing-icons:hover{opacity:1;}}#forecast{display:none;}
 @media only screen and (min-width:1005px){#forecast{width:115px;height:115px;display:block;position:absolute;top:-30px;right:-5px;} #forecast span{font:2.25em/1 "MillerHeadline Light",Cambria,Georgia,serif;letter-spacing:.05em;position:absolute;left:-0.75em;top:.75em;} #forecast a:visited{color:#000;}}.harmonia-select{width:100%;display:block;margin:10px 0;}
 @media only screen and (min-width:665px){.harmonia-select{display:none;visibility:hidden;}}pre{font:1em/1.5 Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;color:#333;border:1px solid rgba(0, 0, 0, 0.15);background:rgba(0, 0, 0, 0.1);margin:0 0 10px;padding:5px 10px;word-wrap:normal;overflow:auto;white-space:pre;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 pre code{color:inherit;border:0;background:transparent;padding:0;}

@@ -209,9 +209,7 @@ module.exports = function(grunt) {
 					'./files/css/<%= pkg.name %>.css' : [
 						'./files/css/less/<%= pkg.name %>.less',
 						'./files/css/less/dev.less'
-					],
-					
-					'./files/css/<%= pkg.name %>.print.css' : './files/css/less/print.less'
+					]
 					
 				}
 				
@@ -227,9 +225,7 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less',
-					
-					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.print.min.css' : './files/css/less/print.less'
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/css/less/<%= pkg.name %>.less'
 					
 				}
 				

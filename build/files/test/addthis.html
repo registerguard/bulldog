@@ -25,17 +25,19 @@
 					display: inline;
 				}
 				.sharing-item iframe,
-				.sharing-item div { display: block !important; }
+				.sharing-item div,
+				.sharing-item img { display: block !important; }
 				.sharing-item a:active,
 				.sharing-item a:focus { outline: 0; }
-				.sharing-icons .sharing-item {
-					height: 16px;
-					margin-bottom: 2px;
-				}
+			.sharing-box_count {}
 				.sharing-box_count .sharing-item {
 					height: auto;
 					_height: 65px;
 					min-height: 65px; /* Height of tallest widget. */
+				}
+				.sharing-icons .sharing-item {
+					height: 16px;
+					margin-bottom: 2px;
 				}
 			@media only screen and (min-width: 665px) {
 				.sharing {
@@ -44,6 +46,15 @@
 					clear: right;
 				}
 					.sharing-item { margin: 0 0 0 5px; }
+				.sharing-icons {
+					opacity: .5;
+					-webkit-transition: opacity .25s ease-in-out;
+					   -moz-transition: opacity .25s ease-in-out;
+					     -o-transition: opacity .25s ease-in-out;
+					    -ms-transition: opacity .25s ease-in-out;
+					        transition: opacity .25s ease-in-out;
+				}
+				.sharing-icons:hover { opacity: 1; }
 			}
 			
 			.fix:before,
@@ -94,7 +105,9 @@
 		</div> <!-- /.sharing -->
 		
 		<div class="sharing sharing-icons addthis_toolbox">
-			<div class="sharing-item"><a class="addthis_button_print"></a></div>
+			<div class="sharing-item"><script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 0;var pfHideImages = 0;var pfDisablePDF = 0;var pfDisableEmail = 0;var pfDisablePrint = 0;var pfCustomCSS = '';var pfBtVersion='1';(function(){var js, pf;pf = document.createElement('script');pf.type = 'text/javascript';if('https:' == document.location.protocol){js='https://pf-cdn.printfriendly.com/ssl/main.js'}else{js='http://cdn.printfriendly.com/printfriendly.js'}pf.src=js;document.getElementsByTagName('head')[0].appendChild(pf)})();</script><a href="http://www.printfriendly.com" onclick="window.print();return false;"><img src="http://cdn.printfriendly.com/pf-icon-small.gif" alt="Print Friendly and PDF" width="16" height="16"></a></div>
+			<!--<div class="sharing-item"><a class="addthis_button_printfriendly"></a></div>-->
+			<!--<div class="sharing-item"><a class="addthis_button_print"></a></div>-->
 			<div class="sharing-item"><a class="addthis_button_email"></a></div>
 			<div class="sharing-item"><a class="addthis_button_gmail"></a></div>
 			<div class="sharing-item"><a class="addthis_button_yahoomail"></a></div>

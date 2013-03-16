@@ -51,7 +51,8 @@ hr {
 		display: inline;
 	}
 	.sharing-item iframe,
-	.sharing-item div { display: block !important; }
+	.sharing-item div,
+	.sharing-item img { display: block !important; }
 	.sharing-item a:active,
 	.sharing-item a:focus { outline: 0; }
 .sharing-box_count {}
@@ -81,52 +82,6 @@ hr {
 	}
 	.sharing-icons:hover { opacity: 1; }
 }
-
-
-
-/*
-
-Delete below after apply above classes and html.
-
-*/
-
-/* Facebook API stuff: */
-#fb-root { display: none; }
-
-/* Sharing widgets on the story page: */
-#sbc {
-	width: 100%;
-	float: left;
-	display: inline;
-}
-	#sbc .sbc-item {
-		height: auto;
-		_height: 70px; /* IE6 */
-		min-height: 70px; /* Height of tallest widget. */
-		margin: 0 5px 0 0;
-		float: left;
-		display: inline;
-	}
-	#sbc .sbc-item iframe,
-	#sbc .sbc-item div { display: block !important; }
-	#sbc .sbc-pinterest {
-		/* Jenky widget code! */
-		margin-top: 10px;
-		_height: 60px;
-		min-height: 60px;
-	}
-@media only screen and (min-width: 665px) {
-	#sbc {
-		width: auto;
-		float: right;
-	}
-		#sbc .sbc-item { margin: 0 0 0 5px; }
-}
-
-
-
-
-
 
 #forecast { display: none; }
 @media only screen and (min-width: 1005px) {
