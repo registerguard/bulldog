@@ -2,26 +2,33 @@
 
 // Grays:
 @white: #fff;
-@gray10: #ebebeb;
-@gray20: #d7d7d7;
-@gray30: #c2c2c2;
-@gray40: #acacac;
-@gray50: #959595;
-@gray60: #7d7d7d;
-@gray70: #626262;
-@gray80: #464646;
-@gray90: #262626;
+@gray1: #eee;
+@gray2: #ddd;
+@gray3: #ccc;
+@gray4: #bbb;
+@gray5: #aaa;
+@gray6: #999;
+@gray7: #888;
+@gray8: #777;
+@gray9: #666;
+@gray10: #555;
+@gray11: #444;
+@gray12: #333;
+@gray13: #222;
+@gray14: #111;
 @black: #000;
 // Base:
 @tan: #ae906f;
 @red: #ae1a1f;
 @blue: #0083ca;
 @green: #9ac80d;
+@yellow: #fc0;
 // Complementary:
-@tanComplement: spin(@tan, 180);
-@redComplement: spin(@red, 180);
-@blueComplement: spin(@blue, 180);
-@greenComplement: spin(@green, 180);
+@tanC: spin(@tan, 180);
+@redC: spin(@red, 180);
+@blueC: spin(@blue, 180);
+@greenC: spin(@green, 180);
+@yellowC: spin(@yellow, 180);
 // Shades:
 @difference: 15%; // Difference (in perecent) between each shade.
 @tanDarker: darken(@tan, (@difference * 2));
@@ -40,34 +47,30 @@
 @greenDark: darken(@green, @difference);
 @greenLight: lighten(@green, @difference);
 @greenLighter: lighten(@green, (@difference * 2));
-// Analgous:
-@distance: 10; // Degrees between each analgous color.
-@tanLeft2: spin(@tan, (@distance * 2));
-@tanLeft1: spin(@tan, @distance);
-@tanRight1: spin(@tan, (@distance * -1));
-@tanRight2: spin(@tan, (@distance * -2));
-@redLeft2: spin(@red, (@distance * 2));
-@redLeft1: spin(@red, @distance);
-@redRight1: spin(@red, (@distance * -1));
-@redRight2: spin(@red, (@distance * -2));
-@blueLeft2: spin(@blue, (@distance * 2));
-@blueLeft1: spin(@blue, @distance);
-@blueRight1: spin(@blue, (@distance * -1));
-@blueRight2: spin(@blue, (@distance * -2));
-@greenLeft2: spin(@green, (@distance * 2));
-@greenLeft1: spin(@green, @distance);
-@greenRight1: spin(@green, (@distance * -1));
-@greenRight2: spin(@green, (@distance * -2));
-// Clash:
-@angle: 45; // Angle formed at base of isosceles triangle.
-@tanClash1: spin(@tan, (@angle * -2));
-@tanClash2: spin(@tan, (@angle * 2));
-@redClash1: spin(@red, (@angle * -2));
-@redClash2: spin(@red, (@angle * 2));
-@blueClash1: spin(@blue, (@angle * -2));
-@blueClash2: spin(@blue, (@angle * 2));
-@greenClash1: spin(@green, (@angle * -2));
-@greenClash2: spin(@green, (@angle * 2));
+@yellowDarker: darken(@yellow, (@difference * 2));
+@yellowDark: darken(@yellow, @difference);
+@yellowLight: lighten(@yellow, @difference);
+@yellowLighter: lighten(@yellow, (@difference * 2));
+@tanCDarker: darken(@tanC, (@difference * 2));
+@tanCDark: darken(@tanC, @difference);
+@tanCLight: lighten(@tanC, @difference);
+@tanCLighter: lighten(@tanC, (@difference * 2));
+@redCDarker: darken(@redC, (@difference * 2));
+@redCDark: darken(@redC, @difference);
+@redCLight: lighten(@redC, @difference);
+@redCLighter: lighten(@redC, (@difference * 2));
+@blueCDarker: darken(@blueC, (@difference * 2));
+@blueCDark: darken(@blueC, @difference);
+@blueCLight: lighten(@blueC, @difference);
+@blueCLighter: lighten(@blueC, (@difference * 2));
+@greenCDarker: darken(@greenC, (@difference * 2));
+@greenCDark: darken(@greenC, @difference);
+@greenCLight: lighten(@greenC, @difference);
+@greenCLighter: lighten(@greenC, (@difference * 2));
+@yellowCDarker: darken(@yellowC, (@difference * 2));
+@yellowCDark: darken(@yellowC, @difference);
+@yellowCLight: lighten(@yellowC, @difference);
+@yellowCLighter: lighten(@yellowC, (@difference * 2));
 
 // Scaffolding:
 @bodyBackground: @white;
@@ -90,4 +93,4 @@
 @subHeadingsFontFamily: "MillerHeadline Light", @serifFontFamily;
 @subHeadingsFontStyle: normal;
 @subHeadingsFontWeight: normal;
-@subHeadingsColor: @gray70;
+@subHeadingsColor: @gray9;
