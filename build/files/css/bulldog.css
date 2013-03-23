@@ -55,19 +55,21 @@ body{font:100.01%/1.5 Cambria,Georgia,serif;color:#000;-webkit-font-smoothing:an
 ::-moz-selection{background:#64c9ff;text-shadow:none;}
 ::selection{background:#64c9ff;text-shadow:none;}
 a{color:#000000;text-decoration:none;}
-a:visited{color:#555555;}
+a:visited{color:#333333;}
 a:visited:hover,a:focus,a:focus:hover,a:hover,a:active{color:#ae1a1f;}
 ul,ol,dl,dt,dd{margin:0;padding:0;}
-ul,ol,dl{font-size:14px;font-size:.875rem;line-height:1.45714285714285;margin:0 0 10px;}
+ul,ol,dl{margin:0 0 10px;}
 dl dt{font-weight:bold;}
 ul ul,ul ol,ul dl,ol ul,ol ol,ol dl,dl ol,dl ul{margin-top:0;margin-bottom:0;}
+ul li,ol li,dl dt,dl dd{font-size:14px;font-size:.875rem;line-height:1.28571428571428;padding:.21428571428572em 0;}
 ul li,dl dd{margin-left:2em;}
 ol li{margin-left:2.5em;}
 .li1,.li1 li{margin:0;padding:0;}
-.li1{font:bold 1em/1.25 "MillerHeadline Bold",Cambria,Georgia,serif;letter-spacing:.02em;margin:0 0 10px;}
-.li1 li{border-width:1px 0;border-style:solid;border-color:#ddd;list-style:none;margin-bottom:-1px;padding:.25em 0;}
+.li1{margin:0 0 10px;}
+.li1 li{font-family:"MillerHeadline Bold",Cambria,Georgia,serif;font-size:1em;font-weight:bold;line-height:1.125;letter-spacing:.01em;border-width:1px 0;border-style:solid;border-color:#ddd;list-style:none;margin-bottom:-1px;padding:.25em 0;}
 .li1 li a,.li1 li a:visited{color:#333;}
 .li1 li a:visited:hover,.li1 li a:focus,.li1 li a:focus:hover,.li1 li a:hover,.li1 li a:active{color:#000;}
+.li1.alt1{font-size:1.125em;line-height:1.33333333333333;}
 .li2{font-family:Arial,sans-serif;}
 .li2 li a,.li2 li a:visited{color:#666;}
 .li2 li a:visited:hover,.li2 li a:focus,.li2 li a:focus:hover,.li2 li a:hover,.li2 li a:active{color:#000;}
@@ -242,17 +244,8 @@ p a:visited:hover,p a:focus,p a:focus:hover,p a:hover,p a:active{color:#0083ca;t
 .jump a{color:#000000;text-decoration:none;}
 .jump a:visited{color:#000000;}
 .jump a:visited:hover,.jump a:focus,.jump a:focus:hover,.jump a:hover,.jump a:active{color:#ae1a1f;}
-blockquote{border-left:3px solid #dddddd;margin:0 0 10px;padding:0 0 0 1.5em;quotes:'\201C' '\201D';}
-blockquote p{font:italic 1.125em/1.33333333333333 Cambria,Georgia,serif;text-indent:-0.75em;word-spacing:.05em;}
-blockquote p:before{font-weight:bold;letter-spacing:.5ex;content:'\201C';content:open-quote;}
-blockquote p:after{content:'';content:no-close-quote;}
-blockquote p:last-of-type:after{font-weight:bold;content:'\201D';content:close-quote;}
-blockquote p:last-of-type{margin:0;}
-blockquote footer{font-size:.875em;line-height:1.71428571428571em;color:#666;margin:0 0 10px;}
-blockquote q:before{content:'\2018';content:open-quote;}
-blockquote q:after{content:'\2019';content:close-quote;}
-blockquote q q:before{content:'\201C';content:open-quote;}
-blockquote q q:after{content:'\201D';content:close-quote;}
+blockquote{border-top:1px solid #ddd;margin:1em 0 0;padding:10px 0 0 3em;position:relative;}
+blockquote:before{display:block;content:"\201C";font-size:6.25em;line-height:1;position:absolute;left:0;top:0;color:#ccc;}
 span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:italic;}
 .mm{height:0;padding-bottom:56.25%;position:relative;overflow:hidden;margin:0 0 10px;}
 .mm iframe,.mm object,.mm embed{width:100% !important;height:100% !important;position:absolute;top:0;left:0;}
@@ -306,6 +299,13 @@ code{font:1em Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu S
 #dsq-combo-widget{font-family:Arial,sans-serif;}
 #dsq-combo-widget .dsq-widget-thread,#dsq-combo-widget .dsq-widget-meta a{-o-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
 #dsq-combo-widget h3{display:none;}
+figure.sig{text-align:center;color:#ae1b1f;margin:0 0 10px;}
+figure.sig a{display:block;width:100%;height:100%;}
+figure.sig a,figure.sig a:visited,figure.sig a:visited:hover,figure.sig a:focus,figure.sig a:focus:hover,figure.sig a:hover,figure.sig a:active{color:#ae1b1f;text-decoration:none;text-decoration:non;}
+figure.sig img{margin:0 auto;display:block;}
+figure.sig figcaption{font:bold 1.375em/1.09090909090909 "MillerHeadline Bold",Cambria,Georgia,serif;border-bottom:4px double #000;display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;margin:-20px 0 0;padding-bottom:5px;}
+figure.sig figcaption span{display:block;}
+.stamp{font-size:.875rem;letter-spacing:.05em;color:#999;}
 
 .marker{font:bold 1.375em/1.09090909090909 Arial,sans-serif;color:#999900;text-transform:none;background:#ff0;margin:5px 0 10px;padding:.54545454545455em .54545454545455em;display:inline-block;*display:inline;*zoom:1;}
 .subtle{font:normal 1.188em/1.26262626262626 Courier,monospace;color:#999999;margin:10px 0;}

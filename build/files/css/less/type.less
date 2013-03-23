@@ -248,55 +248,39 @@ p {
 		.jump a:active { color: @red; }
 
 blockquote {
-	border-left: 3px solid @gray2;
-	margin: 0 0 10px;
-	padding: 0 0 0 1.5em;
-	quotes: '\201C' '\201D';
+	border-top: 1px solid #ddd;
+	margin: 1em 0 0;
+	padding: 10px 0 0 3em;
+	position: relative;
 }
+	blockquote:before {
+		display: block;
+		content: "\201C";
+		font-size: 6.25em;
+		line-height: 1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: #ccc;
+	}
+	/*
 	blockquote p {
-		font: italic 1.125em/1.33333333333333 Cambria, Georgia, serif; /* 18px */
-		text-indent: -.75em;
-		word-spacing: .05em;
-	}
-		blockquote p:before {
-			font-weight: bold;
-			letter-spacing: .5ex;
-			content: '\201C';
-			content: open-quote;
-		}
-		blockquote p:after {
-			content: '';
-			content: no-close-quote;
-		}
-		blockquote p:last-of-type:after {
-			font-weight: bold;
-			content: '\201D';
-			content: close-quote;
-		}
-		blockquote p:last-of-type { margin: 0; }
-	blockquote footer {
-		font-size: .875em; /* 14px */
-		line-height: 1.71428571428571em;
+		font: 1.25em/1.2 Cambria, Georgia, serif;
+		font-style: italic;
 		color: #666;
-		margin: 0 0 10px;
+		margin: 0;
 	}
-	/* For `<q>`s in `<blockquote>`s: */
-	blockquote q:before {
-		content: '\2018';
-		content: open-quote;
+	blockquote cite {
+		font: .875em/1.71428571428571 Arial, sans-serif;
+		font-style: normal;
+		letter-spacing: .025em;
+		text-transform: uppercase;
+		text-align: right;
+		color: #999;
+		display: block;
 	}
-	blockquote q:after {
-		content: '\2019';
-		content: close-quote;
-	}
-		blockquote q q:before {
-			content: '\201C';
-			content: open-quote;
-		}
-		blockquote q q:after {
-			content: '\201D';
-			content: close-quote;
-		}
+	blockquote cite:before { content: "\2014 \2009"; }
+	*/
 
 span.amp1 {
 	font-family: Baskerville, Palatino, "Book Antiqua", serif;
