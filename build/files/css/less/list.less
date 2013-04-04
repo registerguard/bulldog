@@ -22,15 +22,6 @@ dd {
 			margin-bottom: 0;
 		}
 			ul li,
-			ol li,
-			dl dt,
-			dl dd {
-				font-size: 14px;
-				font-size: .875rem;
-				line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
-				padding: .21428571428572em 0; /* (((1.71428571428571 * .25) = .42857142857143) / 2) = .21428571428572 */
-			}
-			ul li,
 			dl dd { margin-left: 2em; }
 			ol li { margin-left: 2.5em; } /* Need a bit more elbow room for the higher numbers. */
 
@@ -53,6 +44,7 @@ dd {
 		margin-bottom: -1px;
 		padding: .25em 0;
 	}
+	/*
 	.li1 li a,
 	.li1 li a:visited { color: #333; }
 	.li1 li a:visited:hover,
@@ -60,13 +52,21 @@ dd {
 	.li1 li a:focus:hover,
 	.li1 li a:hover,
 	.li1 li a:active { color: #000; }
+	*/
 	/* Used for news updates: */
 	.li1.alt1 {
 		font-size: 1.125em;
 		line-height: 1.33333333333333;
 	}
 
-.li2 { font-family: Arial, sans-serif; }
+.li2 {}
+	.li2 li {
+		font-family: Arial, sans-serif;
+		font-size: .875em;
+		line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
+		padding: .21428571428572em 0; /* (((1.71428571428571 * .25) = .42857142857143) / 2) = .21428571428572 */
+	}
+	/*
 	.li2 li a,
 	.li2 li a:visited { color: #666; }
 	.li2 li a:visited:hover,
@@ -74,6 +74,7 @@ dd {
 	.li2 li a:focus:hover,
 	.li2 li a:hover,
 	.li2 li a:active { color: #000; }
+	*/
 
 .li3,
 .li3 li {
