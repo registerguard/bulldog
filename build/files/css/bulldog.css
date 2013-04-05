@@ -67,7 +67,8 @@ ol li{margin-left:2.5em;}
 .li1{margin:0 0 10px;}
 .li1 li{font-family:"MillerHeadline Bold",Cambria,Georgia,serif;font-size:1em;font-weight:bold;line-height:1.125;letter-spacing:.01em;border-width:1px 0;border-style:solid;border-color:#ddd;list-style:none;margin-bottom:-1px;padding:.25em 0;}
 .li1.alt1{font-size:1.125em;line-height:1.33333333333333;}
-.li2 li{font-family:Arial,sans-serif;font-size:.875em;line-height:1.28571428571428;padding:.21428571428572em 0;}
+.li2 li{font-family:Arial,sans-serif;font-size:.875em;line-height:1.28571428571428;margin-bottom:.21428571428572em;}
+.li2 li li{font-size:inherit;margin-top:.21428571428572em;}
 .li3,.li3 li{margin:0;padding:0;}
 .li3{list-style:none;font-size:1em;line-height:1.5em;margin:0 0 10px;}
 .li3 li{border-width:1px 0;border-style:solid;border-color:#ddd;margin:-1px 0 0;padding:5px 0;}
@@ -200,7 +201,7 @@ h6,.h6,.sh6{font-size:1.125em;line-height:1.16666666666666;}
 .head a:visited:hover,.head a:focus,.head a:focus:hover,.head a:hover,.head a:active{color:#555555;}
 .reverse{font-family:"BentonSansCond Regular",Arial,sans-serif;font-size:.75em;font-weight:bold;line-height:1.25;text-transform:uppercase;letter-spacing:.05em;color:#444444;background:#cccccc;margin:0 0 10px;padding:.375em .625em;}
 .reverse a,.reverse a:visited{color:#444444;}
-.reverse a:visited:hover,.reverse a:focus,.reverse a:focus:hover,.reverse a:hover,.reverse a:active{color:#444444;}
+.reverse a:visited:hover,.reverse a:focus,.reverse a:focus:hover,.reverse a:hover,.reverse a:active{color:#111111;}
 .label{font-family:Arial,sans-serif;font-size:.813em;font-weight:bold;line-height:1.15313653136531;color:#ae1a1f;letter-spacing:.1em;text-transform:uppercase;margin:0;padding:.3459409594096em 0;}
 .label a,.label a:visited,.label a:visited:hover,.label a:focus,.label a:focus:hover,.label a:hover,.label a:active{color:#ae1a1f;}
 .streamer:before,.streamer:after{content:" ";display:table;}

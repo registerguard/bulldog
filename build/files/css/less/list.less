@@ -1,3 +1,11 @@
+/**
+ * Default list styling.
+ *
+ * Note to self:
+ * I want to avoid setting a font size on list defaults because, unlike 
+ * `<p>` tag style, this affects too much stuff.
+ */
+
 ul,
 ol,
 dl,
@@ -44,17 +52,8 @@ dd {
 		margin-bottom: -1px;
 		padding: .25em 0;
 	}
-	/*
-	.li1 li a,
-	.li1 li a:visited { color: #333; }
-	.li1 li a:visited:hover,
-	.li1 li a:focus,
-	.li1 li a:focus:hover,
-	.li1 li a:hover,
-	.li1 li a:active { color: #000; }
-	*/
-	/* Used for news updates: */
-	.li1.alt1 {
+	/* A tad bigger: */
+	.li1.alt1 { /* What's a better name than "alt1"? */
 		font-size: 1.125em;
 		line-height: 1.33333333333333;
 	}
@@ -64,17 +63,12 @@ dd {
 		font-family: Arial, sans-serif;
 		font-size: .875em;
 		line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
-		padding: .21428571428572em 0; /* (((1.71428571428571 * .25) = .42857142857143) / 2) = .21428571428572 */
+		margin-bottom: .21428571428572em; /* (((1.71428571428571 * .25) = .42857142857143) / 2) = .21428571428572 */
 	}
-	/*
-	.li2 li a,
-	.li2 li a:visited { color: #666; }
-	.li2 li a:visited:hover,
-	.li2 li a:focus,
-	.li2 li a:focus:hover,
-	.li2 li a:hover,
-	.li2 li a:active { color: #000; }
-	*/
+	.li2 li li {
+		font-size: inherit; /* So things don't get smaller the deeper they are nested. */
+		margin-top: .21428571428572em; /* Evens out the vertical spacing. */
+	}
 
 .li3,
 .li3 li {
