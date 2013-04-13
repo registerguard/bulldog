@@ -239,8 +239,9 @@ module.exports = function(grunt) {
 		 * Copy files and folders.
 		 *
 		 * @see https://github.com/gruntjs/grunt-contrib-copy
+		 * @see http://gruntjs.com/configuring-tasks#globbing-patterns
 		 */
-		
+
 		copy : {
 			
 			prod : {
@@ -252,13 +253,13 @@ module.exports = function(grunt) {
 						expand : true,
 						cwd : './files/',
 						src : [
-							'img/**'
+							'img/**',
+							'!img/junk/**'
 						],
 						dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
-					}//,
+					}/*,
 					
-					/*
 					{
 						
 						filter : 'isFile',
@@ -306,7 +307,16 @@ module.exports = function(grunt) {
 					
 				}
 				
+			}/*,
+			
+			// Testing ability to strip media queries using `@exclude` and `@endexclude`:
+			test : {
+				
+				src : './files/css/less/base.less',
+				dest : './files/css/less/ie/base.less'
+				
 			}
+			*/
 			
 		}
 		
