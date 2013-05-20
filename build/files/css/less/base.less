@@ -1,44 +1,62 @@
-#bd_ear { display: none; }
-@media only screen and (min-width: 1005px) {
-	#bd_ear:before, #bd_ear:after { content: " "; display: table; } #bd_ear:after { clear: both; } #bd_ear { *zoom: 1; }
-	#bd_ear,
-	#bd_ear li {
+#bd_ear {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+	#bd_ear ul:before, #bd_ear ul:after { content: " "; display: table; } #bd_ear ul:after { clear: both; } #bd_ear ul { *zoom: 1; }
+	#bd_ear ul,
+	#bd_ear ul li {
 		margin: 0;
 		padding: 0;
 	}
-	#bd_ear {
-		font: .813em/1.8450184501845 Arial, sans-serif; /* 13px */
+	#bd_ear ul {
+		font: .688em/2.18023255813953 Arial, sans-serif; /* 11px */
 		text-transform: uppercase;
 		list-style: none;
-		margin: 10px 0 15px -20px;
+		margin: 5px 0 0 -10px;
 		display: block;
 		position: relative;
 		z-index: 20;
 	}
-		#bd_ear li {
-			margin-left: 20px;
+		#bd_ear ul li {
+			margin-left: 10px;
 			float: right;
 			display: inline;
 		}
-		#bd_ear li:first-child { float: left; }
-		#bd_ear li a {
+		#bd_ear ul li:first-child { float: left; }
+		#bd_ear ul li:nth-child(n+4) { display: none; }
+		#bd_ear ul li a {
 			color: #000;
 			text-decoration: none;
 		}
-		#bd_ear li a:visited { color: #000; }
-		#bd_ear li a:visited:hover,
-		#bd_ear li a:focus,
-		#bd_ear li a:focus:hover,
-		#bd_ear li a:hover,
-		#bd_ear li a:active {
+		#bd_ear ul li a:visited { color: #000; }
+		#bd_ear ul li a:visited:hover,
+		#bd_ear ul li a:focus,
+		#bd_ear ul li a:focus:hover,
+		#bd_ear ul li a:hover,
+		#bd_ear ul li a:active {
 			color: #000;
 			text-decoration: underline;
 		}
+@media only screen and (min-width: 665px) {
+	#bd_ear ul {
+		font-size: .813em; /* 13px */
+		line-height: 1.8450184501845;
+		margin-top: 10px;
+		margin-left: -20px;
+	}
+		#bd_ear ul li { margin-left: 20px; }
+}
+@media only screen and (min-width: 1005px) {
+	#bd_ear {
+		border-bottom: 0;
+		margin-bottom: 15px;
+	}
+		#bd_ear ul li:nth-child(n+4) { display: block; }
 }
 
 #bd_masthead {
 	border-bottom: 1px solid #ccc;
-	padding: 10px 0;
+	padding: 0 0 10px;
 	position: relative;
 	z-index: 10;
 }
@@ -55,7 +73,7 @@
 	margin: 0;
 	white-space: nowrap;
 	position: absolute;
-	top: 20px;
+	top: 10px;
 	left: 0;
 }
 .no-js #bd_flag {
@@ -75,7 +93,7 @@
 @media only screen and (min-width: 665px) {
 	#bd_flag {
 		font-size: 2.5em; /* 40px */
-		top: 12px;
+		top: 6px;
 	}
 }
 @media only screen and (min-width: 1005px) {
