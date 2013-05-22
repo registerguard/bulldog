@@ -126,14 +126,15 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 #bd_ear ul:after{clear:both;}
 #bd_ear ul{*zoom:1;}
 #bd_ear ul,#bd_ear ul li{margin:0;padding:0;}
-#bd_ear ul{font:0.688em/2.18023255813953 Arial,sans-serif;text-transform:uppercase;list-style:none;margin:5px 0 0 -10px;display:block;position:relative;z-index:20;}
+#bd_ear ul{font:0.75em/2 Arial,sans-serif;text-transform:uppercase;list-style:none;margin:5px 0 0 -10px;display:block;position:relative;z-index:20;}
 #bd_ear ul li{margin-left:10px;float:right;display:inline;}
 #bd_ear ul li:first-child{float:left;}
-#bd_ear ul li:nth-child(n+4){display:none;}
+#bd_ear ul li:nth-child(n+3){display:none;}
 #bd_ear ul li a{color:#000;text-decoration:none;}
 #bd_ear ul li a:visited{color:#000;}
 #bd_ear ul li a:visited:hover,#bd_ear ul li a:focus,#bd_ear ul li a:focus:hover,#bd_ear ul li a:hover,#bd_ear ul li a:active{color:#000;text-decoration:underline;}
-@media only screen and (min-width:665px){#bd_ear ul{font-size:.813em;line-height:1.8450184501845;margin-top:10px;margin-left:-20px;} #bd_ear ul li{margin-left:20px;}}@media only screen and (min-width:1005px){#bd_ear{border-bottom:0;margin-bottom:15px;} #bd_ear ul li:nth-child(n+4){display:block;}}#bd_masthead{border-bottom:1px solid #ccc;padding:0 0 10px;position:relative;z-index:10;}
+#bd_ear time span{display:none;}
+@media only screen and (min-width:665px){#bd_ear ul{font-size:.813em;line-height:1.8450184501845;margin-top:10px;margin-left:-20px;} #bd_ear ul li{margin-left:20px;} #bd_ear time span{display:inline;}}@media only screen and (min-width:1005px){#bd_ear{border-bottom:0;margin-bottom:15px;} #bd_ear ul li:nth-child(n+4){display:block;}}#bd_masthead{border-bottom:1px solid #ccc;padding:0 0 10px;position:relative;z-index:10;}
 @media only screen and (min-width:1005px){#bd_masthead{padding:0;border-bottom:0;}}#bd_flag{font:1.875em/1 "RGWeb",Cambria,Georgia,serif;color:#000;margin:0;white-space:nowrap;position:absolute;top:10px;left:0;}
 .no-js #bd_flag{position:static;margin-bottom:10px;}
 #bd_flag a,#bd_flag a:visited,#bd_flag a:visited:hover,#bd_flag a:focus,#bd_flag a:focus:hover,#bd_flag a:hover,#bd_flag a:active{color:#000;text-decoration:none;}

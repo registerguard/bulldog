@@ -9,7 +9,7 @@
 		padding: 0;
 	}
 	#bd_ear ul {
-		font: .688em/2.18023255813953 Arial, sans-serif; /* 11px */
+		font: .75em/2 Arial, sans-serif; /* 12px */
 		text-transform: uppercase;
 		list-style: none;
 		margin: 5px 0 0 -10px;
@@ -23,7 +23,7 @@
 			display: inline;
 		}
 		#bd_ear ul li:first-child { float: left; }
-		#bd_ear ul li:nth-child(n+4) { display: none; }
+		#bd_ear ul li:nth-child(n+3) { display: none; }
 		#bd_ear ul li a {
 			color: #000;
 			text-decoration: none;
@@ -37,6 +37,7 @@
 			color: #000;
 			text-decoration: underline;
 		}
+		#bd_ear time span { display: none; }
 @media only screen and (min-width: 665px) {
 	#bd_ear ul {
 		font-size: .813em; /* 13px */
@@ -45,6 +46,7 @@
 		margin-left: -20px;
 	}
 		#bd_ear ul li { margin-left: 20px; }
+		#bd_ear time span { display: inline; }
 }
 @media only screen and (min-width: 1005px) {
 	#bd_ear {
