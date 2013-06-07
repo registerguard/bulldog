@@ -75,6 +75,15 @@
 	<!-- Use photo if one exists, otherwise use this as a default: -->
 	<link rel="image_src" href="http://registerguard.com/apple-touch-icon-144x144-precomposed.png">
 	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<!-- [BEGIN] Syncronex -->
+	<meta name="__sync_contentCategory" content="premium_1">
+	<script src="https://www.syncaccess.net/po/rg/api/scripts/syncwall"></script>
+	<!-- [END] Syncronex -->
+	
+	<!-- @endif -->
+	
 	<link rel="canonical" href="">
 	
 </head>
@@ -1038,6 +1047,8 @@
 									
 									<!-- @include indesign.html -->
 									
+									<blockquote><p>Those games are no longer part of A&amp;M&#8217;s plans, Hyman said, because &#8220;having switched from the Big 12 to the SEC, we&#8217;ve had to scrub our whole schedule — throw it almost out. Going forward, we&#8217;ve had conversations with people, but we really can&#8217;t be contractually (obligated) until the conference says you&#8217;ve got the green light.&#8221;</p></blockquote>
+									
 								</div> <!-- /#story -->
 								
 							</section>
@@ -1111,7 +1122,7 @@
 	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
 	<script src="./js/matchMedia.js"></script>
 	<script src="./js/jquery.cookie.js"></script>
 	<script src="./js/jquery.ba-dotimeout.js"></script>
@@ -1132,7 +1143,7 @@
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="http://static.registerguard.com/v5<!-- @echo path -->/js/bulldog.min.js"></script>
 	
 	<!-- @endif -->

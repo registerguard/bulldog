@@ -2,7 +2,7 @@
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 10px;
 }
-	#bd_ear ul:before, #bd_ear ul:after { content: " "; display: table; } #bd_ear ul:after { clear: both; } #bd_ear ul { *zoom: 1; }
+	#bd_ear ul { *zoom: 1; } #bd_ear ul:before, #bd_ear ul:after { content: " "; display: table; } #bd_ear ul:after { clear: both; }
 	#bd_ear ul,
 	#bd_ear ul li {
 		margin: 0;
@@ -213,6 +213,42 @@
 			text-decoration: underline;
 		}
 
+.bd_budget,
+.bd_budget li {
+	margin: 0;
+	padding: 0;
+}
+.bd_budget {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 10px;
+}
+	.bd_budget li {
+		font-size: .875em; /* 14px */
+		line-height: 1.5; /* (((1.5 / .875) = 1.71428571428571) * .875) = 1.5 */
+		list-style: none;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+		.bd_budget li a {
+			color: #666;
+			text-decoration: none;
+		}
+		.bd_budget li a:visited { color: #666; }
+		.bd_budget li a:visited:hover,
+		.bd_budget li a:focus,
+		.bd_budget li a:focus:hover,
+		.bd_budget li a:hover,
+		.bd_budget li a:active {
+			color: #000;
+			text-decoration: underline;
+		}
+			.bd_budget li span a {
+				font-weight: bold;
+				color: #999;
+			}
+
 .bd_insert {
 	font: bold 1.125em/1.33333333333333 "BentonSansCond Regular", Arial, sans-serif; /* 18px */
 	letter-spacing: .02em;
@@ -233,4 +269,8 @@
 	clip: rect(0 0 0 0);
 }
 
-.bd_filler { padding: 10px; }
+.bd_filler { margin: 10px 0; }
+
+.bd_gutter { padding: 0 10px; }
+
+.bd_box { *zoom: 1; } .bd_box:before, .bd_box:after { content: " "; display: table; } .bd_box:after { clear: both; }

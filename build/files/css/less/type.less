@@ -249,9 +249,10 @@ p {
 		.jump a:active { color: @red; }
 
 blockquote {
-	border-top: 1px solid #ddd;
-	margin: 1em 0 0;
-	padding: 10px 0 0 3em;
+	font-style: italic;
+	color: @gray9;
+	margin: 1em 0;
+	padding: 0 0 0 3.5em;
 	position: relative;
 }
 	blockquote:before {
@@ -261,9 +262,10 @@ blockquote {
 		line-height: 1;
 		position: absolute;
 		left: 0;
-		top: 0;
-		color: #ccc;
+		top: -.1em;
+		color: @gray3;
 	}
+		blockquote p { margin: 0 !important; }
 	/*
 	blockquote p {
 		font: 1.25em/1.2 Cambria, Georgia, serif;
