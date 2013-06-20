@@ -14,7 +14,7 @@
 			
 			#container { margin: 0 50px; }
 			
-			iframe[id^='twitter-widget-'] { width: 100%; }
+			.twitter-timeline { width: 100%; }
 			
 		-->
 	</style>
@@ -147,8 +147,8 @@
 				
 				if ($('.twitter-timeline').length && ( ! $('#' + id).length)) {
 					
-					$('head')
-						.append('<script>')
+					$('<script>')
+						.appendTo('head')
 						.attr('id', id)
 						.attr('src', '//platform.twitter.com/widgets.js');
 					
