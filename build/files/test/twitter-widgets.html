@@ -134,9 +134,6 @@
 		/**
 		 * Twitter timeline widget JS.
 		 *
-		 * @todo Make resize based on container in responsive layout.
-		 * @todo Convert to jQuery.
-		 *
 		 * @see https://twitter.com/settings/widgets/
 		 * @see https://dev.twitter.com/docs/embedded-timelines
 		 * @see http://stackoverflow.com/a/5654929/922323
@@ -146,26 +143,41 @@
 		
 		$(document).ready(function() {
 			
+			!function(id) {
+				
+				if ($('.twitter-timeline').length && ( ! $('#' + id).length)) {
+					
+					$('head')
+						.append('<script>')
+						.attr('id', id)
+						.attr('src', '//platform.twitter.com/widgets.js');
+					
+				}
+				
+			}('twitter-wjs');
+			
+		});
+		
+		/*
+		$(document).ready(function() {
+			
 			!function(document, id) {
 				
 				var js;
 				
-				if ($('.twitter-timeline').length) {
+				if ($('.twitter-timeline').length && ( ! $('#' + id).length)) {
 					
-					if ( ! $('#' + id).length) {
-						
-						js = document.createElement('script');
-						js.id = id;
-						js.src = '//platform.twitter.com/widgets.js';
-						$('head').append(js);
-						
-					}
+					js = document.createElement('script');
+					js.id = id;
+					js.src = '//platform.twitter.com/widgets.js';
+					$('head').append(js);
 					
 				}
 				
 			}(document, 'twitter-wjs');
 			
 		});
+		*/
 		
 		/*
 		!function(document, el, id) {
