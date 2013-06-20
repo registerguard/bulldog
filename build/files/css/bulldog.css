@@ -143,8 +143,8 @@ table.tbl1 td{border:1px solid #666;padding:10px;background:#fff;}
 #bd_proof:before,#bd_proof:after{content:" ";display:table;}
 #bd_proof:after{clear:both;}
 #bd_proof{font-family:Arial,sans-serif;font-size:1em;line-height:1.5em;min-height:49px;_height:49px;}
-@media only screen and (min-width:1005px){#bd_proof{min-height:auto;height:auto;}}#bd_banner_top{border-bottom:1px solid #ccc;}
-#bd_banner_bottom{border-top:1px solid #ccc;}
+@media only screen and (min-width:1005px){#bd_proof{min-height:auto;height:auto;}}#bd_banner-top{border-bottom:1px solid #ccc;}
+#bd_banner-bottom{border-top:1px solid #ccc;}
 .bd_banner{padding:5px 0;}
 .bd_banner .advert{margin:0 auto;}
 @media only screen and (min-width:665px){.bd_banner{padding:10px 0;}}
@@ -330,6 +330,7 @@ figure.sig figcaption{font:bold 1.375em/1.09090909090909 "MillerHeadline Bold",C
 figure.sig figcaption span{display:block;}
 .stamp{font-size:.875rem;letter-spacing:.05em;color:#999;}
 #story blockquote{margin:1.33333em 0;}
+.twitter-timeline{width:100%;}
 
 .marker{font:bold 1.375em/1.09090909090909 Arial,sans-serif;color:#999900;text-transform:none;background:#ff0;margin:5px 0 10px;padding:.54545454545455em .54545454545455em;display:inline-block;*display:inline;*zoom:1;}
 .subtle{font:normal 1.188em/1.26262626262626 Courier,monospace;color:#999999;margin:10px 0;}

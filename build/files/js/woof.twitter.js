@@ -1,3 +1,5 @@
+/*jshint -W062, expr:true */
+
 WOOF.register(function() {
 	
 	'use strict';
