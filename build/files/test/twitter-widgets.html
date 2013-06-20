@@ -24,29 +24,30 @@
 
 <div id="container">
 	
-	<h1>Twitter widget examples</h1>
+	<h1>Twitter "timeline" widget examples</h1>
 	
 	<section>
 		
-		<h1>User timeline</h1>
+		<h1>Users</h1>
+		
+		<h2>Default</h2>
 		<a 
 			class="twitter-timeline" 
 			href="https://twitter.com/registerguard" 
-			data-widget-id="347149624567558145" 
-			width="300"
+			data-widget-id="347149624567558145"
 		>
 			Tweets by @registerguard
 		</a>
 		
-		<h2>User timeline override</h2>
+		<h2>Override(s)</h2>
 		<a 
 			class="twitter-timeline" 
-			href="https://twitter.com/registerguard" 
+			href="https://twitter.com/rgsports" 
 			data-widget-id="347149624567558145" 
-			data-screen-name="mickyhulse" 
+			data-screen-name="rgsports" 
 			width="300"
 		>
-			Tweets by @registerguard
+			Tweets by @rgsports
 		</a>
 		
 	</section>
@@ -56,12 +57,25 @@
 	<section>
 		
 		<h1>Favorites</h1>
+		
+		<h2>Default</h2>
 		<a 
 			class="twitter-timeline" 
 			href="https://twitter.com/registerguard/favorites" 
 			data-widget-id="347415474230939648"
 		>
 			Favorite Tweets by @registerguard
+		</a>
+		
+		<h2>Override(s)</h2>
+		<a 
+			class="twitter-timeline" 
+			href="https://twitter.com/rgsports/favorites" 
+			data-widget-id="347415474230939648"
+			data-favorites-screen-name="rgsports" 
+			width="300"
+		>
+			Favorite Tweets by @rgsports
 		</a>
 		
 	</section>
@@ -71,12 +85,26 @@
 	<section>
 		
 		<h1>List</h1>
+		
+		<h2>Default</h2>
 		<a 
 			class="twitter-timeline"
 			href="https://twitter.com/registerguard/rg-news" 
 			data-widget-id="296722620433440769"
 		>
 			Tweets from @registerguard/rg-news
+		</a>
+		
+		<h2>Override(s)</h2>
+		<a 
+			class="twitter-timeline"
+			href="https://twitter.com/rgsports/rg-sports-dept" 
+			data-widget-id="296722620433440769" 
+			data-list-owner-screen-name="rgsports" 
+			data-list-slug="rg-sports-dept" 
+			width="300"
+		>
+			Tweets from @rgsports/rg-sports-dept
 		</a>
 		
 	</section>
@@ -98,57 +126,10 @@
 	
 </div> <!-- /#container -->
 
-<!--
-	
-	347149624567558145 = Tweets by The Register-Guard
-	347415474230939648 = Favorite Tweets by The Register-Guard
-	
-	Standard attributes:
-	
-	width="520"
-	height="600"
-	data-theme="light"
-	data-link-color="#cc0000"
-	data-chrome="noheader nofooter noborders noscrollbar transparent"
-	data-border-color="#cc0000"
-	lang="en-US"
-	data-tweet-limit="5"
-	data-related="benward, endform"
-	aria-polite="polite"
-	href="URI to corresponding, appropriate location in case the widget is temporarily unavailable"
-	
-	Timeline Selection attributes:
-	
-	Users:
-	
-	data-screen-name="registerguard"
-	data-user-id="12345"
-	data-show-replies="true"
-	
-	Favorites:
-	
-	data-favorites-screen-name="registerguard"
-	data-favorites-user-id="12345"
-	
-	Lists:
-	
-	data-list-owner-screen-name="registerguard"
-	data-list-owner-id="12345"
-	data-list-id="12345"
-	data-list-slug="12345"
-	
--->
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
 <script>
 	<!--
-		
-		$(document).ready(function() {
-			
-			
-			
-		});
 		
 		/**
 		 * Twitter timeline widget JS.
@@ -163,6 +144,30 @@
 		 * @see https://www.geekgoddess.com/change-twitter-widget-to-wider-than-520px
 		 */
 		
+		$(document).ready(function() {
+			
+			!function(document, id) {
+				
+				var js;
+				
+				if ($('.twitter-timeline').length) {
+					
+					if ( ! $('#' + id).length) {
+						
+						js = document.createElement('script');
+						js.id = id;
+						js.src = '//platform.twitter.com/widgets.js';
+						$('head').append(js);
+						
+					}
+					
+				}
+				
+			}(document, 'twitter-wjs');
+			
+		});
+		
+		/*
 		!function(document, el, id) {
 			
 			// Hoisted variables:
@@ -180,6 +185,11 @@
 			}
 			
 		}(document, 'script', 'twitter-wjs');
+		*/
+		
+		/*
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		*/
 		
 	//-->
 </script>
