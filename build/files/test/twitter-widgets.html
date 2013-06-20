@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<style>
+		<!--
+			
+			#container { margin: 0 50px; }
+			
+			iframe[id^='twitter-widget-'] { width: 100%; }
+			
+		-->
+	</style>
+	
+</head>
+<body>
+
+<div id="container">
+	
+	<h1>Twitter widget examples</h1>
+	
+	<section>
+		
+		<h1>User timeline</h1>
+		<a 
+			class="twitter-timeline" 
+			href="https://twitter.com/registerguard" 
+			data-widget-id="347149624567558145" 
+			width="300"
+		>
+			Tweets by @registerguard
+		</a>
+		
+		<h2>User timeline override</h2>
+		<a 
+			class="twitter-timeline" 
+			href="https://twitter.com/registerguard" 
+			data-widget-id="347149624567558145" 
+			data-screen-name="mickyhulse" 
+			width="300"
+		>
+			Tweets by @registerguard
+		</a>
+		
+	</section>
+	
+	<hr>
+	
+	<section>
+		
+		<h1>Favorites</h1>
+		<a 
+			class="twitter-timeline" 
+			href="https://twitter.com/registerguard/favorites" 
+			data-widget-id="347415474230939648"
+		>
+			Favorite Tweets by @registerguard
+		</a>
+		
+	</section>
+	
+	<hr>
+	
+	<section>
+		
+		<h1>List</h1>
+		<a 
+			class="twitter-timeline"
+			href="https://twitter.com/registerguard/rg-news" 
+			data-widget-id="296722620433440769"
+		>
+			Tweets from @registerguard/rg-news
+		</a>
+		
+	</section>
+	
+	<hr>
+	
+	<section>
+		
+		<h1>Search</h1>
+		<a 
+			class="twitter-timeline" 
+			href="https://twitter.com/search?q=%23registerguard" 
+			data-widget-id="347514528235397122"
+		>
+			Tweets about "#registerguard"
+		</a>
+		
+	</section>
+	
+</div> <!-- /#container -->
+
+<!--
+	
+	347149624567558145 = Tweets by The Register-Guard
+	347415474230939648 = Favorite Tweets by The Register-Guard
+	
+	Standard attributes:
+	
+	width="520"
+	height="600"
+	data-theme="light"
+	data-link-color="#cc0000"
+	data-chrome="noheader nofooter noborders noscrollbar transparent"
+	data-border-color="#cc0000"
+	lang="en-US"
+	data-tweet-limit="5"
+	data-related="benward, endform"
+	aria-polite="polite"
+	href="URI to corresponding, appropriate location in case the widget is temporarily unavailable"
+	
+	Timeline Selection attributes:
+	
+	Users:
+	
+	data-screen-name="registerguard"
+	data-user-id="12345"
+	data-show-replies="true"
+	
+	Favorites:
+	
+	data-favorites-screen-name="registerguard"
+	data-favorites-user-id="12345"
+	
+	Lists:
+	
+	data-list-owner-screen-name="registerguard"
+	data-list-owner-id="12345"
+	data-list-id="12345"
+	data-list-slug="12345"
+	
+-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+<script>
+	<!--
+		
+		$(document).ready(function() {
+			
+			
+			
+		});
+		
+		/**
+		 * Twitter timeline widget JS.
+		 *
+		 * @todo Make resize based on container in responsive layout.
+		 * @todo Convert to jQuery.
+		 *
+		 * @see https://twitter.com/settings/widgets/
+		 * @see https://dev.twitter.com/docs/embedded-timelines
+		 * @see http://stackoverflow.com/a/5654929/922323
+		 * @see http://tappetyclick.com/blog/2012/12/20/how-dynamically-resize-new-twitter-widget
+		 * @see https://www.geekgoddess.com/change-twitter-widget-to-wider-than-520px
+		 */
+		
+		!function(document, el, id) {
+			
+			// Hoisted variables:
+			var js,
+			    fjs;
+			
+			if ( ! document.getElementById(id)) {
+				
+				fjs = document.getElementsByTagName(el)[0];
+				js = document.createElement(el);
+				js.id = id;
+				js.src = (/^http:/.test(document.location) ? 'http' : 'https') + '://platform.twitter.com/widgets.js';
+				fjs.parentNode.insertBefore(js, fjs);
+				
+			}
+			
+		}(document, 'script', 'twitter-wjs');
+		
+	//-->
+</script>
+
+</body>
