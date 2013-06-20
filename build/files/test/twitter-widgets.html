@@ -14,6 +14,7 @@
 			
 			#container { margin: 0 50px; }
 			
+			iframe[id^='twitter-widget-'],
 			.twitter-timeline { width: 100%; }
 			
 		-->
@@ -45,7 +46,7 @@
 			href="https://twitter.com/rgsports" 
 			data-widget-id="347149624567558145" 
 			data-screen-name="rgsports" 
-			width="300"
+			width="100%"
 		>
 			Tweets by @rgsports
 		</a>
@@ -73,7 +74,7 @@
 			href="https://twitter.com/rgsports/favorites" 
 			data-widget-id="347415474230939648"
 			data-favorites-screen-name="rgsports" 
-			width="300"
+			width="100%"
 		>
 			Favorite Tweets by @rgsports
 		</a>
@@ -102,7 +103,7 @@
 			data-widget-id="296722620433440769" 
 			data-list-owner-screen-name="rgsports" 
 			data-list-slug="rg-sports-dept" 
-			width="300"
+			width="100%"
 		>
 			Tweets from @rgsports/rg-sports-dept
 		</a>
@@ -126,7 +127,7 @@
 	
 </div> <!-- /#container -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
 <script>
 	<!--
@@ -147,6 +148,25 @@
 				
 				if ($('.twitter-timeline').length && ( ! $('#' + id).length)) {
 					
+					$('<script>', {
+						'id' : id,
+						'src' : '//platform.twitter.com/widgets.js'
+					})
+						.appendTo('head');
+					
+				}
+				
+			}('twitter-wjs');
+			
+		});
+		
+		/*
+		$(document).ready(function() {
+			
+			!function(id) {
+				
+				if ($('.twitter-timeline').length && ( ! $('#' + id).length)) {
+					
 					$('<script>')
 						.appendTo('head')
 						.attr('id', id)
@@ -157,6 +177,7 @@
 			}('twitter-wjs');
 			
 		});
+		*/
 		
 		/*
 		$(document).ready(function() {
