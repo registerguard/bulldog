@@ -297,26 +297,26 @@ module.exports = function(grunt) {
 			
 			prod : {
 				
-				src : './files/tmpl/index.html',
-				dest : '../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
+				files : {
+					
+					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html' : './files/tmpl/index.html',
+					'../dist/index.html' : './files/tmpl/latest.html'
+					
+				},
+				
 				options : {
 					
 					context : {
+						name : '<%= pkg.name %>',
+						version : '<%= pkg.version %>',
+						now : '<%= now %>',
+						ver : '<%= ver %>',
 						path : '/<%= pkg.name %>/dist/<%= pkg.version %>/<%= now %>/<%= ver %>'
 					}
 					
 				}
 				
-			}/*,
-			
-			// Testing ability to strip media queries using `@exclude` and `@endexclude`:
-			test : {
-				
-				src : './files/css/less/base.less',
-				dest : './files/css/less/ie/base.less'
-				
 			}
-			*/
 			
 		}
 		
