@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 		
 		now : grunt.template.today('yyyymmdd'), // Alternative: yyyymmddhhMMss
 		
-		ver : 1,
+		ver : 1, // Increment if more than one build is needed in a single day.
 		
 		/*----------------------------------( WATCH )----------------------------------*/
 		
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 			
 		},
 		
-		/*----------------------------------( 03 )----------------------------------*/
+		/*----------------------------------( 02 )----------------------------------*/
 		
 		/**
 		 * Minify files with UglifyJS.
@@ -186,7 +186,7 @@ module.exports = function(grunt) {
 			
 		},
 		
-		/*----------------------------------( 04 )----------------------------------*/
+		/*----------------------------------( 03 )----------------------------------*/
 		
 		/**
 		 * Compile LESS files to CSS.
@@ -233,7 +233,7 @@ module.exports = function(grunt) {
 			
 		},
 		
-		/*----------------------------------( 05 )----------------------------------*/
+		/*----------------------------------( 04 )----------------------------------*/
 		
 		/**
 		 * Copy files and folders.
@@ -241,7 +241,7 @@ module.exports = function(grunt) {
 		 * @see https://github.com/gruntjs/grunt-contrib-copy
 		 * @see http://gruntjs.com/configuring-tasks#globbing-patterns
 		 */
-
+		
 		copy : {
 			
 			prod : {
@@ -277,7 +277,7 @@ module.exports = function(grunt) {
 			
 		},
 		
-		/*----------------------------------( 06 )----------------------------------*/
+		/*----------------------------------( 05 )----------------------------------*/
 		
 		/**
 		 * Grunt task around preprocess npm module.
