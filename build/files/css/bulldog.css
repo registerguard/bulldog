@@ -345,6 +345,12 @@ figure.sig figcaption span{display:block;}
 .stamp{font-size:.875rem;letter-spacing:.05em;color:#999;}
 #story blockquote{margin:1.33333em 0;}
 .twitter-timeline{width:100%;}
+.tools,.tools li{margin:0;padding:0;}
+.tools{margin:-5px 0 10px -5px;overflow:hidden;}
+.tools li{margin-top:5px;margin-left:5px;float:left;display:inline;}
+.tools a{font-family:Arial,sans-serif;font-size:.6875em;line-height:1.36363636363636;font-weight:bold;text-transform:uppercase;letter-spacing:.05em;color:#ffffff;text-decoration:none;border-radius:.25em;background:#0083ca;padding:1px 4px;display:block;}
+.tools a:visited{color:#ffffff;}
+.tools a:visited:hover,.tools a:focus,.tools a:focus:hover,.tools a:hover,.tools a:active{color:#ffffff;background:#18aeff;text-decoration:none;}
 
 .marker{font:bold 1.375em/1.09090909090909 Arial,sans-serif;color:#999900;text-transform:none;background:#ff0;margin:5px 0 10px;padding:.54545454545455em .54545454545455em;display:inline-block;*display:inline;*zoom:1;}
 .subtle{font:normal 1.188em/1.26262626262626 Courier,monospace;color:#999999;margin:10px 0;}
