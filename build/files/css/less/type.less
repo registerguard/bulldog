@@ -175,6 +175,29 @@ h6, .h6, .sh6 {
 		.streamer.alt2 h2 a:hover,
 		.streamer.alt2 h2 a:active { color: @gray4; }
 
+.streamer.alt3 {}
+	.streamer.alt3 a,
+	.streamer.alt3 span {
+		font-size: .75em;
+		line-height: 1.25; /* (((1.5 / .75) = 2) * .625) = 1.25 */
+		padding: .375em .625em; /* ((1.5 / .25) = .375), ((1.25 / 2) = .625) */
+	}
+	.streamer.alt3 h1 { background-color: @blue; }
+		.streamer.alt3 h1 a:visited:hover,
+		.streamer.alt3 h1 a:focus,
+		.streamer.alt3 h1 a:focus:hover,
+		.streamer.alt3 h1 a:hover,
+		.streamer.alt3 h1 a:active { background: lighten(@blue, 10%); }
+	.streamer.alt3 h2 { background-color: @grayD; }
+		.streamer.alt3 h2 span,
+		.streamer.alt3 h2 a:link,
+		.streamer.alt3 h2 a:visited { color: @gray5; }
+		.streamer.alt3 h2 a:visited:hover,
+		.streamer.alt3 h2 a:focus,
+		.streamer.alt3 h2 a:focus:hover,
+		.streamer.alt3 h2 a:hover,
+		.streamer.alt3 h2 a:active { color: @gray1; }
+
 p {
 	font-family: Cambria, Georgia, serif;
 	font-size: .875em; /* 14px */
