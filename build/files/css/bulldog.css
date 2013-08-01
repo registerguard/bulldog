@@ -277,6 +277,8 @@ span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:itali
 .mm{height:0;padding-bottom:56.25%;position:relative;overflow:hidden;margin:0 0 10px;}
 .mm iframe,.mm object,.mm embed{width:100% !important;height:100% !important;position:absolute;top:0;left:0;}
 .ss{padding-bottom:66.666%;}
+.ss.ssp{background:#222;}
+.ss.ssp>div[id^="ssp_"]{width:300px;height:260px;position:absolute !important;left:50%;top:50%;margin-left:-150px;margin-top:-130px;}
 img{width:auto\9;height:auto;max-width:100%;max-height:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;margin-bottom:5px;}
 .oa{overflow:auto;}
 * html .oa{height:1%;}
