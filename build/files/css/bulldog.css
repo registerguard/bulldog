@@ -311,7 +311,13 @@ code{font:1em Consolas,Menlo,Monaco,"Lucida Console","Liberation Mono","DejaVu S
 @media only screen and (min-width:665px){#meta{border:0;margin:0;padding:0;float:left;display:inline;}}.thumb-wrap{margin-left:-15px;margin-bottom:-15px;}
 .thumb-img{width:90px;height:68px;float:left;display:inline;margin-left:15px;margin-bottom:15px;background-position:center center;}
 .thumb-img a{width:100%;height:100%;display:block;}
-@media only screen and (min-width:665px){.thumb-img{width:116px;height:87px;}}@media only screen and (min-width:1345px){.thumb-img{width:90px;height:68px;}}small,.small{font-size:.75em;line-height:1.2em;margin:0 0 5px;}
+@media only screen and (min-width:665px){.thumb-img{width:116px;height:87px;}}@media only screen and (min-width:1345px){.thumb-img{width:90px;height:68px;}}.pics{*zoom:1;}
+.pics:before,.pics:after{content:" ";display:table;}
+.pics:after{clear:both;}
+.pics{margin:-4px 0 0 -4px;}
+.pics-pic{background-size:100px;width:100px;height:56px;margin:4px 0 0 4px;float:left;display:inline;}
+.pics-pic a{width:100%;height:100%;display:block;cursor:-webkit-zoom-in;cursor:-moz-zoom-in;cursor:zoom-in;}
+@media only screen and (min-width:665px){.pics{margin:-8px 0 0 -8px;} .pics-pic{margin:8px 0 0 8px;}}@media only screen and (min-width:1345px){.pics{margin:-10px 0 0 -10px;} .pics-pic{margin:10px 0 0 10px;}}small,.small{font-size:.75em;line-height:1.2em;margin:0 0 5px;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
