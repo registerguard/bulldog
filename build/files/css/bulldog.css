@@ -251,11 +251,11 @@ h6,.h6,.sh6{font-size:1.125em;line-height:1.16666666666666;}
 .streamer.alt2 h2{background-color:#cccccc;}
 .streamer.alt2 h2 span,.streamer.alt2 h2 a:link,.streamer.alt2 h2 a:visited,.streamer.alt2 h2 a:visited:hover,.streamer.alt2 h2 a:focus,.streamer.alt2 h2 a:focus:hover,.streamer.alt2 h2 a:hover,.streamer.alt2 h2 a:active{color:#444444;}
 .streamer.alt3 a,.streamer.alt3 span{font-size:.75em;line-height:1.25;padding:.375em .625em;}
-.streamer.alt3 h1{background-color:#0083ca;}
+.streamer.alt3 h1{background-color:#444444;}
+.streamer.alt3 h1 a:link,.streamer.alt3 h1 a:visited{background:#0083ca;}
 .streamer.alt3 h1 a:visited:hover,.streamer.alt3 h1 a:focus,.streamer.alt3 h1 a:focus:hover,.streamer.alt3 h1 a:hover,.streamer.alt3 h1 a:active{background:#00a4fd;}
-.streamer.alt3 h2{background-color:#dddddd;}
-.streamer.alt3 h2 span,.streamer.alt3 h2 a:link,.streamer.alt3 h2 a:visited{color:#555555;}
-.streamer.alt3 h2 a:visited:hover,.streamer.alt3 h2 a:focus,.streamer.alt3 h2 a:focus:hover,.streamer.alt3 h2 a:hover,.streamer.alt3 h2 a:active{color:#111111;}
+.streamer.alt3 h2{background-color:#cccccc;}
+.streamer.alt3 h2 span,.streamer.alt3 h2 a:link,.streamer.alt3 h2 a:visited,.streamer.alt3 h2 a:visited:hover,.streamer.alt3 h2 a:focus,.streamer.alt3 h2 a:focus:hover,.streamer.alt3 h2 a:hover,.streamer.alt3 h2 a:active{color:#444444;}
 p{font-family:Cambria, Georgia, serif;font-size:.875em;line-height:1.28571428571428;margin:0 0 10px;}
 p a{color:#00517e;text-decoration:none;}
 p a:visited{color:#00517e;}
