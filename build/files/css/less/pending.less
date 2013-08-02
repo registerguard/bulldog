@@ -83,6 +83,33 @@
 			height: 68px;
 		}
 	}
+/* NEW (delete above once new story page has been rolled out): */
+.pics { *zoom: 1; } .pics:before, .pics:after { content: " "; display: table; } .pics:after { clear: both; }
+.pics { margin: -4px 0 0 -4px; }
+	.pics-pic {
+		background-size: 100px;
+		width: 100px;
+		height: 56px;
+		margin: 4px 0 0 4px;
+		float: left;
+		display: inline;
+	}
+		.pics-pic a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			cursor: -webkit-zoom-in;
+			cursor: -moz-zoom-in;
+			cursor: zoom-in;
+		}
+@media only screen and (min-width: 665px) {
+	.pics { margin: -8px 0 0 -8px; }
+		.pics-pic { margin: 8px 0 0 8px; }
+}
+@media only screen and (min-width: 1345px) {
+	.pics { margin: -10px 0 0 -10px; }
+		.pics-pic { margin: 10px 0 0 10px; }
+}
 
 small, .small {
 	font-size: .75em;
@@ -206,3 +233,44 @@ figure.sig {
 
 /*iframe[id^='twitter-widget-'],*/
 .twitter-timeline { width: 100%; }
+
+/* For tools on summary templates: */
+.tools,
+.tools li {
+	margin: 0;
+	padding: 0;
+}
+.tools {
+	margin: -5px 0 10px -5px;
+	overflow: hidden;
+}
+	.tools li {
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+		display: inline;
+	}
+		.tools a {
+			font-family: Arial, sans-serif;
+			font-size: .6875em; /* 11px */
+			line-height: 1.36363636363636; /* (((1.5 / .6875) = 2.18181818181818) * .625) = 1.36363636363636 */
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			color: @white;
+			text-decoration: none;
+			border-radius: .25em;
+			background: @blue;
+			padding: 1px 4px;
+			display: block;
+		}
+		.tools a:visited { color: @white; }
+		.tools a:visited:hover,
+		.tools a:focus,
+		.tools a:focus:hover,
+		.tools a:hover,
+		.tools a:active {
+			color: @white;
+			background: @blueLight;
+			text-decoration: none;
+		}

@@ -35,16 +35,16 @@ h6, .h6, .sh6 {
 
 .head {
 	font: bold 1.25em/1.2 "BentonSansCond Regular", Arial, sans-serif; /* 20px */
-	color: @gray7;
+	color: @gray8;
 	margin: 0 0 10px;
 }
 	.head a,
-	.head a:visited { color: @gray7; }
+	.head a:visited { color: @gray8; }
 	.head a:visited:hover,
 	.head a:focus,
 	.head a:focus:hover,
 	.head a:hover,
-	.head a:active { color: @gray10; }
+	.head a:active { color: @gray5; }
 
 .reverse {
 	font-family: "BentonSansCond Regular", Arial, sans-serif;
@@ -53,18 +53,18 @@ h6, .h6, .sh6 {
 	line-height: 1.25; /* (((1.5 / .75) = 2) * .625) = 1.25 */
 	text-transform: uppercase;
 	letter-spacing: .05em;
-	color: @gray11;
-	background: @gray3;
+	color: @gray4;
+	background: @grayC;
 	margin: 0 0 10px;
 	padding: .375em .625em; /* ((1.5 / .25) = .375), ((1.25 / 2) = .625) */
 }
 	.reverse a,
-	.reverse a:visited { color: @gray11; }
+	.reverse a:visited { color: @gray4; }
 	.reverse a:visited:hover,
 	.reverse a:focus,
 	.reverse a:focus:hover,
 	.reverse a:hover,
-	.reverse a:active { color: @gray14; }
+	.reverse a:active { color: @gray1; }
 
 .label {
 	font-family: Arial, sans-serif;
@@ -164,8 +164,8 @@ h6, .h6, .sh6 {
 		line-height: 1.25; /* (((1.5 / .75) = 2) * .625) = 1.25 */
 		padding: .375em .625em; /* ((1.5 / .25) = .375), ((1.25 / 2) = .625) */
 	}
-	.streamer.alt2 h1 { background-color: @gray11; }
-	.streamer.alt2 h2 { background-color: @gray3; }
+	.streamer.alt2 h1 { background-color: @gray4; }
+	.streamer.alt2 h2 { background-color: @grayC; }
 		.streamer.alt2 h2 span,
 		.streamer.alt2 h2 a:link,
 		.streamer.alt2 h2 a:visited,
@@ -173,7 +173,30 @@ h6, .h6, .sh6 {
 		.streamer.alt2 h2 a:focus,
 		.streamer.alt2 h2 a:focus:hover,
 		.streamer.alt2 h2 a:hover,
-		.streamer.alt2 h2 a:active { color: @gray11; }
+		.streamer.alt2 h2 a:active { color: @gray4; }
+
+.streamer.alt3 {}
+	.streamer.alt3 a,
+	.streamer.alt3 span {
+		font-size: .75em;
+		line-height: 1.25; /* (((1.5 / .75) = 2) * .625) = 1.25 */
+		padding: .375em .625em; /* ((1.5 / .25) = .375), ((1.25 / 2) = .625) */
+	}
+	.streamer.alt3 h1 { background-color: @blue; }
+		.streamer.alt3 h1 a:visited:hover,
+		.streamer.alt3 h1 a:focus,
+		.streamer.alt3 h1 a:focus:hover,
+		.streamer.alt3 h1 a:hover,
+		.streamer.alt3 h1 a:active { background: lighten(@blue, 10%); }
+	.streamer.alt3 h2 { background-color: @grayD; }
+		.streamer.alt3 h2 span,
+		.streamer.alt3 h2 a:link,
+		.streamer.alt3 h2 a:visited { color: @gray5; }
+		.streamer.alt3 h2 a:visited:hover,
+		.streamer.alt3 h2 a:focus,
+		.streamer.alt3 h2 a:focus:hover,
+		.streamer.alt3 h2 a:hover,
+		.streamer.alt3 h2 a:active { color: @gray1; }
 
 p {
 	font-family: Cambria, Georgia, serif;
@@ -218,7 +241,7 @@ p {
 	font-size: .875em;
 	line-height: 1.28571428571428; /* (((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428 */
 	text-transform: uppercase;
-	color: @gray9;
+	color: @gray6;
 	margin: 0;
 	padding: .42857142857143em 0; /* (1.71428571428571 * .25) = .42857142857143 */
 }
@@ -250,7 +273,7 @@ p {
 
 blockquote {
 	font-style: italic;
-	color: @gray9;
+	color: @gray6;
 	margin: 1em 0;
 	padding: 0 0 0 3.5em;
 	position: relative;
@@ -263,7 +286,7 @@ blockquote {
 		position: absolute;
 		left: 0;
 		top: -.1em;
-		color: @gray3;
+		color: @grayC;
 	}
 		blockquote p { margin: 0 !important; }
 	/*
