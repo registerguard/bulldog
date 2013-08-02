@@ -171,7 +171,7 @@ module.exports = function(grunt) {
 						'./files/js/matchMedia.js',
 						'./files/js/jquery.*.js',
 						'./files/js/woof.js',
-						'./files/js/woof.*.js',
+						'./files/js/woof.mod.*.js',
 						'./files/js/woof.init.js'
 					],
 					
