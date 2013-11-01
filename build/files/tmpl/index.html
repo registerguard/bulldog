@@ -1188,7 +1188,7 @@
 	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
 	<script src="./js/matchMedia.js"></script>
 	<script src="./js/jquery.cookie.js"></script>
 	<script src="./js/jquery.ba-dotimeout.js"></script>
@@ -1209,7 +1209,9 @@
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>if(!window.jQuery){document.write('<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js"><\/script>');}</script>
+	
 	<script src="http://static.registerguard.com/v5<!-- @echo path -->/js/bulldog.min.js"></script>
 	
 	<!-- @endif -->
