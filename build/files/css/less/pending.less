@@ -274,3 +274,425 @@ figure.sig {
 			background: @blueLight;
 			text-decoration: none;
 		}
+
+/*-----------------( TAB SKIN )-----------------*/
+
+.nutshell,
+.nutshell li {
+	margin: 0;
+	padding: 0;
+}
+.nutshell {
+	font-family: arial, sans-serif;
+	font-size: smaller;
+	position: relative;
+	margin-bottom: 5px;
+}
+.nutshell li { list-style: none; }
+.nutshell a {
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0);
+	padding: 5px 10px;
+	display: block;
+}
+.nutshell a,
+.nutshell a:visited,
+.nutshell a:visited:hover,
+.nutshell a:focus,
+.nutshell a:focus:hover,
+.nutshell a:hover,
+.nutshell a:active {
+	color: #666;
+	text-decoration: none;
+}
+.nutshell a.nutshell-selected {
+	color: #000;
+	border-radius: 3px;
+	border-color: #ccc;
+	background: #fff;
+}
+.nutshell a:active,
+.nutshell a:focus { outline: none; }
+
+@media all and (min-width : 480px) {
+	
+	.nutshell { *zoom: 1; } .nutshell:before, .nutshell:after { content: " "; display: table; } .nutshell:after { clear: both; }
+	.nutshell { border-bottom: 1px solid #ccc; }
+	.nutshell li {
+		float: left;
+		display: inline;
+		margin-right: 5px;
+		margin-bottom: -1px;
+	}
+	.nutshell li:last-child { margin-right: 0; }
+	.nutshell a { border-bottom: 0; }
+	.nutshell a.nutshell-selected {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		border-color: #ccc;
+		background: #fff;
+	}
+	
+}
+
+/*-----------------( TAB PANEL )-----------------*/
+
+.nutshell-panel {
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*-----------------( UTILITY )-----------------*/
+
+.js .panel { display: none; }
+
+/*-----------------( ACCORDION SKIN )-----------------*/
+
+.ion :first-of-type .ion-head { border-top: 1px solid #ccc; }
+.ion-head {
+	font-family: arial, sans-serif;
+	font-weight: normal;
+	font-size: .9em;
+	text-transform: none;
+	letter-spacing: .05em;
+	line-height: 1;
+	color: #666;
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: #ccc;
+	background: #fff;
+	margin: 0;
+	padding: .5em 0;
+	white-space: nowrap;
+	cursor: pointer;
+	cursor: hand;
+	overflow: hidden;
+}
+.no-js .ion-head { color: #000; } /* Applied only if JS is turned OFF. */
+.js .ion-head::before { /* Applied only if JS is turned ON. */
+	//font-size: smaller;
+	font-weight: bold;
+	//text-align: center;
+	line-height: 1;
+	color: #ccc;
+	//border: 1px solid #ccc;
+	//border-radius: 50%;
+	//background: #eee;
+	//width: 1em;
+	//height: 1em;
+	//float: right;
+	display: inline;
+	content: "\002B\00a0";
+	//position: relative;
+}
+.js .ion-head-selected { color: #000; } /* JS ON */
+.js .ion-head-selected::before { content: "\2212\00a0"; } /* JS ON */
+.ion-panel {
+	overflow: hidden;
+	position: relative;
+}
+.js .ion-panel { display: none; } /* JS ON */
+.ion-wrap {
+	border-width: 0 1px 1px;
+	border-style: solid;
+	border-color: #ccc;
+	background: #eee;
+	padding: 10px;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, .1);
+}
+.ion-wrap :first-child { margin-top: 0; }
+.ion-wrap :last-child { margin-bottom: 0; }
+
+/**
+ * @see http://thecodeplayer.com/walkthrough/css3-breadcrumb-navigation
+ * @see https://gist.github.com/mhulse/2355141
+ * @see http://stackoverflow.com/a/2251833/922323
+ * @see https://github.com/registerguard/rg/issues/69
+ */
+
+/*-----------------( BREAKING CONTAINER )-----------------*/
+
+.breaking {
+	font-family: Arial, sans-serif;
+	border-radius: 3px;
+	margin: 10px 0;
+	padding: 0;
+	overflow: hidden; /* Hides overflow of arrow, clears float and/or makes border radius crop children. */
+	position: relative;
+	-webkit-text-size-adjust: none;
+}
+
+/*-----------------( BREAKING LABEL )-----------------*/
+
+.breaking-label {
+	font-weight: normal;
+	line-height: 36px;
+	letter-spacing: .05em;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.breaking-label a,
+.breaking-label span {
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+	/*border-radius: 3px 3px 0 0;*/
+	padding: 0 10px;
+	display: block;
+}
+.breaking-label a,
+.breaking-label a:visited {
+	color: #fff;
+	text-decoration: none;
+	background: #444;
+	-webkit-transition: background 200ms linear;
+	        transition: background 200ms linear;
+}
+.breaking-label a:visited:hover,
+.breaking-label a:focus,
+.breaking-label a:focus:hover,
+.breaking-label a:hover,
+.breaking-label a:active {
+	color: #fff;
+	text-decoration: none;
+	background: #000;
+}
+.breaking-label a:active,
+.breaking-label a:focus { outline: none; }
+.breaking-label span { background: #444; }
+@media only screen and (min-width: 665px) {
+	.breaking { overflow: hidden; } /* Hides overflow of arrow and clears float. */
+	.breaking 
+	.breaking-label {
+		float: left;
+		display: inline;
+	}
+	.breaking-label a,
+	.breaking-label span {
+		padding-left: 20px; /* Horizontal breathing room. */
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/*-----------------( BREAKING LABEL SKIN )-----------------*/
+
+.breaking-label a { text-shadow: 0 1px 0 #290607; }
+.breaking-skin1 .breaking-label a,
+.breaking-skin1 .breaking-label a:visited { background: #ae1a1f; }
+.breaking-skin1 .breaking-label a:visited:hover,
+.breaking-skin1 .breaking-label a:focus,
+.breaking-skin1 .breaking-label a:focus:hover,
+.breaking-skin1 .breaking-label a:hover,
+.breaking-skin1 .breaking-label a:active { background: #e1343a; }
+
+/*-----------------( BREAKING ARROW )-----------------*/
+
+@media only screen and (min-width: 665px) {
+	.breaking-label a:after,
+	.breaking-label span:after {
+		content: '';
+		position: absolute;
+		top: 0; 
+		right: -18px;
+		width: 36px;
+		height: 36px;
+		-webkit-transform: scale(0.707) rotate(45deg);
+		   -moz-transform: scale(0.707) rotate(45deg);
+		    -ms-transform: scale(0.707) rotate(45deg);
+		     -o-transform: scale(0.707) rotate(45deg);
+		        transform: scale(0.707) rotate(45deg);
+		z-index: 1;
+		border-radius: 0 3px 0 36px;
+		-webkit-transition: background 200ms linear;
+		        transition: background 200ms linear;
+	}
+	.breaking-label a:after,
+	.breaking-label a:visited:after { background: #444; }
+	.breaking-label a:visited:hover:after,
+	.breaking-label a:focus:after,
+	.breaking-label a:focus:hover:after,
+	.breaking-label a:hover:after,
+	.breaking-label a:active:after { background: #000; }
+	.breaking-label span:after { background: #444; }
+}
+
+/*-----------------( BREAKING ARROW SKIN )-----------------*/
+
+@media only screen and (min-width: 665px) {
+	.breaking-skin1 .breaking-label a:after,
+	.breaking-skin1 .breaking-label a:visited:after { background: #ae1a1f; }
+	.breaking-skin1 .breaking-label a:visited:hover:after,
+	.breaking-skin1 .breaking-label a:focus:after,
+	.breaking-skin1 .breaking-label a:focus:hover:after,
+	.breaking-skin1 .breaking-label a:hover:after,
+	.breaking-skin1 .breaking-label a:active:after { background: #e1343a; }
+}
+
+/*-----------------( BREAKING ITEM )-----------------*/
+
+.breaking-item {
+	line-height: 36px;
+	background: #eee;
+	margin: 0;
+	padding: 0 10px;
+}
+@media only screen and (min-width: 665px) {
+	.breaking-item {
+		padding-left: 30px; /* Make room for arrow. */
+		overflow: hidden; /* Forces columnar layout. */
+		/*border-radius: 0 3px 3px 0;*/
+	}
+	* html .breaking-item { height: 1%; } /* Old IE hack for columns. */
+}
+
+/*-----------------( BREAKING ITEM SKIN )-----------------*/
+
+.breaking-skin1 .breaking-item { background: #e5dbd1; }
+
+/*-----------------( TICKER )-----------------*/
+
+/**
+ * @see https://github.com/wmh/jquery-scrollbox
+ */
+
+/* jQuery Scrollbox setups: */
+.ticker {
+	line-height: 36px;
+	width: 100%;
+	height: 36px;
+	overflow: hidden;
+}
+.ticker ul,
+.ticker li {
+	margin: 0;
+	padding: 0;
+}
+.ticker li {
+	list-style: none;
+	/* CSS ellipsis: */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.ticker li a {
+	font-size: smaller;
+	font-weight: bold;
+	letter-spacing: .03em;
+}
+.ticker li a,
+.ticker li a:visited {
+	color: #333;
+	text-decoration: none;
+}
+.ticker li a:visited:hover,
+.ticker li a:focus,
+.ticker li a:focus:hover,
+.ticker li a:hover,
+.ticker li a:active {
+	color: #333;
+	text-decoration: underline;
+}
+@media only screen and (min-width: 665px) {
+	.ticker li a { font-size: inherit; }
+}
+
+/*-----------------( TICKER SKIN )-----------------*/
+
+.breaking-skin1 .ticker li a,
+.breaking-skin1 .ticker li a:visited { color: #856a4b; }
+.breaking-skin1 .ticker li a:visited:hover,
+.breaking-skin1 .ticker li a:focus,
+.breaking-skin1 .ticker li a:focus:hover,
+.breaking-skin1 .ticker li a:hover,
+.breaking-skin1 .ticker li a:active { color: #856a4b; }
+
+/*-----------------( TICKER NAVIGATION )-----------------*/
+
+/* ticker forward/backward buttons: */
+.ticker-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.ticker-nav,
+.ticker-nav li {
+	margin: 0;
+	padding: 0;
+}
+.ticker-nav li {
+	line-height: 36px;
+	list-style: none;
+	float: left;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+	-webkit-transform: rotate(-90deg);
+	   -moz-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	     -o-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+}
+.ticker-nav li a {
+	/* Center vertically/horizontally: */
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	background: rgba(255, 255, 255, .5);
+	/* Make fill container: */
+	width: 100%;
+	height: 100%;
+	display: block;
+	-webkit-transition: background 200ms linear, color 200ms linear;
+	        transition: background 200ms linear, color 200ms linear;
+}
+.ticker-nav li a,
+.ticker-nav li a:visited { color: #333; }
+.ticker-nav li a:visited:hover,
+.ticker-nav li a:focus,
+.ticker-nav li a:focus:hover,
+.ticker-nav li a:hover,
+.ticker-nav li a:active {
+	color: #000;
+	text-decoration: none;
+	background: #eee;
+}
+.ticker-nav li a:active,
+.ticker-nav li a:focus { outline: none; }
+.ticker-has-nav .breaking-label a,
+.ticker-has-nav .breaking-label span { padding-right: 72px; } /* Make some room on the parent. */
+@media only screen and (min-width: 665px) {
+	.ticker-has-nav .breaking-label a,
+	.ticker-has-nav .breaking-label span { padding-right: 10px; } /* Normalize padding. */
+	.breaking-item { position: relative; } /* So we can position the nav within this parent element. */
+	.ticker-has-nav .breaking-item { padding-right: 72px; } /* Make some room on the parent. */
+}
+
+/*-----------------( TICKER NAVIGATION SKIN )-----------------*/
+
+.breaking-skin1 .ticker-nav li a {
+	background: rgba(107, 16, 19, .25);
+}
+.breaking-skin1 .ticker-nav li a,
+.breaking-skin1 .ticker-nav li a:visited { color: rgba(255, 255, 255, .5); }
+.breaking-skin1 .ticker-nav li a:visited:hover,
+.breaking-skin1 .ticker-nav li a:focus,
+.breaking-skin1 .ticker-nav li a:focus:hover,
+.breaking-skin1 .ticker-nav li a:hover,
+.breaking-skin1 .ticker-nav li a:active {
+	color: #fff;
+	background: rgba(225, 52, 58, .5);
+}
+@media only screen and (min-width: 665px) {
+	.breaking-skin1 .ticker-nav li a { background: rgba(133, 106, 75, .1); }
+	.breaking-skin1 .ticker-nav li a,
+	.breaking-skin1 .ticker-nav li a:visited { color: #665200; }
+	.breaking-skin1 .ticker-nav li a:visited:hover,
+	.breaking-skin1 .ticker-nav li a:focus,
+	.breaking-skin1 .ticker-nav li a:focus:hover,
+	.breaking-skin1 .ticker-nav li a:hover,
+	.breaking-skin1 .ticker-nav li a:active {
+		color: #665200;
+		background: rgba(133, 106, 75, .25);
+	}
+}
