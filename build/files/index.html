@@ -848,15 +848,18 @@
 							
 							<form id="finder" method="get" action="http://projects.registerguard.com/pages/search/">
 								
-								<div id="finder_opts">
-									<input type="radio" id="finder_opt-1" name="options" checked="checked" value="http://projects.registerguard.com/pages/search/"> <label for="finder_opt-1">Google Custom Search</label>
-									<!--<input type="radio" id="finder_opt-2" name="options" value="http://projects.registerguard.com/pages/search/archive/"> <label for="finder_opt-2">Google News Archive Search <i>&ndash; Back to <b>1867</b></i></label>-->
-									<input type="radio" id="finder_opt-3" name="options" value="http://pqasb.pqarchiver.com/registerguard/results.html"> <label for="finder_opt-3">Proquest Newspaper Archives <i>&ndash; Back to <b>2001</b></i></label>
-									<input type="radio" id="finder_opt-4" name="options" value="http://bizfinder.registerguard.com/search.pg"> <label for="finder_opt-4">BizFinder Local</label>
+								<div id="finder_opts" style="margin-bottom:10px">
+									<label><input type="radio" id="finder_opt-1" name="options" checked="checked" value="http://projects.registerguard.com/pages/search/"> Google Search</label>
+									<label><input type="radio" id="finder_opt-3" name="options" value="http://pqasb.pqarchiver.com/registerguard/results.html"> Proquest Newspaper Archives (<i>back to <b>2001</b></i>)</label>
+									<label><input type="radio" id="finder_opt-4" name="options" value="http://bizfinder.registerguard.com/search.pg"> BizFinder Local</label>
 								</div>
 								
 								<div>
-									<label for="finder_keywords">Keywords:</label> <input type="search" id="finder_keywords" name="q" title="Search..." placeholder="Search..." results="5" autosave="finder"><input id="finder_submit" type="submit" value="Search"> <a href="http://projects.registerguard.com/pages/search/help/">Search help</a>
+									<label for="finder_keywords">Keywords: <input type="search" id="finder_keywords" name="q" title="Search..." placeholder="Search..." results="5" autosave="finder">
+										<input id="finder_submit" type="submit" value="Search">
+									</label>
+									<a style="text-decoration:underline" href="http://news.google.com/newspapers?nid=4pF9x-cDGsoC">Google News Archive Search</a> (<i>back to <b>1867</b></i>)
+									<a style="text-decoration:underline" href="http://projects.registerguard.com/pages/search/help/">Search Help</a>
 								</div>
 								
 							</form>
