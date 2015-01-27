@@ -274,6 +274,11 @@ blockquote{font-style:italic;color:#666666;margin:1em 0;padding:0 0 0 3.5em;posi
 blockquote:before{display:block;content:"\201C";font-size:6.25em;line-height:1;position:absolute;left:0;top:-0.1em;color:#cccccc;}
 blockquote p{margin:0 !important;}
 span.amp1{font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:italic;}
+.label p{font-family:Arial,sans-serif;font-size:1.0em;font-weight:bold;letter-spacing:0.1em;line-height:1.15314;margin:0;padding:0.345941em 0;text-transform:uppercase;}
+.label p.StandingHeads-Style_7-10_NoRule_60K:nth-of-type(2){display:none;}
+.Bylines-Byline1{font-size:1.125em;line-height:1.16667;margin:0;padding:0.166667em 0;font-variant:small-caps;font-weight:bold;text-rendering:auto;}
+.Bylines-Byline2{font-style:italic;font-weight:400;font-size:1.125em;line-height:1.167;margin:0;padding:3px 0;}
+.PullQuotes-QuickRead{margin-bottom:0;font-size:.7em;font-weight:400;line-height:1.073em;color:#666;font-family:"MillerHeadline Light",Cambria,Georgia,serif;}
 .mm{height:0;padding-bottom:56.25%;position:relative;overflow:hidden;margin:0 0 10px;}
 .mm iframe,.mm object,.mm embed{width:100% !important;height:100% !important;position:absolute;top:0;left:0;}
 .ss{padding-bottom:66.666%;}

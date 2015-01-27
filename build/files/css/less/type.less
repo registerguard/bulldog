@@ -316,3 +316,56 @@ span.amp1 {
 	font-family: Baskerville, Palatino, "Book Antiqua", serif;
 	font-style: italic;
 }
+
+// ********************************************************************************
+// Below are hacks to fix the styles on projects
+// ********************************************************************************
+
+/*
+Hacks to fix label that still has DTI print formatting.
+*/
+.label p {
+	font-family: Arial,sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	line-height: 1.15314;
+	margin: 0;
+	padding: 0.345941em 0;
+	text-transform: uppercase;
+}
+.label p.StandingHeads-Style_7-10_NoRule_60K:nth-of-type(2) {
+	display: none;
+}
+/*
+Hacks to fix bylines.
+*/
+.Bylines-Byline1 {
+	font-size: 1.125em;
+	line-height: 1.16667;
+	margin: 0;
+	padding: 0.166667em 0;
+	font-variant: small-caps;
+	font-weight: bold;
+	text-rendering: auto;
+}
+.Bylines-Byline2 {
+	font-style: italic;
+	font-weight: 400;
+	font-size: 1.125em;
+	line-height: 1.167;
+	margin: 0;
+	padding: 3px 0;
+}
+/*
+Hacks to fix deck.
+.PullQuotes-QuickRead --> bulldog .h4
+*/
+.PullQuotes-QuickRead {
+	margin-bottom:0;
+	font-size: .7em;
+	font-weight:400;
+	line-height: 1.073em;
+	color: #666;
+	font-family: "MillerHeadline Light",Cambria,Georgia,serif
+}
