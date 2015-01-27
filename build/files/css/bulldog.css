@@ -262,7 +262,7 @@ p a:visited{color:#00517e;}
 p a:visited:hover,p a:focus,p a:focus:hover,p a:hover,p a:active{color:#0083ca;text-decoration:underline;}
 .caption{font:italic 0.938em/1.19936034115139 Cambria,Georgia,serif;margin:0 0 10px;}
 .byline1,.byline2{font-family:Cambria, Georgia, serif;font-size:1.125em;line-height:1.16666666666666;margin:0;padding:.16666666666667em 0;}
-.byline1{font-weight:bold;font-variant:small-caps;}
+.byline1{font-weight:bold;font-variant:small-caps;text-rendering:auto;}
 .byline2{font-style:italic;}
 .pub{font-size:.875em;line-height:1.28571428571428;text-transform:uppercase;color:#666666;margin:0;padding:.42857142857143em 0;}
 .jump{font:italic 87.5%/1 Cambria,Georgia,serif;text-align:right;color:#000;margin:0 0 10px;padding:0;}
