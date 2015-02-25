@@ -369,3 +369,47 @@ Hacks to fix deck.
 	color: #666;
 	font-family: "MillerHeadline Light",Cambria,Georgia,serif
 }
+
+/* For tools on summary templates: */
+/* Read: icons for comments, video and slideshows */
+.tools,
+.tools li {
+	margin: 0;
+	padding: 0;
+}
+.tools {
+	margin: -5px 0 10px -5px;
+	overflow: hidden;
+}
+	.tools li {
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+		display: inline;
+	}
+		.tools a {
+			font-family: Arial, sans-serif;
+			//font-size: .6875em; /* 11px */
+			line-height: 1.36363636363636; /* (((1.5 / .6875) = 2.18181818181818) * .625) = 1.36363636363636 */
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			color: @white;
+			text-decoration: none;
+			border-radius: .25em;
+			background: @blue;
+			//padding: 1px 4px;
+			display: block;
+			padding: 2px 3px;
+			font-size: .7em;
+		}
+		.tools a:visited { color: @white; }
+		.tools a:visited:hover,
+		.tools a:focus,
+		.tools a:focus:hover,
+		.tools a:hover,
+		.tools a:active {
+			color: @white;
+			background: @blueLight;
+			text-decoration: none;
+		}
