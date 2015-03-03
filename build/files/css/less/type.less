@@ -236,6 +236,8 @@ p {
 	.byline1 {
 		font-weight: bold;
 		font-variant: small-caps;
+		text-rendering: auto;
+		/*test*/
 	}
 	.byline2 { font-style: italic; }
 
@@ -314,3 +316,101 @@ span.amp1 {
 	font-family: Baskerville, Palatino, "Book Antiqua", serif;
 	font-style: italic;
 }
+
+// ********************************************************************************
+// Below are hacks to fix the styles on projects
+// ********************************************************************************
+
+/*
+Hacks to fix label that still has DTI print formatting.
+*/
+.label p {
+	font-family: Arial,sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	line-height: 1.15314;
+	margin: 0;
+	padding: 0.345941em 0;
+	text-transform: uppercase;
+}
+.label p.StandingHeads-Style_7-10_NoRule_60K:nth-of-type(2) {
+	display: none;
+}
+/*
+Hacks to fix bylines.
+*/
+.Bylines-Byline1 {
+	font-size: 1.125em;
+	line-height: 1.16667;
+	margin: 0;
+	padding: 0.166667em 0;
+	font-variant: small-caps;
+	font-weight: bold;
+	text-rendering: auto;
+}
+.Bylines-Byline2 {
+	font-style: italic;
+	font-weight: 400;
+	font-size: 1.125em;
+	line-height: 1.167;
+	margin: 0;
+	padding: 3px 0;
+}
+/*
+Hacks to fix deck.
+.PullQuotes-QuickRead --> bulldog .h4
+*/
+.PullQuotes-QuickRead {
+	margin-bottom:0;
+	font-size: .7em;
+	font-weight:400;
+	line-height: 1.073em;
+	color: #666;
+	font-family: "MillerHeadline Light",Cambria,Georgia,serif
+}
+
+/* For tools on summary templates: */
+/* Read: icons for comments, video and slideshows */
+.tools,
+.tools li {
+	margin: 0;
+	padding: 0;
+}
+.tools {
+	margin: -5px 0 10px -5px;
+	overflow: hidden;
+}
+	.tools li {
+		margin-top: 5px;
+		margin-left: 5px;
+		float: left;
+		display: inline;
+	}
+		.tools a {
+			font-family: Arial, sans-serif;
+			//font-size: .6875em; /* 11px */
+			//line-height: 1.36363636363636; /* (((1.5 / .6875) = 2.18181818181818) * .625) = 1.36363636363636 */
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+			color: @white;
+			text-decoration: none;
+			border-radius: .25em;
+			background: @blue;
+			//padding: 1px 4px;
+			display: block;
+			padding: 4px 5px;
+			font-size: .7em;
+			line-height: 1em;
+		}
+		.tools a:visited { color: @white; }
+		.tools a:visited:hover,
+		.tools a:focus,
+		.tools a:focus:hover,
+		.tools a:hover,
+		.tools a:active {
+			color: @white;
+			background: @blueLight;
+			text-decoration: none;
+		}

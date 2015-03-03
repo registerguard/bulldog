@@ -274,3 +274,96 @@
 .bd_gutter { padding: 0 10px; }
 
 .bd_box { *zoom: 1; } .bd_box:before, .bd_box:after { content: " "; display: table; } .bd_box:after { clear: both; }
+
+//
+// Adding styles for text over photo inverse bar
+// to be used on the home page.
+// ---
+// Added 2/16 by Rob Denton
+//
+
+/*@media only screen and (min-width: 1345px) {
+	
+	.rg-text-over-image{
+		position: relative;
+		
+		.rg-text-over-image-wrap{
+			position:absolute;
+			bottom:0;
+			background:rgba(0,0,0,0.4);
+			width:100%;
+			
+			.rg-text-over-image-inner{
+				padding:2%;
+				
+				.rg-text-over-image-white{
+					color:white!important;
+				}
+				
+			}
+		
+		}
+		
+		.rg-text-over-image-wrap-dark{
+			background:rgba(0, 0, 0, 0.8);
+		}
+		
+		.rg-text-over-image-wrap-light{
+			background:rgba(255, 255, 255, 0.8);
+		}
+		
+	}
+
+}*/
+
+@media only screen and (min-width: 1345px) {
+	
+	.rg-hop {
+		position: absolute;
+		bottom: 0;
+		background: rgba(0,0,0,0.4);
+		width: 100%;
+		padding: 2%;
+		
+		.rg-hop-white{
+			color: white!important;
+		}
+		
+	}
+	
+	.rg-hop-dark{
+		background:rgba(0, 0, 0, 0.8);
+	}
+	
+	.rg-hop-light{
+		background:rgba(255, 255, 255, 0.8);
+	}
+
+}
+
+@media only screen and (min-width: 1005px) {
+	
+	.rg-hop-big {
+		position: absolute;
+		bottom: 0;
+		background: rgba(0,0,0,0.4);
+		width: 100%;
+		padding: 2%;
+		
+		.rg-hop-big-white{
+			color: white!important;
+		}
+		
+	}
+	
+	.rg-hop-big-dark{
+		background:rgba(0, 0, 0, 0.8);
+	}
+	
+	.rg-hop-big-light{
+		background:rgba(255, 255, 255, 0.8);
+	}
+
+}
+
+
