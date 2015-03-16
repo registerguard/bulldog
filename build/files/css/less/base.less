@@ -317,51 +317,119 @@
 }*/
 
 @media only screen and (min-width: 1345px) {
-	
-	.rg-hop {
-		position: absolute;
-		bottom: 0;
-		background: rgba(0,0,0,0.4);
-		width: 100%;
-		-webkit-transition: background 0.5s;
-		transition: background 0.5s;
+	// Must be in a figure
+	figure{
 		
-		.rg-hop-white{
-			color: white!important;
-		}
-		
-		.rg-hop-dark{
-			background:rgba(0, 0, 0, 0.8);
+		// Must start with class, also differentiates between big and small
+		.rg-hop {
+			position: absolute;
+			bottom: 0;
+			background: rgba(0,0,0,0.4);
+			width: 100%;
 			-webkit-transition: background 0.5s;
 			transition: background 0.5s;
+			
+			// Change text color
+			.rg-hop-white{
+				color: white!important;
+			}
+			
+			// Add padding
+			.rg-hop-inner{
+				padding: 2%; 
+			}
+			
+			// Dark background
+			.rg-hop-dark{
+				background:rgba(0, 0, 0, 0.7);
+				-webkit-transition: background 0.5s;
+				transition: background 0.5s;
+			}
+			
+			&:hover .rg-hop-dark{
+				background:rgba(0, 0, 0, 0.95);
+			}
+			
+			// Light background
+			.rg-hop-light{
+				background:rgba(255, 255, 255, 0.8);
+				-webkit-transition: background 0.5s;
+				transition: background 0.5s;
+			}
+			
+			&:hover .rg-hop-light{
+				background:rgba(255, 255, 255, 0.95);
+			}
+			
 		}
 		
-		.rg-hop-dark:hover{
-			background:rgba(0, 0, 0, 0.95);
+		// On figure hover, make background darker
+		&:hover .rg-hop{
+			background: rgba(0, 0, 0, 0.8);
 		}
 		
-		.rg-hop-light{
-			background:rgba(255, 255, 255, 0.8);
-			-webkit-transition: background 0.5s;
-			transition: background 0.5s;
-		}
-		
-		.rg-hop-light:hover{
-			background:rgba(255, 255, 255, 0.95);
-		}
-		
-		.rg-hop-inner{
-			padding: 2%; 
-		}
-		
-	}
-	
-	.rg-hop:hover{
-		background: rgba(0, 0, 0, 0.8)
 	}
 	
 }
 
+
+@media only screen and (min-width: 1005px) {
+	// Must be in a figure
+	figure{
+		
+		// Must start with class, also differentiates between big and small
+		.rg-hop-big {
+			position: absolute;
+			bottom: 0;
+			background: rgba(0,0,0,0.4);
+			width: 100%;
+			-webkit-transition: background 0.5s;
+			transition: background 0.5s;
+			
+			// Change text color
+			.rg-hop-big-white{
+				color: white!important;
+			}
+			
+			// Add padding
+			.rg-hop-inner{
+				padding: 2%; 
+			}
+			
+			// Dark background
+			.rg-hop-dark{
+				background:rgba(0, 0, 0, 0.7);
+				-webkit-transition: background 0.5s;
+				transition: background 0.5s;
+			}
+			
+			&:hover .rg-hop-dark{
+				background:rgba(0, 0, 0, 0.95);
+			}
+			
+			// Light background
+			.rg-hop-light{
+				background:rgba(255, 255, 255, 0.8);
+				-webkit-transition: background 0.5s;
+				transition: background 0.5s;
+			}
+			
+			&:hover .rg-hop-light{
+				background:rgba(255, 255, 255, 0.95);
+			}
+			
+		}
+		
+		// On figure hover, make background darker
+		&:hover .rg-hop-big{
+			background: rgba(0, 0, 0, 0.8);
+		}
+		
+	}
+	
+}
+
+/*
 @media only screen and (min-width: 1005px) {
 	
 	.rg-hop-big {
@@ -407,4 +475,4 @@
 	}
 
 }
-
+*/
