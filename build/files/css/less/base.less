@@ -476,3 +476,90 @@
 
 }
 */
+
+// rg-rev / Reverse boxes that are 300x300
+
+.rg-rev-wrap{
+	width: 100%;
+	display: inline-block;
+
+	.rg-rev{
+		width: 300px;
+		height: 300px;
+		overflow: hidden;
+		margin: 0 auto;
+		text-shadow: rgba(0,0,0, 0.9) 0 0 1px;
+		background-color: #333;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		a{
+			background: rgba(0, 0, 0, 0.15);
+			padding: 20px;
+			width: 100%;
+			height: 100%;
+			display: block;
+			
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			
+			-webkit-transition: background 250ms linear;
+			-moz-transition: background 250ms linear;
+			-ms-transition: background 250ms linear;
+			-o-transition: background 250ms linear;
+			transition: background 250ms linear;
+			
+		}
+
+		a:hover{
+			background: rgba(0,0,0,.75);
+		}
+
+		h3{
+			color: #da2127;
+			font-weight: bold;
+			-webkit-font-smoothing: auto;
+			text-rendering: auto;
+			letter-spacing: .15em;
+		}
+
+		h1{
+			color: white;
+			font-weight: normal;
+			font-weight: bold;
+			font-style: normal;
+			letter-spacing: .05em;
+			font-size: 28px;
+			line-height: 30px;
+			-webkit-font-smoothing: auto;
+			text-rendering: auto;
+		}
+
+		h2{
+			color: rgb(204, 204, 204);
+			font-family: "MillerHeadline Light",Cambria,Georgia,serif;
+			font-weight: bold;
+			font-size: 22px;
+			line-height: 24px;
+			letter-spacing: .08em;
+			text-transform: none;
+			font-style: normal;
+			font-weight: normal;
+			text-shadow: rgba(0,0,0,0.9) 0 0 5px;
+			-webkit-font-smoothing: auto;
+			text-rendering: auto;
+		}
+		
+	} // Close .rg-rev
+	
+	@media all and (max-width: 665px) {
+		
+		.rg-rev{
+	/*			margin: 0 auto;		*/
+		}
+		
+	}
+	
+} //Close .rg-rev-wrap
