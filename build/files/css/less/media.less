@@ -58,3 +58,59 @@ img {
 	float: left;
 	margin-right: 10px;
 }
+
+/* .sig - mugs */
+figure.sig {
+	text-align: center;
+	color: #ae1b1f;
+	margin: 0 0 10px;
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	a,
+	a:visited,
+	a:visited:hover,
+	a:focus,
+	a:focus:hover,
+	a:hover,
+	a:active {
+		color: #ae1b1f;
+		text-decoration: none;
+		text-decoration: non;
+	}
+	img {
+		margin: 0 auto;
+		display: block;
+	}
+	figcaption {
+		font: bold 1.375em/1.09090909090909 "MillerHeadline Bold", Cambria, Georgia, serif; /* 22px */
+		border-bottom: 4px double #000;
+		display: -moz-inline-stack; /* rgne.ws/Mvlt9X */
+		display: inline-block;
+		*display: inline; /* IE<8 "inline block hack". */
+		*zoom: 1; /* IBID */
+		margin: 10px 0 0;
+		padding-bottom: 5px;
+		
+		span { display: block; }
+		
+	}
+	
+	.rg-mug{
+		// width: 100%; /* default width is 100% */
+		// height: 0; // height of 0 so that we can...
+		// padding-top: 100%; // ... use this trick
+		display: block; // yup
+		margin: 0 auto;
+		border-radius: 144px; // average size
+		-webkit-border-radius: 144px; 
+		-moz-border-radius: 144px;
+		box-shadow: 0 0 8px rgba(0, 0, 0, .4); // add shadow for white backgrounds 
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .4);
+	}
+	
+} /* close figure.sig */
