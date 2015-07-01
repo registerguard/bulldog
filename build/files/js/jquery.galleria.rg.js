@@ -16,7 +16,7 @@
 Galleria.addTheme({
     name: 'rg',
     author: 'Rob Denton, The Register-Guard',
-    css: 'bulldog.css',
+    //css: 'bulldog.css',
     defaults: {
         transition: 'slide',
         thumbCrop:  'height',
