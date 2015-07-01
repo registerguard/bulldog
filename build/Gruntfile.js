@@ -156,6 +156,11 @@ module.exports = function(grunt) {
 		uglify : {
 			
 			prod : {
+				/*options: {
+					mangle: {
+						except: ['jquery.galleria.js', 'jquery.galleria.rg.js']
+					}
+				},*/
 				
 				files : {
 					
