@@ -127,7 +127,7 @@ var doc    = window.document,
             },
             get_image: function(data) {
                 if ( data.entry.yt$hd ) {
-                    return PROT + '//img.youtube.com/vi/'+this.id+'/maxresdefault.jpg';
+                    return PROT + '//img.youtube.com/vi/'+this.id+'/0.jpg';
                 }
                 return data.entry.media$group.media$thumbnail[3].url;
             }
