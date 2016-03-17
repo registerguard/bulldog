@@ -552,3 +552,62 @@ only screen and (min-width: 1005px) and (min-resolution: 1.5dppx) {
 	}
 	
 }
+
+/* 
+** ----------------------------------
+** Pagination
+** ----------------------------------
+*/
+.split {
+	*zoom: 1;
+	
+	&:before, &:after { 
+		content: " "; 
+		display: table; 
+	}
+	
+	&:after { clear: both; }
+	
+	position: relative;
+	margin-bottom: 10px;
+
+	.split-middle {
+		text-align: center;
+		width: 100%;
+		position: absolute;
+		z-index: 5;
+	}
+	.split-first,
+	.split-last {
+		display: inline;
+		position: relative;
+		z-index: 10;
+	}
+	.split-first { float: left; }
+	.split-last { float: right; }
+	
+}
+
+.pointer {
+	font: bold .875em/1.71428571428571 Arial, sans-serif;
+	text-transform: uppercase;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	
+	a {
+		color: #000;
+		text-decoration: none;
+	
+		&:visited { color: #000; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: #ae1a1f; }
+		
+	}
+	
+}
+
+.note { font: bold 1em/1 Cambria, Georgia, serif; }
