@@ -91,12 +91,12 @@ h6, .h6, .sh6 {
 	padding: .3459409594096em 0; /* (((((1.5 / .813) = 1.8450184501845) * .375) = .69188191881919) / 2) = .3459409594096 */
 }
 	.label a,
-	.label a:visited,
+	.label a:visited { color: @red; }
 	.label a:visited:hover,
 	.label a:focus,
 	.label a:focus:hover,
 	.label a:hover,
-	.label a:active { color: @red; }
+	.label a:active { color: @redDarker; text-decoration: underline; }
 
 .streamer:before, .streamer:after { content: " "; display: table; } .streamer:after { clear: both; } .streamer { *zoom: 1; }
 .streamer { margin: 10px 0; }
