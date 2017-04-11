@@ -1,0 +1,183 @@
+/* --------------------------------------------------------------------------
+**
+** Moblie
+** [ A ]LPHA
+** `viewport < 665px`
+**
+-------------------------------------------------------------------------- */
+
+.bdf{
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	
+	
+	.bdf-item{
+		padding: 0;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 300px;
+	}
+	
+	.bdf-grow{ flex-grow: 1; }
+	.bdf-grow-off{ flex-grow: 0; }
+	.bdf-shrink{ flex-shrink: 0; }
+	.bdf-shrink-off{ flex-shrink: 0; }
+	
+	.bdf-Arow{ 
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+	.Blb, .Clb, .Dlb {
+		margin-left: 0;
+		border-left: none;
+		padding-left: 0;
+	}
+	
+}
+
+/* --------------------------------------------------------------------------
+**
+** Tablet
+** [ B ]RAVO
+** Breakpoint #1
+** `(viewport >= 665px)` & `(viewport < 1005px)`
+**
+-------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 665px) and (max-width: 1004px) { /* 640px + 25px */
+	
+	.bdf{
+		
+		/* Size, mimics wiffle */
+		.w_B130 { flex-basis: 130px; }
+		.w_B300 { flex-basis: 300px; }
+		.w_B470 { flex-basis: 470px; }
+		.w_B640 { flex-basis: 640px; }
+		
+		/* Order */
+		.Bo-4{ order: -4; }
+		.Bo-3{ order: -3; }
+		.Bo-2{ order: -2; }
+		.Bo-1{ order: -1; }
+		.Bo0{ order: 0; }
+		.Bo1{ order: 1; }
+		.Bo2{ order: 2; }
+		.Bo3{ order: 3; }
+		.Bo4{ order: 4; }
+		
+		/* Vertical rule to the left, mimics line.less */
+		.Blb{
+			margin-left: 20px;
+			border-left: 1px solid #ccc;
+			padding-left: 19px;
+		}
+		
+	}
+	
+	.bdf-Brow{ 
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+}
+
+/* --------------------------------------------------------------------------
+**
+** Desktop
+** [ C ]HARLIE
+** Breakpoint #2
+** `(viewport >= 1005px)` & `(viewport < 1345px)`
+**
+-------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1005px) and (max-width: 1344px) { /* 980px + 25px */
+	
+	.bdf{
+		
+		/* Size, mimics wiffle */
+		.w_C130 { flex-basis: 130px; }
+		.w_C300 { flex-basis: 300px; }
+		.w_C470 { flex-basis: 470px; }
+		.w_C640 { flex-basis: 640px; }
+		.w_C810 { flex-basis: 810px; }
+		.w_C980 { flex-basis: 980px; }
+		
+		/* Order */
+		.Co-4{ order: -4; }
+		.Co-3{ order: -3; }
+		.Co-2{ order: -2; }
+		.Co-1{ order: -1; }
+		.Co0{ order: 0; }
+		.Co1{ order: 1; }
+		.Co2{ order: 2; }
+		.Co3{ order: 3; }
+		.Co4{ order: 4; }
+		
+		/* Vertical rule to the left, mimics line.less */
+		.Clb{
+			margin-left: 20px;
+			border-left: 1px solid #ccc;
+			padding-left: 19px;
+		}
+		
+	}
+	
+	
+	.bdf-Crow{ 
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+}
+
+/* --------------------------------------------------------------------------
+**
+** Big Desktop
+** [ D ]ELTA
+** Breakpoint #3
+** `viewport >= 1345px`
+**
+-------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1345px) { /* 1320px + 25px */
+	
+	.bdf{
+		
+		/* Size, mimics wiffle */
+		.w_D130 { flex-basis: 130px; }
+		.w_D300 { flex-basis: 300px; }
+		.w_D470 { flex-basis: 470px; }
+		.w_D640 { flex-basis: 640px; }
+		.w_D810 { flex-basis: 810px; }
+		.w_D980 { flex-basis: 980px; }
+		.w_D1150 { flex-basis: 1150px; }
+		
+		/* Order */
+		.Do-4{ order: -4; }
+		.Do-3{ order: -3; }
+		.Do-2{ order: -2; }
+		.Do-1{ order: -1; }
+		.Do0{ order: 0; }
+		.Do1{ order: 1; }
+		.Do2{ order: 2; }
+		.Do3{ order: 3; }
+		.Do4{ order: 4; }
+		
+		/* Vertical rule to the left, mimics line.less */
+		.Dlb{
+			margin-left: 20px;
+			border-left: 1px solid #ccc;
+			padding-left: 19px;
+		}
+		
+	}
+	
+	.bdf-Drow{ 
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	
+}
