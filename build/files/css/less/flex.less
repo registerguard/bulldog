@@ -1,5 +1,17 @@
 /* --------------------------------------------------------------------------
 **
+** FLEXBOX
+** Styling for using Flexbox on registerguard.com
+** See:
+** - https://github.com/registerguard/tracker/issues/627
+** - https://css-tricks.com/using-flexbox/#article-header-id-1
+** - https://msdn.microsoft.com/en-us/library/hh673531(v=vs.85).aspx
+**
+-------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------
+**
 ** Moblie
 ** [ A ]LPHA
 ** `viewport < 665px`
@@ -9,24 +21,35 @@
 .bdf{
 	width: 100%;
 	margin: 0;
-	display: flex;
+	/* See: https://css-tricks.com/using-flexbox/ */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
 	flex-direction: column;
 	
 	
 	.bdf-item{
 		padding: 0;
+		-webkit-flex-grow: 0;
 		flex-grow: 0;
+		-webkit-flex-shrink: 0;
 		flex-shrink: 0;
-		flex-basis: 300px;
 	}
 	
-	.bdf-grow{ flex-grow: 1; }
-	.bdf-grow-off{ flex-grow: 0; }
-	.bdf-shrink{ flex-shrink: 0; }
-	.bdf-shrink-off{ flex-shrink: 0; }
+	.bdf-grow{ -webkit-flex-grow: 1; flex-grow: 1; }
+	.bdf-grow-off{ -webkit-flex-grow: 0; flex-grow: 0; }
+	.bdf-shrink{ -webkit-flex-shrink: 1; flex-shrink: 1; }
+	.bdf-shrink-off{ -webkit-flex-shrink: 0; flex-shrink: 0; }
 	
 	.bdf-Arow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
 		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	
@@ -47,26 +70,49 @@
 **
 -------------------------------------------------------------------------- */
 
+@media only screen and (min-width: 665px) {
+	.bdf{
+		/* Set default size to 300px  */
+		.bdf-item{ 
+			-ms-flex-preferred-size: 300px; 
+			-ms-flex-preferred-size: 300px; 
+			-webkit-flex-basis: 300px; 
+			flex-basis: 300px; 
+		}
+		
+		/* Size, mimics wiffle */
+		.bdf_B130 { -ms-flex-preferred-size: 130px; -webkit-flex-basis: 130px; flex-basis: 130px; }
+		.bdf_B300 { -ms-flex-preferred-size: 300px; -webkit-flex-basis: 300px; flex-basis: 300px; }
+		.bdf_B470 { -ms-flex-preferred-size: 470px; -webkit-flex-basis: 470px; flex-basis: 470px; }
+		.bdf_B640 { -ms-flex-preferred-size: 640px; -webkit-flex-basis: 640px; flex-basis: 640px; }
+		
+	}
+	
+	.bdf-Brow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	
+}
+/* These are split to maximize class efficiency */ 
 @media only screen and (min-width: 665px) and (max-width: 1004px) { /* 640px + 25px */
 	
 	.bdf{
 		
-		/* Size, mimics wiffle */
-		.w_B130 { flex-basis: 130px; }
-		.w_B300 { flex-basis: 300px; }
-		.w_B470 { flex-basis: 470px; }
-		.w_B640 { flex-basis: 640px; }
-		
 		/* Order */
-		.Bo-4{ order: -4; }
-		.Bo-3{ order: -3; }
-		.Bo-2{ order: -2; }
-		.Bo-1{ order: -1; }
-		.Bo0{ order: 0; }
-		.Bo1{ order: 1; }
-		.Bo2{ order: 2; }
-		.Bo3{ order: 3; }
-		.Bo4{ order: 4; }
+		.Bo-4{ -ms-flex-order: -4; -webkit-order: -4; order: -4; }
+		.Bo-3{ -ms-flex-order: -3; -webkit-order: -3; order: -3; }
+		.Bo-2{ -ms-flex-order: -2; -webkit-order: -2; order: -2; }
+		.Bo-1{ -ms-flex-order: -1; -webkit-order: -1; order: -1; }
+		.Bo0{ -ms-flex-order: 0; -webkit-order: 0; order: 0; }
+		.Bo1{ -ms-flex-order: 1; -webkit-order: 1; order: 1; }
+		.Bo2{ -ms-flex-order: 2; -webkit-order: 2; order: 2; }
+		.Bo3{ -ms-flex-order: 3; -webkit-order: 3; order: 3; }
+		.Bo4{ -ms-flex-order: 4; -webkit-order: 4; order: 4; }
 		
 		/* Vertical rule to the left, mimics line.less */
 		.Blb{
@@ -75,11 +121,6 @@
 			padding-left: 19px;
 		}
 		
-	}
-	
-	.bdf-Brow{ 
-		flex-direction: row;
-		flex-wrap: wrap;
 	}
 	
 }
@@ -93,28 +134,45 @@
 **
 -------------------------------------------------------------------------- */
 
+@media only screen and (min-width: 1005px) {
+	
+	.bdf{
+	
+		/* Size, mimics wiffle */
+		.bdf_C130 { -ms-flex-preferred-size: 130px; -webkit-flex-basis: 130px; flex-basis: 130px; }
+		.bdf_C300 { -ms-flex-preferred-size: 300px; -webkit-flex-basis: 300px; flex-basis: 300px; }
+		.bdf_C470 { -ms-flex-preferred-size: 470px; -webkit-flex-basis: 470px; flex-basis: 470px; }
+		.bdf_C640 { -ms-flex-preferred-size: 640px; -webkit-flex-basis: 640px; flex-basis: 640px; }
+		.bdf_C810 { -ms-flex-preferred-size: 810px; -webkit-flex-basis: 810px; flex-basis: 810px; }
+		.bdf_C980 { -ms-flex-preferred-size: 980px; -webkit-flex-basis: 980px; flex-basis: 980px; }
+		
+	}
+	
+	.bdf-Crow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	
+}
+/* These are split to maximize class efficiency */ 
 @media only screen and (min-width: 1005px) and (max-width: 1344px) { /* 980px + 25px */
 	
 	.bdf{
 		
-		/* Size, mimics wiffle */
-		.w_C130 { flex-basis: 130px; }
-		.w_C300 { flex-basis: 300px; }
-		.w_C470 { flex-basis: 470px; }
-		.w_C640 { flex-basis: 640px; }
-		.w_C810 { flex-basis: 810px; }
-		.w_C980 { flex-basis: 980px; }
-		
 		/* Order */
-		.Co-4{ order: -4; }
-		.Co-3{ order: -3; }
-		.Co-2{ order: -2; }
-		.Co-1{ order: -1; }
-		.Co0{ order: 0; }
-		.Co1{ order: 1; }
-		.Co2{ order: 2; }
-		.Co3{ order: 3; }
-		.Co4{ order: 4; }
+		.Co-4{ -ms-flex-order: -4; -webkit-order: -4; order: -4; }
+		.Co-3{ -ms-flex-order: -3; -webkit-order: -3; order: -3; }
+		.Co-2{ -ms-flex-order: -2; -webkit-order: -2; order: -2; }
+		.Co-1{ -ms-flex-order: -1; -webkit-order: -1; order: -1; }
+		.Co0{ -ms-flex-order: 0; -webkit-order: 0; order: 0; }
+		.Co1{ -ms-flex-order: 1; -webkit-order: 1; order: 1; }
+		.Co2{ -ms-flex-order: 2; -webkit-order: 2; order: 2; }
+		.Co3{ -ms-flex-order: 3; -webkit-order: 3; order: 3; }
+		.Co4{ -ms-flex-order: 4; -webkit-order: 4; order: 4; }
 		
 		/* Vertical rule to the left, mimics line.less */
 		.Clb{
@@ -123,12 +181,6 @@
 			padding-left: 19px;
 		}
 		
-	}
-	
-	
-	.bdf-Crow{ 
-		flex-direction: row;
-		flex-wrap: wrap;
 	}
 
 }
@@ -147,24 +199,25 @@
 	.bdf{
 		
 		/* Size, mimics wiffle */
-		.w_D130 { flex-basis: 130px; }
-		.w_D300 { flex-basis: 300px; }
-		.w_D470 { flex-basis: 470px; }
-		.w_D640 { flex-basis: 640px; }
-		.w_D810 { flex-basis: 810px; }
-		.w_D980 { flex-basis: 980px; }
-		.w_D1150 { flex-basis: 1150px; }
+		.bdf_D130 { -ms-flex-preferred-size: 130px; -webkit-flex-basis: 130px; flex-basis: 130px; }
+		.bdf_D300 { -ms-flex-preferred-size: 300px; -webkit-flex-basis: 300px; flex-basis: 300px; }
+		.bdf_D470 { -ms-flex-preferred-size: 470px; -webkit-flex-basis: 470px; flex-basis: 470px; }
+		.bdf_D640 { -ms-flex-preferred-size: 640px; -webkit-flex-basis: 640px; flex-basis: 640px; }
+		.bdf_D810 { -ms-flex-preferred-size: 810px; -webkit-flex-basis: 810px; flex-basis: 810px; }
+		.bdf_D980 { -ms-flex-preferred-size: 980px; -webkit-flex-basis: 980px; flex-basis: 980px; }
+		.bdf_D1150 { -ms-flex-preferred-size: 1150px; -webkit-flex-basis: 1150px; flex-basis: 1150px; }
+		.bdf_D1320 { -ms-flex-preferred-size: 1320px; -webkit-flex-basis: 1320px; flex-basis: 1320px; }
 		
 		/* Order */
-		.Do-4{ order: -4; }
-		.Do-3{ order: -3; }
-		.Do-2{ order: -2; }
-		.Do-1{ order: -1; }
-		.Do0{ order: 0; }
-		.Do1{ order: 1; }
-		.Do2{ order: 2; }
-		.Do3{ order: 3; }
-		.Do4{ order: 4; }
+		.Do-4{ -ms-flex-order: -4; -webkit-order: -4; order: -4; }
+		.Do-3{ -ms-flex-order: -3; -webkit-order: -3; order: -3; }
+		.Do-2{ -ms-flex-order: -2; -webkit-order: -2; order: -2; }
+		.Do-1{ -ms-flex-order: -1; -webkit-order: -1; order: -1; }
+		.Do0{ -ms-flex-order: 0; -webkit-order: 0; order: 0; }
+		.Do1{ -ms-flex-order: 1; -webkit-order: 1; order: 1; }
+		.Do2{ -ms-flex-order: 2; -webkit-order: 2; order: 2; }
+		.Do3{ -ms-flex-order: 3; -webkit-order: 3; order: 3; }
+		.Do4{ -ms-flex-order: 4; -webkit-order: 4; order: 4; }
 		
 		/* Vertical rule to the left, mimics line.less */
 		.Dlb{
@@ -176,7 +229,11 @@
 	}
 	
 	.bdf-Drow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
 		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	
