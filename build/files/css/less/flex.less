@@ -1,0 +1,240 @@
+/* --------------------------------------------------------------------------
+**
+** FLEXBOX
+** Styling for using Flexbox on registerguard.com
+** See:
+** - https://github.com/registerguard/tracker/issues/627
+** - https://css-tricks.com/using-flexbox/#article-header-id-1
+** - https://msdn.microsoft.com/en-us/library/hh673531(v=vs.85).aspx
+**
+-------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------
+**
+** Moblie
+** [ A ]LPHA
+** `viewport < 665px`
+**
+-------------------------------------------------------------------------- */
+
+.bdf{
+	width: 100%;
+	margin: 0;
+	/* See: https://css-tricks.com/using-flexbox/ */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	
+	
+	.bdf-item{
+		padding: 0;
+		-webkit-flex-grow: 0;
+		flex-grow: 0;
+		-webkit-flex-shrink: 0;
+		flex-shrink: 0;
+	}
+	
+	.bdf-grow{ -webkit-flex-grow: 1; flex-grow: 1; }
+	.bdf-grow-off{ -webkit-flex-grow: 0; flex-grow: 0; }
+	.bdf-shrink{ -webkit-flex-shrink: 1; flex-shrink: 1; }
+	.bdf-shrink-off{ -webkit-flex-shrink: 0; flex-shrink: 0; }
+	
+	.bdf-Arow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	
+	.bdf-Blb, .bdf-Clb, .bdf-Dlb {
+		margin-left: 0;
+		border-left: none;
+		padding-left: 0;
+	}
+	
+}
+
+/* --------------------------------------------------------------------------
+**
+** Tablet
+** [ B ]RAVO
+** Breakpoint #1
+** `(viewport >= 665px)` & `(viewport < 1005px)`
+**
+-------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 665px) {
+	.bdf{
+		/* Set default size to 300px  */
+		.bdf-item{ 
+			-ms-flex-preferred-size: 300px; 
+			-ms-flex-preferred-size: 300px; 
+			-webkit-flex-basis: 300px; 
+			flex-basis: 300px; 
+		}
+		
+		/* Size, mimics wiffle */
+		.bdf_B130 { -ms-flex-preferred-size: 130px; -webkit-flex-basis: 130px; flex-basis: 130px; }
+		.bdf_B300 { -ms-flex-preferred-size: 300px; -webkit-flex-basis: 300px; flex-basis: 300px; }
+		.bdf_B470 { -ms-flex-preferred-size: 470px; -webkit-flex-basis: 470px; flex-basis: 470px; }
+		.bdf_B640 { -ms-flex-preferred-size: 640px; -webkit-flex-basis: 640px; flex-basis: 640px; }
+		
+	}
+	
+	.bdf-Brow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	
+}
+/* These are split to maximize class efficiency */ 
+@media only screen and (min-width: 665px) and (max-width: 1004px) { /* 640px + 25px */
+	
+	.bdf{
+		
+		/* Order */
+		.bdf-Bo-4{ -ms-flex-order: -4; -webkit-order: -4; order: -4; }
+		.bdf-Bo-3{ -ms-flex-order: -3; -webkit-order: -3; order: -3; }
+		.bdf-Bo-2{ -ms-flex-order: -2; -webkit-order: -2; order: -2; }
+		.bdf-Bo-1{ -ms-flex-order: -1; -webkit-order: -1; order: -1; }
+		.bdf-Bo0{ -ms-flex-order: 0; -webkit-order: 0; order: 0; }
+		.bdf-Bo1{ -ms-flex-order: 1; -webkit-order: 1; order: 1; }
+		.bdf-Bo2{ -ms-flex-order: 2; -webkit-order: 2; order: 2; }
+		.bdf-Bo3{ -ms-flex-order: 3; -webkit-order: 3; order: 3; }
+		.bdf-Bo4{ -ms-flex-order: 4; -webkit-order: 4; order: 4; }
+		
+		/* Vertical rule to the left, mimics line.less */
+		.bdf-Blb{
+			margin-left: 20px;
+			border-left: 1px solid #ccc;
+			padding-left: 19px;
+		}
+		
+	}
+	
+}
+
+/* --------------------------------------------------------------------------
+**
+** Desktop
+** [ C ]HARLIE
+** Breakpoint #2
+** `(viewport >= 1005px)` & `(viewport < 1345px)`
+**
+-------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1005px) {
+	
+	.bdf{
+	
+		/* Size, mimics wiffle */
+		.bdf_C130 { -ms-flex-preferred-size: 130px; -webkit-flex-basis: 130px; flex-basis: 130px; }
+		.bdf_C300 { -ms-flex-preferred-size: 300px; -webkit-flex-basis: 300px; flex-basis: 300px; }
+		.bdf_C470 { -ms-flex-preferred-size: 470px; -webkit-flex-basis: 470px; flex-basis: 470px; }
+		.bdf_C640 { -ms-flex-preferred-size: 640px; -webkit-flex-basis: 640px; flex-basis: 640px; }
+		.bdf_C810 { -ms-flex-preferred-size: 810px; -webkit-flex-basis: 810px; flex-basis: 810px; }
+		.bdf_C980 { -ms-flex-preferred-size: 980px; -webkit-flex-basis: 980px; flex-basis: 980px; }
+		
+	}
+	
+	.bdf-Crow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	
+}
+/* These are split to maximize class efficiency */ 
+@media only screen and (min-width: 1005px) and (max-width: 1344px) { /* 980px + 25px */
+	
+	.bdf{
+		
+		/* Order */
+		.bdf-Co-4{ -ms-flex-order: -4; -webkit-order: -4; order: -4; }
+		.bdf-Co-3{ -ms-flex-order: -3; -webkit-order: -3; order: -3; }
+		.bdf-Co-2{ -ms-flex-order: -2; -webkit-order: -2; order: -2; }
+		.bdf-Co-1{ -ms-flex-order: -1; -webkit-order: -1; order: -1; }
+		.bdf-Co0{ -ms-flex-order: 0; -webkit-order: 0; order: 0; }
+		.bdf-Co1{ -ms-flex-order: 1; -webkit-order: 1; order: 1; }
+		.bdf-Co2{ -ms-flex-order: 2; -webkit-order: 2; order: 2; }
+		.bdf-Co3{ -ms-flex-order: 3; -webkit-order: 3; order: 3; }
+		.bdf-Co4{ -ms-flex-order: 4; -webkit-order: 4; order: 4; }
+		
+		/* Vertical rule to the left, mimics line.less */
+		.bdf-Clb{
+			margin-left: 20px;
+			border-left: 1px solid #ccc;
+			padding-left: 19px;
+		}
+		
+	}
+
+}
+
+/* --------------------------------------------------------------------------
+**
+** Big Desktop
+** [ D ]ELTA
+** Breakpoint #3
+** `viewport >= 1345px`
+**
+-------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1345px) { /* 1320px + 25px */
+	
+	.bdf{
+		
+		/* Size, mimics wiffle */
+		.bdf_D130 { -ms-flex-preferred-size: 130px; -webkit-flex-basis: 130px; flex-basis: 130px; }
+		.bdf_D300 { -ms-flex-preferred-size: 300px; -webkit-flex-basis: 300px; flex-basis: 300px; }
+		.bdf_D470 { -ms-flex-preferred-size: 470px; -webkit-flex-basis: 470px; flex-basis: 470px; }
+		.bdf_D640 { -ms-flex-preferred-size: 640px; -webkit-flex-basis: 640px; flex-basis: 640px; }
+		.bdf_D810 { -ms-flex-preferred-size: 810px; -webkit-flex-basis: 810px; flex-basis: 810px; }
+		.bdf_D980 { -ms-flex-preferred-size: 980px; -webkit-flex-basis: 980px; flex-basis: 980px; }
+		.bdf_D1150 { -ms-flex-preferred-size: 1150px; -webkit-flex-basis: 1150px; flex-basis: 1150px; }
+		.bdf_D1320 { -ms-flex-preferred-size: 1320px; -webkit-flex-basis: 1320px; flex-basis: 1320px; }
+		
+		/* Order */
+		.bdf-Do-4{ -ms-flex-order: -4; -webkit-order: -4; order: -4; }
+		.bdf-Do-3{ -ms-flex-order: -3; -webkit-order: -3; order: -3; }
+		.bdf-Do-2{ -ms-flex-order: -2; -webkit-order: -2; order: -2; }
+		.bdf-Do-1{ -ms-flex-order: -1; -webkit-order: -1; order: -1; }
+		.bdf-Do0{ -ms-flex-order: 0; -webkit-order: 0; order: 0; }
+		.bdf-Do1{ -ms-flex-order: 1; -webkit-order: 1; order: 1; }
+		.bdf-Do2{ -ms-flex-order: 2; -webkit-order: 2; order: 2; }
+		.bdf-Do3{ -ms-flex-order: 3; -webkit-order: 3; order: 3; }
+		.bdf-Do4{ -ms-flex-order: 4; -webkit-order: 4; order: 4; }
+		
+		/* Vertical rule to the left, mimics line.less */
+		.bdf-Dlb{
+			margin-left: 20px;
+			border-left: 1px solid #ccc;
+			padding-left: 19px;
+		}
+		
+	}
+	
+	.bdf-Drow{ 
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	
+}
