@@ -23,7 +23,7 @@
 			display: inline;
 		}
 		#bd_ear ul li:first-child { float: left; }
-		#bd_ear ul li:nth-child(n+3) { display: none; }
+		#bd_ear ul li:nth-child(n+4) { display: none; }
 		#bd_ear ul li a {
 			color: #000;
 			text-decoration: none;
@@ -36,6 +36,25 @@
 		#bd_ear ul li a:active {
 			color: #000;
 			text-decoration: underline;
+		}
+		
+		#bd_ear ul li.bd_ear_rev { 
+			margin-bottom: 5px;
+		}
+		#bd_ear ul li.bd_ear_rev a{
+			
+			color: #fff;
+			background: #4267b1;
+			padding: 5px;
+			
+			&:visited { color: #fff; }
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active {
+				color: #fff;
+			}
 		}
 		#bd_ear time span { display: none; }
 @media only screen and (min-width: 665px) {
@@ -53,7 +72,11 @@
 		border-bottom: 0;
 		margin-bottom: 15px;
 	}
-		#bd_ear ul li:nth-child(n+3) { display: block; }
+		#bd_ear ul li:nth-child(n+4) { display: block; }
+	
+	#bd_ear ul li.bd_ear_rev { 
+		margin-bottom: 0;
+	}
 }
 
 #bd_masthead {
