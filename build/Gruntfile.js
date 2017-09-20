@@ -37,7 +37,8 @@ module.exports = function(grunt) {
 				files : [
 					
 					'./files/tmpl/*.html',
-					'./files/css/less/*.less'
+					'./files/css/less/*.less',
+					'./files/js/*.js'
 					
 				],
 				
