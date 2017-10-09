@@ -26,31 +26,31 @@ Modified by Rob Denton/The Register-Guard
 */
 
 
-WOOF.register(function(storyMeta, ga) {
+WOOF.register(function() {
 	
 	'use strict';
 	
 	// send ga
 	function sendGA(pct){
 		window.console.log('sendGA called');
-		if ((typeof storyMeta != 'undefined') && (typeof ga != 'undefined')){
+		if ((typeof window.storyMeta != 'undefined') && (typeof window.ga != 'undefined')){
 			window.console.log('both defined');
-			ga('send','pageview',{
-				'dimension1': storyMeta.d1,
-				'dimension2': storyMeta.d2,
-				'dimension3': storyMeta.d3,
-				'dimension4': storyMeta.d4,
-				'dimension5': storyMeta.d5,
-				'dimension6': storyMeta.d6,
-				'dimension7': storyMeta.d7,
+			window.ga('send','pageview',{
+				'dimension1': window.storyMeta.d1,
+				'dimension2': window.storyMeta.d2,
+				'dimension3': window.storyMeta.d3,
+				'dimension4': window.storyMeta.d4,
+				'dimension5': window.storyMeta.d5,
+				'dimension6': window.storyMeta.d6,
+				'dimension7': window.storyMeta.d7,
 				'dimension8': pct
 			});
-			ga('send', 'event', 'image', 'load', 'prog');
+			window.ga('send', 'event', 'image', 'load', 'prog');
 		}
-		if (typeof storyMeta == 'undefined'){
+		if (typeof window.storyMeta == 'undefined'){
 			window.console.log('storyMeta undefined');
 		}
-		if (typeof ga == 'undefined'){
+		if (typeof window.ga == 'undefined'){
 			window.console.log('ga undefined');
 		}
 	}
