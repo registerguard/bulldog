@@ -32,7 +32,7 @@ WOOF.register(function(storyMeta, ga) {
 	
 	// send ga
 	function sendGA(pct){
-		if (typeof storyMeta != 'undefined'){
+		if ((typeof storyMeta != 'undefined') && (typeof ga != 'undefined')){
 			ga('send','pageview',{
 				'dimension1': storyMeta.d1,
 				'dimension2': storyMeta.d2,
