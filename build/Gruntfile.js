@@ -162,7 +162,11 @@ module.exports = function(grunt) {
 						except: ['jquery.galleria.js', 'jquery.galleria.rg.js']
 					}
 				},*/
-				
+				options: {
+					mangle: {
+						except: ['storyMeta']
+					}
+				},
 				files : {
 					
 					'../dist/<%= pkg.version %>/<%= now %>/<%= ver %>/js/preflight.min.js' : [
