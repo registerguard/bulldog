@@ -25,10 +25,11 @@ Modified by Rob Denton/The Register-Guard
 
 */
 
-
-WOOF.register(function() {
+(function($, window, document, undefined) {
 	
 	'use strict';
+	
+	window.console.log("hello");
 	
 	// send ga
 	function sendGA(pct){
@@ -123,4 +124,4 @@ WOOF.register(function() {
 			inView();
 		}, false);
 	}
-}); // WOOF!
+}(jQuery, window, document));
