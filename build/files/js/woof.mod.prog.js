@@ -32,7 +32,9 @@ WOOF.register(function(storyMeta, ga) {
 	
 	// send ga
 	function sendGA(pct){
+		window.console.log('sendGA called');
 		if ((typeof storyMeta != 'undefined') && (typeof ga != 'undefined')){
+			window.console.log('both defined');
 			ga('send','pageview',{
 				'dimension1': storyMeta.d1,
 				'dimension2': storyMeta.d2,
@@ -44,6 +46,12 @@ WOOF.register(function(storyMeta, ga) {
 				'dimension8': pct
 			});
 			ga('send', 'event', 'image', 'load', 'prog');
+		}
+		if (typeof storyMeta == 'undefined'){
+			window.console.log('storyMeta undefined');
+		}
+		if (typeof ga == 'undefined'){
+			window.console.log('ga undefined');
 		}
 	}
 	
