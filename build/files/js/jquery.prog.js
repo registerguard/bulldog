@@ -29,13 +29,9 @@ Modified by Rob Denton/The Register-Guard
 	
 	'use strict';
 	
-	window.console.log("hello");
-	
 	// send ga
 	function sendGA(pct){
-		window.console.log('sendGA called');
 		if ((typeof window.storyMeta != 'undefined') && (typeof window.ga != 'undefined')){
-			window.console.log('both defined');
 			window.ga('send','pageview',{
 				'dimension1': window.storyMeta.d1,
 				'dimension2': window.storyMeta.d2,
@@ -47,12 +43,6 @@ Modified by Rob Denton/The Register-Guard
 				'dimension8': pct
 			});
 			window.ga('send', 'event', 'image', 'load', 'prog');
-		}
-		if (typeof window.storyMeta == 'undefined'){
-			window.console.log('storyMeta undefined');
-		}
-		if (typeof window.ga == 'undefined'){
-			window.console.log('ga undefined');
 		}
 	}
 	
