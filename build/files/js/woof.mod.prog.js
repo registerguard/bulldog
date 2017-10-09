@@ -20,12 +20,32 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Modified by Rob Denton/The Register-Guard
+
 */
 
 
-WOOF.register(function() {
+WOOF.register(function(storyMeta, ga) {
 	
 	'use strict';
+	
+	// send ga
+	function sendGA(pct){
+		if (typeof storyMeta != 'undefined'){
+			ga('send','pageview',{
+				'dimension1': storyMeta.d1,
+				'dimension2': storyMeta.d2,
+				'dimension3': storyMeta.d3,
+				'dimension4': storyMeta.d4,
+				'dimension5': storyMeta.d5,
+				'dimension6': storyMeta.d6,
+				'dimension7': storyMeta.d7,
+				'dimension8': pct
+			});
+			ga('send', 'event', 'image', 'load', 'prog');
+		}
+	}
 	
 	// progressive-image.js
 	if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) {
@@ -54,15 +74,22 @@ WOOF.register(function() {
 				if (item.dataset) {
 					img.srcset = item.dataset.srcset || '';
 					img.sizes = item.dataset.sizes || '';
+					img.pct = item.dataset.pct || '';
 				}
 				img.src = item.href;
 				img.className = 'reveal';
 				if (img.complete) { addImg(); }
 				else { img.onload = addImg; }
+				sendGA(img.pct);
 			}
 			// image in view?
 			function inView() {
-				var wT = window.pageYOffset, wB = wT + window.innerHeight, cRect, pT, pB, p = 0;
+			
+				//var wT = window.pageYOffset, wB = wT + window.innerHeight, cRect, pT, pB, p = 0;
+				var wT = window.pageYOffset,
+				// Add 600 to bottom to load images before they're scrolled to.
+				wB = wT + window.innerHeight + 600,
+				cRect, pT, pB, p = 0;
 				while (p < pItem.length) {
 					cRect = pItem[p].getBoundingClientRect();
 					pT = wT + cRect.top;
