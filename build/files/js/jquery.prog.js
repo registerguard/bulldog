@@ -30,19 +30,23 @@ Modified by Rob Denton/The Register-Guard
 	'use strict';
 	
 	// send ga
-	function sendGA(pct){
+	function sendGA(pct,pageview,event){
 		if ((typeof window.storyMeta != 'undefined') && (typeof window.ga != 'undefined')){
-			window.ga('send','pageview',{
-				'dimension1': window.storyMeta.d1,
-				'dimension2': window.storyMeta.d2,
-				'dimension3': window.storyMeta.d3,
-				'dimension4': window.storyMeta.d4,
-				'dimension5': window.storyMeta.d5,
-				'dimension6': window.storyMeta.d6,
-				'dimension7': window.storyMeta.d7,
-				'dimension8': pct
-			});
-			window.ga('send', 'event', 'image', 'load', 'prog');
+			if (pageview == true) {
+				window.ga('send','pageview',{
+					'dimension1': window.storyMeta.d1,
+					'dimension2': window.storyMeta.d2,
+					'dimension3': window.storyMeta.d3,
+					'dimension4': window.storyMeta.d4,
+					'dimension5': window.storyMeta.d5,
+					'dimension6': window.storyMeta.d6,
+					'dimension7': window.storyMeta.d7,
+					'dimension8': pct
+				});
+			}
+			if (event == true) {
+				window.ga('send', 'event', 'image', 'load', 'prog');
+			}
 		}
 	}
 	
@@ -50,7 +54,7 @@ Modified by Rob Denton/The Register-Guard
 	if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) {
 		window.addEventListener('load', function() {
 			// replace with full image
-			function loadFullImage(item) {
+			function loadFullImage(item,first) {
 				// replace image
 				function addImg() {
 					// disable click
@@ -79,11 +83,15 @@ Modified by Rob Denton/The Register-Guard
 				img.className = 'reveal';
 				if (img.complete) { addImg(); }
 				else { img.onload = addImg; }
-				sendGA(img.pct);
+				if (first == true){ 
+					sendGA(img.PCT,false,true); 
+				} else { 
+					sendGA(img.PCT,true,true);
+				}
+				//sendGA(img.pct);
 			}
 			// image in view?
 			function inView() {
-			
 				//var wT = window.pageYOffset, wB = wT + window.innerHeight, cRect, pT, pB, p = 0;
 				var wT = window.pageYOffset,
 				// Add 600 to bottom to load images before they're scrolled to.
@@ -94,7 +102,8 @@ Modified by Rob Denton/The Register-Guard
 					pT = wT + cRect.top;
 					pB = pT + cRect.height;
 					if (wT < pB && wB > pT) {
-						loadFullImage(pItem[p]);
+						loadFullImage(pItem[p], first);
+						first = false;
 						pItem[p].classList.remove('replace');
 					}
 					else { p++; }
@@ -108,7 +117,8 @@ Modified by Rob Denton/The Register-Guard
 				}, 300);
 			}
 			// start
-			var pItem = document.getElementsByClassName('progressive replace'), timer;
+			var pItem = document.getElementsByClassName('progressive replace'), timer,
+			first = true;
 			window.addEventListener('scroll', scroller, false);
 			window.addEventListener('resize', scroller, false);
 			inView();
