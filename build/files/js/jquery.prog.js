@@ -77,16 +77,16 @@ Modified by Rob Denton/The Register-Guard
 				if (item.dataset) {
 					img.srcset = item.dataset.srcset || '';
 					img.sizes = item.dataset.sizes || '';
-					img.pct = item.dataset.pct || '';
+					img.dataset.pct = item.dataset.pct || '';
 				}
 				img.src = item.href;
 				img.className = 'reveal';
 				if (img.complete) { addImg(); }
 				else { img.onload = addImg; }
 				if (first == true){ 
-					sendGA(img.PCT,false,true); 
+					sendGA(img.dataset.pct,false,true); 
 				} else { 
-					sendGA(img.PCT,true,true);
+					sendGA(img.dataset.pct,true,true);
 				}
 				//sendGA(img.pct);
 			}
