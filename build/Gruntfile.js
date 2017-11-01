@@ -164,7 +164,7 @@ module.exports = function(grunt) {
 				},*/
 				options: {
 					mangle: {
-						except: ['ga','storyMeta']
+						reserved: ['ga','storyMeta']
 					}
 				},
 				files : {

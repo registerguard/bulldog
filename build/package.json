@@ -9,23 +9,22 @@
     "url": "git://github.com/registerguard/bulldog.git"
   },
   "author": {
-    "name": "Micky Hulse",
+    "name": "Micky Hulse, Rob Denton",
     "url": "http://registerguard.com"
   },
   "dependencies": {
-    "grunt-cli": "0.1.13",
-    "grunt": "~0.4",
-    "grunt-contrib-jshint": "0.6.4",
-    "grunt-contrib-clean": "0.4.1",
-    "grunt-contrib-uglify": "0.2.2",
-    "grunt-contrib-copy": "0.4.1",
-    "grunt-contrib-less": "~1",
-    "grunt-contrib-watch": "0.4.4",
-    "grunt-preprocess": "2.3.0",
-    "grunt-env": "0.4.0"
+    "grunt": "1.0.1",
+    "grunt-contrib-jshint": "1.1.0",
+    "grunt-contrib-clean": "1.1.0",
+    "grunt-contrib-uglify": "3.1.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-less": "1.4.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-preprocess": "5.1.0",
+    "grunt-env": "0.4.4"
   },
   "devDependencies": {},
-   "scripts": {
-      "grunt": "grunt"
-    }
+  "scripts": {
+    "grunt": "grunt"
+  }
 }
