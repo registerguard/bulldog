@@ -118,9 +118,11 @@ Modified by Rob Denton/The Register-Guard
 			}
 			// start
 			var pItem = document.getElementsByClassName('progressive replace'), timer,
+			sItem = document.getElementById('image-click'),
 			first = true;
 			window.addEventListener('scroll', scroller, false);
 			window.addEventListener('resize', scroller, false);
+			if (sItem) { sItem.addEventListener('click', scroller, false); } 
 			inView();
 		}, false);
 	}
