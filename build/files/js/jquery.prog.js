@@ -118,7 +118,7 @@ Modified by Rob Denton/The Register-Guard
 			}
 			// start
 			var pItem = document.getElementsByClassName('progressive replace'), timer,
-			sItem = document.getElementById('image-click'),
+			sItem = document.getElementById('image-expand'),
 			first = true;
 			window.addEventListener('scroll', scroller, false);
 			window.addEventListener('resize', scroller, false);
