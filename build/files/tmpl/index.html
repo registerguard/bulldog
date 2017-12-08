@@ -1429,6 +1429,29 @@
 								<p class="QuickFacts-QuickFacts_Text_Bold_Nested">Theater: Regal 15 </p>
 								
 							</section>
+
+							<hr>
+
+							<section id="coral">
+								<div id='coral_talk_6983190351473786'>
+									<button id='coral_btn'>Show comments</button>
+								</div>
+								<script>
+									function loadComments(){
+										var script = document.createElement('script');
+										script.async = true;
+										script.src = 'http://talk.registerguard.com:3000/embed.js';
+										script.onload = function(){
+											Coral.Talk.render(document.getElementById('coral_talk_6983190351473786'), {talk: 'http://talk.registerguard.com:3000/' });
+										};
+										wrap.removeChild(btn);
+										wrap.appendChild(script);
+									}
+									var wrap = document.getElementById('coral_talk_6983190351473786');
+									var btn = document.getElementById('coral_btn');
+									btn.addEventListener('click', loadComments);
+								</script>
+							</section>
 							
 							<hr>
 							
